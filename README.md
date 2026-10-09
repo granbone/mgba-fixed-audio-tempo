@@ -45,10 +45,6 @@ Experimental Unverified means a Fixed Audio attempt exists, but correct operatio
 
 Both recordings show real RetroArch gameplay switching **1x → 2x → 1x**, recorded through OBS and one actual Windows audio-output source. No video speed change, audio time-stretch, pitch correction or audio replacement was applied. They use the v0.3 RC core, SHA256 `A4BD66BA6A50CFC59109971DC1937BD3675991EE5E302FD3C1554F93C114BBF1`. The distributed build uses these exact RC DLL bytes; a separate source rebuild validates the clean export and can have different Git-derived version metadata.
 
-The user adopted both final recordings and confirmed game-footage/audio rights for publication. This records the user's confirmation, not an independently obtained third-party license. Selected battle/walking scenes do not guarantee every BGM, SE or scene. [Recording provenance and measurements](docs/V03_DEMO_REVIEW.md) retain the limits of automatic comparisons. Old withdrawn v0.2 demos are not included.
-
-Game rights notices: FFTA — © 2003 SQUARE / SQUARE ENIX, All rights reserved. Oriental Blue — © 2003 HUDSON SOFT / © 2003 RED, Licensed to Nintendo. These credits do not imply endorsement or ownership of the games by this project.
-
 ## Community reports and licenses
 
 Use the [compatibility Issue Form](https://github.com/granbone/mgba-fixed-audio-tempo/issues/new?template=compatibility-report.yml). Include exact identity, mode, speed, scene and version. Do not upload ROMs, BIOS, saves or savestates.
