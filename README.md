@@ -43,7 +43,7 @@ Experimental Unverified means a Fixed Audio attempt exists, but correct operatio
 [Windows x64 ZIP](https://github.com/granbone/mgba-fixed-audio-tempo/releases/download/v0.3-preview/mgba-fixed-audio-tempo-v0.3-preview-win64.zip) · [SHA256SUMS](https://github.com/granbone/mgba-fixed-audio-tempo/releases/download/v0.3-preview/SHA256SUMS.txt) · [v0.3-preview Release](https://github.com/granbone/mgba-fixed-audio-tempo/releases/tag/v0.3-preview)
 <!-- verified-release-links:end -->
 
-Both recordings show real RetroArch gameplay switching **1x → 2x → 1x**, recorded through OBS and one actual Windows audio-output source. No video speed change, audio time-stretch, pitch correction or audio replacement was applied. They use the v0.3 RC core, SHA256 `A4BD66BA6A50CFC59109971DC1937BD3675991EE5E302FD3C1554F93C114BBF1`. The distributed build uses these exact RC DLL bytes; a separate source rebuild validates the clean export and can have different Git-derived version metadata.
+Both recordings show real RetroArch gameplay switching **1x → 2x → 1x**, recorded through OBS and one actual Windows audio-output source. No video speed change, audio time-stretch, pitch correction or audio replacement was applied. 
 
 ## Community reports and licenses
 
