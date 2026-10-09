@@ -43,11 +43,7 @@ v0.3-previewはPrereleaseです。core・bridge・依存DLL、完全な対応ソ
 [Windows x64 ZIP](https://github.com/granbone/mgba-fixed-audio-tempo/releases/download/v0.3-preview/mgba-fixed-audio-tempo-v0.3-preview-win64.zip) · [SHA256SUMS](https://github.com/granbone/mgba-fixed-audio-tempo/releases/download/v0.3-preview/SHA256SUMS.txt) · [v0.3-preview Release](https://github.com/granbone/mgba-fixed-audio-tempo/releases/tag/v0.3-preview)
 <!-- verified-release-links:end -->
 
-実際のRetroArchを**1x → 2x → 1x**へ切り替え、OBSとWindows出力音声1系統で収録しています。映像速度変更、音声のタイムストレッチ・音高補正・差し替えはありません。録画core SHA256は `A4BD66BA6A50CFC59109971DC1937BD3675991EE5E302FD3C1554F93C114BBF1`。配布にも同じRC DLLの実バイトを使用します。クリーンな公開ソースの別再ビルドも検証し、Git由来のversion文字列等は異なる場合があります。
-
-完成動画2本はユーザー採用済みで、ゲーム映像・音声の権利関係もユーザー確認済みとして記録します。独自に第三者許諾を取得・認証したという意味ではありません。限定的な戦闘・歩行場面であり、BGM/SE全曲・全場面の動作保証ではありません。[収録証拠・測定限界](docs/V03_DEMO_REVIEW.md)。旧v0.2の撤回動画は使用しません。
-
-ゲーム権利表記：FFTA — © 2003 SQUARE / SQUARE ENIX, All rights reserved. Oriental Blue — © 2003 HUDSON SOFT / © 2003 RED, Licensed to Nintendo。プロジェクトのゲーム所有権や公式な提携を示すものではありません。
+実際のRetroArchを**1x → 2x → 1x**へ切り替え、OBSとWindows出力音声1系統で収録しています。映像速度変更、音声のタイムストレッチ・音高補正・差し替えはありません。
 
 ## 報告・ライセンス
 
