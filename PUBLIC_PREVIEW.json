@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "version_candidate": "v0.2-preview",
+  "stage": "EXPERIMENTAL_PRERELEASE",
+  "production_source_checkpoint": "48b207895053296de029cf76469dc71cddeb477e",
+  "production_backends": [
+    "MP2K_ROM_PLAYER",
+    "MP2K_RAM_EWRAM_PLAYER",
+    "B6JJ_NATIVE_AUX"
+  ],
+  "safe_ram_identities": 30,
+  "disabled_ewram_possible_identities": 214,
+  "validated_fast_forward_ratio": 2,
+  "fast_forward_3x_supported": false,
+  "gb_fixed_audio_production_support": false,
+  "gb_research_status": "GB_EVENT_PROTOTYPE",
+  "new_binary_human_validated": false,
+  "existing_human_classifications_preserved": true,
+  "version": "v0.2-preview",
+  "public_history": "New clean root; v0.1-preview remains a local internal checkpoint only."
+}

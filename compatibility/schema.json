@@ -1,0 +1,171 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "GBA Compatibility v2",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "summary",
+    "records"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": 2
+    },
+    "records": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "release_id",
+          "title",
+          "region",
+          "languages",
+          "revision",
+          "game_code",
+          "header_revision",
+          "crc32",
+          "sha1",
+          "sha256",
+          "rom_size",
+          "driver_family",
+          "public_status",
+          "runtime_eligibility",
+          "verification_status",
+          "fixed_audio_2x",
+          "fixed_audio_3x",
+          "state_load",
+          "rewind",
+          "fallback_behavior",
+          "tested_core_version",
+          "notes",
+          "metadata_source",
+          "evidence_sources"
+        ],
+        "properties": {
+          "release_id": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "region": {
+            "type": "string"
+          },
+          "languages": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "revision": {
+            "type": [
+              "string",
+              "integer",
+              "null"
+            ]
+          },
+          "game_code": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "pattern": "^[A-Z0-9]{4}$"
+          },
+          "header_revision": {
+            "type": [
+              "string",
+              "integer",
+              "null"
+            ]
+          },
+          "crc32": {
+            "type": "string",
+            "pattern": "^[0-9A-F]{8}$"
+          },
+          "sha1": {
+            "type": "string",
+            "pattern": "^[0-9A-F]{40}$"
+          },
+          "sha256": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "pattern": "^[0-9A-F]{64}$"
+          },
+          "rom_size": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "driver_family": {
+            "enum": [
+              "MP2K_ROM_PLAYER",
+              "MP2K_EWRAM_PLAYER",
+              "MP2K_MIXED / OTHER_MP2K",
+              "CUSTOM_DRIVER",
+              "OTHER_DRIVER",
+              "UNKNOWN_DRIVER",
+              "NOT_ANALYZED"
+            ]
+          },
+          "public_status": {
+            "enum": [
+              "LIMITED_TEST_PASS",
+              "EXPERIMENTAL_UNVERIFIED",
+              "NATIVE_FALLBACK",
+              "UNSUPPORTED",
+              "UNKNOWN_DRIVER",
+              "NOT_ANALYZED"
+            ]
+          },
+          "runtime_eligibility": {
+            "enum": [
+              "NOT_ESTABLISHED",
+              "EXPERIMENTAL_TRIAL",
+              "CONSERVATIVE_AND_EXPERIMENTAL",
+              "STATIC_REJECTED",
+              "NO_IMPLEMENTED_BACKEND"
+            ]
+          },
+          "verification_status": {
+            "type": "string"
+          },
+          "fixed_audio_2x": {
+            "type": "string"
+          },
+          "fixed_audio_3x": {
+            "const": "NOT_YET_VALIDATED"
+          },
+          "state_load": {
+            "type": "string"
+          },
+          "rewind": {
+            "type": "string"
+          },
+          "fallback_behavior": {
+            "type": "string"
+          },
+          "tested_core_version": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "notes": {
+            "type": "string"
+          },
+          "metadata_source": {
+            "type": "string"
+          },
+          "evidence_sources": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}

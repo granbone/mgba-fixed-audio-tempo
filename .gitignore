@@ -1,0 +1,58 @@
+# Generic files
+*.user*
+*~
+*.swp
+*.pyc
+
+# Build directories
+/build
+/build-*
+/.vs
+
+# Build files
+*.a
+*.dylib
+*.dll
+*.lib
+*.exe
+*.o
+*.so
+CMakeCache.txt
+CMakeFiles
+CMakeSettings.json
+CMakeUserPresets.json
+compile_commands.json
+/.cache
+/.vscode
+cmake_install.cmake
+hle-bios.bin
+version.c
+
+# Runtime generated cruft
+*.sav
+*.ss0
+.clj-kondo/.cache/
+.lsp/.cache/db.transit.json
+
+# Game data and captures never belong in the public repository
+*.gb
+*.gbc
+*.gba
+*.srm
+*.state
+*.rawstate
+*.mp4
+*.wav
+*.pcm
+*.s16le
+*.zip
+*.7z
+__pycache__/
+
+# Media from separate demo work stays in Release assets.
+*.mp4
+*.mov
+
+# Redistributable source/relink archives; audited independently.
+!source/
+!source/*.zip

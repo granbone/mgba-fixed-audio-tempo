@@ -1,0 +1,1 @@
+GB0/GB1 standalone research tooling only. No release Fixed Audio GB/GBC route. Inventory/cluster/family metadata is sanitized; raw normalized ROM windows, disassembly, states, logs and private paths are omitted. See the root COMPATIBILITY.md for the prototype scope.

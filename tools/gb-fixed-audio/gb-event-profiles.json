@@ -1,0 +1,192 @@
+{
+  "researchOnly": true,
+  "profiles": [
+    {
+      "name": "genjin",
+      "identity": {
+        "filename": "<LOCAL_PATH>/GB Genjin (Japan).gb",
+        "relativeFilename": "GB Genjin (Japan).gb",
+        "extension": ".gb",
+        "size": 262144,
+        "crc32": "690227F6",
+        "sha256": "43a3003404f707b9ebd98b1e6e0d6b98892949854186da7a937671f92f88ad20",
+        "title": "GB GENJIN       ",
+        "makerCode": null,
+        "cgbFlag": "20",
+        "cgbOnly": false,
+        "dmgCompatible": true,
+        "sgbFlag": "00",
+        "cartridgeType": "01",
+        "mbc": "MBC1",
+        "romSizeCode": "03",
+        "declaredRomSize": 262144,
+        "ramSizeCode": "00",
+        "declaredRamSize": 0,
+        "region": "Japan",
+        "regionCode": 0,
+        "licenseeCode": "0000",
+        "version": 0,
+        "headerChecksum": "87",
+        "headerChecksumValid": true,
+        "globalChecksum": "D1BD",
+        "globalChecksumValid": true,
+        "status": "INVENTORIED"
+      },
+      "runtimeFamily": "GB_DRIVER_FAMILY_0691",
+      "root": {
+        "bank": 5,
+        "entry": 19965,
+        "return": 943,
+        "cadence": "Timer IRQ",
+        "boardClockHz": 8388608,
+        "period": 139264,
+        "updatesPerSecond": 60.23529411764706,
+        "driverRAM": [
+          52775,
+          53030
+        ],
+        "scratchRAM": [
+          57088,
+          57343
+        ],
+        "ioRead": "NONE",
+        "ioWrite": "NR10-NR52 / Wave RAM; Kanji also writes ROM bank 0x2000=15",
+        "guards": [
+          "exact CRC/size/DMG identity; SHA verified by host",
+          "permitted ROM bank/PC ranges",
+          "6000 instructions/update; 100000 board cycles/update",
+          "RAM read/write allowlist; dedicated scratch stack",
+          "APU IO allowlist; unexpected DIV write rejected",
+          "primary RAM unchanged; aux outside owned RAM unchanged"
+        ]
+      },
+      "eventEntries": [
+        19436
+      ],
+      "eventStatuses": {
+        "BGMStart": "SUPPORTED",
+        "BGMStop": "UNKNOWN",
+        "BGMChange": "SUPPORTED",
+        "SEStart": "SUPPORTED",
+        "SEFinish": "OBSERVED_ONLY",
+        "Pause": "SUPPORTED",
+        "Resume": "SUPPORTED",
+        "Fade": "OBSERVED_ONLY"
+      },
+      "changeSemantics": "Observed direct native music command",
+      "ownership": {
+        "audioExclusive": "Only declared driver RAM observed and permitted in aux (fixture scope)",
+        "gameShared": "Command arguments and input decisions remain in primary; not copied per update",
+        "readOnly": "ROM music/SE data and native driver code",
+        "reconstructable": "Existing in-memory serialized GB state plus all four APU channel PODs",
+        "continuationEssential": "Driver RAM, hardware APU/DIV/timer and current timing state",
+        "unknown": "Unobserved lifecycle/priority rules and untraced game scenes"
+      }
+    },
+    {
+      "name": "kanji",
+      "identity": {
+        "filename": "<LOCAL_PATH>/Kanji de Puzzle (Japan) (GB Compatible).gbc",
+        "relativeFilename": "Kanji de Puzzle (Japan) (GB Compatible).gbc",
+        "extension": ".gbc",
+        "size": 1048576,
+        "crc32": "25EFA1D7",
+        "sha256": "514bbf81dc9754edd2331461fe71e8c20cc328b46e35c1411cff3c21078d34ed",
+        "title": "KANJI-DE-P",
+        "makerCode": "BKAJ",
+        "cgbFlag": "80",
+        "cgbOnly": false,
+        "dmgCompatible": true,
+        "sgbFlag": "00",
+        "cartridgeType": "19",
+        "mbc": "MBC5",
+        "romSizeCode": "05",
+        "declaredRomSize": 1048576,
+        "ramSizeCode": "00",
+        "declaredRamSize": 0,
+        "region": "Japan",
+        "regionCode": 0,
+        "licenseeCode": "424c",
+        "version": 0,
+        "headerChecksum": "D0",
+        "headerChecksumValid": true,
+        "globalChecksum": "3B8B",
+        "globalChecksumValid": true,
+        "status": "INVENTORIED"
+      },
+      "runtimeFamily": "GB_DRIVER_FAMILY_0588",
+      "root": {
+        "bank": 15,
+        "entry": 16387,
+        "return": 905,
+        "cadence": "Timer IRQ",
+        "boardClockHz": 8388608,
+        "period": 131072,
+        "updatesPerSecond": 64.0,
+        "driverRAM": [
+          56960,
+          57183
+        ],
+        "scratchRAM": [
+          55296,
+          55551
+        ],
+        "ioRead": "Native NR11 read (0x491C), plus observed APU reads; original bus side effects retained",
+        "ioWrite": "NR10-NR52 / Wave RAM; Kanji also writes ROM bank 0x2000=15",
+        "guards": [
+          "exact CRC/size/DMG identity; SHA verified by host",
+          "permitted ROM bank/PC ranges",
+          "6000 instructions/update; 100000 board cycles/update",
+          "RAM read/write allowlist; dedicated scratch stack",
+          "APU IO allowlist; unexpected DIV write rejected",
+          "primary RAM unchanged; aux outside owned RAM unchanged"
+        ]
+      },
+      "eventEntries": [
+        16390,
+        16393
+      ],
+      "eventStatuses": {
+        "BGMStart": "SUPPORTED",
+        "BGMStop": "SUPPORTED",
+        "BGMChange": "SUPPORTED",
+        "SEStart": "SUPPORTED",
+        "SEFinish": "SUPPORTED",
+        "Pause": "UNKNOWN",
+        "Resume": "UNKNOWN",
+        "Fade": "UNKNOWN"
+      },
+      "changeSemantics": "Observed title BGM 1 -> Stop A=0 -> gameplay BGM 2; composed native commands, not an inferred dedicated Change function",
+      "ownership": {
+        "audioExclusive": "Only declared driver RAM observed and permitted in aux (fixture scope)",
+        "gameShared": "Command arguments and input decisions remain in primary; not copied per update",
+        "readOnly": "ROM music/SE data and native driver code",
+        "reconstructable": "Existing in-memory serialized GB state plus all four APU channel PODs",
+        "continuationEssential": "Driver RAM, hardware APU/DIV/timer and current timing state",
+        "unknown": "Unobserved lifecycle/priority rules and untraced game scenes"
+      }
+    }
+  ],
+  "queueContract": {
+    "fields": [
+      "sequence number",
+      "game board timestamp",
+      "audio elapsed timestamp",
+      "event type",
+      "id",
+      "full native register arguments"
+    ],
+    "capacity": 256,
+    "mapping": "audioElapsed = sliceAudioStart + (gameTime-sliceGameStart)/speed; piecewise actual 1x/2x speed slice, uint32 local deltas",
+    "acceptance": "Actual external native command completion and driver-RAM stores, excluding nested updater stores. Queue forwards only accepted requests.",
+    "nativeDriverOwnsPriority": true,
+    "noNRxxReplay": true,
+    "lost": 0,
+    "duplicate": 0,
+    "outOfOrder": 0,
+    "overflow": 0,
+    "maxDepth": 2,
+    "latePolicy": "Busy driver/event invocation is never preempted; lateness recorded, max 3.723621 ms; full native-reference semantic/RAM parity retained.",
+    "generation": "Standalone run starts from one fresh loaded generation; future Load must discard queue/ring and use a new generation. No production Load hook added."
+  }
+}

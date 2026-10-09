@@ -1,0 +1,854 @@
+{
+  "source_id": "INTEGRATION_14_ROM",
+  "commit": "ff25771ac8f69df91dfc9ad3bd73e4d5a813bafe",
+  "records": [
+    {
+      "game_code": "AAMJ",
+      "sha256": "05AD9E23775C80A454CB3F0973EC065F4A26BAB56B3BBAE039FEA162AC096A13",
+      "crc32": "F3E41D73",
+      "rom_size": 8388608,
+      "runs": [
+        {
+          "mode": "normal",
+          "status": "VALIDATED",
+          "profile": "known",
+          "functionCount": 9,
+          "underrun": 0,
+          "overrun": 0,
+          "permissiveAudio": false,
+          "unverifiedOwnership": 0,
+          "speedTransitions": [
+            "1.0"
+          ],
+          "activated": true,
+          "candidateFrames": 1316486,
+          "fallbackReason": null,
+          "crash": false,
+          "timeout": false
+        },
+        {
+          "mode": "ff",
+          "status": "VALIDATED",
+          "profile": "known",
+          "functionCount": 9,
+          "underrun": 0,
+          "overrun": 0,
+          "permissiveAudio": false,
+          "unverifiedOwnership": 0,
+          "speedTransitions": [
+            "2.0"
+          ],
+          "activated": true,
+          "candidateFrames": 658147,
+          "fallbackReason": null,
+          "crash": false,
+          "timeout": false
+        },
+        {
+          "mode": "switch",
+          "status": "VALIDATED",
+          "profile": "known",
+          "functionCount": 9,
+          "underrun": 0,
+          "overrun": 0,
+          "permissiveAudio": false,
+          "unverifiedOwnership": 0,
+          "speedTransitions": [
+            "1.0",
+            "2.0",
+            "1.0"
+          ],
+          "activated": true,
+          "candidateFrames": 1097040,
+          "fallbackReason": null,
+          "crash": false,
+          "timeout": false
+        }
+      ]
+    },
+    {
+      "game_code": "BVGJ",
+      "sha256": "5DA5E7F49703D489DE0BF0158DE4C9DF009225BE7A952B738E1E2F9F7DDEA679",
+      "crc32": "B32E0839",
+      "rom_size": 16777216,
+      "runs": [
+        {
+          "mode": "normal",
+          "status": "UNSUPPORTED",
+          "profile": "none",
+          "functionCount": null,
+          "underrun": 0,
+          "overrun": 0,
+          "permissiveAudio": true,
+          "unverifiedOwnership": 0,
+          "speedTransitions": [],
+          "activated": false,
+          "candidateFrames": 0,
+          "fallbackReason": "unknown/non-MP2K driver",
+          "crash": false,
+          "timeout": false
+        },
+        {
+          "mode": "ff",
+          "status": "UNSUPPORTED",
+          "profile": "none",
+          "functionCount": null,
+          "underrun": 0,
+          "overrun": 0,
+          "permissiveAudio": true,
+          "unverifiedOwnership": 0,
+          "speedTransitions": [],
+          "activated": false,
+          "candidateFrames": 0,
+          "fallbackReason": "unknown/non-MP2K driver",
+          "crash": false,
+          "timeout": false
+        },
+        {
+          "mode": "switch",
+          "status": "UNSUPPORTED",
+          "profile": "none",
+          "functionCount": null,
+          "underrun": 0,
+          "overrun": 0,
+          "permissiveAudio": true,
+          "unverifiedOwnership": 0,
+          "speedTransitions": [],
+          "activated": false,
+          "candidateFrames": 0,
+          "fallbackReason": "unknown/non-MP2K driver",
+          "crash": false,
+          "timeout": false
+        }
+      ]
+    },
+    {
+      "game_code": "AB2J",
+      "sha256": "E79D9200F9A06387D644DB035F3497CC79BB2DBA8207FAC1A0367EE39541E8FF",
+      "crc32": "8A824A70",
+      "rom_size": 4194304,
+      "runs": [
+        {
+          "mode": "normal",
+          "status": "FALLBACK",
+          "profile": "none",
+          "functionCount": null,
+          "underrun": 0,
+          "overrun": 0,
+          "permissiveAudio": true,
+          "unverifiedOwnership": 0,
+          "speedTransitions": [],
+          "activated": false,
+          "candidateFrames": 0,
+          "fallbackReason": "invalid or unsupported MP2K tables/SoundMode",
+          "crash": false,
+          "timeout": false
+        },
+        {
+          "mode": "ff",
+          "status": "FALLBACK",
+          "profile": "none",
+          "functionCount": null,
+          "underrun": 0,
+          "overrun": 0,
+          "permissiveAudio": true,
+          "unverifiedOwnership": 0,
+          "speedTransitions": [],
+          "activated": false,
+          "candidateFrames": 0,
+          "fallbackReason": "invalid or unsupported MP2K tables/SoundMode",
+          "crash": false,
+          "timeout": false
+        },
+        {
+          "mode": "switch",
+          "status": "FALLBACK",
+          "profile": "none",
+          "functionCount": null,
+          "underrun": 0,
+          "overrun": 0,
+          "permissiveAudio": true,
+          "unverifiedOwnership": 0,
+          "speedTransitions": [],
+          "activated": false,
+          "candidateFrames": 0,
+          "fallbackReason": "invalid or unsupported MP2K tables/SoundMode",
+          "crash": false,
+          "timeout": false
+        }
+      ]
+    },
+    {
+      "game_code": "A8CJ",
+      "sha256": "D02476B6A991A04CF403DCE91B3B0CBB9E0814933C1DB722DB78372AFE79A58C",
+      "crc32": "3D5A2C07",
+      "rom_size": 8388608,
+      "runs": [
+        {
+          "mode": "normal",
+          "status": "PARTIAL",
+          "profile": "runtime",
+          "functionCount": 9,
+          "underrun": 0,
+          "overrun": 0,
+          "permissiveAudio": true,
+          "unverifiedOwnership": 0,
+          "speedTransitions": [
+            "1.0"
+          ],
+          "activated": true,
+          "candidateFrames": 1116958,
+          "fallbackReason": null,
+          "crash": false,
+          "timeout": false
+        },
+        {
+          "mode": "ff",
+          "status": "PARTIAL",
+          "profile": "runtime",
+          "functionCount": 9,
+          "underrun": 0,
+          "overrun": 0,
+          "permissiveAudio": true,
+          "unverifiedOwnership": 0,
+          "speedTransitions": [
+            "2.0"
+          ],
+          "activated": true,
+          "candidateFrames": 558193,
+          "fallbackReason": null,
+          "crash": false,
+          "timeout": false
+        },
+        {
+          "mode": "switch",
+          "status": "PARTIAL",
+          "profile": "runtime",
+          "functionCount": 9,
+          "underrun": 0,
+          "overrun": 0,
+          "permissiveAudio": true,
+          "unverifiedOwnership": 0,
+          "speedTransitions": [
+            "1.0",
+            "2.0",
+            "1.0"
+          ],
+          "activated": true,
+          "candidateFrames": 897512,
+          "fallbackReason": null,
+          "crash": false,
+          "timeout": false
+        }
+      ]
+    },
+    {
+      "game_code": "BK3J",
+      "sha256": "82F8F7AEC276D48103631715D77885A025A41CFD37EE71FE69B3CAEA86771220",
+      "crc32": "DBC9CD2E",
+      "rom_size": 4194304,
+      "runs": [
+        {
+          "mode": "normal",
+          "status": "PARTIAL",
+          "profile": "runtime",
+          "functionCount": 9,
+          "underrun": 0,
+          "overrun": 0,
+          "permissiveAudio": true,
+          "unverifiedOwnership": 242991,
+          "speedTransitions": [
+            "1.0"
+          ],
+          "activated": true,
+          "candidateFrames": 1211321,
+          "fallbackReason": null,
+          "crash": false,
+          "timeout": false
+        },
+        {
+          "mode": "ff",
+          "status": "PARTIAL",
+          "profile": "runtime",
+          "functionCount": 9,
+          "underrun": 0,
+          "overrun": 0,
+          "permissiveAudio": true,
+          "unverifiedOwnership": 242991,
+          "speedTransitions": [
+            "2.0"
+          ],
+          "activated": true,
+          "candidateFrames": 605375,
+          "fallbackReason": null,
+          "crash": false,
+          "timeout": false
+        },
+        {
+          "mode": "switch",
+          "status": "PARTIAL",
+          "profile": "runtime",
+          "functionCount": 9,
+          "underrun": 0,
+          "overrun": 0,
+          "permissiveAudio": true,
+          "unverifiedOwnership": 242991,
+          "speedTransitions": [
+            "1.0",
+            "2.0",
+            "1.0"
+          ],
+          "activated": true,
+          "candidateFrames": 991875,
+          "fallbackReason": null,
+          "crash": false,
+          "timeout": false
+        }
+      ]
+    },
+    {
+      "game_code": "AQAJ",
+      "sha256": "1477039A31BD0E5F19FF7ABF7A2E2ACF14D26519E542839465684609B8608C53",
+      "crc32": "93FE0E34",
+      "rom_size": 4194304,
+      "runs": [
+        {
+          "mode": "normal",
+          "status": "PARTIAL",
+          "profile": "runtime",
+          "functionCount": 9,
+          "underrun": 0,
+          "overrun": 0,
+          "permissiveAudio": true,
+          "unverifiedOwnership": 796,
+          "speedTransitions": [
+            "1.0"
+          ],
+          "activated": true,
+          "candidateFrames": 1302941,
+          "fallbackReason": null,
+          "crash": false,
+          "timeout": false
+        },
+        {
+          "mode": "ff",
+          "status": "PARTIAL",
+          "profile": "runtime",
+          "functionCount": 9,
+          "underrun": 0,
+          "overrun": 0,
+          "permissiveAudio": true,
+          "unverifiedOwnership": 796,
+          "speedTransitions": [
+            "2.0"
+          ],
+          "activated": true,
+          "candidateFrames": 651185,
+          "fallbackReason": null,
+          "crash": false,
+          "timeout": false
+        },
+        {
+          "mode": "switch",
+          "status": "PARTIAL",
+          "profile": "runtime",
+          "functionCount": 9,
+          "underrun": 0,
+          "overrun": 0,
+          "permissiveAudio": true,
+          "unverifiedOwnership": 796,
+          "speedTransitions": [
+            "1.0",
+            "2.0",
+            "1.0"
+          ],
+          "activated": true,
+          "candidateFrames": 1083495,
+          "fallbackReason": null,
+          "crash": false,
+          "timeout": false
+        }
+      ]
+    },
+    {
+      "game_code": "AFXJ",
+      "sha256": "B13DD536808EF5D0FD4494386A9499F6FEB8310835D3F867CD17CC340D82BF9A",
+      "crc32": "A57B0034",
+      "rom_size": 16777216,
+      "runs": [
+        {
+          "mode": "normal",
+          "status": "PARTIAL",
+          "profile": "runtime",
+          "functionCount": 9,
+          "underrun": 0,
+          "overrun": 0,
+          "permissiveAudio": true,
+          "unverifiedOwnership": 170907,
+          "speedTransitions": [
+            "1.0"
+          ],
+          "activated": true,
+          "candidateFrames": 1133417,
+          "fallbackReason": null,
+          "crash": false,
+          "timeout": false
+        },
+        {
+          "mode": "ff",
+          "status": "PARTIAL",
+          "profile": "runtime",
+          "functionCount": 9,
+          "underrun": 0,
+          "overrun": 0,
+          "permissiveAudio": true,
+          "unverifiedOwnership": 170907,
+          "speedTransitions": [
+            "2.0"
+          ],
+          "activated": true,
+          "candidateFrames": 566422,
+          "fallbackReason": null,
+          "crash": false,
+          "timeout": false
+        },
+        {
+          "mode": "switch",
+          "status": "PARTIAL",
+          "profile": "runtime",
+          "functionCount": 9,
+          "underrun": 0,
+          "overrun": 0,
+          "permissiveAudio": true,
+          "unverifiedOwnership": 170907,
+          "speedTransitions": [
+            "1.0",
+            "2.0",
+            "1.0"
+          ],
+          "activated": true,
+          "candidateFrames": 913971,
+          "fallbackReason": null,
+          "crash": false,
+          "timeout": false
+        }
+      ]
+    },
+    {
+      "game_code": "AFEJ",
+      "sha256": "E62288883544705B18F1A0753896FDD865A628FB4589135813B16A972A4C1557",
+      "crc32": "D38763E1",
+      "rom_size": 8388608,
+      "runs": [
+        {
+          "mode": "normal",
+          "status": "PARTIAL",
+          "profile": "runtime",
+          "functionCount": 9,
+          "underrun": 0,
+          "overrun": 0,
+          "permissiveAudio": true,
+          "unverifiedOwnership": 146841,
+          "speedTransitions": [
+            "1.0"
+          ],
+          "activated": true,
+          "candidateFrames": 1149327,
+          "fallbackReason": null,
+          "crash": false,
+          "timeout": false
+        },
+        {
+          "mode": "ff",
+          "status": "PARTIAL",
+          "profile": "runtime",
+          "functionCount": 9,
+          "underrun": 0,
+          "overrun": 0,
+          "permissiveAudio": true,
+          "unverifiedOwnership": 146841,
+          "speedTransitions": [
+            "2.0"
+          ],
+          "activated": true,
+          "candidateFrames": 574378,
+          "fallbackReason": null,
+          "crash": false,
+          "timeout": false
+        },
+        {
+          "mode": "switch",
+          "status": "PARTIAL",
+          "profile": "runtime",
+          "functionCount": 9,
+          "underrun": 0,
+          "overrun": 0,
+          "permissiveAudio": true,
+          "unverifiedOwnership": 146841,
+          "speedTransitions": [
+            "1.0",
+            "2.0",
+            "1.0"
+          ],
+          "activated": true,
+          "candidateFrames": 929881,
+          "fallbackReason": null,
+          "crash": false,
+          "timeout": false
+        }
+      ]
+    },
+    {
+      "game_code": "AE7J",
+      "sha256": "7EC691A7411864AB51765028156C5B8A3C23A317D23C95FBF07AC201212E25C0",
+      "crc32": "F0C10E72",
+      "rom_size": 16777216,
+      "runs": [
+        {
+          "mode": "normal",
+          "status": "PARTIAL",
+          "profile": "runtime",
+          "functionCount": 9,
+          "underrun": 0,
+          "overrun": 0,
+          "permissiveAudio": true,
+          "unverifiedOwnership": 296967,
+          "speedTransitions": [
+            "1.0"
+          ],
+          "activated": true,
+          "candidateFrames": 1162494,
+          "fallbackReason": null,
+          "crash": false,
+          "timeout": false
+        },
+        {
+          "mode": "ff",
+          "status": "PARTIAL",
+          "profile": "runtime",
+          "functionCount": 9,
+          "underrun": 0,
+          "overrun": 0,
+          "permissiveAudio": true,
+          "unverifiedOwnership": 296967,
+          "speedTransitions": [
+            "2.0"
+          ],
+          "activated": true,
+          "candidateFrames": 580961,
+          "fallbackReason": null,
+          "crash": false,
+          "timeout": false
+        },
+        {
+          "mode": "switch",
+          "status": "PARTIAL",
+          "profile": "runtime",
+          "functionCount": 9,
+          "underrun": 0,
+          "overrun": 0,
+          "permissiveAudio": true,
+          "unverifiedOwnership": 296967,
+          "speedTransitions": [
+            "1.0",
+            "2.0",
+            "1.0"
+          ],
+          "activated": true,
+          "candidateFrames": 943048,
+          "fallbackReason": null,
+          "crash": false,
+          "timeout": false
+        }
+      ]
+    },
+    {
+      "game_code": "BE8J",
+      "sha256": "44FD343625AB9E6B90F63A80758C15066D526E6873FAE91474006314A5EAD464",
+      "crc32": "9D76826F",
+      "rom_size": 16777216,
+      "runs": [
+        {
+          "mode": "normal",
+          "status": "PARTIAL",
+          "profile": "runtime",
+          "functionCount": 9,
+          "underrun": 0,
+          "overrun": 0,
+          "permissiveAudio": true,
+          "unverifiedOwnership": 142063,
+          "speedTransitions": [
+            "1.0"
+          ],
+          "activated": true,
+          "candidateFrames": 1112021,
+          "fallbackReason": null,
+          "crash": false,
+          "timeout": false
+        },
+        {
+          "mode": "ff",
+          "status": "PARTIAL",
+          "profile": "runtime",
+          "functionCount": 9,
+          "underrun": 0,
+          "overrun": 0,
+          "permissiveAudio": true,
+          "unverifiedOwnership": 142063,
+          "speedTransitions": [
+            "2.0"
+          ],
+          "activated": true,
+          "candidateFrames": 555724,
+          "fallbackReason": null,
+          "crash": false,
+          "timeout": false
+        },
+        {
+          "mode": "switch",
+          "status": "PARTIAL",
+          "profile": "runtime",
+          "functionCount": 9,
+          "underrun": 0,
+          "overrun": 0,
+          "permissiveAudio": true,
+          "unverifiedOwnership": 142063,
+          "speedTransitions": [
+            "1.0",
+            "2.0",
+            "1.0"
+          ],
+          "activated": true,
+          "candidateFrames": 892575,
+          "fallbackReason": null,
+          "crash": false,
+          "timeout": false
+        }
+      ]
+    },
+    {
+      "game_code": "ASRJ",
+      "sha256": "DF99974C58A67EC22CF87A4DAEC8385D86A1E70892BC68A79C9CCFED23B952A4",
+      "crc32": "2F6E9788",
+      "rom_size": 8388608,
+      "runs": [
+        {
+          "mode": "normal",
+          "status": "UNSUPPORTED",
+          "profile": "none",
+          "functionCount": null,
+          "underrun": 0,
+          "overrun": 0,
+          "permissiveAudio": true,
+          "unverifiedOwnership": 0,
+          "speedTransitions": [],
+          "activated": false,
+          "candidateFrames": 0,
+          "fallbackReason": "unknown/non-MP2K driver",
+          "crash": false,
+          "timeout": false
+        },
+        {
+          "mode": "ff",
+          "status": "UNSUPPORTED",
+          "profile": "none",
+          "functionCount": null,
+          "underrun": 0,
+          "overrun": 0,
+          "permissiveAudio": true,
+          "unverifiedOwnership": 0,
+          "speedTransitions": [],
+          "activated": false,
+          "candidateFrames": 0,
+          "fallbackReason": "unknown/non-MP2K driver",
+          "crash": false,
+          "timeout": false
+        },
+        {
+          "mode": "switch",
+          "status": "UNSUPPORTED",
+          "profile": "none",
+          "functionCount": null,
+          "underrun": 0,
+          "overrun": 0,
+          "permissiveAudio": true,
+          "unverifiedOwnership": 0,
+          "speedTransitions": [],
+          "activated": false,
+          "candidateFrames": 0,
+          "fallbackReason": "unknown/non-MP2K driver",
+          "crash": false,
+          "timeout": false
+        }
+      ]
+    },
+    {
+      "game_code": "A6SJ",
+      "sha256": "12B706B637A6504CDA20F213FAA1F56451AAF8D5F54A7F48E8484D3B359A0E84",
+      "crc32": "EFB45117",
+      "rom_size": 8388608,
+      "runs": [
+        {
+          "mode": "normal",
+          "status": "UNSUPPORTED",
+          "profile": "none",
+          "functionCount": null,
+          "underrun": 0,
+          "overrun": 0,
+          "permissiveAudio": true,
+          "unverifiedOwnership": 0,
+          "speedTransitions": [],
+          "activated": false,
+          "candidateFrames": 0,
+          "fallbackReason": "unknown/non-MP2K driver",
+          "crash": false,
+          "timeout": false
+        },
+        {
+          "mode": "ff",
+          "status": "UNSUPPORTED",
+          "profile": "none",
+          "functionCount": null,
+          "underrun": 0,
+          "overrun": 0,
+          "permissiveAudio": true,
+          "unverifiedOwnership": 0,
+          "speedTransitions": [],
+          "activated": false,
+          "candidateFrames": 0,
+          "fallbackReason": "unknown/non-MP2K driver",
+          "crash": false,
+          "timeout": false
+        },
+        {
+          "mode": "switch",
+          "status": "UNSUPPORTED",
+          "profile": "none",
+          "functionCount": null,
+          "underrun": 0,
+          "overrun": 0,
+          "permissiveAudio": true,
+          "unverifiedOwnership": 0,
+          "speedTransitions": [],
+          "activated": false,
+          "candidateFrames": 0,
+          "fallbackReason": "unknown/non-MP2K driver",
+          "crash": false,
+          "timeout": false
+        }
+      ]
+    },
+    {
+      "game_code": "B6JJ",
+      "sha256": "A6D5E22F0E937865BBC3B09326CF7471C90E47AE00BC060E63A5B0605FB9D245",
+      "crc32": "C956FD37",
+      "rom_size": 16777216,
+      "runs": [
+        {
+          "mode": "normal",
+          "status": "UNKNOWN",
+          "profile": "none",
+          "functionCount": null,
+          "underrun": null,
+          "overrun": null,
+          "permissiveAudio": false,
+          "unverifiedOwnership": 0,
+          "speedTransitions": [],
+          "activated": false,
+          "candidateFrames": 0,
+          "fallbackReason": null,
+          "crash": false,
+          "timeout": false
+        },
+        {
+          "mode": "ff",
+          "status": "UNKNOWN",
+          "profile": "none",
+          "functionCount": null,
+          "underrun": null,
+          "overrun": null,
+          "permissiveAudio": false,
+          "unverifiedOwnership": 0,
+          "speedTransitions": [],
+          "activated": false,
+          "candidateFrames": 0,
+          "fallbackReason": null,
+          "crash": false,
+          "timeout": false
+        },
+        {
+          "mode": "switch",
+          "status": "UNKNOWN",
+          "profile": "none",
+          "functionCount": null,
+          "underrun": null,
+          "overrun": null,
+          "permissiveAudio": false,
+          "unverifiedOwnership": 0,
+          "speedTransitions": [],
+          "activated": false,
+          "candidateFrames": 0,
+          "fallbackReason": null,
+          "crash": false,
+          "timeout": false
+        }
+      ]
+    },
+    {
+      "game_code": "AJ9J",
+      "sha256": "1A341F6F246EDE623DF31784175DC887B292123FEA5832A868A73D7477050DC6",
+      "crc32": "DF7F91BC",
+      "rom_size": 8388608,
+      "runs": [
+        {
+          "mode": "normal",
+          "status": "UNSUPPORTED",
+          "profile": "none",
+          "functionCount": null,
+          "underrun": 0,
+          "overrun": 0,
+          "permissiveAudio": true,
+          "unverifiedOwnership": 0,
+          "speedTransitions": [],
+          "activated": false,
+          "candidateFrames": 0,
+          "fallbackReason": "unknown/non-MP2K driver",
+          "crash": false,
+          "timeout": false
+        },
+        {
+          "mode": "ff",
+          "status": "UNSUPPORTED",
+          "profile": "none",
+          "functionCount": null,
+          "underrun": 0,
+          "overrun": 0,
+          "permissiveAudio": true,
+          "unverifiedOwnership": 0,
+          "speedTransitions": [],
+          "activated": false,
+          "candidateFrames": 0,
+          "fallbackReason": "unknown/non-MP2K driver",
+          "crash": false,
+          "timeout": false
+        },
+        {
+          "mode": "switch",
+          "status": "UNSUPPORTED",
+          "profile": "none",
+          "functionCount": null,
+          "underrun": 0,
+          "overrun": 0,
+          "permissiveAudio": true,
+          "unverifiedOwnership": 0,
+          "speedTransitions": [],
+          "activated": false,
+          "candidateFrames": 0,
+          "fallbackReason": "unknown/non-MP2K driver",
+          "crash": false,
+          "timeout": false
+        }
+      ]
+    }
+  ]
+}

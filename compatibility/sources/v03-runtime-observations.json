@@ -1,0 +1,269 @@
+{
+  "schema_version": 1,
+  "version_candidate": "v0.3-preview",
+  "scope": "Mode/reload checks, boot/play and one-segment automatic waveform comparisons only. Unverified identities remain unverified.",
+  "records": [
+    {
+      "sha256": "05AD9E23775C80A454CB3F0973EC065F4A26BAB56B3BBAE039FEA162AC096A13",
+      "game_code": "AAMJ",
+      "result": "Limited Test Pass",
+      "verification_status": "LIMITED_AUDIO_COMPARISON_PASS",
+      "notes": "v0.3 candidate representative regression passed: exact prior golden PCM/events and relevant 1x/2x, BGM/SE, State Load/Rewind and OFF scenarios. This rerun does not extend the original limited test scope."
+    },
+    {
+      "sha256": "07BB59B8243C7C86F879D70476FC95D0C319F1F4764FA1F2BD70B7A8C55CF281",
+      "game_code": "AG7J",
+      "result": "Fallback",
+      "verification_status": "NATIVE_FALLBACK_OBSERVED",
+      "notes": "v0.3: ROM_PLAYER trial initialized but no live activation occurred in the 2400-frame 2x boot scenario. Native audio remained active; this is not a permanent unsupported verdict. RC: exact 9000-frame 1x/2x/switch and State Load/Rewind boot/menu probes. Native remained selected in all four scenarios. BGM/SE listening and tempo/pitch certification: HUMAN_REVIEW_REQUIRED. No full-playthrough claim or public promotion.",
+      "rc_audio_report": "docs/V03_RC_AUDIO.json"
+    },
+    {
+      "sha256": "0E9997636409C47734895EA2180521FA7AD8898D7F45E01634C9E207039D7808",
+      "game_code": "AORJ",
+      "result": "Fixed Audio ACTIVE",
+      "verification_status": "HUMAN_REVIEW_REQUIRED",
+      "notes": " RC: exact 9000-frame 1x/2x/switch and State Load/Rewind boot/menu probes. Activation observed; emulator Load/Rewind calls succeeded and guarded recovery was observed. BGM/SE listening and tempo/pitch certification: HUMAN_REVIEW_REQUIRED. No full-playthrough claim or public promotion.",
+      "rc_audio_report": "docs/V03_RC_AUDIO.json"
+    },
+    {
+      "sha256": "138C6E73D019235377141AE546DA3183408F3BDF747CE264B34164E1F2450B0E",
+      "game_code": "A2NJ",
+      "result": "Fixed Audio ACTIVE",
+      "verification_status": "HUMAN_REVIEW_REQUIRED",
+      "notes": "v0.3: boot/play 6000-frame normal/2x/switch probes. ACTIVE is not an audio PASS; no database promotion. Waveform comparison is limited to one segment. RC: exact 9000-frame 1x/2x/switch and State Load/Rewind boot/menu probes. Activation observed; emulator Load/Rewind calls succeeded and guarded recovery was observed. BGM/SE listening and tempo/pitch certification: HUMAN_REVIEW_REQUIRED. No full-playthrough claim or public promotion.",
+      "audio_comparison": {
+        "comparison": "SAME_SAMPLE_RATE_SEGMENT",
+        "correlation": 0.854888,
+        "reference_start_sample": 327680,
+        "comparison_start_sample": 920160,
+        "samples": 32768,
+        "scope": "One energetic 1-second boot/play waveform segment, mono downsampled 16x; no all-scene BGM/SE assurance."
+      },
+      "runs": [
+        {
+          "game_code": "A2NJ",
+          "name": "A2NJ-normal",
+          "mode": "experimental",
+          "speed": "normal",
+          "result": "Fixed Audio ACTIVE",
+          "seconds": 4.476,
+          "final": "GBA MP2K Events: [FIXED AUDIO] end candidate=3126007 native=329172 callback=3455760 fill=581 underrun=0 overrun=0 fallback=0",
+          "sha256": "138C6E73D019235377141AE546DA3183408F3BDF747CE264B34164E1F2450B0E"
+        },
+        {
+          "game_code": "A2NJ",
+          "name": "A2NJ-ff",
+          "mode": "experimental",
+          "speed": "ff",
+          "result": "Fixed Audio ACTIVE",
+          "seconds": 4.18,
+          "final": "GBA MP2K Events: [FIXED AUDIO] end candidate=1562725 native=329172 callback=1892478 fill=581 underrun=0 overrun=0 fallback=0",
+          "sha256": "138C6E73D019235377141AE546DA3183408F3BDF747CE264B34164E1F2450B0E"
+        },
+        {
+          "game_code": "A2NJ",
+          "name": "A2NJ-switch",
+          "mode": "experimental",
+          "speed": "switch",
+          "result": "Fixed Audio ACTIVE",
+          "seconds": 4.427,
+          "final": "GBA MP2K Events: [FIXED AUDIO] end candidate=2577391 native=329172 callback=2907144 fill=581 underrun=0 overrun=0 fallback=0",
+          "sha256": "138C6E73D019235377141AE546DA3183408F3BDF747CE264B34164E1F2450B0E"
+        }
+      ],
+      "rc_audio_report": "docs/V03_RC_AUDIO.json"
+    },
+    {
+      "sha256": "1AFE35E1D00099D62CBDDAD43C2BE3F0F3C3F0F333E8DF54456076CB2DF6A6B8",
+      "game_code": "AE2J",
+      "result": "Fixed Audio ACTIVE",
+      "verification_status": "HUMAN_REVIEW_REQUIRED",
+      "notes": " RC: exact 9000-frame 1x/2x/switch and State Load/Rewind boot/menu probes. Activation observed; emulator Load/Rewind calls succeeded and guarded recovery was observed. BGM/SE listening and tempo/pitch certification: HUMAN_REVIEW_REQUIRED. No full-playthrough claim or public promotion.",
+      "rc_audio_report": "docs/V03_RC_AUDIO.json"
+    },
+    {
+      "sha256": "34EB7628FA53333C092145FE54C65AAB19EA3D6027B3CD9B561DF1069C4EA2EC",
+      "game_code": "A2QJ",
+      "result": "Fixed Audio ACTIVE",
+      "verification_status": "HUMAN_REVIEW_REQUIRED",
+      "notes": "v0.3: boot/play 6000-frame normal/2x/switch probes. ACTIVE is not an audio PASS; no database promotion. Waveform comparison is limited to one segment. RC: exact 9000-frame 1x/2x/switch and State Load/Rewind boot/menu probes. Activation observed; emulator Load/Rewind calls succeeded and guarded recovery was observed. BGM/SE listening and tempo/pitch certification: HUMAN_REVIEW_REQUIRED. No full-playthrough claim or public promotion.",
+      "audio_comparison": {
+        "comparison": "SAME_SAMPLE_RATE_SEGMENT",
+        "correlation": 0.927057,
+        "reference_start_sample": 327680,
+        "comparison_start_sample": 327504,
+        "samples": 32768,
+        "scope": "One energetic 1-second boot/play waveform segment, mono downsampled 16x; no all-scene BGM/SE assurance."
+      },
+      "runs": [
+        {
+          "game_code": "A2QJ",
+          "name": "A2QJ-normal",
+          "mode": "experimental",
+          "speed": "normal",
+          "result": "Fixed Audio ACTIVE",
+          "seconds": 11.407,
+          "final": "GBA MP2K Events: [FIXED AUDIO] end candidate=3122166 native=336978 callback=3459725 fill=581 underrun=0 overrun=0 fallback=0",
+          "sha256": "34EB7628FA53333C092145FE54C65AAB19EA3D6027B3CD9B561DF1069C4EA2EC"
+        },
+        {
+          "game_code": "A2QJ",
+          "name": "A2QJ-ff",
+          "mode": "experimental",
+          "speed": "ff",
+          "result": "Fixed Audio ACTIVE",
+          "seconds": 11.189,
+          "final": "GBA MP2K Events: [FIXED AUDIO] end candidate=1560805 native=336978 callback=1898364 fill=581 underrun=0 overrun=0 fallback=0",
+          "sha256": "34EB7628FA53333C092145FE54C65AAB19EA3D6027B3CD9B561DF1069C4EA2EC"
+        },
+        {
+          "game_code": "A2QJ",
+          "name": "A2QJ-switch",
+          "mode": "experimental",
+          "speed": "switch",
+          "result": "Fixed Audio ACTIVE",
+          "seconds": 11.293,
+          "final": "GBA MP2K Events: [FIXED AUDIO] end candidate=2573550 native=336978 callback=2911109 fill=581 underrun=0 overrun=0 fallback=0",
+          "sha256": "34EB7628FA53333C092145FE54C65AAB19EA3D6027B3CD9B561DF1069C4EA2EC"
+        }
+      ],
+      "rc_audio_report": "docs/V03_RC_AUDIO.json"
+    },
+    {
+      "sha256": "56C83696F4E79BEBCA91C7969B84C03691AA4CA74575AF415EAAB23A5749B2C7",
+      "game_code": "AE2J",
+      "result": "Limited Test Pass",
+      "verification_status": "LIMITED_AUDIO_COMPARISON_PASS",
+      "notes": " RC: exact 9000-frame 1x/2x/switch and State Load/Rewind boot/menu probes. Activation observed; emulator Load/Rewind calls succeeded and guarded recovery was observed. BGM/SE listening and tempo/pitch certification: HUMAN_REVIEW_REQUIRED. No full-playthrough claim or public promotion.",
+      "rc_audio_report": "docs/V03_RC_AUDIO.json"
+    },
+    {
+      "sha256": "6A0C358516567E10A5D5692EE26CF59A54DAB71F9C4AAB98D22766C18DE2649C",
+      "game_code": "U3IJ",
+      "result": "Fallback",
+      "verification_status": "NATIVE_FALLBACK_OBSERVED",
+      "notes": " RC: exact 9000-frame 1x/2x/switch and State Load/Rewind boot/menu probes. Native remained selected in all four scenarios. BGM/SE listening and tempo/pitch certification: HUMAN_REVIEW_REQUIRED. No full-playthrough claim or public promotion.",
+      "rc_audio_report": "docs/V03_RC_AUDIO.json"
+    },
+    {
+      "sha256": "A6D5E22F0E937865BBC3B09326CF7471C90E47AE00BC060E63A5B0605FB9D245",
+      "game_code": "B6JJ",
+      "result": "Limited Test Pass",
+      "verification_status": "LIMITED_AUDIO_COMPARISON_PASS",
+      "notes": "v0.3 candidate representative regression passed: exact prior golden PCM/events and relevant 1x/2x, BGM/SE, State Load/Rewind and OFF scenarios. This rerun does not extend the original limited test scope."
+    },
+    {
+      "sha256": "AAE0C872D22130E54CD2955DFD1B4AAE3FBF3DCD70B3FA23460FB353D01F8199",
+      "game_code": "A2VJ",
+      "result": "Fixed Audio ACTIVE",
+      "verification_status": "HUMAN_REVIEW_REQUIRED",
+      "notes": "v0.3: boot/play 6000-frame normal/2x/switch probes. ACTIVE is not an audio PASS; no database promotion. Waveform comparison is limited to one segment. RC: exact 9000-frame 1x/2x/switch and State Load/Rewind boot/menu probes. Activation observed; emulator Load/Rewind calls succeeded and guarded recovery was observed. BGM/SE listening and tempo/pitch certification: HUMAN_REVIEW_REQUIRED. No full-playthrough claim or public promotion.",
+      "audio_comparison": {
+        "comparison": "SAME_SAMPLE_RATE_SEGMENT",
+        "correlation": 0.875542,
+        "reference_start_sample": 229376,
+        "comparison_start_sample": 229312,
+        "samples": 32768,
+        "scope": "One energetic 1-second boot/play waveform segment, mono downsampled 16x; no all-scene BGM/SE assurance."
+      },
+      "runs": [
+        {
+          "game_code": "A2VJ",
+          "name": "A2VJ-normal",
+          "mode": "experimental",
+          "speed": "normal",
+          "result": "Fixed Audio ACTIVE",
+          "seconds": 4.819,
+          "final": "GBA MP2K Events: [FIXED AUDIO] end candidate=3172091 native=237124 callback=3409796 fill=581 underrun=0 overrun=0 fallback=0",
+          "sha256": "AAE0C872D22130E54CD2955DFD1B4AAE3FBF3DCD70B3FA23460FB353D01F8199"
+        },
+        {
+          "game_code": "A2VJ",
+          "name": "A2VJ-ff",
+          "mode": "experimental",
+          "speed": "ff",
+          "result": "Fixed Audio ACTIVE",
+          "seconds": 4.515,
+          "final": "GBA MP2K Events: [FIXED AUDIO] end candidate=1585768 native=237124 callback=1823473 fill=581 underrun=0 overrun=0 fallback=0",
+          "sha256": "AAE0C872D22130E54CD2955DFD1B4AAE3FBF3DCD70B3FA23460FB353D01F8199"
+        },
+        {
+          "game_code": "A2VJ",
+          "name": "A2VJ-switch",
+          "mode": "experimental",
+          "speed": "switch",
+          "result": "Fixed Audio ACTIVE",
+          "seconds": 4.706,
+          "final": "GBA MP2K Events: [FIXED AUDIO] end candidate=2623475 native=237124 callback=2861180 fill=581 underrun=0 overrun=0 fallback=0",
+          "sha256": "AAE0C872D22130E54CD2955DFD1B4AAE3FBF3DCD70B3FA23460FB353D01F8199"
+        }
+      ],
+      "rc_audio_report": "docs/V03_RC_AUDIO.json"
+    },
+    {
+      "sha256": "B13DD536808EF5D0FD4494386A9499F6FEB8310835D3F867CD17CC340D82BF9A",
+      "game_code": "AFXJ",
+      "result": "Limited Test Pass",
+      "verification_status": "LIMITED_AUDIO_COMPARISON_PASS",
+      "notes": "v0.3 candidate representative regression passed: exact prior golden PCM/events and relevant 1x/2x, BGM/SE, State Load/Rewind and OFF scenarios. This rerun does not extend the original limited test scope."
+    },
+    {
+      "sha256": "B606B80BD68EDF8D3829475322ED51737F3C970BF051FC47A8D8E716DAA2A9BB",
+      "game_code": "ASTJ",
+      "result": "Fixed Audio ACTIVE",
+      "verification_status": "HUMAN_REVIEW_REQUIRED",
+      "notes": " RC: exact 9000-frame 1x/2x/switch and State Load/Rewind boot/menu probes. Activation observed; emulator Load/Rewind calls succeeded and guarded recovery was observed. BGM/SE listening and tempo/pitch certification: HUMAN_REVIEW_REQUIRED. No full-playthrough claim or public promotion.",
+      "rc_audio_report": "docs/V03_RC_AUDIO.json"
+    },
+    {
+      "sha256": "C36899E05A29B481D3FB38C2EDC9569437F0811E67FA50A067BF587A6419F891",
+      "game_code": "A2CJ",
+      "result": "Fixed Audio ACTIVE",
+      "verification_status": "HUMAN_REVIEW_REQUIRED",
+      "notes": " RC: exact 9000-frame 1x/2x/switch and State Load/Rewind boot/menu probes. Activation observed; emulator Load/Rewind calls succeeded and guarded recovery was observed. BGM/SE listening and tempo/pitch certification: HUMAN_REVIEW_REQUIRED. No full-playthrough claim or public promotion.",
+      "rc_audio_report": "docs/V03_RC_AUDIO.json"
+    },
+    {
+      "sha256": "CDEBAFD678E9B51A41E28162C42072E66123EE5120758D2831B6AF4F2B95C705",
+      "game_code": "ABFJ",
+      "result": "Fixed Audio ACTIVE",
+      "verification_status": "HUMAN_REVIEW_REQUIRED",
+      "notes": " RC: exact 9000-frame 1x/2x/switch and State Load/Rewind boot/menu probes. Activation observed; emulator Load/Rewind calls succeeded and guarded recovery was observed. BGM/SE listening and tempo/pitch certification: HUMAN_REVIEW_REQUIRED. No full-playthrough claim or public promotion.",
+      "rc_audio_report": "docs/V03_RC_AUDIO.json"
+    },
+    {
+      "sha256": "D02476B6A991A04CF403DCE91B3B0CBB9E0814933C1DB722DB78372AFE79A58C",
+      "game_code": "A8CJ",
+      "result": "Fixed Audio ACTIVE",
+      "verification_status": "HUMAN_REVIEW_REQUIRED",
+      "notes": " RC: exact 9000-frame 1x/2x/switch and State Load/Rewind boot/menu probes. Activation observed; emulator Load/Rewind calls succeeded and guarded recovery was observed. BGM/SE listening and tempo/pitch certification: HUMAN_REVIEW_REQUIRED. No full-playthrough claim or public promotion.",
+      "rc_audio_report": "docs/V03_RC_AUDIO.json"
+    },
+    {
+      "sha256": "E47C574D43716466929D9ED0E52AA9E79FC95099D31965BECC28668677DEC278",
+      "game_code": "BGXJ",
+      "result": "Fixed Audio ACTIVE",
+      "verification_status": "HUMAN_REVIEW_REQUIRED",
+      "notes": " RC: exact 9000-frame 1x/2x/switch and State Load/Rewind boot/menu probes. Activation observed; emulator Load/Rewind calls succeeded and guarded recovery was observed. BGM/SE listening and tempo/pitch certification: HUMAN_REVIEW_REQUIRED. No full-playthrough claim or public promotion.",
+      "rc_audio_report": "docs/V03_RC_AUDIO.json"
+    },
+    {
+      "sha256": "E50DF7B87F8523F6301D41BAA02961B940887F33339C73D22C20E53623EBC30E",
+      "game_code": "ACHJ",
+      "result": "Fixed Audio ACTIVE",
+      "verification_status": "HUMAN_REVIEW_REQUIRED",
+      "notes": " RC: exact 9000-frame 1x/2x/switch and State Load/Rewind boot/menu probes. Activation observed; emulator Load/Rewind calls succeeded and guarded recovery was observed. BGM/SE listening and tempo/pitch certification: HUMAN_REVIEW_REQUIRED. No full-playthrough claim or public promotion.",
+      "rc_audio_report": "docs/V03_RC_AUDIO.json"
+    },
+    {
+      "sha256": "E62288883544705B18F1A0753896FDD865A628FB4589135813B16A972A4C1557",
+      "game_code": "AFEJ",
+      "result": "Limited Test Pass",
+      "verification_status": "LIMITED_AUDIO_COMPARISON_PASS",
+      "notes": "v0.3 candidate representative regression passed: exact prior golden PCM/events and relevant 1x/2x, BGM/SE, State Load/Rewind and OFF scenarios. This rerun does not extend the original limited test scope."
+    }
+  ],
+  "core_sha256": "22BD1F28F737E9C1A62CC3C7ED9695F7A20F02CF06F644DE832C3B4FBE6F4E66",
+  "rc_core_sha256": "A4BD66BA6A50CFC59109971DC1937BD3675991EE5E302FD3C1554F93C114BBF1"
+}

@@ -1,0 +1,17 @@
+# Emulated frame, RetroPad button, held frames.
+# Fresh AAMJ save RAM. The same sequence is used in both frontend modes.
+420 START 2
+510 DOWN 2
+540 UP 2
+570 RIGHT 2
+600 LEFT 2
+630 A 2
+690 A 2
+750 RIGHT 2
+780 LEFT 2
+810 DOWN 2
+840 UP 2
+870 A 2
+900 B 2
+930 B 2
+960 B 2

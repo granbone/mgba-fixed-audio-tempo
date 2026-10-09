@@ -1,0 +1,187 @@
+name: Compatibility report
+description: Report exact-release Fixed Audio behavior without sharing game files.
+title: "[Compatibility] Game title / region / game code"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **DO NOT upload or link ROM files, BIOS files, savestates containing copyrighted game data, or copyrighted game assets.**
+        We only need identity, hashes and behavior. Do not provide personal information, credentials, private paths, ROM acquisition details or download sites.
+        Reports do not automatically become LIMITED_TEST_PASS. Driver detection and ACTIVE alone do not establish correct audio.
+        v0.3-preview is experimental; 3x is NOT YET VALIDATED. GB/GBC Fixed Audio is research only.
+        Unverified games may crash, freeze, produce incorrect audio, or experience save-data loss. Back up saves and save states before testing. Use Conservative or Disabled if problems occur.
+  - type: checkboxes
+    id: sharing-policy
+    attributes:
+      label: File sharing policy
+      options:
+        - label: I will not upload or link ROMs, BIOS files, copyrighted savestates or game assets.
+          required: true
+  - type: input
+    id: game-title
+    attributes:
+      label: Game title
+    validations:
+      required: true
+  - type: input
+    id: region
+    attributes:
+      label: Region
+      placeholder: Japan, USA, Europe, Australia, Korea, China, or another labelled region
+    validations:
+      required: true
+  - type: input
+    id: language
+    attributes:
+      label: Language
+      description: State the selected language and any known multilingual release information.
+  - type: input
+    id: game-code
+    attributes:
+      label: Game code
+      placeholder: AFXJ, AFXE, AFXP; UNKNOWN if unavailable
+    validations:
+      required: true
+  - type: input
+    id: revision
+    attributes:
+      label: Revision
+      placeholder: Header version or labelled revision; UNKNOWN if unavailable
+  - type: input
+    id: crc32
+    attributes:
+      label: CRC32
+      description: Eight hexadecimal characters, if available. No file upload.
+  - type: input
+    id: sha256
+    attributes:
+      label: SHA256
+      description: 64 hexadecimal characters identifying your local ROM. Do not attach the ROM.
+    validations:
+      required: true
+  - type: input
+    id: core-version
+    attributes:
+      label: Core version
+      placeholder: v0.3-preview candidate or another exact version
+    validations:
+      required: true
+  - type: input
+    id: core-commit
+    attributes:
+      label: Core commit
+      description: Commit from the package manifest; UNKNOWN if unavailable.
+  - type: input
+    id: frontend
+    attributes:
+      label: Frontend
+      placeholder: RetroArch version, audio driver and video driver
+    validations:
+      required: true
+  - type: input
+    id: os
+    attributes:
+      label: OS
+      placeholder: Windows version / Linux distribution / other; no username or machine name
+    validations:
+      required: true
+  - type: dropdown
+    id: fixed-audio
+    attributes:
+      label: Fixed Audio Tempo Mode
+      options:
+        - "Experimental - All Detected Drivers"
+        - "Conservative - Tested Drivers Only"
+        - "Disabled"
+        - "Unknown"
+    validations:
+      required: true
+  - type: dropdown
+    id: speed
+    attributes:
+      label: Game speed
+      multiple: true
+      options:
+        - 1x
+        - 2x
+        - 3x (not yet validated)
+        - Other (describe below)
+    validations:
+      required: true
+  - type: dropdown
+    id: bgm
+    attributes:
+      label: BGM result
+      options:
+        - Not tested
+        - Normal tempo and pitch
+        - Tempo problem
+        - Pitch problem
+        - Missing or distorted audio
+        - Native fallback observed
+        - Other (describe below)
+    validations:
+      required: true
+  - type: dropdown
+    id: se
+    attributes:
+      label: SE result
+      options:
+        - Not tested
+        - Normal
+        - Missing or distorted
+        - Timing / allocation problem
+        - Other (describe below)
+    validations:
+      required: true
+  - type: dropdown
+    id: load
+    attributes:
+      label: State Load
+      options:
+        - Not tested
+        - Fixed Audio resumed
+        - Native audio during recovery then Fixed Audio resumed
+        - Stayed on native fallback
+        - Audio position or other problem
+        - Crash
+    validations:
+      required: true
+  - type: dropdown
+    id: rewind
+    attributes:
+      label: Rewind
+      options:
+        - Not tested
+        - Fixed Audio resumed
+        - Native audio during recovery then Fixed Audio resumed
+        - Stayed on native fallback
+        - Audio position or other problem
+        - Crash
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: observed
+    attributes:
+      label: Observed behavior
+      description: Include recovery duration, operation order and whether audio=fixed or audio=native was observed. Paste only short sanitized text logs, never state blobs or game dumps.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Describe scene, inputs, speed changes, Load/Rewind order and repeat count. Do not attach savestates.
+    validations:
+      required: true
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional notes
+      description: Anything else relevant, with private paths and credentials removed. No ROM acquisition or download information.

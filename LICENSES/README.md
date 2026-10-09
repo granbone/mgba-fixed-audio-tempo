@@ -1,0 +1,1 @@
+Original component license texts accompany this release. See ../THIRD_PARTY_NOTICES.md and ../docs/RELINKING.md. CC-BY-SA-4.0 applies to the compatibility data, not the core or bridge. Original mGBA MPL and bridge LGPL notices remain unchanged.
