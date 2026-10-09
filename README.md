@@ -6,7 +6,7 @@ The existing v0.2-preview tag, Release and binaries are preserved in the **Priva
 
 ## Download and installation
 
-The v0.3-preview prerelease contains the core, bridge, dependency DLL, complete corresponding source, license notices and LGPL rebuild/relink materials. Release download links are added only after asset verification.
+The v0.3-preview prerelease contains the core, bridge, dependency DLL, complete corresponding source, license notices and LGPL rebuild/relink materials. Download links are below; per-file SHA256 is supplied with the release.
 
 See [INSTALL.md](INSTALL.md), [BUILDING.md](BUILDING.md), [architecture](ARCHITECTURE.md), [LGPL relinking](docs/RELINKING.md) and [third-party notices](THIRD_PARTY_NOTICES.md). The bridge is installed beside the core DLL.
 
@@ -35,7 +35,12 @@ Experimental Unverified means a Fixed Audio attempt exists, but correct operatio
 ## Technical Demonstrations
 
 <!-- verified-release-links:start -->
-The two user-approved v0.3 RC recordings are being attached and verified in the Private prerelease. No unverified hosted URL is listed.
+| Game | Scene / 場面 | Video |
+| --- | --- | --- |
+| Final Fantasy Tactics Advance (AFXJ) | Battle Scene / 戦闘・55s | [MP4](https://github.com/granbone/mgba-fixed-audio-tempo/releases/download/v0.3-preview/FFTA_Fixed_Audio_v03_Demo.mp4) |
+| Oriental Blue: Ao no Tengai (AORJ) | Walking / Gameplay・55s | [MP4](https://github.com/granbone/mgba-fixed-audio-tempo/releases/download/v0.3-preview/OrientalBlue_Fixed_Audio_v03_Demo.mp4) |
+
+[Windows x64 ZIP](https://github.com/granbone/mgba-fixed-audio-tempo/releases/download/v0.3-preview/mgba-fixed-audio-tempo-v0.3-preview-win64.zip) · [SHA256SUMS](https://github.com/granbone/mgba-fixed-audio-tempo/releases/download/v0.3-preview/SHA256SUMS.txt) · [v0.3-preview Release](https://github.com/granbone/mgba-fixed-audio-tempo/releases/tag/v0.3-preview)
 <!-- verified-release-links:end -->
 
 Both recordings show real RetroArch gameplay switching **1x → 2x → 1x**, recorded through OBS and one actual Windows audio-output source. No video speed change, audio time-stretch, pitch correction or audio replacement was applied. They use the v0.3 RC core, SHA256 `A4BD66BA6A50CFC59109971DC1937BD3675991EE5E302FD3C1554F93C114BBF1`. The distributed build uses these exact RC DLL bytes; a separate source rebuild validates the clean export and can have different Git-derived version metadata.

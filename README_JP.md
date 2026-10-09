@@ -6,7 +6,7 @@ Windows x64向けの実験的RetroArchコアです。対応するGBA音源につ
 
 ## ダウンロードと導入
 
-v0.3-previewはPrereleaseです。core・bridge・依存DLL、完全な対応ソース、ライセンス・LGPL再リンク素材を同梱します。配布リンクはAssets検証後に掲載します。
+v0.3-previewはPrereleaseです。core・bridge・依存DLL、完全な対応ソース、ライセンス・LGPL再リンク素材を同梱します。配布リンクとSHA256SUMSは下の動画欄に掲載しています。
 
 [INSTALL](INSTALL.md)・[BUILDING](BUILDING.md)・[ARCHITECTURE](ARCHITECTURE.md)・[再リンク手順](docs/RELINKING.md)を参照してください。bridgeはcore DLLの隣に配置します。
 
@@ -35,7 +35,12 @@ v0.3-previewはPrereleaseです。core・bridge・依存DLL、完全な対応ソ
 ## Technical Demonstrations
 
 <!-- verified-release-links:start -->
-ユーザー採用済みのv0.3 RC動画2本をPrivateのPrereleaseへ添付・検証しています。未確認URLは掲載しません。
+| Game | Scene / 場面 | Video |
+| --- | --- | --- |
+| Final Fantasy Tactics Advance (AFXJ) | Battle Scene / 戦闘・55s | [MP4](https://github.com/granbone/mgba-fixed-audio-tempo/releases/download/v0.3-preview/FFTA_Fixed_Audio_v03_Demo.mp4) |
+| Oriental Blue: Ao no Tengai (AORJ) | Walking / Gameplay・55s | [MP4](https://github.com/granbone/mgba-fixed-audio-tempo/releases/download/v0.3-preview/OrientalBlue_Fixed_Audio_v03_Demo.mp4) |
+
+[Windows x64 ZIP](https://github.com/granbone/mgba-fixed-audio-tempo/releases/download/v0.3-preview/mgba-fixed-audio-tempo-v0.3-preview-win64.zip) · [SHA256SUMS](https://github.com/granbone/mgba-fixed-audio-tempo/releases/download/v0.3-preview/SHA256SUMS.txt) · [v0.3-preview Release](https://github.com/granbone/mgba-fixed-audio-tempo/releases/tag/v0.3-preview)
 <!-- verified-release-links:end -->
 
 実際のRetroArchを**1x → 2x → 1x**へ切り替え、OBSとWindows出力音声1系統で収録しています。映像速度変更、音声のタイムストレッチ・音高補正・差し替えはありません。録画core SHA256は `A4BD66BA6A50CFC59109971DC1937BD3675991EE5E302FD3C1554F93C114BBF1`。配布にも同じRC DLLの実バイトを使用します。クリーンな公開ソースの別再ビルドも検証し、Git由来のversion文字列等は異なる場合があります。
