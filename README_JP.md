@@ -42,18 +42,6 @@ v0.4-previewはPrereleaseです。core・bridge・依存DLL、完全な対応ソ
 
 「実験的対応（動作未確認）」にはFixed Audioを試行する機能がありますが、正常動作は未確認です。3,075件すべて、または試行対象601件すべての動作保証ではありません。海外版・別revisionへ試験結果を自動転用しません。
 
-## Published v0.3 demonstrations / 公開済みv0.3動画
-
-<!-- verified-release-links:start -->
-| Game | Scene / 場面 | Video |
-| --- | --- | --- |
-| Final Fantasy Tactics Advance (AFXJ) | Battle Scene / 戦闘・55s | [MP4](https://github.com/granbone/mgba-fixed-audio-tempo/releases/download/v0.3-preview/FFTA_Fixed_Audio_v03_Demo.mp4) |
-| Oriental Blue: Ao no Tengai (AORJ) | Walking / Gameplay・55s | [MP4](https://github.com/granbone/mgba-fixed-audio-tempo/releases/download/v0.3-preview/OrientalBlue_Fixed_Audio_v03_Demo.mp4) |
-
-[Windows x64 ZIP](https://github.com/granbone/mgba-fixed-audio-tempo/releases/download/v0.3-preview/mgba-fixed-audio-tempo-v0.3-preview-win64.zip) · [SHA256SUMS](https://github.com/granbone/mgba-fixed-audio-tempo/releases/download/v0.3-preview/SHA256SUMS.txt) · [v0.3-preview Release](https://github.com/granbone/mgba-fixed-audio-tempo/releases/tag/v0.3-preview)
-<!-- verified-release-links:end -->
-
-既存v0.3動画は実RetroArchの**1x→2x→1x**をOBSとWindows音声で収録したものです。映像速度変更・音声タイムストレッチ・音高補正・差し替えはありません。
 
 ## 報告・ライセンス
 
