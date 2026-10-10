@@ -19,8 +19,6 @@ The demonstration videos have been replaced with new **RTSS-free 1080p/60fps gam
 
 Both show 1x → 2x → 3x transitions twice, with real RetroArch gameplay and captured game audio. No artificial video speed-up, audio time-stretching or pitch correction was applied.
 
-Automated video and audio-comparison checks passed. Human listening review of the new recordings remains pending. The original launch demonstrations remain documented in the project's historical manifest.
-
 ## Download and installation
 
 The v0.4-preview prerelease contains the core, bridge, dependency DLL, complete corresponding source, license notices and LGPL rebuild/relink materials. [Windows x64 ZIP](https://github.com/granbone/mgba-fixed-audio-tempo/releases/download/v0.4-preview/mgba-fixed-audio-tempo-v0.4-preview-win64.zip) · [SHA256SUMS](https://github.com/granbone/mgba-fixed-audio-tempo/releases/download/v0.4-preview/SHA256SUMS.txt) · [Release notes](https://github.com/granbone/mgba-fixed-audio-tempo/releases/tag/v0.4-preview). Verify the ZIP checksum before installation. Per-file SHA256 is also included inside the ZIP.
