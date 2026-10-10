@@ -60,7 +60,7 @@ def main():
     from build_compatibility_db import FAMILIES
     p=argparse.ArgumentParser(description=__doc__);p.add_argument('--root',type=Path,default=ROOT);p.add_argument('--report',type=Path)
     a=p.parse_args();root=a.root;db=load(root/'compatibility/gba-compatibility.json');rows=db['records']
-    assert db['schema_version']==2 and db['summary']==summary(rows)
+    assert db['schema_version']==3 and db['summary']==summary(rows)
     assert len({r['release_id'] for r in rows})==len(rows)
     assert all(set(r)==set(FIELDS) for r in rows)
     dat=load(root/'compatibility/sources/no-intro-gba-releases.json')
@@ -75,6 +75,11 @@ def main():
         for key in ('title','region','revision','languages','crc32','game_code'):assert r[key]==m[key],(key,r['release_id'])
         assert r['driver_family'] in FAMILIES and r['public_status'] in STATUSES
         assert r['fixed_audio_3x']=='NOT_YET_VALIDATED'
+        assert r['bgm_verification_status'] in ('NOT_TESTED','BGM_CONFIRMED','BGM_INCORRECT','BGM_NOT_ACTIVE','BGM_INCONCLUSIVE')
+        assert r['se_verification_status']=='NOT_ASSESSED_BY_BGM_TEST'
+        if r['bgm_verification_status']!='NOT_TESTED':
+            assert r['bgm_test_speeds']==[1,2,3] and r['bgm_test_scope'] and len(r['bgm_tested_commit'])==40
+            assert r['bgm_evidence'].startswith('compatibility/sources/v04-bgm-observations.json#')
         if r['public_status']=='NOT_ANALYZED':
             assert r['driver_family']=='NOT_ANALYZED' and not r['evidence_sources'] and r['sha256'] is None
         if r['public_status']=='EXPERIMENTAL_UNVERIFIED':

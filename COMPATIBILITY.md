@@ -1,4 +1,4 @@
-# GBA Fixed Audio Compatibility — v0.3-preview candidate
+# GBA Fixed Audio Compatibility — v0.4-preview RC (local only)
 
 [All games: Excel](compatibility/GBA_Compatibility.xlsx) · [JSON](compatibility/gba-compatibility.json) · [CSV](compatibility/gba-compatibility.csv)
 
@@ -37,7 +37,7 @@ The new default is Experimental — All Detected Drivers. It tries implemented M
 
 Static profile rejection and observed native fallback are different results. Unknown drivers are not assumed unsupported. Unanalyzed DAT identities are not assumed eligible.
 
-3x and higher remain unvalidated and use native audio. GB/GBC Fixed Audio remains research only. FFTA/AFXJ late-state reconstruction can retain native audio for about 18 seconds. Failed reconstruction safely stops the candidate route.
+3x is supported experimentally for supported backends. Scoped BGM evidence is separate from general/SE validation; unknown or Unlimited rates safely use native audio. GB/GBC Fixed Audio remains research only. FFTA/AFXJ late-state reconstruction can retain native audio for about 18 seconds. Failed reconstruction safely stops the candidate route.
 
 ## Status definitions
 
@@ -58,3 +58,39 @@ Static profile rejection and observed native fallback are different results. Unk
 Titles, regions and named revisions come exclusively from the pinned public No-Intro DAT. Header revisions are separate. Unmatched analysis stays in private ignored reports. [Sources and licenses](compatibility/METADATA_SOURCES.md).
 
 Use the [compatibility report form](.github/ISSUE_TEMPLATE/compatibility-report.yml). Include exact hashes, mode, speed, core version and scenario. Do not attach ROMs, BIOS files, saves or savestates.
+
+
+## BGM-only verification
+
+20 Phase9 exact identities have scoped Fixed1x/2x/3x BGM comparisons. All26 tested identities were already catalogued; zero overlap with the prior32 Limited Test Pass identities. General status, Conservative eligibility and SE acceptance are unchanged. These are not complete-playthrough claims.
+
+| Code | Exact release | BGM result | Speeds |
+|---|---|---|---|
+| BTAJ | Astro Boy - Tetsuwan Atom - Atom Heart no Himitsu (Japan) | BGM_CONFIRMED | [1, 2, 3] |
+| AE2J | Battle Network - Rockman EXE 2 (Japan) (Rev 1) | BGM_CONFIRMED | [1, 2, 3] |
+| A6BJ | Battle Network - Rockman EXE 3 (Japan) (Rev 1) | BGM_CONFIRMED | [1, 2, 3] |
+| AXBJ | Black Matrix Zero (Japan) | BGM_CONFIRMED | [1, 2, 3] |
+| BFGJ | Bokujou Monogatari - Mineral Town no Nakama-tachi for Girl (Japan) | BGM_CONFIRMED | [1, 2, 3] |
+| AJZJ | Bomberman Jetters - Densetsu no Bomberman (Japan) | BGM_CONFIRMED | [1, 2, 3] |
+| ABFJ | Breath of Fire - Ryuu no Senshi (Japan) | BGM_CONFIRMED | [1, 2, 3] |
+| AB2J | Breath of Fire II - Shimei no Ko (Japan) | BGM_INCONCLUSIVE | [1, 2, 3] |
+| A2BJ | Bubble Bobble - Old & New (Japan) | BGM_CONFIRMED | [1, 2, 3] |
+| BIXJ | Calciobit (Japan) | BGM_NOT_ACTIVE | [1, 2, 3] |
+| A2CJ | Castlevania - Akatsuki no Minuet (Japan) | BGM_CONFIRMED | [1, 2, 3] |
+| ACHJ | Castlevania - Byakuya no Concerto (Japan) | BGM_CONFIRMED | [1, 2, 3] |
+| AGDJ | Chinmoku no Iseki - Estpolis Gaiden (Japan) | BGM_CONFIRMED | [1, 2, 3] |
+| A5BJ | Chocobo Land - A Game of Dice (Japan) | BGM_INCONCLUSIVE | [1, 2, 3] |
+| ACGJ | Columns Crown (Japan) | BGM_CONFIRMED | [1, 2, 3] |
+| ARJJ | Custom Robo GX (Japan) | BGM_CONFIRMED | [1, 2, 3] |
+| ASTJ | Densetsu no Stafy (Japan) | BGM_CONFIRMED | [1, 2, 3] |
+| B3DJ | Densetsu no Stafy 3 (Japan) (Rev 1) | BGM_NOT_ACTIVE | [1, 2, 3] |
+| BDDJ | Double Dragon Advance (Japan) | BGM_CONFIRMED | [1, 2, 3] |
+| A9HJ | Dragon Quest Monsters - Caravan Heart (Japan) | BGM_CONFIRMED | [1, 2, 3] |
+| BFTJ | F-Zero - Climax (Japan) | BGM_NOT_ACTIVE | [1, 2, 3] |
+| BFZJ | F-Zero - Falcon Densetsu (Japan) | BGM_CONFIRMED | [1, 2, 3] |
+| AGAJ | Gradius Generation (Japan) | BGM_CONFIRMED | [1, 2, 3] |
+| BGXJ | Gunstar Super Heroes (Japan) | BGM_CONFIRMED | [1, 2, 3] |
+| BGYJ | Konjiki no Gashbell!! - Unare! Yuujou no Zakeru 2 (Japan) | BGM_CONFIRMED | [1, 2, 3] |
+| BKRJ | No No No Puzzle Chailien (Japan) | BGM_INCONCLUSIVE | [1, 2, 3] |
+
+See bgm_test_scope, bgm_tested_commit and bgm_evidence in JSON/CSV/XLSX. HUMAN_REVIEW_REQUIRED applies to unlistened audio. Legacy fixed_audio_3x records general validation only; BGM fields contain the scoped3x evidence. Finite SE can end early at2x/3x. Load/Rewind discard continuing SE; AAMJ can use ownership fallback, and late FFTA recovery can take about18 seconds.

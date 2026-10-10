@@ -11,6 +11,7 @@ struct B6JJAudioEventObservation {
 	uint64_t sequence, gameCycle, targetCycle, actualCycle;
 	uint32_t id, header;
 	bool se;
+	uint64_t audioSample;
 };
 struct B6JJAudioStats {
 	uint64_t recoveryCycles;

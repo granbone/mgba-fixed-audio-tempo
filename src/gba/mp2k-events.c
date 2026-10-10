@@ -263,6 +263,16 @@ void GBAMP2kEventsReset(struct GBAMP2kEvents* events, const struct GBA* gba, flo
 	bool normalAudioWait, bool normalVideoWait) {
 	uint32_t generation = events->players.generation;
 	memset(events, 0, sizeof(*events));
+	const char* stopProbe = getenv("MGBA_MP2K_LIFETIME_STOP_PC");
+	const char* finishProbe = getenv("MGBA_MP2K_LIFETIME_FINISH_PC");
+	if (stopProbe) {
+		char* end; unsigned long pc = strtoul(stopProbe, &end, 0);
+		if (!*end && pc <= UINT32_MAX && !(pc & 1) && _romPointer(gba, pc, 2)) events->lifetimeTraceStopPC = pc;
+	}
+	if (finishProbe) {
+		char* end; unsigned long pc = strtoul(finishProbe, &end, 0);
+		if (!*end && pc <= UINT32_MAX && !(pc & 1) && _romPointer(gba, pc, 2)) events->lifetimeTraceFinishPC = pc;
+	}
 	events->players.generation = generation;
 	events->gba = gba;
 	events->baseFps = baseFps > 0 ? baseFps : 60.f;
@@ -326,6 +336,55 @@ void GBAMP2kEventsPosition(struct GBAMP2kEvents* events, uint64_t* cycle, uint64
 void GBAMP2kEventsObserve(struct GBAMP2kEvents* events, const struct ARMCore* cpu) {
 	uint64_t currentCycle = _currentCycle(events);
 	uint32_t observedPC = _ARMPCAddress((struct ARMCore*) cpu);
+	if (events->aorjLifetimeChecked && cpu->executionMode == MODE_THUMB) {
+		if (observedPC == 0x08082074 && cpu->gprs[0] == 0x03006D10) {
+			/* Entry alone does not prove that Start will be accepted. Retire
+			 * the completion proof, but keep cancellation observation; Stop
+			 * checks the current native header, not a stale song identity. */
+			events->aorjNaturalFinish = false;
+		} else if (observedPC == 0x08081422 && cpu->gprs[7] == 0x03006D10) {
+			const struct GBAMP2kMusicPlayerInfo* p = GBAMP2kPlayerAt(events->gba, events->profile, 2);
+			if (p && p->magic == MP2K_MAGIC + 1 && p->songHeader == 0x0816BD40 && p->clock == 16)
+				events->aorjNaturalFinish = true;
+		} else if (observedPC == 0x08082158 && cpu->gprs[0] == 0x03006D10) {
+			/* An explicit Stop always wins, even after a speed change. The
+			 * latch exists only for a independently continuing finished SE. */
+			events->aorjNaturalFinish = false;
+			if (events->aorjIndependentFinish) {
+				const struct GBAMP2kMusicPlayerInfo* p = GBAMP2kPlayerAt(events->gba, events->profile, 2);
+				if (p && p->magic == MP2K_MAGIC && p->songHeader == 0x0816BD40) {
+					struct GBAMP2kEvent stop = { 0 };
+					stop.type = GBA_MP2K_MPLAY_STOP;
+					stop.playerId = 2; stop.songId = 202; stop.playerGuardPassed = true;
+					stop.programCounter = stop.functionAddress = observedPC;
+					stop.sequence = ++events->sequence; stop.gbaCycle = currentCycle;
+					stop.frontendStateAvailable = events->frontendStateAvailable; stop.frontend = events->frontend;
+					stop.audioSampleTimestampKnown = events->audioClock && events->audioClock->enabled;
+					if (stop.audioSampleTimestampKnown) stop.audioSampleTimestamp = mAudioClockTimestampForCycle(events->audioClock, currentCycle);
+					mLOG(GBA_MP2K_EVENTS, INFO, "[MP2K EXPLICIT LIFETIME STOP] player=2 song=202 cycle=%llu audioSample=%llu",
+						(unsigned long long) currentCycle, (unsigned long long) stop.audioSampleTimestamp);
+					if (events->sink) events->sink(&stop, events->sinkContext);
+				}
+				events->aorjIndependentFinish = false;
+			}
+		}
+	}
+	if (cpu->executionMode == MODE_THUMB &&
+	    ((events->lifetimeTraceStopPC && observedPC == events->lifetimeTraceStopPC) ||
+	     (events->lifetimeTraceFinishPC && observedPC == events->lifetimeTraceFinishPC))) {
+		bool finish = observedPC == events->lifetimeTraceFinishPC;
+		uint32_t pointer = cpu->gprs[finish ? 7 : 0];
+		int id = _playerFromPointer(events, pointer);
+		const struct GBAMP2kMusicPlayerInfo* p = id >= 0 ? GBAMP2kPlayerAt(events->gba, events->profile, id) : NULL;
+		if (p && p->magic == MP2K_MAGIC + (finish ? 1 : 0) && p->trackCount <= 16) {
+			mLOG(GBA_MP2K_EVENTS, INFO, "[MP2K LIFETIME PROBE] kind=%s pc=%08x lr=%08x player=%d header=%08x status=%08x clock=%u cycle=%llu generation=%u",
+				finish ? "NATIVE_FINISH" : "NATIVE_STOP_CALL", observedPC, cpu->gprs[ARM_LR] & ~1U,
+				id, p->songHeader, p->status, p->clock, (unsigned long long) currentCycle, events->players.generation);
+			const struct GBAMP2kMusicPlayerTrack* tracks = (const void*) GBAMP2kPlayerRam(events->gba, p->tracks, p->trackCount * sizeof(*tracks));
+			for (unsigned i = 0; tracks && i < p->trackCount; ++i)
+				mLOG(GBA_MP2K_EVENTS, INFO, "[MP2K LIFETIME TRACK] player=%d track=%u flags=%02x cursor=%08x wait=%u channel=%08x", id, i, tracks[i].flags, tracks[i].cmdPtr, tracks[i].wait, tracks[i].chan);
+		}
+	}
 	if (events->invalidPlayerDeferred && currentCycle - events->invalidPlayerEvent.gbaCycle > 280896) {
 		events->invalidPlayerDeferred = false;
 		mLOG(GBA_MP2K_EVENTS, WARN, "[MP2K %s %s REJECT] detailed_reason=NATIVE_RETURN_TIMEOUT sequence=%llu",

@@ -1,15 +1,26 @@
-# v0.3-preview distribution provenance
+# v0.4-preview preparation manifest
 
-This formal prerelease uses the tested v0.3 RC runtime, with SHA256 calculated from the actual packaged files. It does not reuse the v0.2 core or bridge. The recording and distribution core bytes are identical.
+Publication is pending the user's final instruction. No push, tag, GitHub Release or YouTube upload has occurred.
 
-Production code originates from development checkpoint `75872eb6899ce266e2cae452b5e2a1154d185a46`; the clean export was selected from `e1d95341aba88cdf0d87f03cf42aa1f6fed038e5`. These identifiers record provenance only. Neither old Git history nor old tags are present in this repository.
+The runtime is byte-identical to RC1. Binary source commit:
+`d451f54da8aea4217130574df42aee775cd369a5`.
+The final package records the clean public source/distribution commit separately.
+Matching compiled source, editable agbplay/bridge sources and build-time priority
+patch recipes, dependency sources, LGPL relink support and original licenses are included.
+The private diagnostic adapter is excluded from runtime files.
 
-Normalized production-source content SHA256 (src/, include/, CMakeLists.txt, version.cmake): `1DE978D3E02624657D1287370130451C2F878364DCEF65EB83EA24A3DC454F5B`.
+The distribution ZIP contains no ROM, BIOS, save, state, private WAV, raw PCM or MP4.
+The two user-approved active demo MP4s are separate planned Release assets.
+Their unchanged filenames, lengths and hashes are in docs/V04_DEMO_MANIFEST.json.
+Older25-second RC1 videos are preserved privately and are not selected assets.
 
-The package manifest records the actual new public-source commit/tree and freshly calculated DLL/file hashes. Complete source, pinned agbplay `0b87da48d2502da359e45718eec8566ac40fa9d7`, bridge glue, original licenses, headers/static relink archives and dependency preferred sources are supplied. Relink replacement is allowed without a signature/hash gate. See docs/RELINKING.md and docs/LICENSE_AUDIT.md.
+The DB has3075 exact public DAT identities and601 Experimental eligible identities.
+The20 Phase9 BGM confirmations are scoped scene results, separate from general
+status and SE verification. Conservative acceptance is unchanged.
 
-The RC's embedded Git-derived version string references its former ancestry. A fresh source rebuild can report different version metadata; this is documented rather than presented as binary-identical reproduction.
+Known finite-SE shortening, SE discard on restore, long FFTA reconstruction and
+safe native fallback remain. GB/GBC Fixed Audio is research. No all-title guarantee.
 
-The existing v0.2 distribution and all former history remain in the separately identified Private archive. Old demo images/logs/footage are excluded from this clean public history. Two unchanged v0.3 demonstration MP4s are separate Release assets, adopted and rights-confirmed by the user; no independent third-party permission is claimed. No ROM/BIOS/save/state/raw PCM is distributed.
-
-Compatibility counts: 3,075 public DAT identities; static trials 601 = 32 limited passes + 567 unverified + 2 observed fallback. Total fallback 6, unsupported 9, unknown driver 183, not analyzed 2,278. 3x and GB/GBC research are not production promises. Long-rate ownership-recovery fallback remains a documented inherited limitation.
+See docs/V04_FINAL_RELEASE_AUDIT.md for final test scope and known limits.
+Internal SHA256SUMS.txt covers every package file except itself. External asset
+SHA256SUMS.txt covers the final ZIP and two unchanged demo files; no self-hash cycle.

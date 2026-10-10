@@ -1,0 +1,4901 @@
+{
+  "license": "CC BY-SA 4.0",
+  "source": "Retained Phase9 investigation; this file is the portable public numerical summary. Full protected local records are not distributed.",
+  "scope": "Phase9 exact-identity BGM-only overlay. All26 identities already catalogued;20 newly scoped confirmations,zero prior LIMITED_TEST_PASS overlap. General/SE status unchanged.",
+  "records": [
+    {
+      "release_id": "gba-697f85513ab5704b8b1d554e087a45bfdb92ec33",
+      "sha256": "39CBC7C6A6D5FC9E03357795A3B46C6558DC6F882724D501D7FDDB7E8C27FAF4",
+      "sha1": "697F85513AB5704B8B1D554E087A45BFDB92EC33",
+      "crc32": "2B2AFA2E",
+      "rom_size": 8388608,
+      "game_code": "AXBJ",
+      "revision": null,
+      "bgm_verification_status": "BGM_CONFIRMED",
+      "bgm_test_speeds": [
+        1,
+        2,
+        3
+      ],
+      "bgm_test_scope": "Tested loaded scene only; Fixed1x versus Fixed2x/3x normal sample scale. Native1x fidelity and listening are separately reported, not certified by this status. original 2/5/8s; human listening pending; no complete-playthrough or SE guarantee.",
+      "bgm_tested_commit": "d451f54da8aea4217130574df42aee775cd369a5",
+      "bgm_evidence": "compatibility/sources/v04-bgm-observations.json#AXBJ",
+      "audio_comparisons": [
+        {
+          "speed": 2,
+          "sample_rate": 32768,
+          "common_frames": 393288,
+          "exact_prefix_frames": 5413,
+          "exact_prefix_seconds": 0.165191650390625,
+          "first_different_sample": 5413,
+          "different_stereo_frames": 387873,
+          "windows": [
+            {
+              "fast_start_seconds": 2,
+              "reference_start_seconds": 1.93304443359375,
+              "offset_samples": -2194,
+              "correlation": 0.9999999999999999,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 110.0,
+              "fast_dominant_hz": 110.0,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 5,
+              "reference_start_seconds": 4.93304443359375,
+              "offset_samples": -2194,
+              "correlation": 1.0,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 58.0,
+              "fast_dominant_hz": 58.0,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 8,
+              "reference_start_seconds": 7.93304443359375,
+              "offset_samples": -2194,
+              "correlation": 1.0,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 61.5,
+              "fast_dominant_hz": 61.5,
+              "same_sample_scale": true
+            }
+          ],
+          "phrase_time_slope": 1.0000000000000004,
+          "audio_clock_sample_rate_ratio": 1.00002488080193,
+          "observation": "SAME_SCALE_AGREEMENT"
+        },
+        {
+          "speed": 3,
+          "sample_rate": 32768,
+          "common_frames": 393288,
+          "exact_prefix_frames": 5413,
+          "exact_prefix_seconds": 0.165191650390625,
+          "first_different_sample": 5413,
+          "different_stereo_frames": 387874,
+          "windows": [
+            {
+              "fast_start_seconds": 2,
+              "reference_start_seconds": 1.91070556640625,
+              "offset_samples": -2926,
+              "correlation": 1.0000000000000002,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 110.0,
+              "fast_dominant_hz": 110.0,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 5,
+              "reference_start_seconds": 4.91070556640625,
+              "offset_samples": -2926,
+              "correlation": 1.0,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 58.0,
+              "fast_dominant_hz": 58.0,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 8,
+              "reference_start_seconds": 7.91070556640625,
+              "offset_samples": -2926,
+              "correlation": 0.9999999999999998,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 61.5,
+              "fast_dominant_hz": 61.5,
+              "same_sample_scale": true
+            }
+          ],
+          "phrase_time_slope": 1.0000000000000004,
+          "audio_clock_sample_rate_ratio": 1.0000374073701745,
+          "observation": "SAME_SCALE_AGREEMENT"
+        }
+      ],
+      "universal_steady_comparisons": [
+        {
+          "speed": 2,
+          "windows": [
+            {
+              "fast_start_seconds": 3,
+              "reference_start_seconds": 2.93304443359375,
+              "offset_samples": -2194,
+              "correlation": 1.0,
+              "spectral_cosine": 1.0000000000000002,
+              "reference_dominant_hz": 109.5,
+              "fast_dominant_hz": 109.5,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 6,
+              "reference_start_seconds": 5.93304443359375,
+              "offset_samples": -2194,
+              "correlation": 1.0000000000000002,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 61.0,
+              "fast_dominant_hz": 61.0,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 9,
+              "reference_start_seconds": 8.93304443359375,
+              "offset_samples": -2194,
+              "correlation": 0.9999999999999998,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 130.5,
+              "fast_dominant_hz": 130.5,
+              "same_sample_scale": true
+            }
+          ],
+          "agreement": true,
+          "phrase_time_slope": 1.0
+        },
+        {
+          "speed": 3,
+          "windows": [
+            {
+              "fast_start_seconds": 3,
+              "reference_start_seconds": 2.91070556640625,
+              "offset_samples": -2926,
+              "correlation": 1.0,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 109.5,
+              "fast_dominant_hz": 109.5,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 6,
+              "reference_start_seconds": 5.91070556640625,
+              "offset_samples": -2926,
+              "correlation": 1.0,
+              "spectral_cosine": 1.0000000000000002,
+              "reference_dominant_hz": 61.0,
+              "fast_dominant_hz": 61.0,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 9,
+              "reference_start_seconds": 8.91070556640625,
+              "offset_samples": -2926,
+              "correlation": 0.9999999999999998,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 130.5,
+              "fast_dominant_hz": 130.5,
+              "same_sample_scale": true
+            }
+          ],
+          "agreement": true,
+          "phrase_time_slope": 0.9999999999999999
+        }
+      ],
+      "same_initial_ram": true,
+      "audio_sha256": {
+        "1": "7F90E98E8321372C1E0D6E6AD3732F9B035D3F0719FF53ED1AA5ED39FA57795F",
+        "2": "68ECD96D99245CAA724EEFC9751E6DFBE39792FF02F4B17B55DCA0486A7E1001",
+        "3": "A98145B780732C50C6A0F2DF810A038100E8921F7371A99CA590A4902B096B88"
+      },
+      "scene_state_sha256": "09CA8066538CB385F0A4FACA17EA28D847FB8397D9FDD57B21F4991D7E7B099F",
+      "note": "Scoped BGM comparison. No full-game/region/revision extrapolation.",
+      "scope_is_not_full_game": true
+    },
+    {
+      "release_id": "gba-0e086345f3bef45611c252adf1f4d1fbe642f2c1",
+      "sha256": "C36899E05A29B481D3FB38C2EDC9569437F0811E67FA50A067BF587A6419F891",
+      "sha1": "0E086345F3BEF45611C252ADF1F4D1FBE642F2C1",
+      "crc32": "284E3092",
+      "rom_size": 8388608,
+      "game_code": "A2CJ",
+      "revision": null,
+      "bgm_verification_status": "BGM_CONFIRMED",
+      "bgm_test_speeds": [
+        1,
+        2,
+        3
+      ],
+      "bgm_test_scope": "Tested loaded scene only; Fixed1x versus Fixed2x/3x normal sample scale. Native1x fidelity and listening are separately reported, not certified by this status. original 2/5/8s; human listening pending; no complete-playthrough or SE guarantee.",
+      "bgm_tested_commit": "d451f54da8aea4217130574df42aee775cd369a5",
+      "bgm_evidence": "compatibility/sources/v04-bgm-observations.json#A2CJ",
+      "audio_comparisons": [
+        {
+          "speed": 2,
+          "sample_rate": 32768,
+          "common_frames": 394093,
+          "exact_prefix_frames": 8413,
+          "exact_prefix_seconds": 0.256744384765625,
+          "first_different_sample": 8413,
+          "different_stereo_frames": 385658,
+          "windows": [
+            {
+              "fast_start_seconds": 2,
+              "reference_start_seconds": 1.8995361328125,
+              "offset_samples": -3292,
+              "correlation": 1.0000000000000002,
+              "spectral_cosine": 0.9999999999999999,
+              "reference_dominant_hz": 131.0,
+              "fast_dominant_hz": 131.0,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 5,
+              "reference_start_seconds": 4.8995361328125,
+              "offset_samples": -3292,
+              "correlation": 1.0,
+              "spectral_cosine": 1.0000000000000002,
+              "reference_dominant_hz": 196.0,
+              "fast_dominant_hz": 196.0,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 8,
+              "reference_start_seconds": 7.8995361328125,
+              "offset_samples": -3292,
+              "correlation": 0.9999999999999998,
+              "spectral_cosine": 1.0000000000000002,
+              "reference_dominant_hz": 233.0,
+              "fast_dominant_hz": 233.0,
+              "same_sample_scale": true
+            }
+          ],
+          "phrase_time_slope": 1.0000000000000004,
+          "audio_clock_sample_rate_ratio": 1.00002488080193,
+          "observation": "SAME_SCALE_AGREEMENT"
+        },
+        {
+          "speed": 3,
+          "sample_rate": 32768,
+          "common_frames": 394093,
+          "exact_prefix_frames": 8413,
+          "exact_prefix_seconds": 0.256744384765625,
+          "first_different_sample": 8413,
+          "different_stereo_frames": 385649,
+          "windows": [
+            {
+              "fast_start_seconds": 2,
+              "reference_start_seconds": 1.866058349609375,
+              "offset_samples": -4389,
+              "correlation": 1.0000000000000002,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 131.0,
+              "fast_dominant_hz": 131.0,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 5,
+              "reference_start_seconds": 4.866058349609375,
+              "offset_samples": -4389,
+              "correlation": 1.0000000000000004,
+              "spectral_cosine": 0.9999999999999999,
+              "reference_dominant_hz": 196.0,
+              "fast_dominant_hz": 196.0,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 8,
+              "reference_start_seconds": 7.866058349609375,
+              "offset_samples": -4389,
+              "correlation": 1.0000000000000002,
+              "spectral_cosine": 1.0000000000000002,
+              "reference_dominant_hz": 233.0,
+              "fast_dominant_hz": 233.0,
+              "same_sample_scale": true
+            }
+          ],
+          "phrase_time_slope": 1.0000000000000004,
+          "audio_clock_sample_rate_ratio": 1.0000374073701745,
+          "observation": "SAME_SCALE_AGREEMENT"
+        }
+      ],
+      "universal_steady_comparisons": [
+        {
+          "speed": 2,
+          "windows": [
+            {
+              "fast_start_seconds": 3,
+              "reference_start_seconds": 2.8995361328125,
+              "offset_samples": -3292,
+              "correlation": 1.0,
+              "spectral_cosine": 1.0000000000000002,
+              "reference_dominant_hz": 196.0,
+              "fast_dominant_hz": 196.0,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 6,
+              "reference_start_seconds": 5.8995361328125,
+              "offset_samples": -3292,
+              "correlation": 1.0,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 131.0,
+              "fast_dominant_hz": 131.0,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 9,
+              "reference_start_seconds": 8.8995361328125,
+              "offset_samples": -3292,
+              "correlation": 1.0000000000000002,
+              "spectral_cosine": 0.9999999999999999,
+              "reference_dominant_hz": 185.0,
+              "fast_dominant_hz": 185.0,
+              "same_sample_scale": true
+            }
+          ],
+          "agreement": true,
+          "phrase_time_slope": 0.9999999999999997
+        },
+        {
+          "speed": 3,
+          "windows": [
+            {
+              "fast_start_seconds": 3,
+              "reference_start_seconds": 2.866058349609375,
+              "offset_samples": -4389,
+              "correlation": 1.0000000000000004,
+              "spectral_cosine": 0.9999999999999999,
+              "reference_dominant_hz": 196.0,
+              "fast_dominant_hz": 196.0,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 6,
+              "reference_start_seconds": 5.866058349609375,
+              "offset_samples": -4389,
+              "correlation": 1.0000000000000004,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 131.0,
+              "fast_dominant_hz": 131.0,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 9,
+              "reference_start_seconds": 8.866058349609375,
+              "offset_samples": -4389,
+              "correlation": 1.0,
+              "spectral_cosine": 1.0000000000000002,
+              "reference_dominant_hz": 185.0,
+              "fast_dominant_hz": 185.0,
+              "same_sample_scale": true
+            }
+          ],
+          "agreement": true,
+          "phrase_time_slope": 0.9999999999999999
+        }
+      ],
+      "same_initial_ram": true,
+      "audio_sha256": {
+        "1": "4B30CB397EF78CEF984FB5E84C13DF3B86966AEFDF1E7A87EA819F05068316E4",
+        "2": "7F2634FF12CBAAC6393EE1DD35686D0FB444BFCAAB1222C6EBB3C4813FFFF547",
+        "3": "619C0748089AF6A2D80D331D2BF48A18A7F758235837AC3B2D6E4A24FB2AFD38"
+      },
+      "scene_state_sha256": "04CD3E00A39E754C883936479C95074B09B779324A6A183EBA59B4DD990BD0BF",
+      "note": "Scoped BGM comparison. No full-game/region/revision extrapolation.",
+      "scope_is_not_full_game": true
+    },
+    {
+      "release_id": "gba-3aeb81ee60fa3e56a56ee069b0ce0d8bc34d9c4c",
+      "sha256": "E50DF7B87F8523F6301D41BAA02961B940887F33339C73D22C20E53623EBC30E",
+      "sha1": "3AEB81EE60FA3E56A56EE069B0CE0D8BC34D9C4C",
+      "crc32": "379B3248",
+      "rom_size": 8388608,
+      "game_code": "ACHJ",
+      "revision": null,
+      "bgm_verification_status": "BGM_CONFIRMED",
+      "bgm_test_speeds": [
+        1,
+        2,
+        3
+      ],
+      "bgm_test_scope": "Tested loaded scene only; Fixed1x versus Fixed2x/3x normal sample scale. Native1x fidelity and listening are separately reported, not certified by this status. original 2/5/8s; human listening pending; no complete-playthrough or SE guarantee.",
+      "bgm_tested_commit": "d451f54da8aea4217130574df42aee775cd369a5",
+      "bgm_evidence": "compatibility/sources/v04-bgm-observations.json#ACHJ",
+      "audio_comparisons": [
+        {
+          "speed": 2,
+          "sample_rate": 32768,
+          "common_frames": 392805,
+          "exact_prefix_frames": 6576,
+          "exact_prefix_seconds": 0.20068359375,
+          "first_different_sample": 6576,
+          "different_stereo_frames": 386190,
+          "windows": [
+            {
+              "fast_start_seconds": 2,
+              "reference_start_seconds": 1.907928466796875,
+              "offset_samples": -3017,
+              "correlation": 1.0000000000000002,
+              "spectral_cosine": 0.9999999999999999,
+              "reference_dominant_hz": 370.0,
+              "fast_dominant_hz": 370.0,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 5,
+              "reference_start_seconds": 4.907928466796875,
+              "offset_samples": -3017,
+              "correlation": 1.0000000000000004,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 179.5,
+              "fast_dominant_hz": 179.5,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 8,
+              "reference_start_seconds": 7.907928466796875,
+              "offset_samples": -3017,
+              "correlation": 1.0000000000000002,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 63.0,
+              "fast_dominant_hz": 63.0,
+              "same_sample_scale": true
+            }
+          ],
+          "phrase_time_slope": 1.0000000000000007,
+          "audio_clock_sample_rate_ratio": 1.00002488080193,
+          "observation": "SAME_SCALE_AGREEMENT"
+        },
+        {
+          "speed": 3,
+          "sample_rate": 32768,
+          "common_frames": 392805,
+          "exact_prefix_frames": 6576,
+          "exact_prefix_seconds": 0.20068359375,
+          "first_different_sample": 6576,
+          "different_stereo_frames": 386194,
+          "windows": [
+            {
+              "fast_start_seconds": 2,
+              "reference_start_seconds": 1.877227783203125,
+              "offset_samples": -4023,
+              "correlation": 1.0000000000000002,
+              "spectral_cosine": 0.9999999999999999,
+              "reference_dominant_hz": 370.0,
+              "fast_dominant_hz": 370.0,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 5,
+              "reference_start_seconds": 4.877227783203125,
+              "offset_samples": -4023,
+              "correlation": 1.0,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 179.5,
+              "fast_dominant_hz": 179.5,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 8,
+              "reference_start_seconds": 7.877227783203125,
+              "offset_samples": -4023,
+              "correlation": 1.0000000000000002,
+              "spectral_cosine": 0.9999999999999998,
+              "reference_dominant_hz": 63.0,
+              "fast_dominant_hz": 63.0,
+              "same_sample_scale": true
+            }
+          ],
+          "phrase_time_slope": 1.0000000000000004,
+          "audio_clock_sample_rate_ratio": 1.0000374073701745,
+          "observation": "SAME_SCALE_AGREEMENT"
+        }
+      ],
+      "universal_steady_comparisons": [
+        {
+          "speed": 2,
+          "windows": [
+            {
+              "fast_start_seconds": 3,
+              "reference_start_seconds": 2.907928466796875,
+              "offset_samples": -3017,
+              "correlation": 1.0,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 63.0,
+              "fast_dominant_hz": 63.0,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 6,
+              "reference_start_seconds": 5.907928466796875,
+              "offset_samples": -3017,
+              "correlation": 1.0,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 386.5,
+              "fast_dominant_hz": 386.5,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 9,
+              "reference_start_seconds": 8.907928466796875,
+              "offset_samples": -3017,
+              "correlation": 1.0000000000000004,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 174.5,
+              "fast_dominant_hz": 174.5,
+              "same_sample_scale": true
+            }
+          ],
+          "agreement": true,
+          "phrase_time_slope": 1.0
+        },
+        {
+          "speed": 3,
+          "windows": [
+            {
+              "fast_start_seconds": 3,
+              "reference_start_seconds": 2.877227783203125,
+              "offset_samples": -4023,
+              "correlation": 1.0,
+              "spectral_cosine": 1.0000000000000002,
+              "reference_dominant_hz": 63.0,
+              "fast_dominant_hz": 63.0,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 6,
+              "reference_start_seconds": 5.877227783203125,
+              "offset_samples": -4023,
+              "correlation": 0.9999999999999999,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 386.5,
+              "fast_dominant_hz": 386.5,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 9,
+              "reference_start_seconds": 8.877227783203125,
+              "offset_samples": -4023,
+              "correlation": 1.0,
+              "spectral_cosine": 0.9999999999999998,
+              "reference_dominant_hz": 174.5,
+              "fast_dominant_hz": 174.5,
+              "same_sample_scale": true
+            }
+          ],
+          "agreement": true,
+          "phrase_time_slope": 0.9999999999999999
+        }
+      ],
+      "same_initial_ram": true,
+      "audio_sha256": {
+        "1": "88678C007E45A6DDBC705C95AFBC27853D05AF1987516A367BF153217DE01BE7",
+        "2": "C7CA8ADEBA22808FB593350A05667E9F6EFFB9A95318D3BFEF19C17A3E0F6382",
+        "3": "1A31BBE70ACB90F43C96281790B5EDD66D60625E372D507D76599BF6CC0708C0"
+      },
+      "scene_state_sha256": "0F0B3A8C8725F48F47D80A97F900BEA51671363E1B5AC90991D468084F824449",
+      "note": "Scoped BGM comparison. No full-game/region/revision extrapolation.",
+      "scope_is_not_full_game": true
+    },
+    {
+      "release_id": "gba-75f6297f42c41e2a6d108de9a372308ad2df6a9c",
+      "sha256": "B606B80BD68EDF8D3829475322ED51737F3C970BF051FC47A8D8E716DAA2A9BB",
+      "sha1": "75F6297F42C41E2A6D108DE9A372308AD2DF6A9C",
+      "crc32": "FAE94C8B",
+      "rom_size": 8388608,
+      "game_code": "ASTJ",
+      "revision": null,
+      "bgm_verification_status": "BGM_CONFIRMED",
+      "bgm_test_speeds": [
+        1,
+        2,
+        3
+      ],
+      "bgm_test_scope": "Tested loaded scene only; Fixed1x versus Fixed2x/3x normal sample scale. Native1x fidelity and listening are separately reported, not certified by this status. original 2/5/8s; human listening pending; no complete-playthrough or SE guarantee.",
+      "bgm_tested_commit": "d451f54da8aea4217130574df42aee775cd369a5",
+      "bgm_evidence": "compatibility/sources/v04-bgm-observations.json#ASTJ",
+      "audio_comparisons": [
+        {
+          "speed": 2,
+          "sample_rate": 32768,
+          "common_frames": 393845,
+          "exact_prefix_frames": 7616,
+          "exact_prefix_seconds": 0.232421875,
+          "first_different_sample": 7616,
+          "different_stereo_frames": 386229,
+          "windows": [
+            {
+              "fast_start_seconds": 2,
+              "reference_start_seconds": 1.907928466796875,
+              "offset_samples": -3017,
+              "correlation": 1.0000000000000002,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 88.0,
+              "fast_dominant_hz": 88.0,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 5,
+              "reference_start_seconds": 4.907928466796875,
+              "offset_samples": -3017,
+              "correlation": 1.0000000000000004,
+              "spectral_cosine": 0.9999999999999999,
+              "reference_dominant_hz": 466.5,
+              "fast_dominant_hz": 466.5,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 8,
+              "reference_start_seconds": 7.907928466796875,
+              "offset_samples": -3017,
+              "correlation": 1.0000000000000002,
+              "spectral_cosine": 1.0000000000000002,
+              "reference_dominant_hz": 78.0,
+              "fast_dominant_hz": 78.0,
+              "same_sample_scale": true
+            }
+          ],
+          "phrase_time_slope": 1.0000000000000007,
+          "audio_clock_sample_rate_ratio": 1.00002488080193,
+          "observation": "SAME_SCALE_AGREEMENT"
+        },
+        {
+          "speed": 3,
+          "sample_rate": 32768,
+          "common_frames": 393845,
+          "exact_prefix_frames": 7616,
+          "exact_prefix_seconds": 0.232421875,
+          "first_different_sample": 7616,
+          "different_stereo_frames": 386229,
+          "windows": [
+            {
+              "fast_start_seconds": 2,
+              "reference_start_seconds": 1.877227783203125,
+              "offset_samples": -4023,
+              "correlation": 0.9999999999999999,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 88.0,
+              "fast_dominant_hz": 88.0,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 5,
+              "reference_start_seconds": 4.877227783203125,
+              "offset_samples": -4023,
+              "correlation": 1.0000000000000004,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 466.5,
+              "fast_dominant_hz": 466.5,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 8,
+              "reference_start_seconds": 7.877227783203125,
+              "offset_samples": -4023,
+              "correlation": 1.0000000000000002,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 78.0,
+              "fast_dominant_hz": 78.0,
+              "same_sample_scale": true
+            }
+          ],
+          "phrase_time_slope": 1.0000000000000004,
+          "audio_clock_sample_rate_ratio": 1.0000374073701745,
+          "observation": "SAME_SCALE_AGREEMENT"
+        }
+      ],
+      "universal_steady_comparisons": [
+        {
+          "speed": 2,
+          "windows": [
+            {
+              "fast_start_seconds": 3,
+              "reference_start_seconds": 2.907928466796875,
+              "offset_samples": -3017,
+              "correlation": 1.0000000000000004,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 78.0,
+              "fast_dominant_hz": 78.0,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 6,
+              "reference_start_seconds": 5.907928466796875,
+              "offset_samples": -3017,
+              "correlation": 1.0000000000000004,
+              "spectral_cosine": 1.0000000000000002,
+              "reference_dominant_hz": 349.5,
+              "fast_dominant_hz": 349.5,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 9,
+              "reference_start_seconds": 8.907928466796875,
+              "offset_samples": -3017,
+              "correlation": 1.0000000000000004,
+              "spectral_cosine": 0.9999999999999999,
+              "reference_dominant_hz": 78.0,
+              "fast_dominant_hz": 78.0,
+              "same_sample_scale": true
+            }
+          ],
+          "agreement": true,
+          "phrase_time_slope": 1.0
+        },
+        {
+          "speed": 3,
+          "windows": [
+            {
+              "fast_start_seconds": 3,
+              "reference_start_seconds": 2.877227783203125,
+              "offset_samples": -4023,
+              "correlation": 0.9999999999999999,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 78.0,
+              "fast_dominant_hz": 78.0,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 6,
+              "reference_start_seconds": 5.877227783203125,
+              "offset_samples": -4023,
+              "correlation": 1.0000000000000004,
+              "spectral_cosine": 0.9999999999999999,
+              "reference_dominant_hz": 349.5,
+              "fast_dominant_hz": 349.5,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 9,
+              "reference_start_seconds": 8.877227783203125,
+              "offset_samples": -4023,
+              "correlation": 1.0,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 78.0,
+              "fast_dominant_hz": 78.0,
+              "same_sample_scale": true
+            }
+          ],
+          "agreement": true,
+          "phrase_time_slope": 0.9999999999999999
+        }
+      ],
+      "same_initial_ram": true,
+      "audio_sha256": {
+        "1": "313B38E46CE150D5AE22536E89FDD7E8EE6353DE88FE5E531D71D78A5CFC133E",
+        "2": "902D9C6D8BDF8DD5F4680D315C7DC068D7987669717998FA01360087DBFCAC0E",
+        "3": "699B965B6F76D40B119B9CC76465DE0E911DF7AF97B75F7C329EDFC5FDEFEF50"
+      },
+      "scene_state_sha256": "59A4AB236E66366F1B972D00C6A47E86B1B8120B482D27237FA8917769F77C3D",
+      "note": "Scoped BGM comparison. No full-game/region/revision extrapolation.",
+      "scope_is_not_full_game": true
+    },
+    {
+      "release_id": "gba-dae5354bfe4ccafc92d22b1389265dbf1f79b636",
+      "sha256": "3228100E5B60F45D0E78CE37B53ED55CBF3ADE6A16B115B1CDEA793F222530E1",
+      "sha1": "DAE5354BFE4CCAFC92D22B1389265DBF1F79B636",
+      "crc32": "2D6E4C3B",
+      "rom_size": 16777216,
+      "game_code": "B3DJ",
+      "revision": "Rev 1",
+      "bgm_verification_status": "BGM_NOT_ACTIVE",
+      "bgm_test_speeds": [
+        1,
+        2,
+        3
+      ],
+      "bgm_test_scope": "Tested loaded scene only; Fixed1x versus Fixed2x/3x normal sample scale. Native1x fidelity and listening are separately reported, not certified by this status. ; human listening pending; no complete-playthrough or SE guarantee.",
+      "bgm_tested_commit": "d451f54da8aea4217130574df42aee775cd369a5",
+      "bgm_evidence": "compatibility/sources/v04-bgm-observations.json#B3DJ",
+      "audio_comparisons": [
+        {
+          "speed": 2,
+          "sample_rate": 32768,
+          "common_frames": 392815,
+          "exact_prefix_frames": 392815,
+          "exact_prefix_seconds": 11.987762451171875,
+          "first_different_sample": null,
+          "different_stereo_frames": 0,
+          "windows": [
+            {
+              "fast_start_seconds": 2,
+              "reference_start_seconds": 2.0,
+              "offset_samples": 0,
+              "correlation": 1.0000000000000002,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 69.0,
+              "fast_dominant_hz": 69.0,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 5,
+              "reference_start_seconds": 5.0,
+              "offset_samples": 0,
+              "correlation": 1.0,
+              "spectral_cosine": 0.9999999999999999,
+              "reference_dominant_hz": 82.5,
+              "fast_dominant_hz": 82.5,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 8,
+              "reference_start_seconds": 8.0,
+              "offset_samples": 0,
+              "correlation": 1.0,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 65.5,
+              "fast_dominant_hz": 65.5,
+              "same_sample_scale": true
+            }
+          ],
+          "phrase_time_slope": 1.0000000000000004,
+          "audio_clock_sample_rate_ratio": -0.22690798591164982,
+          "observation": "SAME_SCALE_AGREEMENT"
+        },
+        {
+          "speed": 3,
+          "sample_rate": 32768,
+          "common_frames": 392815,
+          "exact_prefix_frames": 392815,
+          "exact_prefix_seconds": 11.987762451171875,
+          "first_different_sample": null,
+          "different_stereo_frames": 0,
+          "windows": [
+            {
+              "fast_start_seconds": 2,
+              "reference_start_seconds": 2.0,
+              "offset_samples": 0,
+              "correlation": 1.0000000000000002,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 69.0,
+              "fast_dominant_hz": 69.0,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 5,
+              "reference_start_seconds": 5.0,
+              "offset_samples": 0,
+              "correlation": 1.0,
+              "spectral_cosine": 0.9999999999999999,
+              "reference_dominant_hz": 82.5,
+              "fast_dominant_hz": 82.5,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 8,
+              "reference_start_seconds": 8.0,
+              "offset_samples": 0,
+              "correlation": 1.0,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 65.5,
+              "fast_dominant_hz": 65.5,
+              "same_sample_scale": true
+            }
+          ],
+          "phrase_time_slope": 1.0000000000000004,
+          "audio_clock_sample_rate_ratio": -0.23531643445952596,
+          "observation": "SAME_SCALE_AGREEMENT"
+        }
+      ],
+      "universal_steady_comparisons": [
+        {
+          "speed": 2,
+          "windows": [
+            {
+              "fast_start_seconds": 3,
+              "reference_start_seconds": 3.0,
+              "offset_samples": 0,
+              "correlation": 0.9999999999999998,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 77.5,
+              "fast_dominant_hz": 77.5,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 6,
+              "reference_start_seconds": 6.0,
+              "offset_samples": 0,
+              "correlation": 1.0,
+              "spectral_cosine": 1.0000000000000002,
+              "reference_dominant_hz": 58.5,
+              "fast_dominant_hz": 58.5,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 9,
+              "reference_start_seconds": 9.0,
+              "offset_samples": 0,
+              "correlation": 1.0000000000000002,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 77.5,
+              "fast_dominant_hz": 77.5,
+              "same_sample_scale": true
+            }
+          ],
+          "agreement": true,
+          "phrase_time_slope": 1.0
+        },
+        {
+          "speed": 3,
+          "windows": [
+            {
+              "fast_start_seconds": 3,
+              "reference_start_seconds": 3.0,
+              "offset_samples": 0,
+              "correlation": 0.9999999999999998,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 77.5,
+              "fast_dominant_hz": 77.5,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 6,
+              "reference_start_seconds": 6.0,
+              "offset_samples": 0,
+              "correlation": 1.0,
+              "spectral_cosine": 1.0000000000000002,
+              "reference_dominant_hz": 58.5,
+              "fast_dominant_hz": 58.5,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 9,
+              "reference_start_seconds": 9.0,
+              "offset_samples": 0,
+              "correlation": 1.0000000000000002,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 77.5,
+              "fast_dominant_hz": 77.5,
+              "same_sample_scale": true
+            }
+          ],
+          "agreement": true,
+          "phrase_time_slope": 1.0
+        }
+      ],
+      "same_initial_ram": true,
+      "audio_sha256": {
+        "1": "391BEE1856FFB42AB93A1025103914B91720C05CB8AD13F35B7FFF1541FAFACD",
+        "2": "654FC7F71EC66BD340C92DF6930FE2D32212F954500CE8B816E60491DD36D2AF",
+        "3": "4B8EFF3BE9AFFEDBF12571960340EB6EBCCE31885D93C64105B9D2DF4E299DB9"
+      },
+      "scene_state_sha256": "FDA02F091A3797B6DDF0F6AD46380A1BC69AB64394C9F8314AA22847B0BA3706",
+      "note": "STATE_LOAD_POSITION_NOT_RECONSTRUCTIBLE repeats for this two-player title fixture. Native pending/recovery preserved; scanning/profile discovery succeeds. Same-scale native prefixes are not Fixed BGM proof. Sustained game speed also falls below3x in this fixture.",
+      "scope_is_not_full_game": true
+    },
+    {
+      "release_id": "gba-430a7062844888e68bd5587ed53a769ba548adb3",
+      "sha256": "FB388539B95FDAF6009BAD879E9BBB25955DAF8D4D438486A9213D407B2B48CE",
+      "sha1": "430A7062844888E68BD5587ED53A769BA548ADB3",
+      "crc32": "3C24ABCC",
+      "rom_size": 8388608,
+      "game_code": "A9HJ",
+      "revision": null,
+      "bgm_verification_status": "BGM_CONFIRMED",
+      "bgm_test_speeds": [
+        1,
+        2,
+        3
+      ],
+      "bgm_test_scope": "Tested loaded scene only; Fixed1x versus Fixed2x/3x normal sample scale. Native1x fidelity and listening are separately reported, not certified by this status. original 2/5/8s; human listening pending; no complete-playthrough or SE guarantee.",
+      "bgm_tested_commit": "d451f54da8aea4217130574df42aee775cd369a5",
+      "bgm_evidence": "compatibility/sources/v04-bgm-observations.json#A9HJ",
+      "audio_comparisons": [
+        {
+          "speed": 2,
+          "sample_rate": 32768,
+          "common_frames": 395050,
+          "exact_prefix_frames": 11015,
+          "exact_prefix_seconds": 0.336151123046875,
+          "first_different_sample": 11015,
+          "different_stereo_frames": 368975,
+          "windows": [
+            {
+              "fast_start_seconds": 2,
+              "reference_start_seconds": 1.87445068359375,
+              "offset_samples": -4114,
+              "correlation": 1.0,
+              "spectral_cosine": 0.9999999999999999,
+              "reference_dominant_hz": 659.5,
+              "fast_dominant_hz": 659.5,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 5,
+              "reference_start_seconds": 4.87445068359375,
+              "offset_samples": -4114,
+              "correlation": 1.0000000000000002,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 881.5,
+              "fast_dominant_hz": 881.5,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 8,
+              "reference_start_seconds": 7.87445068359375,
+              "offset_samples": -4114,
+              "correlation": 1.0,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 661.0,
+              "fast_dominant_hz": 661.0,
+              "same_sample_scale": true
+            }
+          ],
+          "phrase_time_slope": 1.0000000000000004,
+          "audio_clock_sample_rate_ratio": 1.00002488080193,
+          "observation": "SAME_SCALE_AGREEMENT"
+        },
+        {
+          "speed": 3,
+          "sample_rate": 32768,
+          "common_frames": 395050,
+          "exact_prefix_frames": 11015,
+          "exact_prefix_seconds": 0.336151123046875,
+          "first_different_sample": 11015,
+          "different_stereo_frames": 370342,
+          "windows": [
+            {
+              "fast_start_seconds": 2,
+              "reference_start_seconds": 1.83258056640625,
+              "offset_samples": -5486,
+              "correlation": 0.9999999999999998,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 659.5,
+              "fast_dominant_hz": 659.5,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 5,
+              "reference_start_seconds": 4.83258056640625,
+              "offset_samples": -5486,
+              "correlation": 1.0,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 881.5,
+              "fast_dominant_hz": 881.5,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 8,
+              "reference_start_seconds": 7.83258056640625,
+              "offset_samples": -5486,
+              "correlation": 0.9999999999999998,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 660.5,
+              "fast_dominant_hz": 660.5,
+              "same_sample_scale": true
+            }
+          ],
+          "phrase_time_slope": 1.0000000000000004,
+          "audio_clock_sample_rate_ratio": 1.0000374073701745,
+          "observation": "SAME_SCALE_AGREEMENT"
+        }
+      ],
+      "universal_steady_comparisons": [
+        {
+          "speed": 2,
+          "windows": [
+            {
+              "fast_start_seconds": 3,
+              "reference_start_seconds": 2.87445068359375,
+              "offset_samples": -4114,
+              "correlation": 1.0,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 83.5,
+              "fast_dominant_hz": 83.5,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 6,
+              "reference_start_seconds": 5.87445068359375,
+              "offset_samples": -4114,
+              "correlation": 1.0,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 66.0,
+              "fast_dominant_hz": 66.0,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 9,
+              "reference_start_seconds": 8.87445068359375,
+              "offset_samples": -4114,
+              "correlation": 0.9999999999999998,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 329.0,
+              "fast_dominant_hz": 329.0,
+              "same_sample_scale": true
+            }
+          ],
+          "agreement": true,
+          "phrase_time_slope": 1.0
+        },
+        {
+          "speed": 3,
+          "windows": [
+            {
+              "fast_start_seconds": 3,
+              "reference_start_seconds": 2.83258056640625,
+              "offset_samples": -5486,
+              "correlation": 1.0,
+              "spectral_cosine": 0.9999999999999999,
+              "reference_dominant_hz": 522.0,
+              "fast_dominant_hz": 522.0,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 6,
+              "reference_start_seconds": 5.83258056640625,
+              "offset_samples": -5486,
+              "correlation": 1.0,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 99.0,
+              "fast_dominant_hz": 99.0,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 9,
+              "reference_start_seconds": 8.83258056640625,
+              "offset_samples": -5486,
+              "correlation": 0.9999999999999997,
+              "spectral_cosine": 0.9999999999999999,
+              "reference_dominant_hz": 329.0,
+              "fast_dominant_hz": 329.0,
+              "same_sample_scale": true
+            }
+          ],
+          "agreement": true,
+          "phrase_time_slope": 0.9999999999999999
+        }
+      ],
+      "same_initial_ram": true,
+      "audio_sha256": {
+        "1": "1B5C5C110152D260D7AE718C9783B7D09A8719FA6219CD2F10D2B6F99BC3E19B",
+        "2": "D4DE63216C4A2CB581DBABADA03654D032C8AFCFB849A4120B4CB3605EE8E860",
+        "3": "CA32FE4FC51ACA9D0FE33C0E3231E981E171A22D0CB0BD0F0401FF729034CDF7"
+      },
+      "scene_state_sha256": "145B70FB5A562F7CF4BC8CAD0A9B11D6E122FA5762B74C29D5466229D0E861E1",
+      "note": "Scoped BGM comparison. No full-game/region/revision extrapolation.",
+      "scope_is_not_full_game": true
+    },
+    {
+      "release_id": "gba-6eb9208c493e8baa43ecc0dacf71a8cb631be7ca",
+      "sha256": "80567CD4A90A16913D7FBF9752DED5851D58B88C3CE074BDD3EC21EDDA9B1787",
+      "sha1": "6EB9208C493E8BAA43ECC0DACF71A8CB631BE7CA",
+      "crc32": "DBDC71E3",
+      "rom_size": 16777216,
+      "game_code": "BFTJ",
+      "revision": null,
+      "bgm_verification_status": "BGM_NOT_ACTIVE",
+      "bgm_test_speeds": [
+        1,
+        2,
+        3
+      ],
+      "bgm_test_scope": "Tested loaded scene only; Fixed1x versus Fixed2x/3x normal sample scale. Native1x fidelity and listening are separately reported, not certified by this status. universal steady 3/6/9s; human listening pending; no complete-playthrough or SE guarantee.",
+      "bgm_tested_commit": "d451f54da8aea4217130574df42aee775cd369a5",
+      "bgm_evidence": "compatibility/sources/v04-bgm-observations.json#BFTJ",
+      "audio_comparisons": [
+        {
+          "speed": 2,
+          "sample_rate": 32768,
+          "common_frames": 393288,
+          "exact_prefix_frames": 5413,
+          "exact_prefix_seconds": 0.165191650390625,
+          "first_different_sample": 5413,
+          "different_stereo_frames": 387845,
+          "windows": [
+            {
+              "fast_start_seconds": 2,
+              "reference_start_seconds": 1.93304443359375,
+              "offset_samples": -2194,
+              "correlation": 0.8538769074132749,
+              "spectral_cosine": 0.99675081205378,
+              "reference_dominant_hz": 63.0,
+              "fast_dominant_hz": 63.0,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 5,
+              "reference_start_seconds": 4.93304443359375,
+              "offset_samples": -2194,
+              "correlation": 1.0,
+              "spectral_cosine": 1.0000000000000002,
+              "reference_dominant_hz": 63.0,
+              "fast_dominant_hz": 63.0,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 8,
+              "reference_start_seconds": 7.93304443359375,
+              "offset_samples": -2194,
+              "correlation": 1.0,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 68.0,
+              "fast_dominant_hz": 68.0,
+              "same_sample_scale": true
+            }
+          ],
+          "phrase_time_slope": 1.0000000000000004,
+          "audio_clock_sample_rate_ratio": 1.00002488080193,
+          "observation": "INCONCLUSIVE"
+        },
+        {
+          "speed": 3,
+          "sample_rate": 32768,
+          "common_frames": 393288,
+          "exact_prefix_frames": 5413,
+          "exact_prefix_seconds": 0.165191650390625,
+          "first_different_sample": 5413,
+          "different_stereo_frames": 387837,
+          "windows": [
+            {
+              "fast_start_seconds": 2,
+              "reference_start_seconds": 1.91070556640625,
+              "offset_samples": -2926,
+              "correlation": 0.8379413843902331,
+              "spectral_cosine": 0.9956989952843518,
+              "reference_dominant_hz": 63.0,
+              "fast_dominant_hz": 63.0,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 5,
+              "reference_start_seconds": 4.91070556640625,
+              "offset_samples": -2926,
+              "correlation": 1.0000000000000004,
+              "spectral_cosine": 1.0000000000000002,
+              "reference_dominant_hz": 63.0,
+              "fast_dominant_hz": 63.0,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 8,
+              "reference_start_seconds": 7.91070556640625,
+              "offset_samples": -2926,
+              "correlation": 1.0000000000000004,
+              "spectral_cosine": 0.9999999999999999,
+              "reference_dominant_hz": 68.0,
+              "fast_dominant_hz": 68.0,
+              "same_sample_scale": true
+            }
+          ],
+          "phrase_time_slope": 1.0000000000000004,
+          "audio_clock_sample_rate_ratio": 1.0000374073701745,
+          "observation": "INCONCLUSIVE"
+        }
+      ],
+      "universal_steady_comparisons": [
+        {
+          "speed": 2,
+          "windows": [
+            {
+              "fast_start_seconds": 3,
+              "reference_start_seconds": 2.93304443359375,
+              "offset_samples": -2194,
+              "correlation": 1.0,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 67.5,
+              "fast_dominant_hz": 67.5,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 6,
+              "reference_start_seconds": 5.93304443359375,
+              "offset_samples": -2194,
+              "correlation": 1.0,
+              "spectral_cosine": 0.9999999999999999,
+              "reference_dominant_hz": 67.5,
+              "fast_dominant_hz": 67.5,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 9,
+              "reference_start_seconds": 8.93304443359375,
+              "offset_samples": -2194,
+              "correlation": 1.0,
+              "spectral_cosine": 0.9999999999999999,
+              "reference_dominant_hz": 63.0,
+              "fast_dominant_hz": 63.0,
+              "same_sample_scale": true
+            }
+          ],
+          "agreement": true,
+          "phrase_time_slope": 1.0
+        },
+        {
+          "speed": 3,
+          "windows": [
+            {
+              "fast_start_seconds": 3,
+              "reference_start_seconds": 2.91070556640625,
+              "offset_samples": -2926,
+              "correlation": 1.0,
+              "spectral_cosine": 1.0000000000000002,
+              "reference_dominant_hz": 67.5,
+              "fast_dominant_hz": 67.5,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 6,
+              "reference_start_seconds": 5.91070556640625,
+              "offset_samples": -2926,
+              "correlation": 0.9999999999999998,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 67.5,
+              "fast_dominant_hz": 67.5,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 9,
+              "reference_start_seconds": 8.91070556640625,
+              "offset_samples": -2926,
+              "correlation": 1.0,
+              "spectral_cosine": 1.0000000000000002,
+              "reference_dominant_hz": 63.0,
+              "fast_dominant_hz": 63.0,
+              "same_sample_scale": true
+            }
+          ],
+          "agreement": true,
+          "phrase_time_slope": 0.9999999999999999
+        }
+      ],
+      "same_initial_ram": true,
+      "audio_sha256": {
+        "1": "64F694817886E8542B80DF25049131242E8B8CBE0041C0353A854B8B2A43C11C",
+        "2": "ED9268E7935DA214069814D1D1CB5B6EA04FF976D0DD453C967760629650F314",
+        "3": "AC809EE2437F8E690A20EFB824E914EC3623E95AA347C68E0F5BBC35E1C2E848"
+      },
+      "scene_state_sha256": "7FEF4850F1034020E717C427484FFE6BCA786907C3351D22655E0ECF8C556214",
+      "note": "Headless loaded-state steady windows pass, but real RetroArch cold startup emits MPLAY_STOP with player=-1 / null pointer and guard=0 (UNKNOWN_PLAYER_POINTER). Existing HARD sticky native fallback is preserved across Load. Final BGM_NOT_ACTIVE, not confirmed from a bypassing loaded-state test.",
+      "scope_is_not_full_game": true
+    },
+    {
+      "release_id": "gba-35f47a985873b3018d4be05ab7b539dfe3bff21a",
+      "sha256": "D07EDBE5EF2AF76FCEA3E56FF735B6892CA8F0B0D6A0CDE0E7CCCD23821812BD",
+      "sha1": "35F47A985873B3018D4BE05AB7B539DFE3BFF21A",
+      "crc32": "2446B920",
+      "rom_size": 16777216,
+      "game_code": "BFZJ",
+      "revision": null,
+      "bgm_verification_status": "BGM_CONFIRMED",
+      "bgm_test_speeds": [
+        1,
+        2,
+        3
+      ],
+      "bgm_test_scope": "Tested loaded scene only; Fixed1x versus Fixed2x/3x normal sample scale. Native1x fidelity and listening are separately reported, not certified by this status. original 2/5/8s; human listening pending; no complete-playthrough or SE guarantee.",
+      "bgm_tested_commit": "d451f54da8aea4217130574df42aee775cd369a5",
+      "bgm_evidence": "compatibility/sources/v04-bgm-observations.json#BFZJ",
+      "audio_comparisons": [
+        {
+          "speed": 2,
+          "sample_rate": 32768,
+          "common_frames": 393629,
+          "exact_prefix_frames": 6851,
+          "exact_prefix_seconds": 0.209075927734375,
+          "first_different_sample": 6851,
+          "different_stereo_frames": 386733,
+          "windows": [
+            {
+              "fast_start_seconds": 2,
+              "reference_start_seconds": 1.916290283203125,
+              "offset_samples": -2743,
+              "correlation": 1.0,
+              "spectral_cosine": 1.0000000000000002,
+              "reference_dominant_hz": 85.5,
+              "fast_dominant_hz": 85.5,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 5,
+              "reference_start_seconds": 4.916290283203125,
+              "offset_samples": -2743,
+              "correlation": 1.0000000000000004,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 46.5,
+              "fast_dominant_hz": 46.5,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 8,
+              "reference_start_seconds": 7.916290283203125,
+              "offset_samples": -2743,
+              "correlation": 0.9999999999999999,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 468.0,
+              "fast_dominant_hz": 468.0,
+              "same_sample_scale": true
+            }
+          ],
+          "phrase_time_slope": 1.0000000000000007,
+          "audio_clock_sample_rate_ratio": 1.00002488080193,
+          "observation": "SAME_SCALE_AGREEMENT"
+        },
+        {
+          "speed": 3,
+          "sample_rate": 32768,
+          "common_frames": 393629,
+          "exact_prefix_frames": 6851,
+          "exact_prefix_seconds": 0.209075927734375,
+          "first_different_sample": 6851,
+          "different_stereo_frames": 386730,
+          "windows": [
+            {
+              "fast_start_seconds": 2,
+              "reference_start_seconds": 1.888397216796875,
+              "offset_samples": -3657,
+              "correlation": 1.0000000000000004,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 85.5,
+              "fast_dominant_hz": 85.5,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 5,
+              "reference_start_seconds": 4.888397216796875,
+              "offset_samples": -3657,
+              "correlation": 1.0000000000000002,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 46.5,
+              "fast_dominant_hz": 46.5,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 8,
+              "reference_start_seconds": 7.888397216796875,
+              "offset_samples": -3657,
+              "correlation": 0.9999999999999999,
+              "spectral_cosine": 1.0000000000000002,
+              "reference_dominant_hz": 468.0,
+              "fast_dominant_hz": 468.0,
+              "same_sample_scale": true
+            }
+          ],
+          "phrase_time_slope": 1.0000000000000004,
+          "audio_clock_sample_rate_ratio": 1.0000374073701745,
+          "observation": "SAME_SCALE_AGREEMENT"
+        }
+      ],
+      "universal_steady_comparisons": [
+        {
+          "speed": 2,
+          "windows": [
+            {
+              "fast_start_seconds": 3,
+              "reference_start_seconds": 2.916290283203125,
+              "offset_samples": -2743,
+              "correlation": 1.0,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 697.0,
+              "fast_dominant_hz": 697.0,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 6,
+              "reference_start_seconds": 5.916290283203125,
+              "offset_samples": -2743,
+              "correlation": 1.0,
+              "spectral_cosine": 1.0000000000000002,
+              "reference_dominant_hz": 102.0,
+              "fast_dominant_hz": 102.0,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 9,
+              "reference_start_seconds": 8.916290283203125,
+              "offset_samples": -2743,
+              "correlation": 1.0,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 52.0,
+              "fast_dominant_hz": 52.0,
+              "same_sample_scale": true
+            }
+          ],
+          "agreement": true,
+          "phrase_time_slope": 1.0000000000000002
+        },
+        {
+          "speed": 3,
+          "windows": [
+            {
+              "fast_start_seconds": 3,
+              "reference_start_seconds": 2.888397216796875,
+              "offset_samples": -3657,
+              "correlation": 1.0000000000000002,
+              "spectral_cosine": 1.0000000000000002,
+              "reference_dominant_hz": 697.0,
+              "fast_dominant_hz": 697.0,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 6,
+              "reference_start_seconds": 5.888397216796875,
+              "offset_samples": -3657,
+              "correlation": 1.0000000000000002,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 102.0,
+              "fast_dominant_hz": 102.0,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 9,
+              "reference_start_seconds": 8.888397216796875,
+              "offset_samples": -3657,
+              "correlation": 1.0000000000000002,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 52.0,
+              "fast_dominant_hz": 52.0,
+              "same_sample_scale": true
+            }
+          ],
+          "agreement": true,
+          "phrase_time_slope": 0.9999999999999999
+        }
+      ],
+      "same_initial_ram": true,
+      "audio_sha256": {
+        "1": "4396858C71F8DCD40F2BDC40D8D279657D40675A2A86C27C0100B940CAA336D6",
+        "2": "24564BB9B6CBE539668A641BE2F2D53389403279DB2AFD5EB41EB8C287CBB4B2",
+        "3": "5123BEF625AC07F6EF158A6D0A880A4DE054DF2EF623ABC63E9EA37CCAB2FAE2"
+      },
+      "scene_state_sha256": "87353516A5DB99556AB17F61695FB5F7CBF61FEAD03F682281D270300B8BA353",
+      "note": "Scoped BGM comparison. No full-game/region/revision extrapolation.",
+      "scope_is_not_full_game": true
+    },
+    {
+      "release_id": "gba-ca16dc4044b9ae98a26c826bb3cc19a7e8315315",
+      "sha256": "F269A5046863C7108726C036FE08521FCE70C2C65B25BC67C16495EB7FC0B8F7",
+      "sha1": "CA16DC4044B9AE98A26C826BB3CC19A7E8315315",
+      "crc32": "E2D94B0D",
+      "rom_size": 8388608,
+      "game_code": "BTAJ",
+      "revision": null,
+      "bgm_verification_status": "BGM_CONFIRMED",
+      "bgm_test_speeds": [
+        1,
+        2,
+        3
+      ],
+      "bgm_test_scope": "Tested loaded scene only; Fixed1x versus Fixed2x/3x normal sample scale. Native1x fidelity and listening are separately reported, not certified by this status. original 2/5/8s; human listening pending; no complete-playthrough or SE guarantee.",
+      "bgm_tested_commit": "d451f54da8aea4217130574df42aee775cd369a5",
+      "bgm_evidence": "compatibility/sources/v04-bgm-observations.json#BTAJ",
+      "audio_comparisons": [
+        {
+          "speed": 2,
+          "sample_rate": 32768,
+          "common_frames": 393288,
+          "exact_prefix_frames": 5413,
+          "exact_prefix_seconds": 0.165191650390625,
+          "first_different_sample": 5413,
+          "different_stereo_frames": 387872,
+          "windows": [
+            {
+              "fast_start_seconds": 2,
+              "reference_start_seconds": 1.93304443359375,
+              "offset_samples": -2194,
+              "correlation": 0.9999999999999998,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 351.0,
+              "fast_dominant_hz": 351.0,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 5,
+              "reference_start_seconds": 4.93304443359375,
+              "offset_samples": -2194,
+              "correlation": 1.0000000000000002,
+              "spectral_cosine": 0.9999999999999999,
+              "reference_dominant_hz": 130.0,
+              "fast_dominant_hz": 130.0,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 8,
+              "reference_start_seconds": 7.93304443359375,
+              "offset_samples": -2194,
+              "correlation": 0.9999999999999998,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 471.0,
+              "fast_dominant_hz": 471.0,
+              "same_sample_scale": true
+            }
+          ],
+          "phrase_time_slope": 1.0000000000000004,
+          "audio_clock_sample_rate_ratio": 1.00002488080193,
+          "observation": "SAME_SCALE_AGREEMENT"
+        },
+        {
+          "speed": 3,
+          "sample_rate": 32768,
+          "common_frames": 393288,
+          "exact_prefix_frames": 5413,
+          "exact_prefix_seconds": 0.165191650390625,
+          "first_different_sample": 5413,
+          "different_stereo_frames": 387869,
+          "windows": [
+            {
+              "fast_start_seconds": 2,
+              "reference_start_seconds": 1.91070556640625,
+              "offset_samples": -2926,
+              "correlation": 1.0000000000000002,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 351.0,
+              "fast_dominant_hz": 351.0,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 5,
+              "reference_start_seconds": 4.91070556640625,
+              "offset_samples": -2926,
+              "correlation": 1.0000000000000002,
+              "spectral_cosine": 1.0000000000000002,
+              "reference_dominant_hz": 130.0,
+              "fast_dominant_hz": 130.0,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 8,
+              "reference_start_seconds": 7.91070556640625,
+              "offset_samples": -2926,
+              "correlation": 0.999980429585449,
+              "spectral_cosine": 0.9999999999951061,
+              "reference_dominant_hz": 74.5,
+              "fast_dominant_hz": 74.5,
+              "same_sample_scale": true
+            }
+          ],
+          "phrase_time_slope": 1.0000000000000004,
+          "audio_clock_sample_rate_ratio": 1.0000374073701745,
+          "observation": "SAME_SCALE_AGREEMENT"
+        }
+      ],
+      "universal_steady_comparisons": [
+        {
+          "speed": 2,
+          "windows": [
+            {
+              "fast_start_seconds": 3,
+              "reference_start_seconds": 2.93304443359375,
+              "offset_samples": -2194,
+              "correlation": 1.0,
+              "spectral_cosine": 0.9999999999999998,
+              "reference_dominant_hz": 349.0,
+              "fast_dominant_hz": 349.0,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 6,
+              "reference_start_seconds": 5.93304443359375,
+              "offset_samples": -2194,
+              "correlation": 1.0000000000000002,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 351.0,
+              "fast_dominant_hz": 351.0,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 9,
+              "reference_start_seconds": 8.93304443359375,
+              "offset_samples": -2194,
+              "correlation": 0.9999999999999999,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 471.5,
+              "fast_dominant_hz": 471.5,
+              "same_sample_scale": true
+            }
+          ],
+          "agreement": true,
+          "phrase_time_slope": 1.0
+        },
+        {
+          "speed": 3,
+          "windows": [
+            {
+              "fast_start_seconds": 3,
+              "reference_start_seconds": 2.91070556640625,
+              "offset_samples": -2926,
+              "correlation": 0.9999999999999998,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 349.0,
+              "fast_dominant_hz": 349.0,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 6,
+              "reference_start_seconds": 5.91070556640625,
+              "offset_samples": -2926,
+              "correlation": 1.0000000000000002,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 351.0,
+              "fast_dominant_hz": 351.0,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 9,
+              "reference_start_seconds": 8.91070556640625,
+              "offset_samples": -2926,
+              "correlation": 0.7446975843193704,
+              "spectral_cosine": 0.9059787405580987,
+              "reference_dominant_hz": 471.5,
+              "fast_dominant_hz": 445.0,
+              "same_sample_scale": true
+            }
+          ],
+          "agreement": false,
+          "phrase_time_slope": 0.9999999999999999
+        }
+      ],
+      "same_initial_ram": true,
+      "audio_sha256": {
+        "1": "85913BB34C9F637EADDE89EF18AC36814D5B7B074CBBD711CAB02CA714BEE1DB",
+        "2": "3B3B9CA88E0E9FFBC52922D40316077B021BE7CACE8D2A7BB888B29D69F326BE",
+        "3": "53E0DE1B2CE71D2FC567F284EEB471E00644DDE8089DEB34620236B4A6184CCD"
+      },
+      "scene_state_sha256": "FC4FBBE7266AEE550EADD00920232C40BC80F3AAB6C141213F4A3B7455DB3B7D",
+      "note": "Original windows pass. Additional late window diverges around game FADE/STOP/restart of song24. Confirmation is limited to the early comparison windows.",
+      "scope_is_not_full_game": true
+    },
+    {
+      "release_id": "gba-70a7229a57f4a296a661136e07e23668011310bf",
+      "sha256": "B789D472269A104EDEA88DD0DB3D1BB2BF8A60DBD1F851746F053BF427A33C4B",
+      "sha1": "70A7229A57F4A296A661136E07E23668011310BF",
+      "crc32": "A592F7DF",
+      "rom_size": 8388608,
+      "game_code": "ACGJ",
+      "revision": null,
+      "bgm_verification_status": "BGM_CONFIRMED",
+      "bgm_test_speeds": [
+        1,
+        2,
+        3
+      ],
+      "bgm_test_scope": "Tested loaded scene only; Fixed1x versus Fixed2x/3x normal sample scale. Native1x fidelity and listening are separately reported, not certified by this status. original 2/5/8s; human listening pending; no complete-playthrough or SE guarantee.",
+      "bgm_tested_commit": "d451f54da8aea4217130574df42aee775cd369a5",
+      "bgm_evidence": "compatibility/sources/v04-bgm-observations.json#ACGJ",
+      "audio_comparisons": [
+        {
+          "speed": 2,
+          "sample_rate": 32768,
+          "common_frames": 392807,
+          "exact_prefix_frames": 4932,
+          "exact_prefix_seconds": 0.1505126953125,
+          "first_different_sample": 4932,
+          "different_stereo_frames": 387834,
+          "windows": [
+            {
+              "fast_start_seconds": 2,
+              "reference_start_seconds": 1.93304443359375,
+              "offset_samples": -2194,
+              "correlation": 1.0000000000000002,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 789.5,
+              "fast_dominant_hz": 789.5,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 5,
+              "reference_start_seconds": 4.93304443359375,
+              "offset_samples": -2194,
+              "correlation": 1.0,
+              "spectral_cosine": 0.9999999999999999,
+              "reference_dominant_hz": 263.0,
+              "fast_dominant_hz": 263.0,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 8,
+              "reference_start_seconds": 7.93304443359375,
+              "offset_samples": -2194,
+              "correlation": 1.0,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 263.0,
+              "fast_dominant_hz": 263.0,
+              "same_sample_scale": true
+            }
+          ],
+          "phrase_time_slope": 1.0000000000000004,
+          "audio_clock_sample_rate_ratio": 1.00002488080193,
+          "observation": "SAME_SCALE_AGREEMENT"
+        },
+        {
+          "speed": 3,
+          "sample_rate": 32768,
+          "common_frames": 392807,
+          "exact_prefix_frames": 4932,
+          "exact_prefix_seconds": 0.1505126953125,
+          "first_different_sample": 4932,
+          "different_stereo_frames": 387819,
+          "windows": [
+            {
+              "fast_start_seconds": 2,
+              "reference_start_seconds": 1.91070556640625,
+              "offset_samples": -2926,
+              "correlation": 1.0000000000000002,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 789.5,
+              "fast_dominant_hz": 789.5,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 5,
+              "reference_start_seconds": 4.91070556640625,
+              "offset_samples": -2926,
+              "correlation": 1.0,
+              "spectral_cosine": 1.0000000000000002,
+              "reference_dominant_hz": 263.0,
+              "fast_dominant_hz": 263.0,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 8,
+              "reference_start_seconds": 7.91070556640625,
+              "offset_samples": -2926,
+              "correlation": 1.0000000000000002,
+              "spectral_cosine": 0.9999999999999998,
+              "reference_dominant_hz": 263.0,
+              "fast_dominant_hz": 263.0,
+              "same_sample_scale": true
+            }
+          ],
+          "phrase_time_slope": 1.0000000000000004,
+          "audio_clock_sample_rate_ratio": 1.0000374073701745,
+          "observation": "SAME_SCALE_AGREEMENT"
+        }
+      ],
+      "universal_steady_comparisons": [
+        {
+          "speed": 2,
+          "windows": [
+            {
+              "fast_start_seconds": 3,
+              "reference_start_seconds": 2.93304443359375,
+              "offset_samples": -2194,
+              "correlation": 1.0,
+              "spectral_cosine": 0.9999999999999998,
+              "reference_dominant_hz": 785.0,
+              "fast_dominant_hz": 785.0,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 6,
+              "reference_start_seconds": 5.93304443359375,
+              "offset_samples": -2194,
+              "correlation": 0.9999999999999998,
+              "spectral_cosine": 0.9999999999999999,
+              "reference_dominant_hz": 263.0,
+              "fast_dominant_hz": 263.0,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 9,
+              "reference_start_seconds": 8.93304443359375,
+              "offset_samples": -2194,
+              "correlation": 1.0,
+              "spectral_cosine": 1.0000000000000002,
+              "reference_dominant_hz": 263.0,
+              "fast_dominant_hz": 263.0,
+              "same_sample_scale": true
+            }
+          ],
+          "agreement": true,
+          "phrase_time_slope": 1.0
+        },
+        {
+          "speed": 3,
+          "windows": [
+            {
+              "fast_start_seconds": 3,
+              "reference_start_seconds": 2.91070556640625,
+              "offset_samples": -2926,
+              "correlation": 0.9999999999999999,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 785.0,
+              "fast_dominant_hz": 785.0,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 6,
+              "reference_start_seconds": 5.91070556640625,
+              "offset_samples": -2926,
+              "correlation": 0.9999999999999998,
+              "spectral_cosine": 1.0000000000000002,
+              "reference_dominant_hz": 263.0,
+              "fast_dominant_hz": 263.0,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 9,
+              "reference_start_seconds": 8.91070556640625,
+              "offset_samples": -2926,
+              "correlation": 1.0000000000000002,
+              "spectral_cosine": 0.9999999999999998,
+              "reference_dominant_hz": 263.0,
+              "fast_dominant_hz": 263.0,
+              "same_sample_scale": true
+            }
+          ],
+          "agreement": true,
+          "phrase_time_slope": 0.9999999999999999
+        }
+      ],
+      "same_initial_ram": true,
+      "audio_sha256": {
+        "1": "ABDA7CDDEC8B9C3CA444156220A15B8D1C5A744BB0FAB1CE4842EB39926E79B6",
+        "2": "0295E8E9DE18D58C572B41F08772A67A0CF6B3A12244218BC8676485DEEB8839",
+        "3": "B8AF84EEA6B3B34D8AB88EF7249093B5C67D2B368D041624721A9995D4ED225A"
+      },
+      "scene_state_sha256": "50CE7044834253B50B6119E858D7B37B415E06605AC5C304B16FFC4BD1D31F12",
+      "note": "Scoped BGM comparison. No full-game/region/revision extrapolation.",
+      "scope_is_not_full_game": true
+    },
+    {
+      "release_id": "gba-973594b533fa97319ea791c09905837b20fd9fca",
+      "sha256": "8B06A5CE76FE280CBDDB4C317B64872F9EFA3BB80BBBADBF7E4C1C124E608E2F",
+      "sha1": "973594B533FA97319EA791C09905837B20FD9FCA",
+      "crc32": "BE9FD5E7",
+      "rom_size": 4194304,
+      "game_code": "A2BJ",
+      "revision": null,
+      "bgm_verification_status": "BGM_CONFIRMED",
+      "bgm_test_speeds": [
+        1,
+        2,
+        3
+      ],
+      "bgm_test_scope": "Tested loaded scene only; Fixed1x versus Fixed2x/3x normal sample scale. Native1x fidelity and listening are separately reported, not certified by this status. original 2/5/8s; human listening pending; no complete-playthrough or SE guarantee.",
+      "bgm_tested_commit": "d451f54da8aea4217130574df42aee775cd369a5",
+      "bgm_evidence": "compatibility/sources/v04-bgm-observations.json#A2BJ",
+      "audio_comparisons": [
+        {
+          "speed": 2,
+          "sample_rate": 32768,
+          "common_frames": 393288,
+          "exact_prefix_frames": 5413,
+          "exact_prefix_seconds": 0.165191650390625,
+          "first_different_sample": 5413,
+          "different_stereo_frames": 386628,
+          "windows": [
+            {
+              "fast_start_seconds": 2,
+              "reference_start_seconds": 1.93304443359375,
+              "offset_samples": -2194,
+              "correlation": 1.0000000000000002,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 58.5,
+              "fast_dominant_hz": 58.5,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 5,
+              "reference_start_seconds": 4.93304443359375,
+              "offset_samples": -2194,
+              "correlation": 1.0,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 117.0,
+              "fast_dominant_hz": 117.0,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 8,
+              "reference_start_seconds": 7.93304443359375,
+              "offset_samples": -2194,
+              "correlation": 1.0,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 51.5,
+              "fast_dominant_hz": 51.5,
+              "same_sample_scale": true
+            }
+          ],
+          "phrase_time_slope": 1.0000000000000004,
+          "audio_clock_sample_rate_ratio": 1.00002488080193,
+          "observation": "SAME_SCALE_AGREEMENT"
+        },
+        {
+          "speed": 3,
+          "sample_rate": 32768,
+          "common_frames": 393288,
+          "exact_prefix_frames": 5413,
+          "exact_prefix_seconds": 0.165191650390625,
+          "first_different_sample": 5413,
+          "different_stereo_frames": 387717,
+          "windows": [
+            {
+              "fast_start_seconds": 2,
+              "reference_start_seconds": 1.91070556640625,
+              "offset_samples": -2926,
+              "correlation": 1.0000000000000002,
+              "spectral_cosine": 1.0000000000000002,
+              "reference_dominant_hz": 58.5,
+              "fast_dominant_hz": 58.5,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 5,
+              "reference_start_seconds": 4.91070556640625,
+              "offset_samples": -2926,
+              "correlation": 1.0,
+              "spectral_cosine": 0.9999999999999998,
+              "reference_dominant_hz": 52.0,
+              "fast_dominant_hz": 52.0,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 8,
+              "reference_start_seconds": 7.91070556640625,
+              "offset_samples": -2926,
+              "correlation": 1.0000000000000002,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 51.5,
+              "fast_dominant_hz": 51.5,
+              "same_sample_scale": true
+            }
+          ],
+          "phrase_time_slope": 1.0000000000000004,
+          "audio_clock_sample_rate_ratio": 1.0000374073701745,
+          "observation": "SAME_SCALE_AGREEMENT"
+        }
+      ],
+      "universal_steady_comparisons": [
+        {
+          "speed": 2,
+          "windows": [
+            {
+              "fast_start_seconds": 3,
+              "reference_start_seconds": 2.93304443359375,
+              "offset_samples": -2194,
+              "correlation": 1.0,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 52.0,
+              "fast_dominant_hz": 52.0,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 6,
+              "reference_start_seconds": 5.93304443359375,
+              "offset_samples": -2194,
+              "correlation": 0.9999999999999999,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 58.5,
+              "fast_dominant_hz": 58.5,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 9,
+              "reference_start_seconds": 8.93304443359375,
+              "offset_samples": -2194,
+              "correlation": 1.0,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 57.5,
+              "fast_dominant_hz": 57.5,
+              "same_sample_scale": true
+            }
+          ],
+          "agreement": true,
+          "phrase_time_slope": 1.0
+        },
+        {
+          "speed": 3,
+          "windows": [
+            {
+              "fast_start_seconds": 3,
+              "reference_start_seconds": 2.91070556640625,
+              "offset_samples": -2926,
+              "correlation": 1.0,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 50.5,
+              "fast_dominant_hz": 50.5,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 6,
+              "reference_start_seconds": 5.91070556640625,
+              "offset_samples": -2926,
+              "correlation": 0.9999999999999999,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 58.5,
+              "fast_dominant_hz": 58.5,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 9,
+              "reference_start_seconds": 8.91070556640625,
+              "offset_samples": -2926,
+              "correlation": 1.0000000000000002,
+              "spectral_cosine": 1.0000000000000002,
+              "reference_dominant_hz": 57.5,
+              "fast_dominant_hz": 57.5,
+              "same_sample_scale": true
+            }
+          ],
+          "agreement": true,
+          "phrase_time_slope": 0.9999999999999999
+        }
+      ],
+      "same_initial_ram": true,
+      "audio_sha256": {
+        "1": "D9E8138B1535F659DAF33206DACBA5EC4D41D5AECD227040A8B3F456E1183994",
+        "2": "51D96A13D6C4333F2EEE13C8D82BE73DE311383A39F4F5DA8F61483105DA6F27",
+        "3": "1BB84911AEE03F2D613313FF744922F873470695A558212D2CEF8AC2C9075575"
+      },
+      "scene_state_sha256": "6DF6A8F2436C37823A6307AFEE838A4392D5343F47E49923A1FAF095C32D5E24",
+      "note": "Scoped BGM comparison. No full-game/region/revision extrapolation.",
+      "scope_is_not_full_game": true
+    },
+    {
+      "release_id": "gba-7d0fbe2d8addba9d3c49da7bc0de792cf10b7268",
+      "sha256": "8627870DBE38E1FBC732AE9E07005000790687A766311E49A09D07CDF1734B5F",
+      "sha1": "7D0FBE2D8ADDBA9D3C49DA7BC0DE792CF10B7268",
+      "crc32": "70C423B8",
+      "rom_size": 8388608,
+      "game_code": "AJZJ",
+      "revision": null,
+      "bgm_verification_status": "BGM_CONFIRMED",
+      "bgm_test_speeds": [
+        1,
+        2,
+        3
+      ],
+      "bgm_test_scope": "Tested loaded scene only; Fixed1x versus Fixed2x/3x normal sample scale. Native1x fidelity and listening are separately reported, not certified by this status. original 2/5/8s; human listening pending; no complete-playthrough or SE guarantee.",
+      "bgm_tested_commit": "d451f54da8aea4217130574df42aee775cd369a5",
+      "bgm_evidence": "compatibility/sources/v04-bgm-observations.json#AJZJ",
+      "audio_comparisons": [
+        {
+          "speed": 2,
+          "sample_rate": 32768,
+          "common_frames": 395050,
+          "exact_prefix_frames": 11015,
+          "exact_prefix_seconds": 0.336151123046875,
+          "first_different_sample": 11015,
+          "different_stereo_frames": 384031,
+          "windows": [
+            {
+              "fast_start_seconds": 2,
+              "reference_start_seconds": 1.87445068359375,
+              "offset_samples": -4114,
+              "correlation": 0.9999999999999999,
+              "spectral_cosine": 1.0000000000000002,
+              "reference_dominant_hz": 116.0,
+              "fast_dominant_hz": 116.0,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 5,
+              "reference_start_seconds": 4.87445068359375,
+              "offset_samples": -4114,
+              "correlation": 1.0,
+              "spectral_cosine": 1.0000000000000002,
+              "reference_dominant_hz": 82.0,
+              "fast_dominant_hz": 82.0,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 8,
+              "reference_start_seconds": 7.87445068359375,
+              "offset_samples": -4114,
+              "correlation": 0.9999999999999999,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 58.0,
+              "fast_dominant_hz": 58.0,
+              "same_sample_scale": true
+            }
+          ],
+          "phrase_time_slope": 1.0000000000000004,
+          "audio_clock_sample_rate_ratio": 1.00002488080193,
+          "observation": "SAME_SCALE_AGREEMENT"
+        },
+        {
+          "speed": 3,
+          "sample_rate": 32768,
+          "common_frames": 395050,
+          "exact_prefix_frames": 11015,
+          "exact_prefix_seconds": 0.336151123046875,
+          "first_different_sample": 11015,
+          "different_stereo_frames": 384034,
+          "windows": [
+            {
+              "fast_start_seconds": 2,
+              "reference_start_seconds": 1.83258056640625,
+              "offset_samples": -5486,
+              "correlation": 1.0,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 116.0,
+              "fast_dominant_hz": 116.0,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 5,
+              "reference_start_seconds": 4.83258056640625,
+              "offset_samples": -5486,
+              "correlation": 0.9999999999999998,
+              "spectral_cosine": 1.0000000000000002,
+              "reference_dominant_hz": 82.0,
+              "fast_dominant_hz": 82.0,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 8,
+              "reference_start_seconds": 7.83258056640625,
+              "offset_samples": -5486,
+              "correlation": 0.9999999999999998,
+              "spectral_cosine": 1.0000000000000002,
+              "reference_dominant_hz": 58.0,
+              "fast_dominant_hz": 58.0,
+              "same_sample_scale": true
+            }
+          ],
+          "phrase_time_slope": 1.0000000000000004,
+          "audio_clock_sample_rate_ratio": 1.0000374073701745,
+          "observation": "SAME_SCALE_AGREEMENT"
+        }
+      ],
+      "universal_steady_comparisons": [
+        {
+          "speed": 2,
+          "windows": [
+            {
+              "fast_start_seconds": 3,
+              "reference_start_seconds": 2.87445068359375,
+              "offset_samples": -4114,
+              "correlation": 1.0000000000000002,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 87.0,
+              "fast_dominant_hz": 87.0,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 6,
+              "reference_start_seconds": 5.87445068359375,
+              "offset_samples": -4114,
+              "correlation": 1.0,
+              "spectral_cosine": 0.9999999999999999,
+              "reference_dominant_hz": 73.5,
+              "fast_dominant_hz": 73.5,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 9,
+              "reference_start_seconds": 8.87445068359375,
+              "offset_samples": -4114,
+              "correlation": 0.9999999999999999,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 65.5,
+              "fast_dominant_hz": 65.5,
+              "same_sample_scale": true
+            }
+          ],
+          "agreement": true,
+          "phrase_time_slope": 1.0
+        },
+        {
+          "speed": 3,
+          "windows": [
+            {
+              "fast_start_seconds": 3,
+              "reference_start_seconds": 2.83258056640625,
+              "offset_samples": -5486,
+              "correlation": 1.0,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 87.0,
+              "fast_dominant_hz": 87.0,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 6,
+              "reference_start_seconds": 5.83258056640625,
+              "offset_samples": -5486,
+              "correlation": 1.0,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 73.5,
+              "fast_dominant_hz": 73.5,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 9,
+              "reference_start_seconds": 8.83258056640625,
+              "offset_samples": -5486,
+              "correlation": 0.9999999999999999,
+              "spectral_cosine": 0.9999999999999999,
+              "reference_dominant_hz": 65.5,
+              "fast_dominant_hz": 65.5,
+              "same_sample_scale": true
+            }
+          ],
+          "agreement": true,
+          "phrase_time_slope": 0.9999999999999999
+        }
+      ],
+      "same_initial_ram": true,
+      "audio_sha256": {
+        "1": "709380AEDCC7F60F68673AE1DBDD5A814E3F866D838F79EC89E272E0E65A1CD6",
+        "2": "32A65F520B274F5A7B3DFA3DC6294235FA5D556D6F2BFAF668410A81970546AD",
+        "3": "04092C5A31A96C0595ACC3ABA8E793016980EE395F29AA7DD79FACEFB376FA2A"
+      },
+      "scene_state_sha256": "94BDD32C6307F9479A153A6E222FF0A3EF0E9A4E49E1D6449DC52851C80A3590",
+      "note": "Scoped BGM comparison. No full-game/region/revision extrapolation.",
+      "scope_is_not_full_game": true
+    },
+    {
+      "release_id": "gba-9cb4d57bdedee5a760e98a3068c0e39a293b447c",
+      "sha256": "1AFE35E1D00099D62CBDDAD43C2BE3F0F3C3F0F333E8DF54456076CB2DF6A6B8",
+      "sha1": "9CB4D57BDEDEE5A760E98A3068C0E39A293B447C",
+      "crc32": "41576087",
+      "rom_size": 8388608,
+      "game_code": "AE2J",
+      "revision": "Rev 1",
+      "bgm_verification_status": "BGM_CONFIRMED",
+      "bgm_test_speeds": [
+        1,
+        2,
+        3
+      ],
+      "bgm_test_scope": "Tested loaded scene only; Fixed1x versus Fixed2x/3x normal sample scale. Native1x fidelity and listening are separately reported, not certified by this status. original 2/5/8s; human listening pending; no complete-playthrough or SE guarantee.",
+      "bgm_tested_commit": "d451f54da8aea4217130574df42aee775cd369a5",
+      "bgm_evidence": "compatibility/sources/v04-bgm-observations.json#AE2J",
+      "audio_comparisons": [
+        {
+          "speed": 2,
+          "sample_rate": 32768,
+          "common_frames": 395871,
+          "exact_prefix_frames": 12934,
+          "exact_prefix_seconds": 0.39471435546875,
+          "first_different_sample": 12934,
+          "different_stereo_frames": 382113,
+          "windows": [
+            {
+              "fast_start_seconds": 2,
+              "reference_start_seconds": 1.857666015625,
+              "offset_samples": -4664,
+              "correlation": 1.0000000000000002,
+              "spectral_cosine": 1.0000000000000002,
+              "reference_dominant_hz": 248.5,
+              "fast_dominant_hz": 248.5,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 5,
+              "reference_start_seconds": 4.857666015625,
+              "offset_samples": -4664,
+              "correlation": 1.0000000000000002,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 138.5,
+              "fast_dominant_hz": 138.5,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 8,
+              "reference_start_seconds": 7.857666015625,
+              "offset_samples": -4664,
+              "correlation": 0.9999999999999999,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 60.5,
+              "fast_dominant_hz": 60.5,
+              "same_sample_scale": true
+            }
+          ],
+          "phrase_time_slope": 1.0000000000000004,
+          "audio_clock_sample_rate_ratio": 1.00002488080193,
+          "observation": "SAME_SCALE_AGREEMENT"
+        },
+        {
+          "speed": 3,
+          "sample_rate": 32768,
+          "common_frames": 395871,
+          "exact_prefix_frames": 12934,
+          "exact_prefix_seconds": 0.39471435546875,
+          "first_different_sample": 12934,
+          "different_stereo_frames": 382337,
+          "windows": [
+            {
+              "fast_start_seconds": 2,
+              "reference_start_seconds": 1.81024169921875,
+              "offset_samples": -6218,
+              "correlation": 1.0000000000000004,
+              "spectral_cosine": 1.0000000000000002,
+              "reference_dominant_hz": 248.5,
+              "fast_dominant_hz": 248.5,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 5,
+              "reference_start_seconds": 4.81024169921875,
+              "offset_samples": -6218,
+              "correlation": 1.0,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 138.5,
+              "fast_dominant_hz": 138.5,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 8,
+              "reference_start_seconds": 7.81024169921875,
+              "offset_samples": -6218,
+              "correlation": 0.9941071179314648,
+              "spectral_cosine": 0.9995330149293755,
+              "reference_dominant_hz": 60.5,
+              "fast_dominant_hz": 60.5,
+              "same_sample_scale": true
+            }
+          ],
+          "phrase_time_slope": 1.0000000000000007,
+          "audio_clock_sample_rate_ratio": 1.0000374073701745,
+          "observation": "SAME_SCALE_AGREEMENT"
+        }
+      ],
+      "universal_steady_comparisons": [
+        {
+          "speed": 2,
+          "windows": [
+            {
+              "fast_start_seconds": 3,
+              "reference_start_seconds": 2.857666015625,
+              "offset_samples": -4664,
+              "correlation": 1.0000000000000002,
+              "spectral_cosine": 0.9999999999999999,
+              "reference_dominant_hz": 68.0,
+              "fast_dominant_hz": 68.0,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 6,
+              "reference_start_seconds": 5.857666015625,
+              "offset_samples": -4664,
+              "correlation": 1.0000000000000002,
+              "spectral_cosine": 0.9999999999999999,
+              "reference_dominant_hz": 73.5,
+              "fast_dominant_hz": 73.5,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 9,
+              "reference_start_seconds": 8.857666015625,
+              "offset_samples": -4664,
+              "correlation": 1.0,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 55.5,
+              "fast_dominant_hz": 55.5,
+              "same_sample_scale": true
+            }
+          ],
+          "agreement": true,
+          "phrase_time_slope": 0.9999999999999996
+        },
+        {
+          "speed": 3,
+          "windows": [
+            {
+              "fast_start_seconds": 3,
+              "reference_start_seconds": 2.81024169921875,
+              "offset_samples": -6218,
+              "correlation": 1.0000000000000002,
+              "spectral_cosine": 1.0000000000000002,
+              "reference_dominant_hz": 68.0,
+              "fast_dominant_hz": 68.0,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 6,
+              "reference_start_seconds": 5.81024169921875,
+              "offset_samples": -6218,
+              "correlation": 0.9999999999999998,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 139.0,
+              "fast_dominant_hz": 139.0,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 9,
+              "reference_start_seconds": 8.81024169921875,
+              "offset_samples": -6218,
+              "correlation": 0.644683587231453,
+              "spectral_cosine": 0.9139617349791807,
+              "reference_dominant_hz": 55.5,
+              "fast_dominant_hz": 55.5,
+              "same_sample_scale": true
+            }
+          ],
+          "agreement": false,
+          "phrase_time_slope": 1.0
+        }
+      ],
+      "same_initial_ram": true,
+      "audio_sha256": {
+        "1": "64EFDBC0E80FCA3049D35559F885249562FE071E85142E53DC7978BD8942AA30",
+        "2": "E47DC5C8EEAA2D41483E3E0EE6A9054584D49BBF30054668B67ED9F25225E9F5",
+        "3": "A16DBD0AE611A2A659C2E1DC2132E2DB7E97923E236EF7DDD018CE2C6B9D54F3"
+      },
+      "scene_state_sha256": "D541913457B08F714528B3F675D8E5D7BA4A3DFAC846E6652D481E6C48231A85",
+      "note": "Rev1 only. Original windows pass; late FADE/STOP/restart of player31 song0 changes the scene. Additional late comparison retained, not hidden.",
+      "scope_is_not_full_game": true
+    },
+    {
+      "release_id": "gba-87e0ab10541eaaa5e9c01f7fad822a3e1bf52278",
+      "sha256": "416AA3D4BE363FA3032343C754C924C4D367735DAFB5B9158BB2EC234458D2F4",
+      "sha1": "87E0AB10541EAAA5E9C01F7FAD822A3E1BF52278",
+      "crc32": "E48E6BC9",
+      "rom_size": 8388608,
+      "game_code": "A6BJ",
+      "revision": "Rev 1",
+      "bgm_verification_status": "BGM_CONFIRMED",
+      "bgm_test_speeds": [
+        1,
+        2,
+        3
+      ],
+      "bgm_test_scope": "Tested loaded scene only; Fixed1x versus Fixed2x/3x normal sample scale. Native1x fidelity and listening are separately reported, not certified by this status. original 2/5/8s; human listening pending; no complete-playthrough or SE guarantee.",
+      "bgm_tested_commit": "d451f54da8aea4217130574df42aee775cd369a5",
+      "bgm_evidence": "compatibility/sources/v04-bgm-observations.json#A6BJ",
+      "audio_comparisons": [
+        {
+          "speed": 2,
+          "sample_rate": 32768,
+          "common_frames": 394695,
+          "exact_prefix_frames": 10112,
+          "exact_prefix_seconds": 0.30859375,
+          "first_different_sample": 10112,
+          "different_stereo_frames": 384583,
+          "windows": [
+            {
+              "fast_start_seconds": 2,
+              "reference_start_seconds": 1.882781982421875,
+              "offset_samples": -3841,
+              "correlation": 1.0,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 624.5,
+              "fast_dominant_hz": 624.5,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 5,
+              "reference_start_seconds": 4.882781982421875,
+              "offset_samples": -3841,
+              "correlation": 1.0000000000000002,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 391.5,
+              "fast_dominant_hz": 391.5,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 8,
+              "reference_start_seconds": 7.882781982421875,
+              "offset_samples": -3841,
+              "correlation": 1.0000000000000004,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 66.5,
+              "fast_dominant_hz": 66.5,
+              "same_sample_scale": true
+            }
+          ],
+          "phrase_time_slope": 1.0000000000000004,
+          "audio_clock_sample_rate_ratio": 1.00002488080193,
+          "observation": "SAME_SCALE_AGREEMENT"
+        },
+        {
+          "speed": 3,
+          "sample_rate": 32768,
+          "common_frames": 394695,
+          "exact_prefix_frames": 10112,
+          "exact_prefix_seconds": 0.30859375,
+          "first_different_sample": 10112,
+          "different_stereo_frames": 384583,
+          "windows": [
+            {
+              "fast_start_seconds": 2,
+              "reference_start_seconds": 1.843719482421875,
+              "offset_samples": -5121,
+              "correlation": 1.0000000000000002,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 624.5,
+              "fast_dominant_hz": 624.5,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 5,
+              "reference_start_seconds": 4.843719482421875,
+              "offset_samples": -5121,
+              "correlation": 1.0000000000000002,
+              "spectral_cosine": 0.9999999999999999,
+              "reference_dominant_hz": 391.5,
+              "fast_dominant_hz": 391.5,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 8,
+              "reference_start_seconds": 7.843719482421875,
+              "offset_samples": -5121,
+              "correlation": 1.0,
+              "spectral_cosine": 1.0000000000000002,
+              "reference_dominant_hz": 66.5,
+              "fast_dominant_hz": 66.5,
+              "same_sample_scale": true
+            }
+          ],
+          "phrase_time_slope": 1.0000000000000004,
+          "audio_clock_sample_rate_ratio": 1.0000374073701745,
+          "observation": "SAME_SCALE_AGREEMENT"
+        }
+      ],
+      "universal_steady_comparisons": [
+        {
+          "speed": 2,
+          "windows": [
+            {
+              "fast_start_seconds": 3,
+              "reference_start_seconds": 2.882781982421875,
+              "offset_samples": -3841,
+              "correlation": 1.0000000000000002,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 97.5,
+              "fast_dominant_hz": 97.5,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 6,
+              "reference_start_seconds": 5.882781982421875,
+              "offset_samples": -3841,
+              "correlation": 1.0,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 88.5,
+              "fast_dominant_hz": 88.5,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 9,
+              "reference_start_seconds": 8.882781982421875,
+              "offset_samples": -3841,
+              "correlation": 1.0000000000000002,
+              "spectral_cosine": 1.0000000000000002,
+              "reference_dominant_hz": 393.0,
+              "fast_dominant_hz": 393.0,
+              "same_sample_scale": true
+            }
+          ],
+          "agreement": true,
+          "phrase_time_slope": 0.9999999999999999
+        },
+        {
+          "speed": 3,
+          "windows": [
+            {
+              "fast_start_seconds": 3,
+              "reference_start_seconds": 2.843719482421875,
+              "offset_samples": -5121,
+              "correlation": 1.0000000000000002,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 97.5,
+              "fast_dominant_hz": 97.5,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 6,
+              "reference_start_seconds": 5.843719482421875,
+              "offset_samples": -5121,
+              "correlation": 1.0000000000000002,
+              "spectral_cosine": 0.9999999999999999,
+              "reference_dominant_hz": 88.5,
+              "fast_dominant_hz": 88.5,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 9,
+              "reference_start_seconds": 8.843719482421875,
+              "offset_samples": -5121,
+              "correlation": 0.9940107960387474,
+              "spectral_cosine": 0.999013079570745,
+              "reference_dominant_hz": 393.0,
+              "fast_dominant_hz": 393.0,
+              "same_sample_scale": true
+            }
+          ],
+          "agreement": true,
+          "phrase_time_slope": 0.9999999999999999
+        }
+      ],
+      "same_initial_ram": true,
+      "audio_sha256": {
+        "1": "3363363E45D5C2D7B2F3B6306102ED5BDD2C5357792C743A9D8C238040AAFB58",
+        "2": "0901D87804415FE9F04F2F67D28D68B4DA084C9A38F4D04199846884884E5B9C",
+        "3": "3B76912602E07E7F38AE5E3CDDF5945CC7CED4AD9FB970C60ADB2ED6E7B24E59"
+      },
+      "scene_state_sha256": "58D5F73651B7422C03FEB01B6402C1E4AB14105F483E77B04ADA5DE6709F9C04",
+      "note": "Scoped BGM comparison. No full-game/region/revision extrapolation.",
+      "scope_is_not_full_game": true
+    },
+    {
+      "release_id": "gba-b09dc97ab42f5e32dc6254d09b0b195295b24932",
+      "sha256": "CDEBAFD678E9B51A41E28162C42072E66123EE5120758D2831B6AF4F2B95C705",
+      "sha1": "B09DC97AB42F5E32DC6254D09B0B195295B24932",
+      "crc32": "66E96B35",
+      "rom_size": 4194304,
+      "game_code": "ABFJ",
+      "revision": null,
+      "bgm_verification_status": "BGM_CONFIRMED",
+      "bgm_test_speeds": [
+        1,
+        2,
+        3
+      ],
+      "bgm_test_scope": "Tested loaded scene only; Fixed1x versus Fixed2x/3x normal sample scale. Native1x fidelity and listening are separately reported, not certified by this status. original 2/5/8s; human listening pending; no complete-playthrough or SE guarantee.",
+      "bgm_tested_commit": "d451f54da8aea4217130574df42aee775cd369a5",
+      "bgm_evidence": "compatibility/sources/v04-bgm-observations.json#ABFJ",
+      "audio_comparisons": [
+        {
+          "speed": 2,
+          "sample_rate": 32768,
+          "common_frames": 393288,
+          "exact_prefix_frames": 5413,
+          "exact_prefix_seconds": 0.165191650390625,
+          "first_different_sample": 5413,
+          "different_stereo_frames": 387875,
+          "windows": [
+            {
+              "fast_start_seconds": 2,
+              "reference_start_seconds": 1.93304443359375,
+              "offset_samples": -2194,
+              "correlation": 0.9999999999999999,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 219.5,
+              "fast_dominant_hz": 219.5,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 5,
+              "reference_start_seconds": 4.93304443359375,
+              "offset_samples": -2194,
+              "correlation": 0.9999999999999998,
+              "spectral_cosine": 0.9999999999999999,
+              "reference_dominant_hz": 293.0,
+              "fast_dominant_hz": 293.0,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 8,
+              "reference_start_seconds": 7.93304443359375,
+              "offset_samples": -2194,
+              "correlation": 0.9999999999999999,
+              "spectral_cosine": 0.9999999999999998,
+              "reference_dominant_hz": 147.5,
+              "fast_dominant_hz": 147.5,
+              "same_sample_scale": true
+            }
+          ],
+          "phrase_time_slope": 1.0000000000000004,
+          "audio_clock_sample_rate_ratio": 1.00002488080193,
+          "observation": "SAME_SCALE_AGREEMENT"
+        },
+        {
+          "speed": 3,
+          "sample_rate": 32768,
+          "common_frames": 393288,
+          "exact_prefix_frames": 5413,
+          "exact_prefix_seconds": 0.165191650390625,
+          "first_different_sample": 5413,
+          "different_stereo_frames": 387875,
+          "windows": [
+            {
+              "fast_start_seconds": 2,
+              "reference_start_seconds": 1.91070556640625,
+              "offset_samples": -2926,
+              "correlation": 1.0000000000000002,
+              "spectral_cosine": 1.0000000000000002,
+              "reference_dominant_hz": 219.5,
+              "fast_dominant_hz": 219.5,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 5,
+              "reference_start_seconds": 4.91070556640625,
+              "offset_samples": -2926,
+              "correlation": 0.9999999999999998,
+              "spectral_cosine": 1.0000000000000002,
+              "reference_dominant_hz": 293.0,
+              "fast_dominant_hz": 293.0,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 8,
+              "reference_start_seconds": 7.91070556640625,
+              "offset_samples": -2926,
+              "correlation": 1.0,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 147.5,
+              "fast_dominant_hz": 147.5,
+              "same_sample_scale": true
+            }
+          ],
+          "phrase_time_slope": 1.0000000000000004,
+          "audio_clock_sample_rate_ratio": 1.0000374073701745,
+          "observation": "SAME_SCALE_AGREEMENT"
+        }
+      ],
+      "universal_steady_comparisons": [
+        {
+          "speed": 2,
+          "windows": [
+            {
+              "fast_start_seconds": 3,
+              "reference_start_seconds": 2.93304443359375,
+              "offset_samples": -2194,
+              "correlation": 1.0,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 293.5,
+              "fast_dominant_hz": 293.5,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 6,
+              "reference_start_seconds": 5.93304443359375,
+              "offset_samples": -2194,
+              "correlation": 1.0,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 293.0,
+              "fast_dominant_hz": 293.0,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 9,
+              "reference_start_seconds": 8.93304443359375,
+              "offset_samples": -2194,
+              "correlation": 1.0,
+              "spectral_cosine": 0.9999999999999999,
+              "reference_dominant_hz": 873.0,
+              "fast_dominant_hz": 873.0,
+              "same_sample_scale": true
+            }
+          ],
+          "agreement": true,
+          "phrase_time_slope": 1.0
+        },
+        {
+          "speed": 3,
+          "windows": [
+            {
+              "fast_start_seconds": 3,
+              "reference_start_seconds": 2.91070556640625,
+              "offset_samples": -2926,
+              "correlation": 0.9999999999999999,
+              "spectral_cosine": 1.0000000000000002,
+              "reference_dominant_hz": 293.5,
+              "fast_dominant_hz": 293.5,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 6,
+              "reference_start_seconds": 5.91070556640625,
+              "offset_samples": -2926,
+              "correlation": 1.0000000000000002,
+              "spectral_cosine": 0.9999999999999999,
+              "reference_dominant_hz": 293.0,
+              "fast_dominant_hz": 293.0,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 9,
+              "reference_start_seconds": 8.91070556640625,
+              "offset_samples": -2926,
+              "correlation": 1.0,
+              "spectral_cosine": 0.9999999999999999,
+              "reference_dominant_hz": 873.0,
+              "fast_dominant_hz": 873.0,
+              "same_sample_scale": true
+            }
+          ],
+          "agreement": true,
+          "phrase_time_slope": 0.9999999999999999
+        }
+      ],
+      "same_initial_ram": true,
+      "audio_sha256": {
+        "1": "046300F65E28FA957642905EC8F8C448D83870B68528B7C94F32D63EED7BFB53",
+        "2": "C205F293D3E4CD8970EC297433ED265BA182977827D3DBB0A38F4643BCDB3832",
+        "3": "A53F4736797176DAE72D73034E41B8184DF86D79F740E0C7B79FE246D94EBD3F"
+      },
+      "scene_state_sha256": "2439CA21A18F5BADB259852073E56F05D3D559A3BDF6FD67254CD5B24122E717",
+      "note": "Scoped BGM comparison. No full-game/region/revision extrapolation.",
+      "scope_is_not_full_game": true
+    },
+    {
+      "release_id": "gba-e862d66da9286b4c938441bee2fd1a8e980d694f",
+      "sha256": "E79D9200F9A06387D644DB035F3497CC79BB2DBA8207FAC1A0367EE39541E8FF",
+      "sha1": "E862D66DA9286B4C938441BEE2FD1A8E980D694F",
+      "crc32": "8A824A70",
+      "rom_size": 4194304,
+      "game_code": "AB2J",
+      "revision": null,
+      "bgm_verification_status": "BGM_INCONCLUSIVE",
+      "bgm_test_speeds": [
+        1,
+        2,
+        3
+      ],
+      "bgm_test_scope": "Tested loaded scene only; Fixed1x versus Fixed2x/3x normal sample scale. Native1x fidelity and listening are separately reported, not certified by this status. ; human listening pending; no complete-playthrough or SE guarantee.",
+      "bgm_tested_commit": "d451f54da8aea4217130574df42aee775cd369a5",
+      "bgm_evidence": "compatibility/sources/v04-bgm-observations.json#AB2J",
+      "audio_comparisons": [
+        {
+          "speed": 2,
+          "sample_rate": 32768,
+          "common_frames": 395442,
+          "exact_prefix_frames": 11956,
+          "exact_prefix_seconds": 0.3648681640625,
+          "first_different_sample": 11956,
+          "different_stereo_frames": 383486,
+          "windows": [
+            {
+              "fast_start_seconds": 2,
+              "reference_start_seconds": 1.866058349609375,
+              "offset_samples": -4389,
+              "correlation": 1.0000000000000004,
+              "spectral_cosine": 0.9999999999999999,
+              "reference_dominant_hz": 277.0,
+              "fast_dominant_hz": 277.0,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 5,
+              "reference_start_seconds": 4.866058349609375,
+              "offset_samples": -4389,
+              "correlation": 1.0000000000000004,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 370.0,
+              "fast_dominant_hz": 370.0,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 8,
+              "reference_start_seconds": 7.866058349609375,
+              "offset_samples": -4389,
+              "correlation": 0.9999999999999998,
+              "spectral_cosine": 0.9999999999999999,
+              "reference_dominant_hz": 329.5,
+              "fast_dominant_hz": 329.5,
+              "same_sample_scale": true
+            }
+          ],
+          "phrase_time_slope": 1.0000000000000004,
+          "audio_clock_sample_rate_ratio": 1.00002488080193,
+          "observation": "SAME_SCALE_AGREEMENT"
+        },
+        {
+          "speed": 3,
+          "sample_rate": 32768,
+          "common_frames": 395442,
+          "exact_prefix_frames": 11956,
+          "exact_prefix_seconds": 0.3648681640625,
+          "first_different_sample": 11956,
+          "different_stereo_frames": 383486,
+          "windows": [
+            {
+              "fast_start_seconds": 2,
+              "reference_start_seconds": 1.8214111328125,
+              "offset_samples": -5852,
+              "correlation": 1.0,
+              "spectral_cosine": 0.9999999999999999,
+              "reference_dominant_hz": 277.5,
+              "fast_dominant_hz": 277.5,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 5,
+              "reference_start_seconds": 4.8214111328125,
+              "offset_samples": -5852,
+              "correlation": 1.0000000000000002,
+              "spectral_cosine": 0.9999999999999999,
+              "reference_dominant_hz": 370.0,
+              "fast_dominant_hz": 370.0,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 8,
+              "reference_start_seconds": 7.8214111328125,
+              "offset_samples": -5852,
+              "correlation": 0.7203366780704864,
+              "spectral_cosine": 0.9040655738467392,
+              "reference_dominant_hz": 329.5,
+              "fast_dominant_hz": 658.5,
+              "same_sample_scale": true
+            }
+          ],
+          "phrase_time_slope": 1.0000000000000004,
+          "audio_clock_sample_rate_ratio": 1.0000374073701745,
+          "observation": "INCONCLUSIVE"
+        }
+      ],
+      "universal_steady_comparisons": [
+        {
+          "speed": 2,
+          "windows": [
+            {
+              "fast_start_seconds": 3,
+              "reference_start_seconds": 2.866058349609375,
+              "offset_samples": -4389,
+              "correlation": 1.0000000000000004,
+              "spectral_cosine": 0.9999999999999999,
+              "reference_dominant_hz": 553.5,
+              "fast_dominant_hz": 553.5,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 6,
+              "reference_start_seconds": 5.866058349609375,
+              "offset_samples": -4389,
+              "correlation": 1.0000000000000002,
+              "spectral_cosine": 1.0000000000000002,
+              "reference_dominant_hz": 370.0,
+              "fast_dominant_hz": 370.0,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 9,
+              "reference_start_seconds": 8.866058349609375,
+              "offset_samples": -4389,
+              "correlation": 1.0000000000000002,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 329.5,
+              "fast_dominant_hz": 329.5,
+              "same_sample_scale": true
+            }
+          ],
+          "agreement": true,
+          "phrase_time_slope": 0.9999999999999999
+        },
+        {
+          "speed": 3,
+          "windows": [
+            {
+              "fast_start_seconds": 3,
+              "reference_start_seconds": 2.8214111328125,
+              "offset_samples": -5852,
+              "correlation": 1.0,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 553.5,
+              "fast_dominant_hz": 553.5,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 6,
+              "reference_start_seconds": 5.8214111328125,
+              "offset_samples": -5852,
+              "correlation": 1.0,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 370.0,
+              "fast_dominant_hz": 370.0,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 9,
+              "reference_start_seconds": 8.8214111328125,
+              "offset_samples": -5852,
+              "correlation": 0.1483255557581617,
+              "spectral_cosine": 0.1536027225019909,
+              "reference_dominant_hz": 329.5,
+              "fast_dominant_hz": 223.5,
+              "same_sample_scale": true
+            }
+          ],
+          "agreement": false,
+          "phrase_time_slope": 0.9999999999999999
+        }
+      ],
+      "same_initial_ram": true,
+      "audio_sha256": {
+        "1": "8BA2AB914DE453BA55751C91FF4986611D44C13EF463D0177D05F61323A2A58B",
+        "2": "850EE3E897E990BED9BD5B342157A64AFE645143D304D6152C26D952CAB809C1",
+        "3": "1AD4486CE1D12D2B7459862C1BA0FA5647DE258406BC24B8F45684A6ABDDEB19"
+      },
+      "scene_state_sha256": "9B13DBB2F38A24842370D0A3AF17880D0FDA984F7CF8DB2A2361B7F6F5A4A2CE",
+      "note": "Player8 song144 polling STOP at sample290589 and song122 PLAY at294612 in3x; accelerated title/attract transition. 2x comparison passes; full1x/3x audio scene comparison is inconclusive.",
+      "scope_is_not_full_game": true
+    },
+    {
+      "release_id": "gba-09cb1502e49a022ae4eb37cc9dd278fbe12437f3",
+      "sha256": "CB422870FE58A442272EA823AFD33D6B63B94EED717375C37B7CB23D63F8E8BA",
+      "sha1": "09CB1502E49A022AE4EB37CC9DD278FBE12437F3",
+      "crc32": "D4F8152E",
+      "rom_size": 8388608,
+      "game_code": "A5BJ",
+      "revision": null,
+      "bgm_verification_status": "BGM_INCONCLUSIVE",
+      "bgm_test_speeds": [
+        1,
+        2,
+        3
+      ],
+      "bgm_test_scope": "Tested loaded scene only; Fixed1x versus Fixed2x/3x normal sample scale. Native1x fidelity and listening are separately reported, not certified by this status. ; human listening pending; no complete-playthrough or SE guarantee.",
+      "bgm_tested_commit": "d451f54da8aea4217130574df42aee775cd369a5",
+      "bgm_evidence": "compatibility/sources/v04-bgm-observations.json#A5BJ",
+      "audio_comparisons": [
+        {
+          "speed": 2,
+          "sample_rate": 32768,
+          "common_frames": 394695,
+          "exact_prefix_frames": 10112,
+          "exact_prefix_seconds": 0.30859375,
+          "first_different_sample": 10112,
+          "different_stereo_frames": 384582,
+          "windows": [
+            {
+              "fast_start_seconds": 2,
+              "reference_start_seconds": 1.882781982421875,
+              "offset_samples": -3841,
+              "correlation": 0.97103788535689,
+              "spectral_cosine": 0.9969757238952516,
+              "reference_dominant_hz": 658.5,
+              "fast_dominant_hz": 658.5,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 5,
+              "reference_start_seconds": 4.882781982421875,
+              "offset_samples": -3841,
+              "correlation": 0.9817238358977266,
+              "spectral_cosine": 0.9998744501095677,
+              "reference_dominant_hz": 369.5,
+              "fast_dominant_hz": 369.5,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 8,
+              "reference_start_seconds": 7.882781982421875,
+              "offset_samples": -3841,
+              "correlation": 0.8193173026313018,
+              "spectral_cosine": 0.958279598555128,
+              "reference_dominant_hz": 391.5,
+              "fast_dominant_hz": 391.5,
+              "same_sample_scale": true
+            }
+          ],
+          "phrase_time_slope": 1.0000000000000004,
+          "audio_clock_sample_rate_ratio": 1.00002488080193,
+          "observation": "INCONCLUSIVE"
+        },
+        {
+          "speed": 3,
+          "sample_rate": 32768,
+          "common_frames": 394695,
+          "exact_prefix_frames": 10112,
+          "exact_prefix_seconds": 0.30859375,
+          "first_different_sample": 10112,
+          "different_stereo_frames": 384583,
+          "windows": [
+            {
+              "fast_start_seconds": 2,
+              "reference_start_seconds": 1.843719482421875,
+              "offset_samples": -5121,
+              "correlation": 0.9261364294775631,
+              "spectral_cosine": 0.9236424579056393,
+              "reference_dominant_hz": 658.5,
+              "fast_dominant_hz": 658.5,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 5,
+              "reference_start_seconds": 4.843719482421875,
+              "offset_samples": -5121,
+              "correlation": 0.7608594160199589,
+              "spectral_cosine": 0.9419840390441933,
+              "reference_dominant_hz": 369.5,
+              "fast_dominant_hz": 369.5,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 8,
+              "reference_start_seconds": 7.843719482421875,
+              "offset_samples": -5121,
+              "correlation": 0.8985077832225806,
+              "spectral_cosine": 0.9493092577696677,
+              "reference_dominant_hz": 391.5,
+              "fast_dominant_hz": 391.5,
+              "same_sample_scale": true
+            }
+          ],
+          "phrase_time_slope": 1.0000000000000004,
+          "audio_clock_sample_rate_ratio": 1.0000374073701745,
+          "observation": "INCONCLUSIVE"
+        }
+      ],
+      "universal_steady_comparisons": [
+        {
+          "speed": 2,
+          "windows": [
+            {
+              "fast_start_seconds": 3,
+              "reference_start_seconds": 2.882781982421875,
+              "offset_samples": -3841,
+              "correlation": 0.8964978706136794,
+              "spectral_cosine": 0.9067794471532556,
+              "reference_dominant_hz": 587.0,
+              "fast_dominant_hz": 587.0,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 6,
+              "reference_start_seconds": 5.882781982421875,
+              "offset_samples": -3841,
+              "correlation": 0.8063697769819815,
+              "spectral_cosine": 0.8494229858833459,
+              "reference_dominant_hz": 370.0,
+              "fast_dominant_hz": 370.0,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 9,
+              "reference_start_seconds": 8.882781982421875,
+              "offset_samples": -3841,
+              "correlation": 0.8661400709361925,
+              "spectral_cosine": 0.9196506049821065,
+              "reference_dominant_hz": 494.0,
+              "fast_dominant_hz": 494.0,
+              "same_sample_scale": true
+            }
+          ],
+          "agreement": false,
+          "phrase_time_slope": 0.9999999999999999
+        },
+        {
+          "speed": 3,
+          "windows": [
+            {
+              "fast_start_seconds": 3,
+              "reference_start_seconds": 2.843719482421875,
+              "offset_samples": -5121,
+              "correlation": 0.9643934498872971,
+              "spectral_cosine": 0.9960719822693664,
+              "reference_dominant_hz": 587.0,
+              "fast_dominant_hz": 587.0,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 6,
+              "reference_start_seconds": 5.843719482421875,
+              "offset_samples": -5121,
+              "correlation": 0.8302314553613857,
+              "spectral_cosine": 0.8738626511702399,
+              "reference_dominant_hz": 369.5,
+              "fast_dominant_hz": 369.5,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 9,
+              "reference_start_seconds": 8.843719482421875,
+              "offset_samples": -5121,
+              "correlation": 0.9757018997399953,
+              "spectral_cosine": 0.9679342924081326,
+              "reference_dominant_hz": 494.0,
+              "fast_dominant_hz": 494.0,
+              "same_sample_scale": true
+            }
+          ],
+          "agreement": false,
+          "phrase_time_slope": 0.9999999999999999
+        }
+      ],
+      "same_initial_ram": true,
+      "audio_sha256": {
+        "1": "EE5F5AE583605A22CB826271A2E9CC912EAE9048BD70F23A8227F2299C161CF0",
+        "2": "07FC6A4EE2DC20561142EFC0F4CEB013AEEE896B1393D61329FA3C21279FF1E1",
+        "3": "D83F5BB1C672FEB8023F072FA61F507DAA865ED01982AF246261DC3D911043D5"
+      },
+      "scene_state_sha256": "EB6DB2E73291A727C6DAC505F352CCDBF9F68C7FB06253DCC265F847496C633C",
+      "note": "BGM player0 song23 remains, but players2/3 songs318/319 and many others arrive at accelerated game times. Full mixtures differ; isolated BGM fidelity/PSG contention not proven. Finite SFX shortening is not itself a BGM rejection.",
+      "scope_is_not_full_game": true
+    },
+    {
+      "release_id": "gba-aaf5d856fd85154b62204bea00677e392ba12396",
+      "sha256": "F0A032C2E93B684E9CB2DDD3B436223AA24111C11883F6DBC55FC597AA52A6E0",
+      "sha1": "AAF5D856FD85154B62204BEA00677E392BA12396",
+      "crc32": "2C00B4E6",
+      "rom_size": 8388608,
+      "game_code": "AGDJ",
+      "revision": null,
+      "bgm_verification_status": "BGM_CONFIRMED",
+      "bgm_test_speeds": [
+        1,
+        2,
+        3
+      ],
+      "bgm_test_scope": "Tested loaded scene only; Fixed1x versus Fixed2x/3x normal sample scale. Native1x fidelity and listening are separately reported, not certified by this status. universal steady 3/6/9s; human listening pending; no complete-playthrough or SE guarantee.",
+      "bgm_tested_commit": "d451f54da8aea4217130574df42aee775cd369a5",
+      "bgm_evidence": "compatibility/sources/v04-bgm-observations.json#AGDJ",
+      "audio_comparisons": [
+        {
+          "speed": 2,
+          "sample_rate": 32768,
+          "common_frames": 393629,
+          "exact_prefix_frames": 6851,
+          "exact_prefix_seconds": 0.209075927734375,
+          "first_different_sample": 6851,
+          "different_stereo_frames": 386750,
+          "windows": [
+            {
+              "fast_start_seconds": 2,
+              "reference_start_seconds": 1.916290283203125,
+              "offset_samples": -2743,
+              "correlation": 0.9380164505365108,
+              "spectral_cosine": 0.9898178536431819,
+              "reference_dominant_hz": 660.5,
+              "fast_dominant_hz": 660.5,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 5,
+              "reference_start_seconds": 4.916290283203125,
+              "offset_samples": -2743,
+              "correlation": 1.0,
+              "spectral_cosine": 0.9999999999999999,
+              "reference_dominant_hz": 1396.0,
+              "fast_dominant_hz": 1396.0,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 8,
+              "reference_start_seconds": 7.916290283203125,
+              "offset_samples": -2743,
+              "correlation": 1.0,
+              "spectral_cosine": 0.9999999999999998,
+              "reference_dominant_hz": 133.0,
+              "fast_dominant_hz": 133.0,
+              "same_sample_scale": true
+            }
+          ],
+          "phrase_time_slope": 1.0000000000000007,
+          "audio_clock_sample_rate_ratio": 1.00002488080193,
+          "observation": "INCONCLUSIVE"
+        },
+        {
+          "speed": 3,
+          "sample_rate": 32768,
+          "common_frames": 393629,
+          "exact_prefix_frames": 6851,
+          "exact_prefix_seconds": 0.209075927734375,
+          "first_different_sample": 6851,
+          "different_stereo_frames": 386757,
+          "windows": [
+            {
+              "fast_start_seconds": 2,
+              "reference_start_seconds": 1.888397216796875,
+              "offset_samples": -3657,
+              "correlation": 0.9359525666367575,
+              "spectral_cosine": 0.9882148820565749,
+              "reference_dominant_hz": 660.5,
+              "fast_dominant_hz": 660.5,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 5,
+              "reference_start_seconds": 4.888397216796875,
+              "offset_samples": -3657,
+              "correlation": 1.0000000000000004,
+              "spectral_cosine": 0.9999999999999999,
+              "reference_dominant_hz": 261.0,
+              "fast_dominant_hz": 261.0,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 8,
+              "reference_start_seconds": 7.888397216796875,
+              "offset_samples": -3657,
+              "correlation": 1.0,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 133.0,
+              "fast_dominant_hz": 133.0,
+              "same_sample_scale": true
+            }
+          ],
+          "phrase_time_slope": 1.0000000000000004,
+          "audio_clock_sample_rate_ratio": 1.0000374073701745,
+          "observation": "INCONCLUSIVE"
+        }
+      ],
+      "universal_steady_comparisons": [
+        {
+          "speed": 2,
+          "windows": [
+            {
+              "fast_start_seconds": 3,
+              "reference_start_seconds": 2.916290283203125,
+              "offset_samples": -2743,
+              "correlation": 0.9999999999999998,
+              "spectral_cosine": 0.9999999999999999,
+              "reference_dominant_hz": 660.0,
+              "fast_dominant_hz": 660.0,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 6,
+              "reference_start_seconds": 5.916290283203125,
+              "offset_samples": -2743,
+              "correlation": 1.0000000000000004,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 1396.0,
+              "fast_dominant_hz": 1396.0,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 9,
+              "reference_start_seconds": 8.916290283203125,
+              "offset_samples": -2743,
+              "correlation": 1.0,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 164.5,
+              "fast_dominant_hz": 164.5,
+              "same_sample_scale": true
+            }
+          ],
+          "agreement": true,
+          "phrase_time_slope": 1.0000000000000002
+        },
+        {
+          "speed": 3,
+          "windows": [
+            {
+              "fast_start_seconds": 3,
+              "reference_start_seconds": 2.888397216796875,
+              "offset_samples": -3657,
+              "correlation": 1.0000000000000002,
+              "spectral_cosine": 0.9999999999999999,
+              "reference_dominant_hz": 660.0,
+              "fast_dominant_hz": 660.0,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 6,
+              "reference_start_seconds": 5.888397216796875,
+              "offset_samples": -3657,
+              "correlation": 1.0000000000000002,
+              "spectral_cosine": 0.9999999999999999,
+              "reference_dominant_hz": 660.5,
+              "fast_dominant_hz": 660.5,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 9,
+              "reference_start_seconds": 8.888397216796875,
+              "offset_samples": -3657,
+              "correlation": 1.0000000000000002,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 164.5,
+              "fast_dominant_hz": 164.5,
+              "same_sample_scale": true
+            }
+          ],
+          "agreement": true,
+          "phrase_time_slope": 0.9999999999999999
+        }
+      ],
+      "same_initial_ram": true,
+      "audio_sha256": {
+        "1": "01FBEAD4E9A1C75E3747DE01021A516D6092B62881EC2F4956A0F39C8B088651",
+        "2": "57A7C549CDC265A3B4BB5D79FF9E1ED3BC2D2D73CDBE6D6D6EF640E276B4CD45",
+        "3": "F7A72C844AD429E4FFB1178EEB9895CAB1901F1C5A89EA7A75E2D74AC6E3AFEF"
+      },
+      "scene_state_sha256": "E49B7EC02E4370012D1DFADC82AB1F1BAFE30A31993558B4AF625D219ABA8699",
+      "note": "Original2s window has a transient mismatch; universal steady3/6/9s windows all pass without lowering0.97. Scope is the steady BGM interval.",
+      "scope_is_not_full_game": true
+    },
+    {
+      "release_id": "gba-0b5ce051aa1fd83ab0ec79122b07b02bb41096a5",
+      "sha256": "E445679A00F5862EC82A327807B9CB9B72D50608061413987383F8E8C86E8E7A",
+      "sha1": "0B5CE051AA1FD83AB0EC79122B07B02BB41096A5",
+      "crc32": "F533DC13",
+      "rom_size": 8388608,
+      "game_code": "ARJJ",
+      "revision": null,
+      "bgm_verification_status": "BGM_CONFIRMED",
+      "bgm_test_speeds": [
+        1,
+        2,
+        3
+      ],
+      "bgm_test_scope": "Tested loaded scene only; Fixed1x versus Fixed2x/3x normal sample scale. Native1x fidelity and listening are separately reported, not certified by this status. original 2/5/8s; human listening pending; no complete-playthrough or SE guarantee.",
+      "bgm_tested_commit": "d451f54da8aea4217130574df42aee775cd369a5",
+      "bgm_evidence": "compatibility/sources/v04-bgm-observations.json#ARJJ",
+      "audio_comparisons": [
+        {
+          "speed": 2,
+          "sample_rate": 32768,
+          "common_frames": 393629,
+          "exact_prefix_frames": 6851,
+          "exact_prefix_seconds": 0.209075927734375,
+          "first_different_sample": 6851,
+          "different_stereo_frames": 386778,
+          "windows": [
+            {
+              "fast_start_seconds": 2,
+              "reference_start_seconds": 1.916290283203125,
+              "offset_samples": -2743,
+              "correlation": 0.9999999999999999,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 73.0,
+              "fast_dominant_hz": 73.0,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 5,
+              "reference_start_seconds": 4.916290283203125,
+              "offset_samples": -2743,
+              "correlation": 1.0,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 83.0,
+              "fast_dominant_hz": 83.0,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 8,
+              "reference_start_seconds": 7.916290283203125,
+              "offset_samples": -2743,
+              "correlation": 1.0000000000000002,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 83.5,
+              "fast_dominant_hz": 83.5,
+              "same_sample_scale": true
+            }
+          ],
+          "phrase_time_slope": 1.0000000000000007,
+          "audio_clock_sample_rate_ratio": 1.00002488080193,
+          "observation": "SAME_SCALE_AGREEMENT"
+        },
+        {
+          "speed": 3,
+          "sample_rate": 32768,
+          "common_frames": 393629,
+          "exact_prefix_frames": 6851,
+          "exact_prefix_seconds": 0.209075927734375,
+          "first_different_sample": 6851,
+          "different_stereo_frames": 386778,
+          "windows": [
+            {
+              "fast_start_seconds": 2,
+              "reference_start_seconds": 1.888397216796875,
+              "offset_samples": -3657,
+              "correlation": 1.0,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 73.0,
+              "fast_dominant_hz": 73.0,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 5,
+              "reference_start_seconds": 4.888397216796875,
+              "offset_samples": -3657,
+              "correlation": 1.0000000000000002,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 83.0,
+              "fast_dominant_hz": 83.0,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 8,
+              "reference_start_seconds": 7.888397216796875,
+              "offset_samples": -3657,
+              "correlation": 1.0000000000000002,
+              "spectral_cosine": 0.9999999999999998,
+              "reference_dominant_hz": 83.5,
+              "fast_dominant_hz": 83.5,
+              "same_sample_scale": true
+            }
+          ],
+          "phrase_time_slope": 1.0000000000000004,
+          "audio_clock_sample_rate_ratio": 1.0000374073701745,
+          "observation": "SAME_SCALE_AGREEMENT"
+        }
+      ],
+      "universal_steady_comparisons": [
+        {
+          "speed": 2,
+          "windows": [
+            {
+              "fast_start_seconds": 3,
+              "reference_start_seconds": 2.916290283203125,
+              "offset_samples": -2743,
+              "correlation": 1.0,
+              "spectral_cosine": 0.9999999999999999,
+              "reference_dominant_hz": 73.0,
+              "fast_dominant_hz": 73.0,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 6,
+              "reference_start_seconds": 5.916290283203125,
+              "offset_samples": -2743,
+              "correlation": 1.0,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 74.0,
+              "fast_dominant_hz": 74.0,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 9,
+              "reference_start_seconds": 8.916290283203125,
+              "offset_samples": -2743,
+              "correlation": 0.9999999999999999,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 73.0,
+              "fast_dominant_hz": 73.0,
+              "same_sample_scale": true
+            }
+          ],
+          "agreement": true,
+          "phrase_time_slope": 1.0000000000000002
+        },
+        {
+          "speed": 3,
+          "windows": [
+            {
+              "fast_start_seconds": 3,
+              "reference_start_seconds": 2.888397216796875,
+              "offset_samples": -3657,
+              "correlation": 1.0000000000000004,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 73.0,
+              "fast_dominant_hz": 73.0,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 6,
+              "reference_start_seconds": 5.888397216796875,
+              "offset_samples": -3657,
+              "correlation": 1.0000000000000004,
+              "spectral_cosine": 0.9999999999999999,
+              "reference_dominant_hz": 74.0,
+              "fast_dominant_hz": 74.0,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 9,
+              "reference_start_seconds": 8.888397216796875,
+              "offset_samples": -3657,
+              "correlation": 1.0,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 73.0,
+              "fast_dominant_hz": 73.0,
+              "same_sample_scale": true
+            }
+          ],
+          "agreement": true,
+          "phrase_time_slope": 0.9999999999999999
+        }
+      ],
+      "same_initial_ram": true,
+      "audio_sha256": {
+        "1": "0AF8724B61039285B9A919D9332968B4FA4C0B3FAF0448B7A8BCD60649E99512",
+        "2": "5D7E258042999BC96C2C0109C944B2056292CB82404DAFD01C03E8215571A2FC",
+        "3": "522E3F5012CCC7C1E577A5C31E92673AF8A4FE214738E65985DCF5C7283759D2"
+      },
+      "scene_state_sha256": "D4760503F28E8E0B14D9FA7F5B7D0237DEF5F6D5DD1971FE4AE248F48609996D",
+      "note": "Scoped BGM comparison. No full-game/region/revision extrapolation.",
+      "scope_is_not_full_game": true
+    },
+    {
+      "release_id": "gba-cb270b06b9161afe9db3abec32b53bfd2e241864",
+      "sha256": "1D328F4E67806675DBEC107DC7146665CF4BDCC35DB20EAED2CE6C29245DCAFA",
+      "sha1": "CB270B06B9161AFE9DB3ABEC32B53BFD2E241864",
+      "crc32": "A3330E8F",
+      "rom_size": 4194304,
+      "game_code": "BDDJ",
+      "revision": null,
+      "bgm_verification_status": "BGM_CONFIRMED",
+      "bgm_test_speeds": [
+        1,
+        2,
+        3
+      ],
+      "bgm_test_scope": "Tested loaded scene only; Fixed1x versus Fixed2x/3x normal sample scale. Native1x fidelity and listening are separately reported, not certified by this status. original 2/5/8s; human listening pending; no complete-playthrough or SE guarantee.",
+      "bgm_tested_commit": "d451f54da8aea4217130574df42aee775cd369a5",
+      "bgm_evidence": "compatibility/sources/v04-bgm-observations.json#BDDJ",
+      "audio_comparisons": [
+        {
+          "speed": 2,
+          "sample_rate": 32768,
+          "common_frames": 395050,
+          "exact_prefix_frames": 11015,
+          "exact_prefix_seconds": 0.336151123046875,
+          "first_different_sample": 11015,
+          "different_stereo_frames": 379306,
+          "windows": [
+            {
+              "fast_start_seconds": 2,
+              "reference_start_seconds": 1.87445068359375,
+              "offset_samples": -4114,
+              "correlation": 1.0000000000000002,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 223.0,
+              "fast_dominant_hz": 223.0,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 5,
+              "reference_start_seconds": 4.87445068359375,
+              "offset_samples": -4114,
+              "correlation": 1.0,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 87.0,
+              "fast_dominant_hz": 87.0,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 8,
+              "reference_start_seconds": 7.87445068359375,
+              "offset_samples": -4114,
+              "correlation": 1.0,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 119.5,
+              "fast_dominant_hz": 119.5,
+              "same_sample_scale": true
+            }
+          ],
+          "phrase_time_slope": 1.0000000000000004,
+          "audio_clock_sample_rate_ratio": 1.00002488080193,
+          "observation": "SAME_SCALE_AGREEMENT"
+        },
+        {
+          "speed": 3,
+          "sample_rate": 32768,
+          "common_frames": 395050,
+          "exact_prefix_frames": 11015,
+          "exact_prefix_seconds": 0.336151123046875,
+          "first_different_sample": 11015,
+          "different_stereo_frames": 380676,
+          "windows": [
+            {
+              "fast_start_seconds": 2,
+              "reference_start_seconds": 1.83258056640625,
+              "offset_samples": -5486,
+              "correlation": 0.9999999999999999,
+              "spectral_cosine": 1.0000000000000002,
+              "reference_dominant_hz": 223.0,
+              "fast_dominant_hz": 223.0,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 5,
+              "reference_start_seconds": 4.83258056640625,
+              "offset_samples": -5486,
+              "correlation": 1.0,
+              "spectral_cosine": 0.9999999999999999,
+              "reference_dominant_hz": 130.5,
+              "fast_dominant_hz": 130.5,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 8,
+              "reference_start_seconds": 7.83258056640625,
+              "offset_samples": -5486,
+              "correlation": 0.9999999999999998,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 119.5,
+              "fast_dominant_hz": 119.5,
+              "same_sample_scale": true
+            }
+          ],
+          "phrase_time_slope": 1.0000000000000004,
+          "audio_clock_sample_rate_ratio": 1.0000374073701745,
+          "observation": "SAME_SCALE_AGREEMENT"
+        }
+      ],
+      "universal_steady_comparisons": [
+        {
+          "speed": 2,
+          "windows": [
+            {
+              "fast_start_seconds": 3,
+              "reference_start_seconds": 2.87445068359375,
+              "offset_samples": -4114,
+              "correlation": 1.0,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 195.5,
+              "fast_dominant_hz": 195.5,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 6,
+              "reference_start_seconds": 5.87445068359375,
+              "offset_samples": -4114,
+              "correlation": 1.0,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 99.0,
+              "fast_dominant_hz": 99.0,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 9,
+              "reference_start_seconds": 8.87445068359375,
+              "offset_samples": -4114,
+              "correlation": 0.9999999999999999,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 119.5,
+              "fast_dominant_hz": 119.5,
+              "same_sample_scale": true
+            }
+          ],
+          "agreement": true,
+          "phrase_time_slope": 1.0
+        },
+        {
+          "speed": 3,
+          "windows": [
+            {
+              "fast_start_seconds": 3,
+              "reference_start_seconds": 2.83258056640625,
+              "offset_samples": -5486,
+              "correlation": 0.9999999999999998,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 195.5,
+              "fast_dominant_hz": 195.5,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 6,
+              "reference_start_seconds": 5.83258056640625,
+              "offset_samples": -5486,
+              "correlation": 0.9999999999999998,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 99.0,
+              "fast_dominant_hz": 99.0,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 9,
+              "reference_start_seconds": 8.83258056640625,
+              "offset_samples": -5486,
+              "correlation": 0.9999999999999999,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 119.5,
+              "fast_dominant_hz": 119.5,
+              "same_sample_scale": true
+            }
+          ],
+          "agreement": true,
+          "phrase_time_slope": 0.9999999999999999
+        }
+      ],
+      "same_initial_ram": true,
+      "audio_sha256": {
+        "1": "0BF72392550B9D43406F4B97957D5DA4A0C8879FEE9A6D20A1B8BACD0D133407",
+        "2": "5D140BDB84CF4F7C62DC350A6BD19E46DCD2C90056FA139F45AF54D91E178AD7",
+        "3": "D3CD33C8A88DFD6809E6C099E322B3B2CD622BEA1161B82BADC84367972A97FF"
+      },
+      "scene_state_sha256": "BFD573B31138045DAA4A1F36AFA8412ED62B6F9A475AE1A6DFF2CE4C6EE04E2C",
+      "note": "Scoped BGM comparison. No full-game/region/revision extrapolation.",
+      "scope_is_not_full_game": true
+    },
+    {
+      "release_id": "gba-6894ed29af5a1603c72e3b55047a5c9f5d5ddb6b",
+      "sha256": "E47C574D43716466929D9ED0E52AA9E79FC95099D31965BECC28668677DEC278",
+      "sha1": "6894ED29AF5A1603C72E3B55047A5C9F5D5DDB6B",
+      "crc32": "6D4307F7",
+      "rom_size": 8388608,
+      "game_code": "BGXJ",
+      "revision": null,
+      "bgm_verification_status": "BGM_CONFIRMED",
+      "bgm_test_speeds": [
+        1,
+        2,
+        3
+      ],
+      "bgm_test_scope": "Tested loaded scene only; Fixed1x versus Fixed2x/3x normal sample scale. Native1x fidelity and listening are separately reported, not certified by this status. original 2/5/8s; human listening pending; no complete-playthrough or SE guarantee.",
+      "bgm_tested_commit": "d451f54da8aea4217130574df42aee775cd369a5",
+      "bgm_evidence": "compatibility/sources/v04-bgm-observations.json#BGXJ",
+      "audio_comparisons": [
+        {
+          "speed": 2,
+          "sample_rate": 32768,
+          "common_frames": 394694,
+          "exact_prefix_frames": 10111,
+          "exact_prefix_seconds": 0.308563232421875,
+          "first_different_sample": 10111,
+          "different_stereo_frames": 384583,
+          "windows": [
+            {
+              "fast_start_seconds": 2,
+              "reference_start_seconds": 1.882781982421875,
+              "offset_samples": -3841,
+              "correlation": 1.0000000000000004,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 64.5,
+              "fast_dominant_hz": 64.5,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 5,
+              "reference_start_seconds": 4.882781982421875,
+              "offset_samples": -3841,
+              "correlation": 0.9999999999999998,
+              "spectral_cosine": 1.0000000000000002,
+              "reference_dominant_hz": 64.5,
+              "fast_dominant_hz": 64.5,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 8,
+              "reference_start_seconds": 7.882781982421875,
+              "offset_samples": -3841,
+              "correlation": 1.0,
+              "spectral_cosine": 0.9999999999999999,
+              "reference_dominant_hz": 64.5,
+              "fast_dominant_hz": 64.5,
+              "same_sample_scale": true
+            }
+          ],
+          "phrase_time_slope": 1.0000000000000004,
+          "audio_clock_sample_rate_ratio": 1.00002488080193,
+          "observation": "SAME_SCALE_AGREEMENT"
+        },
+        {
+          "speed": 3,
+          "sample_rate": 32768,
+          "common_frames": 394694,
+          "exact_prefix_frames": 10111,
+          "exact_prefix_seconds": 0.308563232421875,
+          "first_different_sample": 10111,
+          "different_stereo_frames": 384583,
+          "windows": [
+            {
+              "fast_start_seconds": 2,
+              "reference_start_seconds": 1.843719482421875,
+              "offset_samples": -5121,
+              "correlation": 1.0000000000000002,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 64.5,
+              "fast_dominant_hz": 64.5,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 5,
+              "reference_start_seconds": 4.843719482421875,
+              "offset_samples": -5121,
+              "correlation": 1.0,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 64.5,
+              "fast_dominant_hz": 64.5,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 8,
+              "reference_start_seconds": 7.843719482421875,
+              "offset_samples": -5121,
+              "correlation": 1.0000000000000002,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 64.5,
+              "fast_dominant_hz": 64.5,
+              "same_sample_scale": true
+            }
+          ],
+          "phrase_time_slope": 1.0000000000000004,
+          "audio_clock_sample_rate_ratio": 1.0000374073701745,
+          "observation": "SAME_SCALE_AGREEMENT"
+        }
+      ],
+      "universal_steady_comparisons": [
+        {
+          "speed": 2,
+          "windows": [
+            {
+              "fast_start_seconds": 3,
+              "reference_start_seconds": 2.882781982421875,
+              "offset_samples": -3841,
+              "correlation": 1.0000000000000002,
+              "spectral_cosine": 0.9999999999999998,
+              "reference_dominant_hz": 64.5,
+              "fast_dominant_hz": 64.5,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 6,
+              "reference_start_seconds": 5.882781982421875,
+              "offset_samples": -3841,
+              "correlation": 1.0000000000000002,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 67.0,
+              "fast_dominant_hz": 67.0,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 9,
+              "reference_start_seconds": 8.882781982421875,
+              "offset_samples": -3841,
+              "correlation": 1.0,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 64.5,
+              "fast_dominant_hz": 64.5,
+              "same_sample_scale": true
+            }
+          ],
+          "agreement": true,
+          "phrase_time_slope": 0.9999999999999999
+        },
+        {
+          "speed": 3,
+          "windows": [
+            {
+              "fast_start_seconds": 3,
+              "reference_start_seconds": 2.843719482421875,
+              "offset_samples": -5121,
+              "correlation": 1.0000000000000002,
+              "spectral_cosine": 0.9999999999999999,
+              "reference_dominant_hz": 64.5,
+              "fast_dominant_hz": 64.5,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 6,
+              "reference_start_seconds": 5.843719482421875,
+              "offset_samples": -5121,
+              "correlation": 1.0,
+              "spectral_cosine": 0.9999999999999999,
+              "reference_dominant_hz": 67.0,
+              "fast_dominant_hz": 67.0,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 9,
+              "reference_start_seconds": 8.843719482421875,
+              "offset_samples": -5121,
+              "correlation": 1.0000000000000002,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 64.5,
+              "fast_dominant_hz": 64.5,
+              "same_sample_scale": true
+            }
+          ],
+          "agreement": true,
+          "phrase_time_slope": 0.9999999999999999
+        }
+      ],
+      "same_initial_ram": true,
+      "audio_sha256": {
+        "1": "8B84EA0B8A43D95ED6CB49C6E03A1E8A5AF67AFB9AA1E81945618DB256F46C3D",
+        "2": "F60B245EFE012D4A700EDD09176706AFE5AB69BFB3D1C513E19BBC9945E0279B",
+        "3": "1CCFDA030DF3EF854C249C95F0BD3076B27E962AEED9BFF27F348FB76C7D0B76"
+      },
+      "scene_state_sha256": "8D98BA2BF18D02AEF49CB55BBA00B0163969603AAD5123DA64696BEF220DADDB",
+      "note": "Scoped BGM comparison. No full-game/region/revision extrapolation.",
+      "scope_is_not_full_game": true
+    },
+    {
+      "release_id": "gba-b1db63dd449153b82b16abcadf1eeb7c7a100dbb",
+      "sha256": "3B8BCCD212508AAE6F684CD38E27C70F75AD300146461D6EE7D6E20336326F27",
+      "sha1": "B1DB63DD449153B82B16ABCADF1EEB7C7A100DBB",
+      "crc32": "6C20EA42",
+      "rom_size": 4194304,
+      "game_code": "AGAJ",
+      "revision": null,
+      "bgm_verification_status": "BGM_CONFIRMED",
+      "bgm_test_speeds": [
+        1,
+        2,
+        3
+      ],
+      "bgm_test_scope": "Tested loaded scene only; Fixed1x versus Fixed2x/3x normal sample scale. Native1x fidelity and listening are separately reported, not certified by this status. original 2/5/8s; human listening pending; no complete-playthrough or SE guarantee.",
+      "bgm_tested_commit": "d451f54da8aea4217130574df42aee775cd369a5",
+      "bgm_evidence": "compatibility/sources/v04-bgm-observations.json#AGAJ",
+      "audio_comparisons": [
+        {
+          "speed": 2,
+          "sample_rate": 32768,
+          "common_frames": 395050,
+          "exact_prefix_frames": 11015,
+          "exact_prefix_seconds": 0.336151123046875,
+          "first_different_sample": 11015,
+          "different_stereo_frames": 384017,
+          "windows": [
+            {
+              "fast_start_seconds": 2,
+              "reference_start_seconds": 1.87445068359375,
+              "offset_samples": -4114,
+              "correlation": 1.0,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 123.0,
+              "fast_dominant_hz": 123.0,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 5,
+              "reference_start_seconds": 4.87445068359375,
+              "offset_samples": -4114,
+              "correlation": 1.0,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 103.5,
+              "fast_dominant_hz": 103.5,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 8,
+              "reference_start_seconds": 7.87445068359375,
+              "offset_samples": -4114,
+              "correlation": 1.0,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 82.0,
+              "fast_dominant_hz": 82.0,
+              "same_sample_scale": true
+            }
+          ],
+          "phrase_time_slope": 1.0000000000000004,
+          "audio_clock_sample_rate_ratio": 1.00002488080193,
+          "observation": "SAME_SCALE_AGREEMENT"
+        },
+        {
+          "speed": 3,
+          "sample_rate": 32768,
+          "common_frames": 395050,
+          "exact_prefix_frames": 11015,
+          "exact_prefix_seconds": 0.336151123046875,
+          "first_different_sample": 11015,
+          "different_stereo_frames": 384019,
+          "windows": [
+            {
+              "fast_start_seconds": 2,
+              "reference_start_seconds": 1.83258056640625,
+              "offset_samples": -5486,
+              "correlation": 1.0,
+              "spectral_cosine": 0.9999999999999999,
+              "reference_dominant_hz": 123.0,
+              "fast_dominant_hz": 123.0,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 5,
+              "reference_start_seconds": 4.83258056640625,
+              "offset_samples": -5486,
+              "correlation": 0.9999999999999998,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 103.5,
+              "fast_dominant_hz": 103.5,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 8,
+              "reference_start_seconds": 7.83258056640625,
+              "offset_samples": -5486,
+              "correlation": 1.0000000000000002,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 82.0,
+              "fast_dominant_hz": 82.0,
+              "same_sample_scale": true
+            }
+          ],
+          "phrase_time_slope": 1.0000000000000004,
+          "audio_clock_sample_rate_ratio": 1.0000374073701745,
+          "observation": "SAME_SCALE_AGREEMENT"
+        }
+      ],
+      "universal_steady_comparisons": [
+        {
+          "speed": 2,
+          "windows": [
+            {
+              "fast_start_seconds": 3,
+              "reference_start_seconds": 2.87445068359375,
+              "offset_samples": -4114,
+              "correlation": 0.9999999999999998,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 97.5,
+              "fast_dominant_hz": 97.5,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 6,
+              "reference_start_seconds": 5.87445068359375,
+              "offset_samples": -4114,
+              "correlation": 1.0000000000000002,
+              "spectral_cosine": 1.0000000000000002,
+              "reference_dominant_hz": 87.0,
+              "fast_dominant_hz": 87.0,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 9,
+              "reference_start_seconds": 8.87445068359375,
+              "offset_samples": -4114,
+              "correlation": 0.9999999999999999,
+              "spectral_cosine": 1.0000000000000002,
+              "reference_dominant_hz": 97.5,
+              "fast_dominant_hz": 97.5,
+              "same_sample_scale": true
+            }
+          ],
+          "agreement": true,
+          "phrase_time_slope": 1.0
+        },
+        {
+          "speed": 3,
+          "windows": [
+            {
+              "fast_start_seconds": 3,
+              "reference_start_seconds": 2.83258056640625,
+              "offset_samples": -5486,
+              "correlation": 1.0,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 97.5,
+              "fast_dominant_hz": 97.5,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 6,
+              "reference_start_seconds": 5.83258056640625,
+              "offset_samples": -5486,
+              "correlation": 1.0,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 87.0,
+              "fast_dominant_hz": 87.0,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 9,
+              "reference_start_seconds": 8.83258056640625,
+              "offset_samples": -5486,
+              "correlation": 0.8834648369878007,
+              "spectral_cosine": 0.9975155547201255,
+              "reference_dominant_hz": 97.5,
+              "fast_dominant_hz": 97.5,
+              "same_sample_scale": true
+            }
+          ],
+          "agreement": false,
+          "phrase_time_slope": 0.9999999999999999
+        }
+      ],
+      "same_initial_ram": true,
+      "audio_sha256": {
+        "1": "F8A354985F3408470412EDC51DC6C5161C7E7C7A808540D6B202CE731E0389A6",
+        "2": "4277E73505C25843A039E1947A6C7FCCDF9C63E0A6F33DDDC8B1D2BEF4484AC1",
+        "3": "1F93A7C520678564BFF5E3BB8E582BFE30242CF89CACB48E36BD6B10428008D6"
+      },
+      "scene_state_sha256": "73833EA983071229E7A15AC5637A3B800A8644275C54F2B8AD58589952D4CEDB",
+      "note": "Original windows pass; later STOP song19 / PLAY song20 changes the game-selected BGM. Additional late comparison retained.",
+      "scope_is_not_full_game": true
+    },
+    {
+      "release_id": "gba-8b624aeb36a0321c094dc3ee1f64f5573509b212",
+      "sha256": "B35DA879AAAB432750920CB290238CA19B7AC012D5AA1EB0EE8269AD2861E2E5",
+      "sha1": "8B624AEB36A0321C094DC3EE1F64F5573509B212",
+      "crc32": "7C26672F",
+      "rom_size": 16777216,
+      "game_code": "BFGJ",
+      "revision": null,
+      "bgm_verification_status": "BGM_CONFIRMED",
+      "bgm_test_speeds": [
+        1,
+        2,
+        3
+      ],
+      "bgm_test_scope": "Tested loaded scene only; Fixed1x versus Fixed2x/3x normal sample scale. Native1x fidelity and listening are separately reported, not certified by this status. original 2/5/8s; human listening pending; no complete-playthrough or SE guarantee.",
+      "bgm_tested_commit": "d451f54da8aea4217130574df42aee775cd369a5",
+      "bgm_evidence": "compatibility/sources/v04-bgm-observations.json#BFGJ",
+      "audio_comparisons": [
+        {
+          "speed": 2,
+          "sample_rate": 32768,
+          "common_frames": 395442,
+          "exact_prefix_frames": 11956,
+          "exact_prefix_seconds": 0.3648681640625,
+          "first_different_sample": 11956,
+          "different_stereo_frames": 383486,
+          "windows": [
+            {
+              "fast_start_seconds": 2,
+              "reference_start_seconds": 1.866058349609375,
+              "offset_samples": -4389,
+              "correlation": 1.0000000000000002,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 348.5,
+              "fast_dominant_hz": 348.5,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 5,
+              "reference_start_seconds": 4.866058349609375,
+              "offset_samples": -4389,
+              "correlation": 1.0000000000000002,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 1403.5,
+              "fast_dominant_hz": 1403.5,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 8,
+              "reference_start_seconds": 7.866058349609375,
+              "offset_samples": -4389,
+              "correlation": 1.0000000000000004,
+              "spectral_cosine": 0.9999999999999999,
+              "reference_dominant_hz": 395.5,
+              "fast_dominant_hz": 395.5,
+              "same_sample_scale": true
+            }
+          ],
+          "phrase_time_slope": 1.0000000000000004,
+          "audio_clock_sample_rate_ratio": 1.00002488080193,
+          "observation": "SAME_SCALE_AGREEMENT"
+        },
+        {
+          "speed": 3,
+          "sample_rate": 32768,
+          "common_frames": 395442,
+          "exact_prefix_frames": 11956,
+          "exact_prefix_seconds": 0.3648681640625,
+          "first_different_sample": 11956,
+          "different_stereo_frames": 383486,
+          "windows": [
+            {
+              "fast_start_seconds": 2,
+              "reference_start_seconds": 1.8214111328125,
+              "offset_samples": -5852,
+              "correlation": 1.0,
+              "spectral_cosine": 1.0000000000000002,
+              "reference_dominant_hz": 348.5,
+              "fast_dominant_hz": 348.5,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 5,
+              "reference_start_seconds": 4.8214111328125,
+              "offset_samples": -5852,
+              "correlation": 1.0,
+              "spectral_cosine": 0.9999999999999999,
+              "reference_dominant_hz": 1403.5,
+              "fast_dominant_hz": 1403.5,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 8,
+              "reference_start_seconds": 7.8214111328125,
+              "offset_samples": -5852,
+              "correlation": 1.0,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 395.5,
+              "fast_dominant_hz": 395.5,
+              "same_sample_scale": true
+            }
+          ],
+          "phrase_time_slope": 1.0000000000000004,
+          "audio_clock_sample_rate_ratio": 1.0000374073701745,
+          "observation": "SAME_SCALE_AGREEMENT"
+        }
+      ],
+      "universal_steady_comparisons": [
+        {
+          "speed": 2,
+          "windows": [
+            {
+              "fast_start_seconds": 3,
+              "reference_start_seconds": 2.866058349609375,
+              "offset_samples": -4389,
+              "correlation": 1.0000000000000002,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 705.0,
+              "fast_dominant_hz": 705.0,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 6,
+              "reference_start_seconds": 5.866058349609375,
+              "offset_samples": -4389,
+              "correlation": 1.0000000000000004,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 1403.0,
+              "fast_dominant_hz": 1403.0,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 9,
+              "reference_start_seconds": 8.866058349609375,
+              "offset_samples": -4389,
+              "correlation": 1.0000000000000004,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 934.0,
+              "fast_dominant_hz": 934.0,
+              "same_sample_scale": true
+            }
+          ],
+          "agreement": true,
+          "phrase_time_slope": 0.9999999999999999
+        },
+        {
+          "speed": 3,
+          "windows": [
+            {
+              "fast_start_seconds": 3,
+              "reference_start_seconds": 2.8214111328125,
+              "offset_samples": -5852,
+              "correlation": 1.0,
+              "spectral_cosine": 0.9999999999999999,
+              "reference_dominant_hz": 705.0,
+              "fast_dominant_hz": 705.0,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 6,
+              "reference_start_seconds": 5.8214111328125,
+              "offset_samples": -5852,
+              "correlation": 0.9999999999999999,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 1403.0,
+              "fast_dominant_hz": 1403.0,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 9,
+              "reference_start_seconds": 8.8214111328125,
+              "offset_samples": -5852,
+              "correlation": 1.0,
+              "spectral_cosine": 1.0000000000000002,
+              "reference_dominant_hz": 934.0,
+              "fast_dominant_hz": 934.0,
+              "same_sample_scale": true
+            }
+          ],
+          "agreement": true,
+          "phrase_time_slope": 0.9999999999999999
+        }
+      ],
+      "same_initial_ram": true,
+      "audio_sha256": {
+        "1": "11E55B19A5B901B74B66829F6F05420494B87FD8532E3E8DF9B31283C8A999C8",
+        "2": "4E2E2AA8727B424C274B97886A35D6088C04E8F427D7566B35A55BE0F0515895",
+        "3": "51E42ADFE4821AEC9199DACD1F89D8520B52D5D564FB3BC7FC152D491F1C28EC"
+      },
+      "scene_state_sha256": "0F65F3A0FF5427A145FAD38992A49472D93E558A5E474C3E16693F638F65A220",
+      "note": "Scoped BGM comparison. No full-game/region/revision extrapolation.",
+      "scope_is_not_full_game": true
+    },
+    {
+      "release_id": "gba-df835357ee70fc0b6c6eb606d9ff1dcc97eba9d3",
+      "sha256": "3801CB767BCB005AA85CFFA00AE3B366C62801F1A74A0EE72FCB06B21081604B",
+      "sha1": "DF835357EE70FC0B6C6EB606D9FF1DCC97EBA9D3",
+      "crc32": "498443DA",
+      "rom_size": 8388608,
+      "game_code": "BIXJ",
+      "revision": null,
+      "bgm_verification_status": "BGM_NOT_ACTIVE",
+      "bgm_test_speeds": [
+        1,
+        2,
+        3
+      ],
+      "bgm_test_scope": "Tested loaded scene only; Fixed1x versus Fixed2x/3x normal sample scale. Native1x fidelity and listening are separately reported, not certified by this status. ; human listening pending; no complete-playthrough or SE guarantee.",
+      "bgm_tested_commit": "d451f54da8aea4217130574df42aee775cd369a5",
+      "bgm_evidence": "compatibility/sources/v04-bgm-observations.json#BIXJ",
+      "audio_comparisons": [
+        {
+          "speed": 2,
+          "sample_rate": 32768,
+          "common_frames": 785628,
+          "exact_prefix_frames": 785628,
+          "exact_prefix_seconds": 23.9754638671875,
+          "first_different_sample": null,
+          "different_stereo_frames": 0,
+          "windows": [],
+          "phrase_time_slope": null,
+          "audio_clock_sample_rate_ratio": 1.00002488080193,
+          "observation": "INCONCLUSIVE"
+        },
+        {
+          "speed": 3,
+          "sample_rate": 32768,
+          "common_frames": 785628,
+          "exact_prefix_frames": 785628,
+          "exact_prefix_seconds": 23.9754638671875,
+          "first_different_sample": null,
+          "different_stereo_frames": 0,
+          "windows": [],
+          "phrase_time_slope": null,
+          "audio_clock_sample_rate_ratio": 1.0000374073701745,
+          "observation": "INCONCLUSIVE"
+        }
+      ],
+      "universal_steady_comparisons": [
+        {
+          "speed": 2,
+          "windows": [],
+          "agreement": false,
+          "phrase_time_slope": null
+        },
+        {
+          "speed": 3,
+          "windows": [],
+          "agreement": false,
+          "phrase_time_slope": null
+        }
+      ],
+      "same_initial_ram": true,
+      "audio_sha256": {
+        "1": "B0C879ACBFE29218E10F1B0806A81BC9793C4D1351F2101B1CD3A14CE688F842",
+        "2": "4CA7448B4C2921AB44A780DDC9E8EB3592A8748D446B13CED4D83E844C5E8825",
+        "3": "935324C0FD1C5D8BF73C98989D6FEEBD949ADB2B8B37B53D32F966690D04E88E"
+      },
+      "scene_state_sha256": "590EE7D7E4B6843E8A7D70884D02CB7FBE5F45559AEED5CB2A7EAD98A78E207D",
+      "note": "Selected no-input and Start fixtures do not provide comparable nonzero1x BGM. Player discovery/profile validation works; startup has active=0 and unverified ownership. Late game events occur at different audio times. Not a scanner failure or proven bad BGM.",
+      "scope_is_not_full_game": true
+    },
+    {
+      "release_id": "gba-854a76c49f6e83d8ee9dd42098ce1fc7236af855",
+      "sha256": "039B57B95F60928CAF08F32375B1C0EA5BC779314CF4F886936A4D70100DB2A8",
+      "sha1": "854A76C49F6E83D8EE9DD42098CE1FC7236AF855",
+      "crc32": "B7827F20",
+      "rom_size": 16777216,
+      "game_code": "BGYJ",
+      "revision": null,
+      "bgm_verification_status": "BGM_CONFIRMED",
+      "bgm_test_speeds": [
+        1,
+        2,
+        3
+      ],
+      "bgm_test_scope": "Tested loaded scene only; Fixed1x versus Fixed2x/3x normal sample scale. Native1x fidelity and listening are separately reported, not certified by this status. original 2/5/8s; human listening pending; no complete-playthrough or SE guarantee.",
+      "bgm_tested_commit": "d451f54da8aea4217130574df42aee775cd369a5",
+      "bgm_evidence": "compatibility/sources/v04-bgm-observations.json#BGYJ",
+      "audio_comparisons": [
+        {
+          "speed": 2,
+          "sample_rate": 32768,
+          "common_frames": 395049,
+          "exact_prefix_frames": 11014,
+          "exact_prefix_seconds": 0.33612060546875,
+          "first_different_sample": 11014,
+          "different_stereo_frames": 384004,
+          "windows": [
+            {
+              "fast_start_seconds": 2,
+              "reference_start_seconds": 1.87445068359375,
+              "offset_samples": -4114,
+              "correlation": 0.9999999999999999,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 104.5,
+              "fast_dominant_hz": 104.5,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 5,
+              "reference_start_seconds": 4.87445068359375,
+              "offset_samples": -4114,
+              "correlation": 1.0,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 132.0,
+              "fast_dominant_hz": 132.0,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 8,
+              "reference_start_seconds": 7.87445068359375,
+              "offset_samples": -4114,
+              "correlation": 0.9999999999999999,
+              "spectral_cosine": 1.0000000000000002,
+              "reference_dominant_hz": 104.5,
+              "fast_dominant_hz": 104.5,
+              "same_sample_scale": true
+            }
+          ],
+          "phrase_time_slope": 1.0000000000000004,
+          "audio_clock_sample_rate_ratio": 1.00002488080193,
+          "observation": "SAME_SCALE_AGREEMENT"
+        },
+        {
+          "speed": 3,
+          "sample_rate": 32768,
+          "common_frames": 395049,
+          "exact_prefix_frames": 11014,
+          "exact_prefix_seconds": 0.33612060546875,
+          "first_different_sample": 11014,
+          "different_stereo_frames": 383992,
+          "windows": [
+            {
+              "fast_start_seconds": 2,
+              "reference_start_seconds": 1.83258056640625,
+              "offset_samples": -5486,
+              "correlation": 0.9999999999999999,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 104.5,
+              "fast_dominant_hz": 104.5,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 5,
+              "reference_start_seconds": 4.83258056640625,
+              "offset_samples": -5486,
+              "correlation": 0.9999999999999999,
+              "spectral_cosine": 1.0000000000000002,
+              "reference_dominant_hz": 132.0,
+              "fast_dominant_hz": 132.0,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 8,
+              "reference_start_seconds": 7.83258056640625,
+              "offset_samples": -5486,
+              "correlation": 0.9999999999999999,
+              "spectral_cosine": 0.9999999999999998,
+              "reference_dominant_hz": 104.5,
+              "fast_dominant_hz": 104.5,
+              "same_sample_scale": true
+            }
+          ],
+          "phrase_time_slope": 1.0000000000000004,
+          "audio_clock_sample_rate_ratio": 1.0000374073701745,
+          "observation": "SAME_SCALE_AGREEMENT"
+        }
+      ],
+      "universal_steady_comparisons": [
+        {
+          "speed": 2,
+          "windows": [
+            {
+              "fast_start_seconds": 3,
+              "reference_start_seconds": 2.87445068359375,
+              "offset_samples": -4114,
+              "correlation": 1.0,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 117.5,
+              "fast_dominant_hz": 117.5,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 6,
+              "reference_start_seconds": 5.87445068359375,
+              "offset_samples": -4114,
+              "correlation": 0.9999999999999999,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 98.0,
+              "fast_dominant_hz": 98.0,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 9,
+              "reference_start_seconds": 8.87445068359375,
+              "offset_samples": -4114,
+              "correlation": 1.0000000000000002,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 104.0,
+              "fast_dominant_hz": 104.0,
+              "same_sample_scale": true
+            }
+          ],
+          "agreement": true,
+          "phrase_time_slope": 1.0
+        },
+        {
+          "speed": 3,
+          "windows": [
+            {
+              "fast_start_seconds": 3,
+              "reference_start_seconds": 2.83258056640625,
+              "offset_samples": -5486,
+              "correlation": 0.9999999999999999,
+              "spectral_cosine": 1.0000000000000002,
+              "reference_dominant_hz": 117.5,
+              "fast_dominant_hz": 117.5,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 6,
+              "reference_start_seconds": 5.83258056640625,
+              "offset_samples": -5486,
+              "correlation": 0.9999999999999999,
+              "spectral_cosine": 1.0000000000000002,
+              "reference_dominant_hz": 98.0,
+              "fast_dominant_hz": 98.0,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 9,
+              "reference_start_seconds": 8.83258056640625,
+              "offset_samples": -5486,
+              "correlation": 0.9999999999999999,
+              "spectral_cosine": 0.9999999999999998,
+              "reference_dominant_hz": 104.0,
+              "fast_dominant_hz": 104.0,
+              "same_sample_scale": true
+            }
+          ],
+          "agreement": true,
+          "phrase_time_slope": 0.9999999999999999
+        }
+      ],
+      "same_initial_ram": true,
+      "audio_sha256": {
+        "1": "CF179EEA6A1C4F8BE880F620A50A43D7974998E3768F95661644739F9C3A6CB5",
+        "2": "770945CD0BB4020CDDA7850A0974F894F752537AB10B13FC75CBF7C5AA1D77AC",
+        "3": "4AC496A390362DBD89A0B049067D8C7890E92DAE03BB39A3791061098130BBFB"
+      },
+      "scene_state_sha256": "49B339F443BB61EF9F96D6AE19EE5233174795C901BDE921268BE361178FE8AF",
+      "note": "Catalog UNKNOWN; exact-DAT ROM and guarded Experimental runtime establish an EWRAM MP2K candidate. Later-menu song18 comparison passes. Catalog and Conservative admission unchanged.",
+      "scope_is_not_full_game": true
+    },
+    {
+      "release_id": "gba-110a7ae6e5886c10f2018d5293e9c1430299ed42",
+      "sha256": "D62A437DFDF20029BD0DE832E52D36AE0306EDD52ED7854E77FF2DBA1E0C8495",
+      "sha1": "110A7AE6E5886C10F2018D5293E9C1430299ED42",
+      "crc32": "1B00BC2C",
+      "rom_size": 8388608,
+      "game_code": "BKRJ",
+      "revision": null,
+      "bgm_verification_status": "BGM_INCONCLUSIVE",
+      "bgm_test_speeds": [
+        1,
+        2,
+        3
+      ],
+      "bgm_test_scope": "Tested loaded scene only; Fixed1x versus Fixed2x/3x normal sample scale. Native1x fidelity and listening are separately reported, not certified by this status. ; human listening pending; no complete-playthrough or SE guarantee.",
+      "bgm_tested_commit": "d451f54da8aea4217130574df42aee775cd369a5",
+      "bgm_evidence": "compatibility/sources/v04-bgm-observations.json#BKRJ",
+      "audio_comparisons": [
+        {
+          "speed": 2,
+          "sample_rate": 32768,
+          "common_frames": 393443,
+          "exact_prefix_frames": 6117,
+          "exact_prefix_seconds": 0.186676025390625,
+          "first_different_sample": 6117,
+          "different_stereo_frames": 386791,
+          "windows": [
+            {
+              "fast_start_seconds": 2,
+              "reference_start_seconds": 1.924652099609375,
+              "offset_samples": -2469,
+              "correlation": 0.705415139214849,
+              "spectral_cosine": 0.9877216764788747,
+              "reference_dominant_hz": 151.0,
+              "fast_dominant_hz": 151.0,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 5,
+              "reference_start_seconds": 4.924652099609375,
+              "offset_samples": -2469,
+              "correlation": 1.0,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 151.0,
+              "fast_dominant_hz": 151.0,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 8,
+              "reference_start_seconds": 7.924652099609375,
+              "offset_samples": -2469,
+              "correlation": 1.0,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 152.5,
+              "fast_dominant_hz": 152.5,
+              "same_sample_scale": true
+            }
+          ],
+          "phrase_time_slope": 1.0000000000000007,
+          "audio_clock_sample_rate_ratio": 1.00002488080193,
+          "observation": "INCONCLUSIVE"
+        },
+        {
+          "speed": 3,
+          "sample_rate": 32768,
+          "common_frames": 393443,
+          "exact_prefix_frames": 6117,
+          "exact_prefix_seconds": 0.186676025390625,
+          "first_different_sample": 6117,
+          "different_stereo_frames": 385976,
+          "windows": [
+            {
+              "fast_start_seconds": 2,
+              "reference_start_seconds": 1.8995361328125,
+              "offset_samples": -3292,
+              "correlation": 0.8183183236748707,
+              "spectral_cosine": 0.9957315200612575,
+              "reference_dominant_hz": 151.0,
+              "fast_dominant_hz": 151.0,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 5,
+              "reference_start_seconds": 4.8995361328125,
+              "offset_samples": -3292,
+              "correlation": 1.0,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 151.0,
+              "fast_dominant_hz": 151.0,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 8,
+              "reference_start_seconds": 7.8995361328125,
+              "offset_samples": -3292,
+              "correlation": 1.0,
+              "spectral_cosine": 0.9999999999999999,
+              "reference_dominant_hz": 152.5,
+              "fast_dominant_hz": 152.5,
+              "same_sample_scale": true
+            }
+          ],
+          "phrase_time_slope": 1.0000000000000004,
+          "audio_clock_sample_rate_ratio": 1.0000374073701745,
+          "observation": "INCONCLUSIVE"
+        }
+      ],
+      "universal_steady_comparisons": [
+        {
+          "speed": 2,
+          "windows": [
+            {
+              "fast_start_seconds": 3,
+              "reference_start_seconds": 2.924652099609375,
+              "offset_samples": -2469,
+              "correlation": 0.8635697737922647,
+              "spectral_cosine": 0.8053763722626691,
+              "reference_dominant_hz": 658.0,
+              "fast_dominant_hz": 151.0,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 6,
+              "reference_start_seconds": 5.924652099609375,
+              "offset_samples": -2469,
+              "correlation": 1.0000000000000002,
+              "spectral_cosine": 1.0000000000000002,
+              "reference_dominant_hz": 151.0,
+              "fast_dominant_hz": 151.0,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 9,
+              "reference_start_seconds": 8.924652099609375,
+              "offset_samples": -2469,
+              "correlation": 0.9999999999999998,
+              "spectral_cosine": 0.9999999999999999,
+              "reference_dominant_hz": 151.0,
+              "fast_dominant_hz": 151.0,
+              "same_sample_scale": true
+            }
+          ],
+          "agreement": false,
+          "phrase_time_slope": 0.9999999999999997
+        },
+        {
+          "speed": 3,
+          "windows": [
+            {
+              "fast_start_seconds": 3,
+              "reference_start_seconds": 2.8995361328125,
+              "offset_samples": -3292,
+              "correlation": 0.8618394502574274,
+              "spectral_cosine": 0.8056214726008146,
+              "reference_dominant_hz": 658.0,
+              "fast_dominant_hz": 151.0,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 6,
+              "reference_start_seconds": 5.8995361328125,
+              "offset_samples": -3292,
+              "correlation": 0.9999999999999998,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 151.0,
+              "fast_dominant_hz": 151.0,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 9,
+              "reference_start_seconds": 8.8995361328125,
+              "offset_samples": -3292,
+              "correlation": 1.0,
+              "spectral_cosine": 0.9999999999999999,
+              "reference_dominant_hz": 151.0,
+              "fast_dominant_hz": 151.0,
+              "same_sample_scale": true
+            }
+          ],
+          "agreement": false,
+          "phrase_time_slope": 0.9999999999999997
+        }
+      ],
+      "same_initial_ram": true,
+      "audio_sha256": {
+        "1": "C629F377CFDD3CC69D790892C4B069F3C1AB19936F4C8D10C7510343168266FC",
+        "2": "16E63D1420B86434C5523BC8E2AD21C8345D1E1EF74893BA31F9BCB97B305AD8",
+        "3": "26BAFF4716B82419DE1B10716BEC876C30DEBA556239DFABF4A0D3F7DD4B037C"
+      },
+      "scene_state_sha256": "FAC5D9E2342340A5487D116AFFEC616DBF38DDFAD963A293BF5F59FF717EF753",
+      "note": "Ordinary Experimental runtime validates MP2K EWRAM players; full-mix correlations remain below0.97, with multiple song/SE transitions. Structural recognition is not full BGM confirmation.",
+      "scope_is_not_full_game": true
+    }
+  ]
+}

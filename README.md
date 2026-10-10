@@ -1,8 +1,18 @@
-# mGBA Fixed Audio Tempo v0.3-preview
+# mGBA Fixed Audio Tempo — v0.4-preview
 
-An experimental Windows x64 RetroArch core that aims to keep supported GBA BGM and sound effects at normal tempo and pitch during actual 2x gameplay.
+## 2x / 3x gameplay with normal BGM tempo and pitch
 
-The existing v0.2-preview tag, Release and binaries are preserved in the **Private archive**. They are not current public downloads. This repository begins with a new clean root; no former Git history or tags are imported.
+This experimental Windows x64 RetroArch core uses an independent audio clock and event-driven synthesis to keep supported GBA BGM at its normal tempo and pitch while the game runs at **2x or 3x**. It does not time-stretch or pitch-correct a fast recording. Native fallback uses normal mGBA audio and does not provide fixed tempo during fast-forward.
+
+The v0.4-preview distribution is prepared locally, pending the user's final publication instruction. No v0.4 Release or download link is published yet. Published v0.3 downloads below remain available and unchanged. See [final release audit](docs/V04_FINAL_RELEASE_AUDIT.md) and [release notes](docs/V04_RELEASE_NOTES_EN.md).
+
+Phase9 verified BGM in limited scenes for **20 exact DAT identities** (ROM_PLAYER 10, EWRAM_PLAYER 9, UNKNOWN candidate 1). These are additional BGM-only observations, not whole-game or SE certification. The catalog has 3,075 identities; 601 are eligible for an Experimental attempt. See [compatibility](COMPATIBILITY.md).
+
+Known limits: some finite SE can end early at 2x/3x; ongoing SE are discarded on State Load/Rewind; FFTA restoration can take longer; ownership or runtime checks may keep native audio active. Unknown/Unlimited frontend speeds use native audio. Unverified games can produce incorrect audio, freeze or crash. GB/GBC Fixed Audio remains research. Major BGM failures, runaway audio and new compatibility regressions remain release blockers.
+
+## Adopted v0.4 demonstration candidates
+
+The user watched and approved the unchanged FFTA active gameplay (34.25seconds) and Oriental Blue active walking (24.17seconds) videos. Both show **1x→2x→3x twice**, using real RetroArch gameplay and Windows process audio. No video speed changes, audio time-stretch or pitch correction were applied. FFTA's state reload/audio cut near19.15seconds is explicitly marked. User approval applies to the viewed footage, not every game or sound effect. [Video manifest](docs/V04_DEMO_MANIFEST.json). MP4s are planned Release assets and are excluded from Git and the distribution ZIP.
 
 ## Download and installation
 
@@ -15,16 +25,16 @@ See [INSTALL.md](INSTALL.md), [BUILDING.md](BUILDING.md), [architecture](ARCHITE
 | Mode | Behavior |
 | --- | --- |
 | **Experimental — All Detected Drivers** | New default. Tries implemented backends for statically eligible detected drivers, including unverified titles. Runtime validation can still select native audio. |
-| **Conservative — Tested Drivers Only** | Restricts the attempt to the existing tested paths/allowlists. |
+| **Conservative — Tested Drivers Only** | Restricts the attempt to existing tested paths/allowlists at1x/2x. At3x it uses native audio. |
 | **Disabled** | Uses normal mGBA audio. Explicitly saved Disabled settings remain disabled. |
 
-Reload content after changing modes. In supported 2x paths, BGM/SE are rendered at normal tempo and pitch. Static eligibility, runtime ACTIVE and an actual audio test pass are different observations. Unsupported or unsafe runtime structures use native fallback; fallback does not preserve fixed tempo during fast-forward.
+Reload content after changing modes. Supported2x/3x BGM paths use normal tempo and pitch; finite SE lifetime has the limitations listed above. Static eligibility, runtime ACTIVE and an actual audio test pass are different observations. Unsupported or unsafe runtime structures use native fallback; fallback does not preserve fixed tempo during fast-forward.
 
 **Experimental Feature:** Unverified games may crash, freeze, produce incorrect audio, or experience save-data loss. Back up saves and save states before testing. Use Conservative or Disabled if problems occur. Memory checks, structure/pointer validation, buffer/queue limits, timeouts, State Load/Rewind protection and safe fallback remain enabled. Backup advice does not replace these safeguards.
 
-**3x is unvalidated and not guaranteed. GB/GBC Fixed Audio remains research.** A long-rate recovery/ownership limitation can retain native fallback; see [validation and limits](docs/V03_RC_VALIDATION.md).
+Published v0.3 scope: **3x is unvalidated and not guaranteed. GB/GBC Fixed Audio remains research.** A long-rate recovery/ownership limitation can retain native fallback; see [validation and limits](docs/V03_RC_VALIDATION.md).
 
-## Compatibility Database v2
+## Compatibility Database v3
 
 Browse [COMPATIBILITY.md](COMPATIBILITY.md), [JSON](compatibility/gba-compatibility.json), [CSV](compatibility/gba-compatibility.csv), or [Excel](compatibility/GBA_Compatibility.xlsx). JSON is the source of truth. Titles, regions and revisions come from exact public DAT identities; [metadata sources](compatibility/METADATA_SOURCES.md) retain attribution and license terms.
 
@@ -32,7 +42,7 @@ Limited test pass means Fixed Audio was observed to work in specific test scenar
 
 Experimental Unverified means a Fixed Audio attempt exists, but correct operation is unverified. Neither all 3,075 releases nor all 601 eligible identities are guaranteed to work. Regional variants do not inherit another release's results.
 
-## Technical Demonstrations
+## Published v0.3 demonstrations / 公開済みv0.3動画
 
 <!-- verified-release-links:start -->
 | Game | Scene / 場面 | Video |
@@ -43,7 +53,7 @@ Experimental Unverified means a Fixed Audio attempt exists, but correct operatio
 [Windows x64 ZIP](https://github.com/granbone/mgba-fixed-audio-tempo/releases/download/v0.3-preview/mgba-fixed-audio-tempo-v0.3-preview-win64.zip) · [SHA256SUMS](https://github.com/granbone/mgba-fixed-audio-tempo/releases/download/v0.3-preview/SHA256SUMS.txt) · [v0.3-preview Release](https://github.com/granbone/mgba-fixed-audio-tempo/releases/tag/v0.3-preview)
 <!-- verified-release-links:end -->
 
-Both recordings show real RetroArch gameplay switching **1x → 2x → 1x**, recorded through OBS and one actual Windows audio-output source. No video speed change, audio time-stretch, pitch correction or audio replacement was applied. 
+Both v0.3 recordings show real RetroArch gameplay switching **1x→2x→1x**, recorded through OBS and Windows audio. No video speed change, audio time-stretch, pitch correction or audio replacement was applied.
 
 ## Community reports and licenses
 

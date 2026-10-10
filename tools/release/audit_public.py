@@ -9,7 +9,7 @@ from pathlib import Path, PurePosixPath
 FORBIDDEN = {'.gb','.gbc','.gba','.sav','.srm','.state','.rawstate','.ss0','.bin',
              '.mp4','.mov','.wav','.pcm','.s16le','.7z','.rar','.gz','.xz','.bz2'}
 SECRET = re.compile(rb'github_pat_[A-Za-z0-9_]{20,}|gh[pousr]_[A-Za-z0-9]{20,}|sk-[A-Za-z0-9_-]{30,}|AKIA[0-9A-Z]{16}|-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY-----')
-PRIVATE = re.compile(rb'(?:J:[\\/][A-Za-z0-9_. -]{4}|[DT]:[\\/](?:RetroRom|RetroGameRoms)|[A-Za-z]:[\\/]Users[\\/]|\\\\AS[0-9]+[\\/])',re.I)
+PRIVATE = re.compile(rb'(?:J:[\\/]+[A-Za-z0-9_. -]{4}|[DT]:[\\/]+(?:RetroRom|RetroGameRoms)|[A-Za-z]:[\\/]+Users[\\/]+|\\\\+AS[0-9]+[\\/]+)',re.I)
 # Nintendo logo header patterns detect renamed/embedded cartridge images.
 GB_LOGO = bytes.fromhex('CEED6666CC0D000B03730083000C000D0008111F8889000EDCCC6EE6DDDDD999BBBB67636E0EECCCDDDC999FBBB9333E')
 GBA_LOGO = bytes.fromhex('24FFAE51699AA2213D84820A84E409AD11248B98C0817F21A352BE199309CE2010464A4AF82731EC58C7E83382E3CEBF')
@@ -54,6 +54,20 @@ def inspect(name,data,depth=0):
     assert not SECRET.search(data),('credential signature',name)
     # Binary debug and UTF-16 strings are inspected as well as UTF-8 text.
     assert not PRIVATE.search(data) and not PRIVATE.search(data.replace(b'\x00',b'')),('personal path',name)
+    # JSON can also encode the colon/backslash as Unicode escapes. Inspect
+    # decoded keys/values, not just the serialized representation.
+    if p.suffix.lower()=='.json':
+        try:document=json.loads(data)
+        except (ValueError,UnicodeDecodeError):document=None
+        def strings(value):
+            if isinstance(value,str):yield value
+            elif isinstance(value,dict):
+                for key,item in value.items():yield key;yield from strings(item)
+            elif isinstance(value,list):
+                for item in value:yield from strings(item)
+        for value in strings(document):
+            encoded=value.encode('utf8')
+            assert not PRIVATE.search(encoded) and not SECRET.search(encoded),('decoded JSON private content',name)
 
 def git(root,*args):return subprocess.check_output(['git','-C',str(root),*args])
 

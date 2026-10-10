@@ -64,6 +64,28 @@ static const uint8_t* traceRam(uint32_t address, size_t bytes) {
 		return testIwram+address-0x03000000;
 	return NULL;
 }
+/* Read-only, explicitly addressed native PSG channel transition diagnostics.
+ * Does not alter the ROM, core, allocation or driver timing. Caller must supply
+ * a verified game's CGB channel base; traceRam enforces the RAM bounds. */
+static void traceNativePsg(void) {
+	const char* setting = getenv("MGBA_RUNNER_NATIVE_PSG_BASE");
+	if (!setting) return;
+	char* end;
+	unsigned long address = strtoul(setting, &end, 0);
+	if (*end || address > UINT32_MAX - 4 * 0x40) return;
+	static uint8_t previous[4][8];
+	static bool seen[4];
+	for (unsigned i = 0; i < 4; ++i) {
+		const uint8_t* voice = traceRam((uint32_t) address + i * 0x40, 0x40);
+		if (!voice) return;
+		uint8_t state[8] = { voice[0], voice[1], voice[0x11], voice[0x13] };
+		memcpy(state + 4, voice + 0x2c, 4);
+		if (seen[i] && !memcmp(previous[i], state, sizeof(state))) continue;
+		fprintf(logFile, "[HOST NATIVE PSG] frame=%u ch=%u status=%02x type=%02x key=%u priority=%u track=%08x gate=%u\n",
+			frameNumber, i + 1, voice[0], voice[1], voice[0x11], voice[0x13], traceWord(voice + 0x2c), voice[0x10]);
+		memcpy(previous[i], state, sizeof(state)); seen[i] = true;
+	}
+}
 static void tracePlayers(void) {
 	if (!playerTraceFile) return;
 	unsigned initialized = 0;
@@ -85,6 +107,28 @@ static void tracePlayers(void) {
 			playerTraceStates[i]?playerTraceStates[i]:"WAIT_INIT");
 	}
 	fputs("]}\n",playerTraceFile);
+}
+
+/* Private native lifetime observations, including Disabled. Bounded RAM reads
+ * only; no writes or player registration from diagnostic addresses. */
+static void traceLifetime(void) {
+	const char* setting = getenv("MGBA_RUNNER_LIFETIME_PLAYER");
+	if (!setting) return;
+	char* end; unsigned long address = strtoul(setting, &end, 0);
+	if (*end || address > UINT32_MAX) return;
+	const uint8_t* p = traceRam(address, 0x40);
+	if (!p || traceWord(p + 0x34) != 0x68736d53 || p[8] > 16) return;
+	static uint32_t previousClock = UINT32_MAX, previousStatus = UINT32_MAX;
+	uint32_t clock = traceWord(p + 12), status = traceWord(p + 4);
+	if (clock == previousClock && status == previousStatus) return;
+	previousClock = clock; previousStatus = status;
+	fprintf(logFile, "[HOST LIFETIME PLAYER] frame=%u address=%08lx header=%08x status=%08x clock=%u tracks=%u\n", frameNumber, address, traceWord(p), status, clock, p[8]);
+	uint32_t base = traceWord(p + 0x2c);
+	const uint8_t* tracks = traceRam(base, p[8] * 0x50);
+	for (unsigned i = 0; tracks && i < p[8]; ++i) {
+		const uint8_t* t = tracks + i * 0x50;
+		fprintf(logFile, "[HOST LIFETIME TRACK] frame=%u track=%u flags=%02x cursor=%08x wait=%u channel=%08x\n", frameNumber, i, t[0], traceWord(t + 0x40), t[1], traceWord(t + 0x20));
+	}
 }
 
 
@@ -527,6 +571,25 @@ int main(int argc, char** argv) {
 		fprintf(logFile, "[HOST] stdin initial state success=%d bytes=%u\n", (int) success, length);
 		if (!success) { p_retro_unload_game(); p_retro_deinit(); goto cleanup; }
 	}
+	/* Private diagnostics only: record the exact starting native state and RAM.
+	 * This does not restore or mutate the emulated machine. */
+	const char* snapshotPrefix = getenv("MGBA_RUNNER_INITIAL_SNAPSHOT");
+	if (snapshotPrefix) {
+		char path[1200]; size_t bytes = p_retro_serialize_size();
+		void* snapshot = malloc(bytes);
+		bool ok = snapshot && p_retro_serialize(snapshot, bytes);
+		snprintf(path, sizeof(path), "%s.rawstate", snapshotPrefix);
+		FILE* file = ok && GetFileAttributesA(path) == INVALID_FILE_ATTRIBUTES ? fopen(path, "wb") : NULL;
+		ok = file && fwrite(snapshot, bytes, 1, file) == 1;
+		if (file) fclose(file);
+		free(snapshot);
+		snprintf(path, sizeof(path), "%s.ram", snapshotPrefix);
+		file = ok && testIwram && testWram && GetFileAttributesA(path) == INVALID_FILE_ATTRIBUTES ? fopen(path, "wb") : NULL;
+		ok = file && fwrite(testIwram, 0x8000, 1, file) == 1 && fwrite(testWram, 0x40000, 1, file) == 1;
+		if (file) fclose(file);
+		fprintf(logFile, "[HOST] initial snapshot success=%d bytes=%zu\n", (int) ok, bytes);
+		if (!ok) { p_retro_unload_game(); p_retro_deinit(); goto cleanup; }
+	}
 	for (frameNumber = 0; frameNumber < frames; ++frameNumber) {
 		if (!strcmp(argv[4], "switch")) {
 			fastForward = frameNumber >= switchStart && frameNumber < switchEnd;
@@ -544,6 +607,8 @@ int main(int argc, char** argv) {
 		}
 		p_retro_run();
 		tracePlayers();
+		traceNativePsg();
+		traceLifetime();
 		if (endpointTarget && frameNumber >= endpointStart && endpointCount < endpointTarget) {
 			endpointSize = p_retro_serialize_size();
 			void* state = malloc(endpointSize);

@@ -45,6 +45,7 @@
 
 #include "libretro_core_options.h"
 #include "fixed_audio_mode.h"
+#include "fixed_audio_rate.h"
 
 #ifdef M_CORE_GBA
 mLOG_DECLARE_CATEGORY(GBA_MP2K_EVENTS);
@@ -59,6 +60,14 @@ struct _MP2kAudioStats {
 	uint64_t sent;
 };
 static struct _MP2kAudioStats mp2kAudioStats;
+
+/* Opt-in wall probe. Runs and actual GBA frames are separate counters;
+ * neither presentation FPS nor frontend target-rate claims drive synthesis. */
+static struct {
+	retro_perf_get_time_usec_t clock;
+	uint64_t runs, samples, transportUs, gameUs, audioUs;
+	uint64_t gbaFrames, gbaStepAnomalies, callbackRequested, callbackAccepted;
+} fixedAudioProbe;
 
 struct _MP2kPcmTrace {
 	FILE* pcm;
@@ -262,6 +271,16 @@ static void _submitFixedAudio(size_t nativeFrames);
 static retro_environment_t environCallback;
 static retro_video_refresh_t videoCallback;
 static retro_audio_sample_batch_t audioCallback;
+#ifdef M_CORE_GBA
+static size_t _probeAudioCallback(const int16_t* data, size_t frames) {
+	size_t accepted = audioCallback(data, frames);
+	if (fixedAudioProbe.clock) {
+		fixedAudioProbe.callbackRequested += frames;
+		fixedAudioProbe.callbackAccepted += accepted;
+	}
+	return accepted;
+}
+#endif
 static retro_input_poll_t inputPollCallback;
 static retro_input_state_t inputCallback;
 static retro_log_printf_t logCallback;
@@ -897,7 +916,8 @@ static void _closeMP2kPcmTrace(void) {
 static void _openMP2kPcmTrace(void) {
 	_closeMP2kPcmTrace();
 	const char* enabled = getenv("MGBA_MP2K_AUDIO_TRACE");
-	if (!enabled || strcmp(enabled, "1") || !GBAMP2kEventsEnabled(core)) {
+	if (!enabled || strcmp(enabled, "1") ||
+	    (!GBAMP2kEventsEnabled(core) && fixedAudioBackend != FIXED_AUDIO_BACKEND_B6JJ)) {
 		return;
 	}
 	char defaultPath[80];
@@ -919,7 +939,7 @@ static void _openMP2kPcmTrace(void) {
 	}
 	mp2kPcmTrace.enabled = true;
 	mLOG(GBA_MP2K_EVENTS, INFO, "[MP2K PCM] file=%s format=s16le channels=2 rate=%u start=0",
-		path, core->audioSampleRate(core));
+		path, fixedAudioBackend == FIXED_AUDIO_BACKEND_B6JJ ? 65536 : core->audioSampleRate(core));
 }
 
 static void _traceMP2kInput(uint16_t keys) {
@@ -1635,6 +1655,16 @@ static void _pollRuntimeMP2kPlayers(void) {
 		if (profile->playerBacking == GBA_MP2K_RAM_PLAYER && !stopped) continue;
 		if (song < 0 || (song == mp2kCandidate.activeSong[id] && !stopped) ||
 		    (stopped && mp2kCandidate.activeSong[id] < 0)) continue;
+		if (stopped && song == 202 && mp2kCandidate.activeSong[id] == 202 &&
+		    GBAMP2kEventsTakeAorjNaturalFinish(core, id)) {
+			/* Native FINE already owns native completion. At checked 2x/3x it
+			 * must not become a Stop on a still-running independent sequence.
+			 * No timer or queued STOP is deferred; the bridge reaches its own
+			 * FINE. Real native Stop remains observed for this lifetime. */
+			mp2kCandidate.activeSong[id] = -1;
+			mLOG(GBA_MP2K_EVENTS, INFO, "[MP2K NATURAL COMPLETE] player=%u song=202 nativeClock=%u action=ALLOW_INDEPENDENT_FINE", id, player->clock);
+			continue;
+		}
 		if (!runtimeAudioPartial && fixedAudioOutput.active)
 			mLOG(GBA, INFO, "[FIXED AUDIO] game=%s status=PARTIAL audio=fixed semantic=polling phase=frame-level fade=unverified", profile->gameCode);
 		runtimeAudioPartial = true;
@@ -1647,6 +1677,19 @@ static void _pollRuntimeMP2kPlayers(void) {
 		event.audioSampleTimestamp = fixedAudioClock.runStartSample + fixedAudioClock.runAdvance;
 		event.sequence = (UINT64_C(1) << 63) | ++runtimePollingSequence;
 		GBAMP2kEventsTracePosition(core, &event.gbaCycle, NULL);
+		if (getenv("MGBA_MP2K_LIFETIME_FINISH_PC"))
+			mLOG(GBA_MP2K_EVENTS, INFO, "[MP2K LIFETIME POLL] sequence=%llu kind=%s player=%u song=%d status=%08x clock=%u cycle=%llu audioSample=%llu",
+				(unsigned long long) event.sequence, stopped ? "STOP" : "START", id, event.songId, player->status, player->clock,
+				(unsigned long long) event.gbaCycle, (unsigned long long) event.audioSampleTimestamp);
+		if (getenv("MGBA_MP2K_LIFETIME_FINISH_PC")) {
+			/* Read-only evidence for evaluating other polling drivers. An
+			 * inactive track is not, by itself, authority to suppress Stop. */
+			const struct GBAMP2kMusicPlayerTrack* tracks = (const void*) GBAMP2kPlayerRam(gba,
+				player->tracks, player->trackCount * sizeof(*tracks));
+			for (unsigned track = 0; tracks && track < player->trackCount; ++track)
+				mLOG(GBA_MP2K_EVENTS, INFO, "[MP2K LIFETIME POLL TRACK] player=%u track=%u flags=%02x cursor=%08x channel=%08x header=%08x",
+					id, track, tracks[track].flags, tracks[track].cmdPtr, tracks[track].chan, player->songHeader);
+		}
 		_candidateEventSink(&event, &mp2kCandidate);
 	}
 }
@@ -1983,11 +2026,15 @@ static void _stateLoadDropCandidate(void) {
 
 /* Suspend once per load burst. Intermediate states only deserialize native GBA
  * state; no ROM scan, watch reconstruction, renderer, seek or ring refill. */
+static unsigned _fixedAudioSupportedSpeed(double nominal) {
+	return fixedAudioSupportedSpeed(fixedAudioMode, mp2kCurrentFrontend.throttleStateKnown,
+		mp2kCurrentFrontend.throttleMode == GBA_MP2K_THROTTLE_NORMAL,
+		mp2kCurrentFrontend.throttleMode == GBA_MP2K_THROTTLE_FAST_FORWARD,
+		nominal, mp2kCurrentFrontend.runRate);
+}
+
 static bool _stateLoadRateSupported(void) {
-	double rate = mp2kCurrentFrontend.runRate, normal = fixedAudioClock.nominalRunRate;
-	return mp2kCurrentFrontend.throttleStateKnown &&
-		((mp2kCurrentFrontend.throttleMode == GBA_MP2K_THROTTLE_NORMAL && rate > normal * .98 && rate < normal * 1.02) ||
-			(mp2kCurrentFrontend.throttleMode == GBA_MP2K_THROTTLE_FAST_FORWARD && rate > normal * 1.98 && rate < normal * 2.02));
+	return _fixedAudioSupportedSpeed(fixedAudioClock.nominalRunRate) != 0;
 }
 
 static void _stateLoadSuspend(const char* reason) {
@@ -2661,7 +2708,7 @@ static void _emitFixedAudioTone(void) {
 			mp2kPcmTrace.enabled = false;
 		}
 	}
-	audioCallback(audioSampleBuffer, frames);
+	_probeAudioCallback(audioSampleBuffer, frames);
 	if (mp2kPcmTrace.enabled) {
 		mp2kPcmTrace.submittedFrames += frames;
 	}
@@ -2671,6 +2718,19 @@ static void _emitFixedAudioTone(void) {
 	}
 }
 
+static void _b6jjEventTrace(void* context, const struct B6JJAudioEventObservation* e) {
+	(void) context;
+	mLOG(GBA_MP2K_EVENTS, INFO,
+		"[B6JJ EVENT] generation=%llu seq=%llu gameCycle=%llu audioSample=%llu targetCycle=%llu actualCycle=%llu kind=%s id=%u header=%08x",
+		(unsigned long long) b6jjGeneration, (unsigned long long) e->sequence,
+		(unsigned long long) e->gameCycle, (unsigned long long) e->audioSample,
+		(unsigned long long) e->targetCycle, (unsigned long long) e->actualCycle,
+		e->se ? "SE" : "BGM", e->id, e->header);
+}
+static void _b6jjAttachTrace(void) {
+	if (b6jjAudio && getenv("MGBA_B6JJ_EVENT_TRACE"))
+		B6JJAudioSetDiagnosticSink(b6jjAudio, _b6jjEventTrace, NULL);
+}
 static void _b6jjDiagnostic(const char* phase) {
 	const struct B6JJAudioStats* s = B6JJAudioGetStats(b6jjAudio);
 	if (!s) return;
@@ -2717,6 +2777,7 @@ static bool _openB6JJAudio(void) {
 	b6jjLoggedSpeed = 0;
 	b6jjCallbackFrames = b6jjPartialBatches = 0;
 	b6jjAudio = B6JJAudioCreate(core, &fixedAudioClock);
+	_b6jjAttachTrace();
 	if (!b6jjAudio) {
 		memset(&fixedAudioClock, 0, sizeof(fixedAudioClock));
 		mLOG(GBA_MP2K_EVENTS, WARN, "[B6JJ AUDIO] NATIVE_FALLBACK reason=INITIALIZATION aux=0 ring=0 queue=0 sticky=1");
@@ -2731,6 +2792,7 @@ static void _recoverB6JJAudio(void) {
 	mAudioClockInit(&fixedAudioClock, (double) core->frequency(core)/core->frameCycles(core), 65536);
 	++b6jjRebuilds;
 	b6jjAudio = B6JJAudioCreateLoaded(core, &fixedAudioClock);
+	_b6jjAttachTrace();
 	b6jjRecoveryPending = false;
 	if (!b6jjAudio) {
 		memset(&fixedAudioClock, 0, sizeof(fixedAudioClock));
@@ -2759,7 +2821,7 @@ static bool _submitB6JJAudio(void) {
 			fclose(mp2kPcmTrace.pcm); mp2kPcmTrace.pcm = NULL; mp2kPcmTrace.enabled = false;
 		} else mp2kPcmTrace.submittedFrames += frames;
 	}
-	size_t accepted = audioCallback(b6jjOutput, frames);
+	size_t accepted = _probeAudioCallback(b6jjOutput, frames);
 	b6jjCallbackFrames += accepted;
 	if (fixedAudioRunTraceEnabled) {
 		const struct B6JJAudioStats* s = B6JJAudioGetStats(b6jjAudio);
@@ -2797,12 +2859,8 @@ static void _beginFixedAudioClockRun(void) {
 				(unsigned long long) (b6jjRebuilds-b6jjRewindRebuildBase));
 		}
 		if (b6jjRecoveryPending) {
-			double rate = mp2kCurrentFrontend.runRate;
 			double normal = (double) core->frequency(core)/core->frameCycles(core);
-			bool supported = mp2kCurrentFrontend.throttleStateKnown &&
-				((mp2kCurrentFrontend.throttleMode == GBA_MP2K_THROTTLE_NORMAL && rate > normal*.98 && rate < normal*1.02) ||
-				 (mp2kCurrentFrontend.throttleMode == GBA_MP2K_THROTTLE_FAST_FORWARD && rate > normal*1.98 && rate < normal*2.02));
-			if (!supported) return;
+			if (!_fixedAudioSupportedSpeed(normal)) return;
 			_recoverB6JJAudio();
 		}
 	}
@@ -2811,20 +2869,16 @@ static void _beginFixedAudioClockRun(void) {
 	}
 	double rate = mp2kCurrentFrontend.runRate;
 	double normal = fixedAudioClock.nominalRunRate;
-	bool normalRate = rate > normal * 0.98 && rate < normal * 1.02;
-	bool doubleRate = rate > normal * 1.98 && rate < normal * 2.02;
+	unsigned supportedSpeed = _fixedAudioSupportedSpeed(normal);
 	if (fixedAudioBackend == FIXED_AUDIO_BACKEND_B6JJ) {
 		if (mp2kCurrentFrontend.throttleMode == GBA_MP2K_THROTTLE_REWIND) {
 			_dropB6JJAudio("REWIND_DETECTED"); return;
 		}
-		bool supported = mp2kCurrentFrontend.throttleStateKnown &&
-			((mp2kCurrentFrontend.throttleMode == GBA_MP2K_THROTTLE_NORMAL && normalRate) ||
-			 (mp2kCurrentFrontend.throttleMode == GBA_MP2K_THROTTLE_FAST_FORWARD && doubleRate));
-		if (!supported) { _dropB6JJAudio("UNSUPPORTED_FRONTEND_CLOCK"); return; }
+		if (!supportedSpeed) { _dropB6JJAudio("UNSUPPORTED_FRONTEND_CLOCK"); return; }
 		mAudioClockSetFrontendRate(&fixedAudioClock, true, rate);
 		uint64_t gameCycle = 0; GBAMP2kEventsTracePosition(core, &gameCycle, NULL);
 		mAudioClockBeginRun(&fixedAudioClock, gameCycle, core->frameCycles(core));
-		unsigned speed = normalRate ? 1 : 2;
+		unsigned speed = supportedSpeed;
 		if (b6jjLoggedSpeed != speed) {
 			mLOG(GBA_MP2K_EVENTS, INFO, "[B6JJ AUDIO] speed=%u rate=%.6f sample=%llu fraction=%.9f", speed, rate,
 				(unsigned long long) fixedAudioClock.absoluteAudioSample, fixedAudioClock.fractionalAccumulator);
@@ -2832,9 +2886,7 @@ static void _beginFixedAudioClockRun(void) {
 		}
 		return;
 	}
-	fixedAudioOutput.clockSupported = mp2kCurrentFrontend.throttleStateKnown &&
-		((mp2kCurrentFrontend.throttleMode == GBA_MP2K_THROTTLE_NORMAL && normalRate) ||
-		 (mp2kCurrentFrontend.throttleMode == GBA_MP2K_THROTTLE_FAST_FORWARD && doubleRate));
+	fixedAudioOutput.clockSupported = supportedSpeed != 0;
 	bool rateKnown = mp2kCurrentFrontend.throttleStateKnown && rate >= 0;
 	if (fixedAudioOutput.requested && !fixedAudioOutput.hardFallback) {
 		if (stateLoadStage == STATE_LOAD_RATE_SETTLING || stateLoadStage == STATE_LOAD_REWINDING || stateLoadStage == STATE_LOAD_REWIND_END_PENDING) {
@@ -2879,7 +2931,7 @@ static void _beginFixedAudioClockRun(void) {
 				_ownershipFallback("synthetic unknown Direct Sound DMA");
 		}
 		if (fixedAudioOutput.active) {
-			int speed = normalRate ? 1 : 2;
+			int speed = (int) supportedSpeed;
 			if (!fixedAudioOutput.loggedSpeed) {
 				const struct GBAMP2kProfile* profile = GBAMP2kEventsProfile(core);
 				mLOG(GBA_MP2K_EVENTS, INFO,
@@ -2931,7 +2983,7 @@ static void _sendNativeAudio(size_t produced) {
 			GBAMP2kEventsDisablePcmTrace(core);
 		}
 	}
-	size_t accepted = audioCallback(audioSampleBuffer, produced);
+	size_t accepted = _probeAudioCallback(audioSampleBuffer, produced);
 	if (fixedAudioOutput.requested) {
 		fixedAudioOutput.lastNativeSample[0] = audioSampleBuffer[2 * (produced - 1)];
 		fixedAudioOutput.lastNativeSample[1] = audioSampleBuffer[2 * (produced - 1) + 1];
@@ -3061,7 +3113,7 @@ static void _submitFixedAudio(size_t nativeFrames) {
 	fixedAudioOutput.startupRemaining -= silence;
 	fixedAudioOutput.readFrame += candidate;
 	fixedAudioOutput.candidateFrames += candidate;
-	size_t accepted = audioCallback(fixedAudioOutput.output, frames);
+	size_t accepted = _probeAudioCallback(fixedAudioOutput.output, frames);
 	fixedAudioOutput.callbackFrames += accepted;
 	if (accepted != frames) {
 		++fixedAudioOutput.underrunCount;
@@ -3105,6 +3157,10 @@ static void _updateMP2kAudioStats(void) {
 #endif
 
 void retro_run(void) {
+#ifdef M_CORE_GBA
+	retro_time_t probeStart = fixedAudioProbe.clock ? fixedAudioProbe.clock() : 0;
+	retro_time_t probeGame = 0, probeAudio = 0;
+#endif
 	if (deferredSetup) {
 		_doDeferredSetup();
 	}
@@ -3188,7 +3244,21 @@ void retro_run(void) {
 		}
 	}
 
+#ifdef M_CORE_GBA
+	if (fixedAudioProbe.clock) probeGame = fixedAudioProbe.clock();
+	bool probeGba = fixedAudioProbe.clock && core->platform(core) == mPLATFORM_GBA;
+	uint32_t gbaFrameBefore = probeGba ? core->frameCounter(core) : 0;
+#endif
 	core->runFrame(core);
+#ifdef M_CORE_GBA
+	if (fixedAudioProbe.clock) probeAudio = fixedAudioProbe.clock();
+	uint32_t gbaFrameAfter = probeGba ? core->frameCounter(core) : 0;
+	if (probeGba) {
+		uint32_t delta = gbaFrameAfter - gbaFrameBefore; /* includes uint32 wrap */
+		fixedAudioProbe.gbaFrames += delta;
+		if (delta != 1) ++fixedAudioProbe.gbaStepAnomalies;
+	}
+#endif
 	unsigned width, height;
 	core->currentVideoSize(core, &width, &height);
 	videoCallback(outputBuffer, width, height, BYTES_PER_PIXEL * 256);
@@ -3235,6 +3305,28 @@ void retro_run(void) {
 	_traceMP2kFadeState();
 	_updateMP2kAudioStats();
 	_endFixedAudioClockRun();
+	if (fixedAudioProbe.clock) {
+		retro_time_t now = fixedAudioProbe.clock();
+		++fixedAudioProbe.runs;
+		fixedAudioProbe.samples += b6jjAudio || fixedAudioOutput.active ? fixedAudioClock.runAdvance : 0;
+		fixedAudioProbe.transportUs += probeGame - probeStart;
+		fixedAudioProbe.gameUs += probeAudio - probeGame;
+		fixedAudioProbe.audioUs += now - probeAudio;
+		if (!(fixedAudioProbe.runs % 120)) {
+			if (probeGba) {
+				mLOG(GBA_MP2K_EVENTS, INFO, "[GBA FRAME PROBE] runs=%llu us=%lld counter=%u emulatedFrames=%llu stepAnomalies=%llu callbackRequested=%llu callbackAccepted=%llu",
+					(unsigned long long) fixedAudioProbe.runs, (long long) now, gbaFrameAfter,
+					(unsigned long long) fixedAudioProbe.gbaFrames, (unsigned long long) fixedAudioProbe.gbaStepAnomalies,
+					(unsigned long long) fixedAudioProbe.callbackRequested, (unsigned long long) fixedAudioProbe.callbackAccepted);
+			}
+			mLOG(GBA_MP2K_EVENTS, INFO, "[FIXED AUDIO PROBE] frames=%llu us=%lld fixedSamples=%llu fixed=%d",
+				(unsigned long long) fixedAudioProbe.runs, (long long) now,
+				(unsigned long long) fixedAudioProbe.samples, (int) (b6jjAudio || fixedAudioOutput.active));
+			mLOG(GBA_MP2K_EVENTS, INFO, "[FIXED AUDIO PROFILE] frames=%llu transportUs=%llu gameUs=%llu audioUs=%llu",
+				(unsigned long long) fixedAudioProbe.runs, (unsigned long long) fixedAudioProbe.transportUs,
+				(unsigned long long) fixedAudioProbe.gameUs, (unsigned long long) fixedAudioProbe.audioUs);
+		}
+	}
 #endif
 }
 
@@ -3474,6 +3566,11 @@ void retro_reset(void) {
 		_openMP2kCandidate();
 	}
 	memset(&mp2kAudioStats, 0, sizeof(mp2kAudioStats));
+	memset(&fixedAudioProbe, 0, sizeof(fixedAudioProbe));
+	if (getenv("MGBA_FIXED_AUDIO_WALL_PROBE")) {
+		struct retro_perf_callback perf = { 0 };
+		if (environCallback(RETRO_ENVIRONMENT_GET_PERF_INTERFACE, &perf)) fixedAudioProbe.clock = perf.get_time_usec;
+	}
 	mp2kPcmTrace.previousKeys = 0;
 	if (fixedAudioOutput.requested) {
 		mAudioClockInit(&fixedAudioClock, fixedAudioClock.nominalRunRate,
@@ -3663,6 +3760,11 @@ bool retro_load_game(const struct retro_game_info* game) {
 	bool b6jjSelected = _openB6JJAudio();
 	if (!b6jjSelected) _detectRuntimeMP2kProfile();
 	memset(&mp2kAudioStats, 0, sizeof(mp2kAudioStats));
+	memset(&fixedAudioProbe, 0, sizeof(fixedAudioProbe));
+	if (getenv("MGBA_FIXED_AUDIO_WALL_PROBE")) {
+		struct retro_perf_callback perf = { 0 };
+		if (environCallback(RETRO_ENVIRONMENT_GET_PERF_INTERFACE, &perf)) fixedAudioProbe.clock = perf.get_time_usec;
+	}
 	_openMP2kPcmTrace();
 	_openGBAStemTrace();
 	if (!b6jjSelected) {

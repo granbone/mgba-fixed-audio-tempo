@@ -9,7 +9,7 @@
   ],
   "properties": {
     "schema_version": {
-      "const": 2
+      "const": 3
     },
     "records": {
       "type": "array",
@@ -39,7 +39,13 @@
           "tested_core_version",
           "notes",
           "metadata_source",
-          "evidence_sources"
+          "evidence_sources",
+          "bgm_verification_status",
+          "bgm_test_speeds",
+          "bgm_test_scope",
+          "bgm_tested_commit",
+          "bgm_evidence",
+          "se_verification_status"
         ],
         "properties": {
           "release_id": {
@@ -162,6 +168,38 @@
             "items": {
               "type": "string"
             }
+          },
+          "bgm_verification_status": {
+            "enum": [
+              "NOT_TESTED",
+              "BGM_CONFIRMED",
+              "BGM_INCORRECT",
+              "BGM_NOT_ACTIVE",
+              "BGM_INCONCLUSIVE"
+            ]
+          },
+          "bgm_test_speeds": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "enum": [
+                1,
+                2,
+                3
+              ]
+            }
+          },
+          "bgm_test_scope": {
+            "type": "string"
+          },
+          "bgm_tested_commit": {
+            "type": "string"
+          },
+          "bgm_evidence": {
+            "type": "string"
+          },
+          "se_verification_status": {
+            "type": "string"
           }
         },
         "additionalProperties": false

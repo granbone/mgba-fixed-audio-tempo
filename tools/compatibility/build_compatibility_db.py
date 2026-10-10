@@ -15,7 +15,8 @@ STATUSES = {
 FAMILIES = ['MP2K_ROM_PLAYER','MP2K_EWRAM_PLAYER','MP2K_MIXED / OTHER_MP2K','CUSTOM_DRIVER','OTHER_DRIVER','UNKNOWN_DRIVER','NOT_ANALYZED']
 FIELDS = ['release_id','title','region','languages','revision','game_code','header_revision','crc32','sha1','sha256','rom_size',
  'driver_family','public_status','runtime_eligibility','verification_status','fixed_audio_2x','fixed_audio_3x','state_load','rewind',
- 'fallback_behavior','tested_core_version','notes','metadata_source','evidence_sources']
+ 'fallback_behavior','tested_core_version','notes','metadata_source','evidence_sources',
+ 'bgm_verification_status','bgm_test_speeds','bgm_test_scope','bgm_tested_commit','bgm_evidence','se_verification_status']
 WARNING_EN = 'Experimental Feature. Unverified games may crash, freeze, produce incorrect audio, or experience save-data loss. Back up saves and save states before testing. Use the Conservative or Disabled mode if problems occur.'
 WARNING_JP = '未検証のゲームでは、クラッシュ、フリーズ、音声異常、セーブデータやステートセーブの破損等が発生する可能性があります。試用前にバックアップを作成してください。問題がある場合はConservativeまたはDisabledへ切り替えてください。動作保証のない実験版です。'
 LIMIT_EN = 'Limited test pass means Fixed Audio was observed to work in specific test scenarios. It does not indicate a complete playthrough or guarantee correct behavior for every scene, BGM, sound effect, or feature.'
@@ -31,6 +32,26 @@ def summary(rows):
    experimental_trial_eligible=sum(r['driver_family']==f and r['runtime_eligibility'] in ('EXPERIMENTAL_TRIAL','CONSERVATIVE_AND_EXPERIMENTAL') for r in rows)) for f in FAMILIES},
   public_status={s:Counter(r['public_status'] for r in rows)[s] for s in STATUSES},
   experimental_trial_eligible=sum(r['runtime_eligibility'] in ('EXPERIMENTAL_TRIAL','CONSERVATIVE_AND_EXPERIMENTAL') for r in rows))
+
+def apply_bgm_evidence(root, db):
+ """Independent, exact-identity overlay. Never promotes general/SE eligibility."""
+ path=root/'compatibility/sources/v04-bgm-observations.json'
+ entries=load(path)['records'] if path.exists() else []
+ bysha={e['sha256']:e for e in entries}
+ assert len(bysha)==len(entries)
+ found=set()
+ for r in db['records']:
+  r.update(bgm_verification_status='NOT_TESTED',bgm_test_speeds=[],bgm_test_scope='',
+   bgm_tested_commit='',bgm_evidence='',se_verification_status='NOT_ASSESSED_BY_BGM_TEST')
+  e=bysha.get(r['sha256'])
+  if not e:continue
+  assert all(r[k]==e[k] for k in ('release_id','sha1','crc32','rom_size','game_code','revision'))
+  found.add(r['sha256'])
+  for k in ('bgm_verification_status','bgm_test_speeds','bgm_test_scope','bgm_tested_commit','bgm_evidence'):r[k]=e[k]
+ assert found==set(bysha), 'Unmatched BGM identity'
+ db.update(schema_version=3,version_candidate='v0.4-preview-rc1',
+  bgm_summary=dict(Counter(r['bgm_verification_status'] for r in db['records'])),
+  fixed_audio_3x_scope='Legacy general-validation field retained. Scoped 1x/2x/3x BGM evidence is recorded separately.')
 def main():
  p=argparse.ArgumentParser(description=__doc__);p.add_argument('--root',type=Path,default=ROOT);a=p.parse_args();root=a.root
  ext=load(root/'compatibility/sources/no-intro-gba-releases.json')
@@ -111,6 +132,7 @@ def main():
    dict(id='EXACT_IDENTITY_EVIDENCE',url='sources/runtime-eligibility.json',acquired='2026-10-09',license='CC BY-SA 4.0',scope='Hash-only analysis and production static eligibility. No audio correctness inferred.'),
    dict(id='LIMITED_RUNTIME_TESTS',url='sources/v03-runtime-observations.json',acquired='2026-10-09',license='CC BY-SA 4.0',scope='Scenario-specific observations. Prior limited PCM/event acceptance retained separately.')],
   gb_production_support=False,fixed_audio_3x='NOT_YET_VALIDATED',summary=summary(rows),records=rows)
+ apply_bgm_evidence(root,db)
  write(root/'compatibility/gba-compatibility.json',db)
  print(json.dumps(db['summary'],indent=2))
 if __name__=='__main__':main()

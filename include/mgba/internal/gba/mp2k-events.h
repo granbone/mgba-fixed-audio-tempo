@@ -96,6 +96,9 @@ struct GBAMP2kEvents {
 	bool enabled;
 	const struct GBAMP2kProfile* profile;
 	bool runtimeTimingTrace;
+	/* Optional read-only instruction probes; never semantic commands. */
+	uint32_t lifetimeTraceStopPC, lifetimeTraceFinishPC;
+	bool aorjLifetimeChecked, aorjNaturalFinish, aorjIndependentFinish;
 	const struct GBA* gba;
 	float baseFps;
 	bool normalAudioWait;
@@ -146,6 +149,10 @@ void GBAMP2kEventsSetSink(struct mCore* core, GBAMP2kEventSink sink, void* conte
 bool GBAMP2kEventsEnabled(const struct mCore* core);
 const struct GBAMP2kProfile* GBAMP2kEventsProfile(const struct mCore* core);
 bool GBAMP2kEventsUseRuntimeProfile(struct mCore* core, const struct GBAMP2kProfile* profile);
+/* Exact AORJ SE202 native FINE proof, consumed only at supported 2x/3x.
+ * Identity and cancellation observation are prerequisites; inactive flags alone
+ * cannot distinguish FINE from an explicit Stop after FINE. Rebind clears proof. */
+bool GBAMP2kEventsTakeAorjNaturalFinish(struct mCore* core, unsigned player);
 /* Enable the exact known route without a process environment opt-in. */
 bool GBAMP2kEventsEnableKnownProfile(struct mCore* core);
 /* Discard observation history after a native state load; seed only loaded RAM. */

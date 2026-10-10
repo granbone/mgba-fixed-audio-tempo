@@ -39,4 +39,4 @@ Join order: full SHA1 with size and CRC32 consistency; uniquely matching CRC32+s
 
 Static eligibility is measured by the production bridge scanner and core profile builder. It confirms a trial path, not live structure validity, bridge success or audio accuracy. The public database contains no ownership statistics or filenames. Original internal evidence and unmatched reports remain private.
 
-The compatibility data and evidence snapshots are CC BY-SA 4.0. Source code remains MPL-2.0 or its existing file license; separate bridge/agbplay code remains LGPLv3. The v0.3 RC is prepared locally and is not published. Its package includes matching editable sources, dependency notices and relink support as described in THIRD_PARTY_NOTICES.md.
+The compatibility data and evidence snapshots are CC BY-SA 4.0. Source code remains MPL-2.0 or its existing file license; separate bridge/agbplay code remains LGPLv3. The v0.4 RC is prepared locally and is not published. Its package includes matching editable sources, dependency notices and relink support as described in THIRD_PARTY_NOTICES.md.

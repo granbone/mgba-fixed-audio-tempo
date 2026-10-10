@@ -26,6 +26,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     for name in ('package', 'tool-bin', 'rom', 'retroarch-dir', 'output-dir'):
         parser.add_argument('--' + name, type=Path, required=True)
+    parser.add_argument('--muted', action='store_true', help='Mute only the frontend speaker output; synthesis and PCM assertions remain enabled.')
     args = parser.parse_args()
     package, out, tool = args.package.resolve(), args.output_dir.resolve(), args.tool_bin.resolve()
     if out == package or package in out.parents:
@@ -124,7 +125,7 @@ def main():
                       'video_vsync = "true"\naudio_sync = "true"\n'
                       'pause_nonactive = "false"\n'
                       'config_save_on_exit = "false"\n'
-                      'log_verbosity = "true"\n', encoding='utf-8')
+                      'log_verbosity = "true"\n' + ('audio_mute_enable = "true"\n' if args.muted else ''), encoding='utf-8')
     runtime_env.pop('MGBA_FIXED_AUDIO_OUTPUT_PATH')
     run([retro / 'retroarch.exe', '--verbose', '--max-frames=500',
          '--log-file=' + str(out / 'retroarch.log'), '-L', core, args.rom],

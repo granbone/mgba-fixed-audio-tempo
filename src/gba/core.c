@@ -6,6 +6,7 @@
 #include <mgba/gba/core.h>
 
 #include <mgba/core/core.h>
+#include <mgba/core/audio-clock.h>
 #include <mgba/core/log.h>
 #include <mgba/core/serialize.h>
 #include <mgba/internal/arm/debugger/debugger.h>
@@ -933,6 +934,21 @@ bool GBAMP2kEventsUseRuntimeProfile(struct mCore* core, const struct GBAMP2kProf
 	if (events->enabled || !GBAMP2kProfileValidate(profile, events->gba)) return false;
 	events->profile = profile;
 	GBAMP2kPlayersInit(&events->players, events->gba, profile, events->players.generation + 1);
+	/* AORJ uses a wrapper variant that the general hook scanner deliberately
+	 * does not accept. This narrow lifetime watch grants no ownership or new
+	 * profile validity. Identity, tables and native instruction sites agree. */
+	const uint8_t* rom = (const void*) events->gba->memory.rom;
+	uint16_t stopOpcode, finishOpcode, startOpcode;
+	if (profile->romSize == 0x1000000 && profile->romCrc32 == 0x05E80ECC &&
+	    !strcmp(profile->gameCode, "AORJ") && profile->polling &&
+	    profile->playerBacking == GBA_MP2K_ROM_PLAYER && profile->playerTableOffset == 0xCC9C0 &&
+	    profile->songTableOffset == 0xCC9F0 && profile->songCount == 965 && profile->playerCount == 4) {
+		memcpy(&stopOpcode, rom + 0x82158, 2);
+		memcpy(&finishOpcode, rom + 0x81422, 2);
+		memcpy(&startOpcode, rom + 0x82074, 2);
+		events->aorjLifetimeChecked = stopOpcode == 0xB570 && finishOpcode == 0x6078 && startOpcode == 0xB5F0;
+	}
+	if (events->lifetimeTraceFinishPC) mLOG(GBA_MP2K_EVENTS, INFO, "[MP2K LIFETIME IDENTITY] checked=%d crc=%08x size=%zu table=%08x baseFps=%f", events->aorjLifetimeChecked, profile->romCrc32, profile->romSize, profile->playerTableOffset, events->baseFps);
 	events->enabled = true;
 	events->runtimeTimingTrace = true; /* Observe first ticks for runtime output, not just diagnostics. */
 	for (unsigned i = 0; i < profile->playerCount; ++i) events->activeSong[i] = -1;
@@ -948,6 +964,27 @@ void GBAMP2kEventsSetFrontendState(struct mCore* core, const struct GBAMP2kFront
 		struct GBACore* gbacore = (struct GBACore*) core;
 		GBAMP2kEventsUpdateFrontendState(&gbacore->mp2kEvents, state);
 	}
+}
+
+bool GBAMP2kEventsTakeAorjNaturalFinish(struct mCore* core, unsigned player) {
+	if (!GBAMP2kEventsEnabled(core) || player != 2) return false;
+	struct GBAMP2kEvents* e = &((struct GBACore*) core)->mp2kEvents;
+	if (e->suspended || !e->aorjLifetimeChecked || !e->aorjNaturalFinish || !e->frontendStateAvailable ||
+	    !e->frontend.throttleStateKnown || e->frontend.throttleMode != GBA_MP2K_THROTTLE_FAST_FORWARD ||
+	    !e->audioClock || !e->audioClock->enabled || !e->audioClock->frontendRateKnown ||
+	    e->audioClock->nominalRunRate <= 0 ||
+	    !((e->audioClock->frontendRunRate >= e->audioClock->nominalRunRate * 1.99 &&
+	       e->audioClock->frontendRunRate <= e->audioClock->nominalRunRate * 2.01) ||
+	      (e->audioClock->frontendRunRate >= e->audioClock->nominalRunRate * 2.99 &&
+	       e->audioClock->frontendRunRate <= e->audioClock->nominalRunRate * 3.01))) return false;
+	const struct GBAMP2kMusicPlayerInfo* p = GBAMP2kPlayerAt(e->gba, e->profile, player);
+	if (!p || p->magic != MP2K_MAGIC || p->songHeader != 0x0816BD40 ||
+	    p->status != 0x80000000U || p->clock != 16 || p->trackCount != 2 || p->tracks != 0x03005A10) return false;
+	const struct GBAMP2kMusicPlayerTrack* t = (const void*) GBAMP2kPlayerRam(e->gba, p->tracks, 2 * sizeof(*t));
+	if (!t || t[0].flags || t[1].flags || t[0].cmdPtr != 0x0816BD3E || t[0].chan || t[1].chan) return false;
+	e->aorjNaturalFinish = false;
+	e->aorjIndependentFinish = true;
+	return true;
 }
 
 void GBAMP2kEventsSuspend(struct mCore* core) {
@@ -972,6 +1009,9 @@ bool GBAMP2kEventsRebind(struct mCore* core, const int* activeSongs) {
 	fresh.normalVideoWait = events->normalVideoWait;
 	fresh.runtimeTimingTrace = events->runtimeTimingTrace;
 	fresh.nativeTickTrace = events->nativeTickTrace;
+	fresh.lifetimeTraceStopPC = events->lifetimeTraceStopPC;
+	fresh.lifetimeTraceFinishPC = events->lifetimeTraceFinishPC;
+	fresh.aorjLifetimeChecked = events->aorjLifetimeChecked;
 	fresh.audioClock = events->audioClock;
 	for (unsigned i = 0; i < GBA_MP2K_MAX_PLAYERS; ++i)
 		fresh.activeSong[i] = activeSongs ? activeSongs[i] : -1;

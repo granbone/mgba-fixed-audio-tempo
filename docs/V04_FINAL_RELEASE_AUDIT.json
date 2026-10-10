@@ -1,0 +1,1836 @@
+{
+  "schema_version": 1,
+  "version": "v0.4-preview",
+  "date": "2026-10-10",
+  "readiness": "FINAL_PACKAGE_VALIDATION_PENDING",
+  "publication": "NOT_PUBLISHED; no push/tag/Release/YouTube upload",
+  "git": {
+    "development_branch": "feature/3x-fixed-audio-poc",
+    "start_head": "0697b19ab69107bae8f43532b27b44d4744a4468",
+    "public_remote_main_at_start": "fd06f47974ab104f476c3f777d43f869b3fba9c1",
+    "binary_source_commit": "d451f54da8aea4217130574df42aee775cd369a5",
+    "public_candidate_branch": "release/v0.4-preview-preparation",
+    "public_candidate_base": "fd06f47974ab104f476c3f777d43f869b3fba9c1",
+    "private_development_history": "PRESERVED; must not be pushed; separate clean public candidate contains no imported development commit objects"
+  },
+  "runtime_sha256": {
+    "mgba_fixed_audio_libretro.dll": "92BAE49862CC8598B05C2E83F973FA969374B12260A0D40441D2793134F93D7C",
+    "libmgba_mp2k_bridge.dll": "D750BD152B51F632C37F627FC22C6A33E8CDA9B43B16294334D86E90DD511502",
+    "zlib1.dll": "93E9243A44C29200EEACAF9658EFE2558581770E4B11CA4B500E18E424A6E3B5"
+  },
+  "binary_changed": false,
+  "compiled_source_changed": false,
+  "fresh_regressions": {
+    "pcm_event48": {
+      "passed": 48,
+      "total": 48,
+      "reference": "Phase6 corrected-bridge candidate; not original public package",
+      "portable_rerun": 48
+    },
+    "scenes16": {
+      "passed": 16,
+      "total": 16,
+      "original_public_package": 8,
+      "common_corrected_bridge": 8,
+      "pcm_event_initial_ram_exact": true
+    },
+    "legacy12": {
+      "passed": 12,
+      "total": 12,
+      "cases": [
+        {
+          "case": "aamj-golden",
+          "returncode": 0,
+          "seconds": 54.646,
+          "script_sha256": "f42855f0f96453798aed9784474659a510521093a765cb080de78543d91c76ee"
+        },
+        {
+          "case": "ffta-golden",
+          "returncode": 0,
+          "seconds": 404.782,
+          "script_sha256": "91adda5efabd88e292dba39268c53130a6019a2f927c98b790f915be45d54fa0"
+        },
+        {
+          "case": "ffta-late-load",
+          "returncode": 0,
+          "seconds": 10.363,
+          "script_sha256": "73d2854b8767538a332da3889c0250c6f731215de91dece4493281ebaaf13278"
+        },
+        {
+          "case": "afej-rewind",
+          "returncode": 0,
+          "seconds": 16.594,
+          "script_sha256": "d7e4df5b9680ad81305c01ea759a408887b020510105488e787c765df3fc3315"
+        },
+        {
+          "case": "hard-guards",
+          "returncode": 0,
+          "seconds": 0.97,
+          "script_sha256": "8cb52d0bb3cad7a7b4a9ba49aee61a0be0994fea8323c472e70166918c2a95f4"
+        },
+        {
+          "case": "srwj-golden",
+          "returncode": 0,
+          "seconds": 106.359,
+          "script_sha256": "870a7a53aec54408187b75620d33719e4d7968539fd9b23999b3c67ba4e3d0ce"
+        },
+        {
+          "case": "14-rom",
+          "returncode": 0,
+          "seconds": 53.51,
+          "script_sha256": "7dbbf661d350b355e96d18b58016b44c2807d9f8042a0177e1a54d94b64a0d33"
+        },
+        {
+          "case": "afej-modt127-normal",
+          "returncode": 0,
+          "seconds": 3.242,
+          "script_sha256": "73d2854b8767538a332da3889c0250c6f731215de91dece4493281ebaaf13278"
+        },
+        {
+          "case": "afej-modt127-ff",
+          "returncode": 0,
+          "seconds": 2.537,
+          "script_sha256": "73d2854b8767538a332da3889c0250c6f731215de91dece4493281ebaaf13278"
+        },
+        {
+          "case": "srwj-loads",
+          "returncode": 0,
+          "seconds": 107.289,
+          "script_sha256": "1ae1b38ed18d400f2d2a94e9d6fd58829378629f72c0d8d2033c286e92357a58"
+        },
+        {
+          "case": "srwj-rewind",
+          "returncode": 0,
+          "seconds": 31.697,
+          "script_sha256": "1ae1b38ed18d400f2d2a94e9d6fd58829378629f72c0d8d2033c286e92357a58"
+        },
+        {
+          "case": "srwj-off",
+          "returncode": 0,
+          "seconds": 8.15,
+          "script_sha256": "1ae1b38ed18d400f2d2a94e9d6fd58829378629f72c0d8d2033c286e92357a58"
+        }
+      ],
+      "input_hashes_unchanged": true
+    },
+    "three36": {
+      "passed": 36,
+      "total": 36,
+      "pcm_event_exact_to_phase9": true,
+      "ring_under": 0,
+      "ring_over": 0,
+      "queue_drop": 0
+    },
+    "guards28": {
+      "completed": 28,
+      "unknown_zero_other_rate_fallback": true,
+      "explicit_disabled_priority": true,
+      "mp2k_fault_injection_verified": true,
+      "b6jj_ring_injection": "NOT_APPLICABLE: MP2K injection knobs do not exercise B6JJ ring; B6JJ has separate legacy recovery/guard coverage"
+    },
+    "goldens_updated": false,
+    "thresholds_relaxed": false
+  },
+  "intended_historical_pcm_changes": "Prior player priority, deterministic PSG ordering and limited natural-end SFX fixes remain. The48-case reference is the accepted corrected candidate. Original distribution versus common-bridge comparisons are explicitly separated, not described as universal old-package PCM equality.",
+  "frontend": [
+    {
+      "game": "AAMJ",
+      "internal_speed_x": [
+        1.004588489991588,
+        2.0005341618999037,
+        2.9683121434155026,
+        1.0045740488641661,
+        2.000154903847186,
+        2.97905279325085
+      ],
+      "gba_frames_per_second": [
+        60.00156004056105,
+        119.48690615541065,
+        177.28986651416156,
+        60.00069750810853,
+        119.4642540196877,
+        177.93137868794292
+      ],
+      "callback_samples_per_second": [
+        32918.355877252805,
+        32776.82306791451,
+        32421.884338777298,
+        32917.88267038604,
+        32770.467071100575,
+        32539.20087755756
+      ],
+      "counter_evidence": [
+        {
+          "target_speed": 1,
+          "measurement_seconds": 7.999792,
+          "internal_frame_delta": 480,
+          "frame_counter_delta_mod32": 480,
+          "first_sample": [
+            120,
+            691637132262,
+            6118,
+            121,
+            1,
+            65835,
+            65835
+          ],
+          "last_sample": [
+            600,
+            691645132054,
+            6598,
+            601,
+            1,
+            329175,
+            329175
+          ]
+        },
+        {
+          "target_speed": 2,
+          "measurement_seconds": 7.030059,
+          "internal_frame_delta": 840,
+          "frame_counter_delta_mod32": 840,
+          "first_sample": [
+            840,
+            691647943249,
+            6838,
+            841,
+            1,
+            421618,
+            421618
+          ],
+          "last_sample": [
+            1680,
+            691654973308,
+            7678,
+            1681,
+            1,
+            652041,
+            652041
+          ]
+        },
+        {
+          "target_speed": 3,
+          "measurement_seconds": 7.445434,
+          "internal_frame_delta": 1320,
+          "frame_counter_delta_mod32": 1320,
+          "first_sample": [
+            2160,
+            691658263180,
+            8158,
+            2161,
+            1,
+            759754,
+            759754
+          ],
+          "last_sample": [
+            3480,
+            691665708614,
+            9478,
+            3481,
+            1,
+            1001149,
+            1001149
+          ]
+        },
+        {
+          "target_speed": 1,
+          "measurement_seconds": 7.999907,
+          "internal_frame_delta": 480,
+          "frame_counter_delta_mod32": 480,
+          "first_sample": [
+            3720,
+            691667411775,
+            9718,
+            3721,
+            1,
+            1058572,
+            1058572
+          ],
+          "last_sample": [
+            4200,
+            691675411682,
+            10198,
+            4201,
+            1,
+            1321912,
+            1321912
+          ]
+        },
+        {
+          "target_speed": 2,
+          "measurement_seconds": 7.031392,
+          "internal_frame_delta": 840,
+          "frame_counter_delta_mod32": 840,
+          "first_sample": [
+            4440,
+            691678128026,
+            10438,
+            4441,
+            1,
+            1411338,
+            1411338
+          ],
+          "last_sample": [
+            5280,
+            691685159418,
+            11278,
+            5281,
+            1,
+            1641760,
+            1641760
+          ]
+        },
+        {
+          "target_speed": 3,
+          "measurement_seconds": 6.744173,
+          "internal_frame_delta": 1200,
+          "frame_counter_delta_mod32": 1200,
+          "first_sample": [
+            5760,
+            691688426438,
+            11758,
+            5761,
+            1,
+            1748194,
+            1748194
+          ],
+          "last_sample": [
+            6960,
+            691695170611,
+            12958,
+            6961,
+            1,
+            1967644,
+            1967644
+          ]
+        }
+      ],
+      "one_core_cpu_percent": 10.792746154861437,
+      "ring_under": 0,
+      "ring_over": 0,
+      "queue_drop": "Measured separately by host regression",
+      "unexpected_fallback": 0,
+      "muted": true,
+      "physical_device_underruns": "NOT_INSTRUMENTED"
+    },
+    {
+      "game": "AFXJ",
+      "internal_speed_x": [
+        1.0045633752542233,
+        1.997586680713893,
+        2.9765093200612514,
+        1.0046040617594112,
+        1.9915902121283435,
+        2.9704144119605442
+      ],
+      "gba_frames_per_second": [
+        60.00006000006,
+        119.31086046992571,
+        177.7794633904677,
+        60.00249010333929,
+        118.95270638648584,
+        177.41542976078782
+      ],
+      "callback_samples_per_second": [
+        32917.53291753292,
+        32728.38939428717,
+        32511.41936753178,
+        32918.86613294452,
+        32630.285075825268,
+        32444.846717504075
+      ],
+      "counter_evidence": [
+        {
+          "target_speed": 1,
+          "measurement_seconds": 5.999994,
+          "internal_frame_delta": 360,
+          "frame_counter_delta_mod32": 360,
+          "first_sample": [
+            240,
+            691702721373,
+            707336,
+            240,
+            0,
+            166174,
+            166174
+          ],
+          "last_sample": [
+            600,
+            691708721367,
+            707696,
+            600,
+            0,
+            363679,
+            363679
+          ]
+        },
+        {
+          "target_speed": 2,
+          "measurement_seconds": 7.040432,
+          "internal_frame_delta": 840,
+          "frame_counter_delta_mod32": 840,
+          "first_sample": [
+            960,
+            691713027070,
+            708056,
+            960,
+            0,
+            504950,
+            504950
+          ],
+          "last_sample": [
+            1800,
+            691720067502,
+            708896,
+            1800,
+            0,
+            735372,
+            735372
+          ]
+        },
+        {
+          "target_speed": 3,
+          "measurement_seconds": 6.749936,
+          "internal_frame_delta": 1200,
+          "frame_counter_delta_mod32": 1200,
+          "first_sample": [
+            2280,
+            691723159408,
+            709376,
+            2280,
+            0,
+            836959,
+            836959
+          ],
+          "last_sample": [
+            3480,
+            691729909344,
+            710576,
+            3480,
+            0,
+            1056409,
+            1056409
+          ]
+        },
+        {
+          "target_speed": 1,
+          "measurement_seconds": 5.999751,
+          "internal_frame_delta": 360,
+          "frame_counter_delta_mod32": 360,
+          "first_sample": [
+            3840,
+            691732971002,
+            710936,
+            3840,
+            0,
+            1158088,
+            1158088
+          ],
+          "last_sample": [
+            4200,
+            691738970753,
+            711296,
+            4200,
+            0,
+            1355593,
+            1355593
+          ]
+        },
+        {
+          "target_speed": 2,
+          "measurement_seconds": 7.06163,
+          "internal_frame_delta": 840,
+          "frame_counter_delta_mod32": 840,
+          "first_sample": [
+            4560,
+            691743208594,
+            711656,
+            4560,
+            0,
+            1494669,
+            1494669
+          ],
+          "last_sample": [
+            5400,
+            691750270224,
+            712496,
+            5400,
+            0,
+            1725092,
+            1725092
+          ]
+        },
+        {
+          "target_speed": 3,
+          "measurement_seconds": 6.763786,
+          "internal_frame_delta": 1200,
+          "frame_counter_delta_mod32": 1200,
+          "first_sample": [
+            5880,
+            691753328116,
+            712976,
+            5880,
+            0,
+            1825307,
+            1825307
+          ],
+          "last_sample": [
+            7080,
+            691760091902,
+            714176,
+            7080,
+            0,
+            2044757,
+            2044757
+          ]
+        }
+      ],
+      "one_core_cpu_percent": 8.698468910063196,
+      "ring_under": 0,
+      "ring_over": 0,
+      "queue_drop": "Measured separately by host regression",
+      "unexpected_fallback": 0,
+      "muted": true,
+      "physical_device_underruns": "NOT_INSTRUMENTED"
+    },
+    {
+      "game": "AORJ",
+      "internal_speed_x": [
+        1.004590164352062,
+        2.000379084026333,
+        2.998630538344934,
+        1.0045804531390046,
+        2.001012066745377,
+        3.000929560325688
+      ],
+      "gba_frames_per_second": [
+        60.00166004592794,
+        119.47764374156189,
+        179.10070847762756,
+        60.00108001944035,
+        119.51545021754657,
+        179.23802331528208
+      ],
+      "callback_samples_per_second": [
+        32918.41074269722,
+        32774.14003121211,
+        32753.04206284614,
+        32918.09252566546,
+        32784.510797651805,
+        32778.153513782214
+      ],
+      "counter_evidence": [
+        {
+          "target_speed": 1,
+          "measurement_seconds": 5.999834,
+          "internal_frame_delta": 360,
+          "frame_counter_delta_mod32": 360,
+          "first_sample": [
+            240,
+            691767710525,
+            41016,
+            240,
+            0,
+            143318,
+            143318
+          ],
+          "last_sample": [
+            600,
+            691773710359,
+            41376,
+            600,
+            0,
+            340823,
+            340823
+          ]
+        },
+        {
+          "target_speed": 2,
+          "measurement_seconds": 7.030604,
+          "internal_frame_delta": 840,
+          "frame_counter_delta_mod32": 840,
+          "first_sample": [
+            960,
+            691777911955,
+            41736,
+            960,
+            0,
+            479077,
+            479077
+          ],
+          "last_sample": [
+            1800,
+            691784942559,
+            42576,
+            1800,
+            0,
+            709499,
+            709499
+          ]
+        },
+        {
+          "target_speed": 3,
+          "measurement_seconds": 6.700141,
+          "internal_frame_delta": 1200,
+          "frame_counter_delta_mod32": 1200,
+          "first_sample": [
+            2280,
+            691788002979,
+            43056,
+            2280,
+            0,
+            809623,
+            809623
+          ],
+          "last_sample": [
+            3480,
+            691794703120,
+            44256,
+            3480,
+            0,
+            1029073,
+            1029073
+          ]
+        },
+        {
+          "target_speed": 1,
+          "measurement_seconds": 5.999892,
+          "internal_frame_delta": 360,
+          "frame_counter_delta_mod32": 360,
+          "first_sample": [
+            3840,
+            691797970286,
+            44616,
+            3840,
+            0,
+            1137335,
+            1137335
+          ],
+          "last_sample": [
+            4200,
+            691803970178,
+            44976,
+            4200,
+            0,
+            1334840,
+            1334840
+          ]
+        },
+        {
+          "target_speed": 2,
+          "measurement_seconds": 7.02838,
+          "internal_frame_delta": 840,
+          "frame_counter_delta_mod32": 840,
+          "first_sample": [
+            4560,
+            691808063293,
+            45336,
+            4560,
+            0,
+            1469528,
+            1469528
+          ],
+          "last_sample": [
+            5400,
+            691815091673,
+            46176,
+            5400,
+            0,
+            1699950,
+            1699950
+          ]
+        },
+        {
+          "target_speed": 3,
+          "measurement_seconds": 6.695008,
+          "internal_frame_delta": 1200,
+          "frame_counter_delta_mod32": 1200,
+          "first_sample": [
+            5880,
+            691818133914,
+            46656,
+            5880,
+            0,
+            1799434,
+            1799434
+          ],
+          "last_sample": [
+            7080,
+            691824828922,
+            47856,
+            7080,
+            0,
+            2018884,
+            2018884
+          ]
+        }
+      ],
+      "one_core_cpu_percent": 4.369660093660251,
+      "ring_under": 0,
+      "ring_over": 0,
+      "queue_drop": "Measured separately by host regression",
+      "unexpected_fallback": 0,
+      "muted": true,
+      "physical_device_underruns": "NOT_INSTRUMENTED"
+    },
+    {
+      "game": "B6JJ",
+      "internal_speed_x": [
+        1.0046139408731463,
+        2.000067009344094,
+        3.001299847213142,
+        1.0045871505072275,
+        1.9999159853758912,
+        3.0002394388596874
+      ],
+      "gba_frames_per_second": [
+        60.003080158114784,
+        119.45900430066636,
+        179.26013962572276,
+        60.00148003650757,
+        119.44998401645452,
+        179.1968040847314
+      ],
+      "callback_samples_per_second": [
+        65838.37970349145,
+        65538.19623445309,
+        65564.39606810811,
+        65836.62397005793,
+        65533.24748102736,
+        65541.23109399051
+      ],
+      "counter_evidence": [
+        {
+          "target_speed": 1,
+          "measurement_seconds": 5.999692,
+          "internal_frame_delta": 360,
+          "frame_counter_delta_mod32": 360,
+          "first_sample": [
+            240,
+            692013267483,
+            708,
+            240,
+            0,
+            263339,
+            263339
+          ],
+          "last_sample": [
+            600,
+            692019267175,
+            1068,
+            600,
+            0,
+            658349,
+            658349
+          ]
+        },
+        {
+          "target_speed": 2,
+          "measurement_seconds": 7.031701,
+          "internal_frame_delta": 840,
+          "frame_counter_delta_mod32": 840,
+          "first_sample": [
+            960,
+            692023530516,
+            1428,
+            960,
+            0,
+            939245,
+            939245
+          ],
+          "last_sample": [
+            1800,
+            692030562217,
+            2268,
+            1800,
+            0,
+            1400090,
+            1400090
+          ]
+        },
+        {
+          "target_speed": 3,
+          "measurement_seconds": 6.694182,
+          "internal_frame_delta": 1200,
+          "frame_counter_delta_mod32": 1200,
+          "first_sample": [
+            2280,
+            692033687450,
+            2748,
+            2280,
+            0,
+            1601984,
+            1601984
+          ],
+          "last_sample": [
+            3480,
+            692040381632,
+            3948,
+            3480,
+            0,
+            2040884,
+            2040884
+          ]
+        },
+        {
+          "target_speed": 1,
+          "measurement_seconds": 5.999852,
+          "internal_frame_delta": 360,
+          "frame_counter_delta_mod32": 360,
+          "first_sample": [
+            3840,
+            692043646921,
+            4308,
+            3840,
+            0,
+            2254482,
+            2254482
+          ],
+          "last_sample": [
+            4200,
+            692049646773,
+            4668,
+            4200,
+            0,
+            2649492,
+            2649492
+          ]
+        },
+        {
+          "target_speed": 2,
+          "measurement_seconds": 7.032232,
+          "internal_frame_delta": 840,
+          "frame_counter_delta_mod32": 840,
+          "first_sample": [
+            4560,
+            692053748548,
+            5028,
+            4560,
+            0,
+            2919964,
+            2919964
+          ],
+          "last_sample": [
+            5400,
+            692060780780,
+            5868,
+            5400,
+            0,
+            3380809,
+            3380809
+          ]
+        },
+        {
+          "target_speed": 3,
+          "measurement_seconds": 6.696548,
+          "internal_frame_delta": 1200,
+          "frame_counter_delta_mod32": 1200,
+          "first_sample": [
+            5880,
+            692063843839,
+            6348,
+            5880,
+            0,
+            3579777,
+            3579777
+          ],
+          "last_sample": [
+            7080,
+            692070540387,
+            7548,
+            7080,
+            0,
+            4018677,
+            4018677
+          ]
+        }
+      ],
+      "one_core_cpu_percent": 2.6937322166822795,
+      "ring_under": 0,
+      "ring_over": 0,
+      "queue_drop": "Measured separately by host regression",
+      "unexpected_fallback": 0,
+      "muted": true,
+      "physical_device_underruns": "NOT_INSTRUMENTED"
+    }
+  ],
+  "frontend_recovery": [
+    {
+      "game": "AAMJ",
+      "state_load_confirmed": true,
+      "commands_count": 20,
+      "fallback_reasons": [],
+      "b6jj_fallback_reasons": [],
+      "recovery_markers": [
+        "[FIXED AUDIO] STATE_LOAD_DETECTED run=33",
+        "[FIXED AUDIO] STATE_LOAD_CANDIDATE_DROPPED ring=0 state=LOAD_RATE_SETTLING sticky=0",
+        "[FIXED AUDIO] STATE_LOAD_PLAYER_DISCOVERY player=0 address=03002ec0 song=3 header=0826f9e8 playing=1 priority=5 tracks=7",
+        "[FIXED AUDIO] STATE_LOAD_POSITION player=0 clock=225 tempo=94/256/94/52 fade=0/0/0 track0=0826e90f wait=3 running=190",
+        "[FIXED AUDIO] STATE_LOAD_PROFILE game=AAMJ players=9 active=1 validated=1",
+        "[FIXED AUDIO] STATE_LOAD_OWNERSHIP dma=1 source=030033e0 owned=1",
+        "[FIXED AUDIO] STATE_LOAD_OWNERSHIP dma=2 source=03003a10 owned=1",
+        "[FIXED AUDIO] STATE_LOAD_REBIND_BEGIN active=1 state=STATE_LOAD_REBIND",
+        "[FIXED AUDIO] STATE_LOAD_REBIND_OK seekRuns=6 state=RECOVERING",
+        "[FIXED AUDIO] STATE_LOAD_RECOVERED runs=12 state=ACTIVE",
+        "[FIXED AUDIO] RECOVERED reason=LOAD_RATE_SETTLING healthyRuns=8 playerPosition=7132 ringFill=751",
+        "[FIXED AUDIO] STATE_LOAD_DETECTED run=2283",
+        "[FIXED AUDIO] STATE_LOAD_CANDIDATE_DROPPED ring=0 state=LOAD_RATE_SETTLING sticky=0",
+        "[FIXED AUDIO] STATE_LOAD_PLAYER_DISCOVERY player=0 address=03002ec0 song=3 header=0826f9e8 playing=1 priority=5 tracks=7",
+        "[FIXED AUDIO] STATE_LOAD_POSITION player=0 clock=597 tempo=94/256/94/88 fade=0/0/0 track0=0826ead6 wait=3 running=190",
+        "[FIXED AUDIO] STATE_LOAD_PROFILE game=AAMJ players=9 active=1 validated=1",
+        "[FIXED AUDIO] STATE_LOAD_OWNERSHIP dma=1 source=030033e0 owned=1",
+        "[FIXED AUDIO] STATE_LOAD_OWNERSHIP dma=2 source=03003a10 owned=1",
+        "[FIXED AUDIO] STATE_LOAD_REBIND_BEGIN active=1 state=STATE_LOAD_REBIND",
+        "[FIXED AUDIO] STATE_LOAD_REBIND_OK seekRuns=15 state=RECOVERING",
+        "[FIXED AUDIO] STATE_LOAD_RECOVERED runs=21 state=ACTIVE",
+        "[FIXED AUDIO] RECOVERED reason=LOAD_RATE_SETTLING healthyRuns=8 playerPosition=4023 ringFill=385",
+        "[FIXED AUDIO] STATE_LOAD_DETECTED run=4173",
+        "[FIXED AUDIO] STATE_LOAD_CANDIDATE_DROPPED ring=0 state=LOAD_RATE_SETTLING sticky=0",
+        "[FIXED AUDIO] REWIND_DETECTED method=frontend state=REWINDING",
+        "[FIXED AUDIO] STATE_LOAD_DETECTED run=4174",
+        "[FIXED AUDIO] STATE_LOAD_DETECTED run=4176",
+        "[FIXED AUDIO] STATE_LOAD_DETECTED run=4178",
+        "[FIXED AUDIO] STATE_LOAD_DETECTED run=4181",
+        "[FIXED AUDIO] STATE_LOAD_DETECTED run=4183",
+        "[FIXED AUDIO] STATE_LOAD_DETECTED run=4184",
+        "[FIXED AUDIO] STATE_LOAD_DETECTED run=4188",
+        "[FIXED AUDIO] REWIND_END stableRuns=5 state=REWIND_REBIND",
+        "[FIXED AUDIO] STATE_LOAD_PLAYER_DISCOVERY player=0 address=03002ec0 song=3 header=0826f9e8 playing=1 priority=5 tracks=7",
+        "[FIXED AUDIO] STATE_LOAD_POSITION player=0 clock=1787 tempo=94/256/94/94 fade=0/0/0 track0=0826ecee wait=1 running=190",
+        "[FIXED AUDIO] STATE_LOAD_PROFILE game=AAMJ players=9 active=1 validated=1",
+        "[FIXED AUDIO] STATE_LOAD_OWNERSHIP dma=1 source=030033e0 owned=1",
+        "[FIXED AUDIO] STATE_LOAD_OWNERSHIP dma=2 source=03003a10 owned=1",
+        "[FIXED AUDIO] STATE_LOAD_REBIND_BEGIN active=1 state=STATE_LOAD_REBIND",
+        "[FIXED AUDIO] STATE_LOAD_REBIND_OK seekRuns=45 state=RECOVERING",
+        "[FIXED AUDIO] STATE_LOAD_RECOVERED runs=71 state=ACTIVE",
+        "[FIXED AUDIO] REWIND_RECOVERED runs=56 state=ACTIVE",
+        "[FIXED AUDIO] RECOVERED reason=REWINDING healthyRuns=8 playerPosition=9509 ringFill=385"
+      ],
+      "ring_under": 0,
+      "ring_over": 0,
+      "muted": true,
+      "ongoing_se": "Intentionally discarded, no complete SE-state restoration claim"
+    },
+    {
+      "game": "AFXJ",
+      "state_load_confirmed": true,
+      "commands_count": 114,
+      "fallback_reasons": [],
+      "b6jj_fallback_reasons": [],
+      "recovery_markers": [
+        "[FIXED AUDIO] STATE_LOAD_DETECTED run=31",
+        "[FIXED AUDIO] STATE_LOAD_CANDIDATE_DROPPED ring=0 state=LOAD_RATE_SETTLING sticky=0",
+        "[FIXED AUDIO] STATE_LOAD_PLAYER_DISCOVERY player=0 address=0200f270 song=33 header=0834129c playing=1 priority=1 tracks=16",
+        "[FIXED AUDIO] STATE_LOAD_POSITION player=0 clock=1836 tempo=140/256/140/130 fade=0/3/0 track0=0833f258 wait=90 running=223",
+        "[FIXED AUDIO] STATE_LOAD_PROFILE game=AFXJ players=3 active=1 validated=1",
+        "[FIXED AUDIO] STATE_LOAD_OWNERSHIP dma=1 source=02008840 owned=0",
+        "[FIXED AUDIO] status=PARTIAL reason=unverified-audio-ownership audio=candidate detail=STATE_LOAD_UNVERIFIED_OWNERSHIP",
+        "[FIXED AUDIO] STATE_LOAD_REBIND_BEGIN active=1 state=STATE_LOAD_REBIND",
+        "[FIXED AUDIO] STATE_LOAD_REBIND_OK seekRuns=31 state=RECOVERING",
+        "[FIXED AUDIO] STATE_LOAD_RECOVERED runs=37 state=ACTIVE",
+        "[FIXED AUDIO] RECOVERED reason=LOAD_RATE_SETTLING healthyRuns=8 playerPosition=20847 ringFill=1129",
+        "[FIXED AUDIO] STATE_LOAD_DETECTED run=2025",
+        "[FIXED AUDIO] STATE_LOAD_CANDIDATE_DROPPED ring=0 state=LOAD_RATE_SETTLING sticky=0",
+        "[FIXED AUDIO] STATE_LOAD_PLAYER_DISCOVERY player=0 address=0200f270 song=33 header=0834129c playing=1 priority=1 tracks=16",
+        "[FIXED AUDIO] STATE_LOAD_POSITION player=0 clock=2393 tempo=140/256/140/20 fade=0/3/0 track0=0833f25d wait=13 running=223",
+        "[FIXED AUDIO] STATE_LOAD_PROFILE game=AFXJ players=3 active=1 validated=1",
+        "[FIXED AUDIO] STATE_LOAD_OWNERSHIP dma=1 source=02008840 owned=0",
+        "[FIXED AUDIO] STATE_LOAD_REBIND_BEGIN active=1 state=STATE_LOAD_REBIND",
+        "[FIXED AUDIO] STATE_LOAD_REBIND_OK seekRuns=41 state=RECOVERING",
+        "[FIXED AUDIO] STATE_LOAD_RECOVERED runs=47 state=ACTIVE",
+        "[FIXED AUDIO] RECOVERED reason=LOAD_RATE_SETTLING healthyRuns=8 playerPosition=8778 ringFill=764",
+        "[FIXED AUDIO] STATE_LOAD_DETECTED run=3847",
+        "[FIXED AUDIO] STATE_LOAD_CANDIDATE_DROPPED ring=0 state=LOAD_RATE_SETTLING sticky=0",
+        "[FIXED AUDIO] REWIND_DETECTED method=frontend state=REWINDING",
+        "[FIXED AUDIO] STATE_LOAD_DETECTED run=3848",
+        "[FIXED AUDIO] STATE_LOAD_DETECTED run=3849",
+        "[FIXED AUDIO] STATE_LOAD_DETECTED run=3850",
+        "[FIXED AUDIO] STATE_LOAD_DETECTED run=3851",
+        "[FIXED AUDIO] STATE_LOAD_DETECTED run=3852",
+        "[FIXED AUDIO] STATE_LOAD_DETECTED run=3853",
+        "[FIXED AUDIO] STATE_LOAD_DETECTED run=3854",
+        "[FIXED AUDIO] STATE_LOAD_DETECTED run=3855",
+        "[FIXED AUDIO] STATE_LOAD_DETECTED run=3856",
+        "[FIXED AUDIO] STATE_LOAD_DETECTED run=3857",
+        "[FIXED AUDIO] STATE_LOAD_DETECTED run=3858",
+        "[FIXED AUDIO] STATE_LOAD_DETECTED run=3859",
+        "[FIXED AUDIO] STATE_LOAD_DETECTED run=3860",
+        "[FIXED AUDIO] STATE_LOAD_DETECTED run=3861",
+        "[FIXED AUDIO] STATE_LOAD_DETECTED run=3862",
+        "[FIXED AUDIO] STATE_LOAD_DETECTED run=3864",
+        "[FIXED AUDIO] STATE_LOAD_DETECTED run=3865",
+        "[FIXED AUDIO] STATE_LOAD_DETECTED run=3866",
+        "[FIXED AUDIO] STATE_LOAD_DETECTED run=3867",
+        "[FIXED AUDIO] STATE_LOAD_DETECTED run=3868",
+        "[FIXED AUDIO] STATE_LOAD_DETECTED run=3869",
+        "[FIXED AUDIO] STATE_LOAD_DETECTED run=3870",
+        "[FIXED AUDIO] STATE_LOAD_DETECTED run=3871",
+        "[FIXED AUDIO] STATE_LOAD_DETECTED run=3872",
+        "[FIXED AUDIO] STATE_LOAD_DETECTED run=3873",
+        "[FIXED AUDIO] STATE_LOAD_DETECTED run=3874",
+        "[FIXED AUDIO] STATE_LOAD_DETECTED run=3875",
+        "[FIXED AUDIO] STATE_LOAD_DETECTED run=3876",
+        "[FIXED AUDIO] STATE_LOAD_DETECTED run=3877",
+        "[FIXED AUDIO] STATE_LOAD_DETECTED run=3878",
+        "[FIXED AUDIO] STATE_LOAD_DETECTED run=3879",
+        "[FIXED AUDIO] STATE_LOAD_DETECTED run=3880",
+        "[FIXED AUDIO] STATE_LOAD_DETECTED run=3881",
+        "[FIXED AUDIO] STATE_LOAD_DETECTED run=3882",
+        "[FIXED AUDIO] STATE_LOAD_DETECTED run=3883",
+        "[FIXED AUDIO] STATE_LOAD_DETECTED run=3884",
+        "[FIXED AUDIO] STATE_LOAD_DETECTED run=3885",
+        "[FIXED AUDIO] STATE_LOAD_DETECTED run=3886",
+        "[FIXED AUDIO] STATE_LOAD_DETECTED run=3887",
+        "[FIXED AUDIO] STATE_LOAD_DETECTED run=3888",
+        "[FIXED AUDIO] STATE_LOAD_DETECTED run=3890",
+        "[FIXED AUDIO] STATE_LOAD_DETECTED run=3891",
+        "[FIXED AUDIO] STATE_LOAD_DETECTED run=3892",
+        "[FIXED AUDIO] REWIND_END stableRuns=5 state=REWIND_REBIND",
+        "[FIXED AUDIO] STATE_LOAD_PLAYER_DISCOVERY player=0 address=0200f270 song=33 header=0834129c playing=1 priority=1 tracks=16",
+        "[FIXED AUDIO] STATE_LOAD_POSITION player=0 clock=4059 tempo=140/256/140/20 fade=0/3/0 track0=0833f26f wait=75 running=223",
+        "[FIXED AUDIO] STATE_LOAD_PROFILE game=AFXJ players=3 active=1 validated=1",
+        "[FIXED AUDIO] STATE_LOAD_OWNERSHIP dma=1 source=02008840 owned=0",
+        "[FIXED AUDIO] STATE_LOAD_REBIND_BEGIN active=1 state=STATE_LOAD_REBIND",
+        "[FIXED AUDIO] STATE_LOAD_REBIND_OK seekRuns=69 state=RECOVERING",
+        "[FIXED AUDIO] STATE_LOAD_RECOVERED runs=125 state=ACTIVE",
+        "[FIXED AUDIO] REWIND_RECOVERED runs=80 state=ACTIVE",
+        "[FIXED AUDIO] RECOVERED reason=REWINDING healthyRuns=8 playerPosition=13898 ringFill=764"
+      ],
+      "ring_under": 0,
+      "ring_over": 0,
+      "muted": true,
+      "ongoing_se": "Intentionally discarded, no complete SE-state restoration claim"
+    },
+    {
+      "game": "AORJ",
+      "state_load_confirmed": true,
+      "commands_count": 184,
+      "fallback_reasons": [],
+      "b6jj_fallback_reasons": [],
+      "recovery_markers": [
+        "[FIXED AUDIO] STATE_LOAD_DETECTED run=35",
+        "[FIXED AUDIO] STATE_LOAD_CANDIDATE_DROPPED ring=0 state=LOAD_RATE_SETTLING sticky=0",
+        "[FIXED AUDIO] STATE_LOAD_PLAYER_DISCOVERY player=0 address=03006c90 song=82 header=08164708 playing=1 priority=20 tracks=8",
+        "[FIXED AUDIO] STATE_LOAD_POSITION player=0 clock=923 tempo=110/256/110/90 fade=0/2/65521 track0=08163fbd wait=4 running=213",
+        "[FIXED AUDIO] STATE_LOAD_PROFILE game=AORJ players=4 active=1 validated=1",
+        "[FIXED AUDIO] STATE_LOAD_OWNERSHIP dma=1 source=03005ea0 owned=1",
+        "[FIXED AUDIO] STATE_LOAD_OWNERSHIP dma=2 source=030064d0 owned=1",
+        "[FIXED AUDIO] STATE_LOAD_REBIND_BEGIN active=1 state=STATE_LOAD_REBIND",
+        "[FIXED AUDIO] STATE_LOAD_REBIND_OK seekRuns=20 state=RECOVERING",
+        "[FIXED AUDIO] STATE_LOAD_RECOVERED runs=26 state=ACTIVE",
+        "[FIXED AUDIO] RECOVERED reason=LOAD_RATE_SETTLING healthyRuns=8 playerPosition=14812 ringFill=1129",
+        "[FIXED AUDIO] STATE_LOAD_DETECTED run=2303",
+        "[FIXED AUDIO] STATE_LOAD_CANDIDATE_DROPPED ring=0 state=LOAD_RATE_SETTLING sticky=0",
+        "[FIXED AUDIO] STATE_LOAD_PLAYER_DISCOVERY player=0 address=03006c90 song=82 header=08164708 playing=1 priority=20 tracks=8",
+        "[FIXED AUDIO] STATE_LOAD_POSITION player=0 clock=1360 tempo=110/256/110/100 fade=0/2/65521 track0=08164026 wait=2 running=219",
+        "[FIXED AUDIO] STATE_LOAD_PROFILE game=AORJ players=4 active=1 validated=1",
+        "[FIXED AUDIO] STATE_LOAD_OWNERSHIP dma=1 source=03005ea0 owned=1",
+        "[FIXED AUDIO] STATE_LOAD_OWNERSHIP dma=2 source=030064d0 owned=1",
+        "[FIXED AUDIO] STATE_LOAD_REBIND_BEGIN active=1 state=STATE_LOAD_REBIND",
+        "[FIXED AUDIO] STATE_LOAD_REBIND_OK seekRuns=29 state=RECOVERING",
+        "[FIXED AUDIO] STATE_LOAD_RECOVERED runs=35 state=ACTIVE",
+        "[FIXED AUDIO] RECOVERED reason=LOAD_RATE_SETTLING healthyRuns=8 playerPosition=6583 ringFill=764",
+        "[FIXED AUDIO] STATE_LOAD_DETECTED run=4535",
+        "[FIXED AUDIO] STATE_LOAD_CANDIDATE_DROPPED ring=0 state=LOAD_RATE_SETTLING sticky=0",
+        "[FIXED AUDIO] REWIND_DETECTED method=frontend state=REWINDING",
+        "[FIXED AUDIO] STATE_LOAD_DETECTED run=4536",
+        "[FIXED AUDIO] STATE_LOAD_DETECTED run=4537",
+        "[FIXED AUDIO] STATE_LOAD_DETECTED run=4538",
+        "[FIXED AUDIO] STATE_LOAD_DETECTED run=4539",
+        "[FIXED AUDIO] STATE_LOAD_DETECTED run=4540",
+        "[FIXED AUDIO] STATE_LOAD_DETECTED run=4541",
+        "[FIXED AUDIO] STATE_LOAD_DETECTED run=4542",
+        "[FIXED AUDIO] STATE_LOAD_DETECTED run=4543",
+        "[FIXED AUDIO] STATE_LOAD_DETECTED run=4544",
+        "[FIXED AUDIO] STATE_LOAD_DETECTED run=4545",
+        "[FIXED AUDIO] STATE_LOAD_DETECTED run=4546",
+        "[FIXED AUDIO] STATE_LOAD_DETECTED run=4547",
+        "[FIXED AUDIO] STATE_LOAD_DETECTED run=4548",
+        "[FIXED AUDIO] STATE_LOAD_DETECTED run=4549",
+        "[FIXED AUDIO] STATE_LOAD_DETECTED run=4550",
+        "[FIXED AUDIO] STATE_LOAD_DETECTED run=4551",
+        "[FIXED AUDIO] STATE_LOAD_DETECTED run=4552",
+        "[FIXED AUDIO] STATE_LOAD_DETECTED run=4553",
+        "[FIXED AUDIO] STATE_LOAD_DETECTED run=4554",
+        "[FIXED AUDIO] STATE_LOAD_DETECTED run=4555",
+        "[FIXED AUDIO] STATE_LOAD_DETECTED run=4556",
+        "[FIXED AUDIO] STATE_LOAD_DETECTED run=4557",
+        "[FIXED AUDIO] STATE_LOAD_DETECTED run=4558",
+        "[FIXED AUDIO] STATE_LOAD_DETECTED run=4559",
+        "[FIXED AUDIO] STATE_LOAD_DETECTED run=4560",
+        "[FIXED AUDIO] STATE_LOAD_DETECTED run=4561",
+        "[FIXED AUDIO] STATE_LOAD_DETECTED run=4562",
+        "[FIXED AUDIO] STATE_LOAD_DETECTED run=4563",
+        "[FIXED AUDIO] STATE_LOAD_DETECTED run=4564",
+        "[FIXED AUDIO] STATE_LOAD_DETECTED run=4565",
+        "[FIXED AUDIO] STATE_LOAD_DETECTED run=4566",
+        "[FIXED AUDIO] STATE_LOAD_DETECTED run=4567",
+        "[FIXED AUDIO] STATE_LOAD_DETECTED run=4568",
+        "[FIXED AUDIO] STATE_LOAD_DETECTED run=4569",
+        "[FIXED AUDIO] STATE_LOAD_DETECTED run=4570",
+        "[FIXED AUDIO] STATE_LOAD_DETECTED run=4571",
+        "[FIXED AUDIO] STATE_LOAD_DETECTED run=4572",
+        "[FIXED AUDIO] STATE_LOAD_DETECTED run=4573",
+        "[FIXED AUDIO] STATE_LOAD_DETECTED run=4574",
+        "[FIXED AUDIO] STATE_LOAD_DETECTED run=4575",
+        "[FIXED AUDIO] STATE_LOAD_DETECTED run=4576",
+        "[FIXED AUDIO] STATE_LOAD_DETECTED run=4577",
+        "[FIXED AUDIO] STATE_LOAD_DETECTED run=4578",
+        "[FIXED AUDIO] STATE_LOAD_DETECTED run=4579",
+        "[FIXED AUDIO] STATE_LOAD_DETECTED run=4580",
+        "[FIXED AUDIO] STATE_LOAD_DETECTED run=4581",
+        "[FIXED AUDIO] STATE_LOAD_DETECTED run=4582",
+        "[FIXED AUDIO] STATE_LOAD_DETECTED run=4583",
+        "[FIXED AUDIO] STATE_LOAD_DETECTED run=4584",
+        "[FIXED AUDIO] STATE_LOAD_DETECTED run=4585",
+        "[FIXED AUDIO] STATE_LOAD_DETECTED run=4586",
+        "[FIXED AUDIO] STATE_LOAD_DETECTED run=4587",
+        "[FIXED AUDIO] STATE_LOAD_DETECTED run=4588",
+        "[FIXED AUDIO] STATE_LOAD_DETECTED run=4589",
+        "[FIXED AUDIO] STATE_LOAD_DETECTED run=4590",
+        "[FIXED AUDIO] STATE_LOAD_DETECTED run=4591",
+        "[FIXED AUDIO] STATE_LOAD_DETECTED run=4592",
+        "[FIXED AUDIO] STATE_LOAD_DETECTED run=4593",
+        "[FIXED AUDIO] STATE_LOAD_DETECTED run=4594",
+        "[FIXED AUDIO] STATE_LOAD_DETECTED run=4595",
+        "[FIXED AUDIO] STATE_LOAD_DETECTED run=4596",
+        "[FIXED AUDIO] STATE_LOAD_DETECTED run=4597",
+        "[FIXED AUDIO] STATE_LOAD_DETECTED run=4598",
+        "[FIXED AUDIO] STATE_LOAD_DETECTED run=4599",
+        "[FIXED AUDIO] STATE_LOAD_DETECTED run=4600",
+        "[FIXED AUDIO] STATE_LOAD_DETECTED run=4601",
+        "[FIXED AUDIO] STATE_LOAD_DETECTED run=4602",
+        "[FIXED AUDIO] STATE_LOAD_DETECTED run=4603",
+        "[FIXED AUDIO] STATE_LOAD_DETECTED run=4604",
+        "[FIXED AUDIO] STATE_LOAD_DETECTED run=4605",
+        "[FIXED AUDIO] REWIND_END stableRuns=5 state=REWIND_REBIND",
+        "[FIXED AUDIO] STATE_LOAD_PLAYER_DISCOVERY player=0 address=03006c90 song=82 header=08164708 playing=1 priority=20 tracks=8",
+        "[FIXED AUDIO] STATE_LOAD_POSITION player=0 clock=2949 tempo=110/256/110/10 fade=0/2/65521 track0=0816401b wait=21 running=213",
+        "[FIXED AUDIO] STATE_LOAD_PROFILE game=AORJ players=4 active=1 validated=1",
+        "[FIXED AUDIO] STATE_LOAD_OWNERSHIP dma=1 source=03005ea0 owned=1",
+        "[FIXED AUDIO] STATE_LOAD_OWNERSHIP dma=2 source=030064d0 owned=1",
+        "[FIXED AUDIO] STATE_LOAD_REBIND_BEGIN active=1 state=STATE_LOAD_REBIND",
+        "[FIXED AUDIO] STATE_LOAD_REBIND_OK seekRuns=63 state=RECOVERING",
+        "[FIXED AUDIO] STATE_LOAD_RECOVERED runs=144 state=ACTIVE",
+        "[FIXED AUDIO] REWIND_RECOVERED runs=74 state=ACTIVE",
+        "[FIXED AUDIO] RECOVERED reason=REWINDING healthyRuns=8 playerPosition=12801 ringFill=764"
+      ],
+      "ring_under": 0,
+      "ring_over": 0,
+      "muted": true,
+      "ongoing_se": "Intentionally discarded, no complete SE-state restoration claim"
+    },
+    {
+      "game": "B6JJ",
+      "state_load_confirmed": true,
+      "commands_count": 266,
+      "fallback_reasons": [],
+      "b6jj_fallback_reasons": [
+        "STATE_LOAD_OR_REWIND",
+        "STATE_LOAD_OR_REWIND",
+        "STATE_LOAD_OR_REWIND",
+        "UNLOAD"
+      ],
+      "recovery_markers": [
+        "[B6JJ RECOVERY] LOAD generation=1 success=1 rewind=0 pending=1 aux=0 ring=0 queue=0",
+        "[B6JJ RECOVERY] READY generation=1 loads=1 rebuilds=1 recoveryRuns=0 recoveryRoots=1 recoveryCycles=4838 recoveryUs=36050 start=continuation staleQueue=0 stalePcm=0",
+        "[B6JJ RECOVERY] LOAD generation=2 success=1 rewind=0 pending=1 aux=0 ring=0 queue=0",
+        "[B6JJ RECOVERY] READY generation=2 loads=2 rebuilds=2 recoveryRuns=0 recoveryRoots=1 recoveryCycles=12976 recoveryUs=40157 start=continuation staleQueue=0 stalePcm=0",
+        "[B6JJ RECOVERY] REWIND_BEGIN intermediateRebuilds=0",
+        "[B6JJ RECOVERY] LOAD generation=3 success=1 rewind=1 pending=1 aux=0 ring=0 queue=0",
+        "[B6JJ RECOVERY] LOAD generation=4 success=1 rewind=1 pending=1 aux=0 ring=0 queue=0",
+        "[B6JJ RECOVERY] LOAD generation=5 success=1 rewind=1 pending=1 aux=0 ring=0 queue=0",
+        "[B6JJ RECOVERY] LOAD generation=6 success=1 rewind=1 pending=1 aux=0 ring=0 queue=0",
+        "[B6JJ RECOVERY] LOAD generation=7 success=1 rewind=1 pending=1 aux=0 ring=0 queue=0",
+        "[B6JJ RECOVERY] LOAD generation=8 success=1 rewind=1 pending=1 aux=0 ring=0 queue=0",
+        "[B6JJ RECOVERY] LOAD generation=9 success=1 rewind=1 pending=1 aux=0 ring=0 queue=0",
+        "[B6JJ RECOVERY] LOAD generation=10 success=1 rewind=1 pending=1 aux=0 ring=0 queue=0",
+        "[B6JJ RECOVERY] LOAD generation=11 success=1 rewind=1 pending=1 aux=0 ring=0 queue=0",
+        "[B6JJ RECOVERY] LOAD generation=12 success=1 rewind=1 pending=1 aux=0 ring=0 queue=0",
+        "[B6JJ RECOVERY] LOAD generation=13 success=1 rewind=1 pending=1 aux=0 ring=0 queue=0",
+        "[B6JJ RECOVERY] LOAD generation=14 success=1 rewind=1 pending=1 aux=0 ring=0 queue=0",
+        "[B6JJ RECOVERY] LOAD generation=15 success=1 rewind=1 pending=1 aux=0 ring=0 queue=0",
+        "[B6JJ RECOVERY] LOAD generation=16 success=1 rewind=1 pending=1 aux=0 ring=0 queue=0",
+        "[B6JJ RECOVERY] LOAD generation=17 success=1 rewind=1 pending=1 aux=0 ring=0 queue=0",
+        "[B6JJ RECOVERY] LOAD generation=18 success=1 rewind=1 pending=1 aux=0 ring=0 queue=0",
+        "[B6JJ RECOVERY] LOAD generation=19 success=1 rewind=1 pending=1 aux=0 ring=0 queue=0",
+        "[B6JJ RECOVERY] LOAD generation=20 success=1 rewind=1 pending=1 aux=0 ring=0 queue=0",
+        "[B6JJ RECOVERY] LOAD generation=21 success=1 rewind=1 pending=1 aux=0 ring=0 queue=0",
+        "[B6JJ RECOVERY] LOAD generation=22 success=1 rewind=1 pending=1 aux=0 ring=0 queue=0",
+        "[B6JJ RECOVERY] LOAD generation=23 success=1 rewind=1 pending=1 aux=0 ring=0 queue=0",
+        "[B6JJ RECOVERY] LOAD generation=24 success=1 rewind=1 pending=1 aux=0 ring=0 queue=0",
+        "[B6JJ RECOVERY] LOAD generation=25 success=1 rewind=1 pending=1 aux=0 ring=0 queue=0",
+        "[B6JJ RECOVERY] LOAD generation=26 success=1 rewind=1 pending=1 aux=0 ring=0 queue=0",
+        "[B6JJ RECOVERY] LOAD generation=27 success=1 rewind=1 pending=1 aux=0 ring=0 queue=0",
+        "[B6JJ RECOVERY] LOAD generation=28 success=1 rewind=1 pending=1 aux=0 ring=0 queue=0",
+        "[B6JJ RECOVERY] LOAD generation=29 success=1 rewind=1 pending=1 aux=0 ring=0 queue=0",
+        "[B6JJ RECOVERY] LOAD generation=30 success=1 rewind=1 pending=1 aux=0 ring=0 queue=0",
+        "[B6JJ RECOVERY] LOAD generation=31 success=1 rewind=1 pending=1 aux=0 ring=0 queue=0",
+        "[B6JJ RECOVERY] LOAD generation=32 success=1 rewind=1 pending=1 aux=0 ring=0 queue=0",
+        "[B6JJ RECOVERY] LOAD generation=33 success=1 rewind=1 pending=1 aux=0 ring=0 queue=0",
+        "[B6JJ RECOVERY] LOAD generation=34 success=1 rewind=1 pending=1 aux=0 ring=0 queue=0",
+        "[B6JJ RECOVERY] LOAD generation=35 success=1 rewind=1 pending=1 aux=0 ring=0 queue=0",
+        "[B6JJ RECOVERY] LOAD generation=36 success=1 rewind=1 pending=1 aux=0 ring=0 queue=0",
+        "[B6JJ RECOVERY] LOAD generation=37 success=1 rewind=1 pending=1 aux=0 ring=0 queue=0",
+        "[B6JJ RECOVERY] LOAD generation=38 success=1 rewind=1 pending=1 aux=0 ring=0 queue=0",
+        "[B6JJ RECOVERY] LOAD generation=39 success=1 rewind=1 pending=1 aux=0 ring=0 queue=0",
+        "[B6JJ RECOVERY] LOAD generation=40 success=1 rewind=1 pending=1 aux=0 ring=0 queue=0",
+        "[B6JJ RECOVERY] LOAD generation=41 success=1 rewind=1 pending=1 aux=0 ring=0 queue=0",
+        "[B6JJ RECOVERY] LOAD generation=42 success=1 rewind=1 pending=1 aux=0 ring=0 queue=0",
+        "[B6JJ RECOVERY] LOAD generation=43 success=1 rewind=1 pending=1 aux=0 ring=0 queue=0",
+        "[B6JJ RECOVERY] LOAD generation=44 success=1 rewind=1 pending=1 aux=0 ring=0 queue=0",
+        "[B6JJ RECOVERY] LOAD generation=45 success=1 rewind=1 pending=1 aux=0 ring=0 queue=0",
+        "[B6JJ RECOVERY] LOAD generation=46 success=1 rewind=1 pending=1 aux=0 ring=0 queue=0",
+        "[B6JJ RECOVERY] LOAD generation=47 success=1 rewind=1 pending=1 aux=0 ring=0 queue=0",
+        "[B6JJ RECOVERY] LOAD generation=48 success=1 rewind=1 pending=1 aux=0 ring=0 queue=0",
+        "[B6JJ RECOVERY] LOAD generation=49 success=1 rewind=1 pending=1 aux=0 ring=0 queue=0",
+        "[B6JJ RECOVERY] LOAD generation=50 success=1 rewind=1 pending=1 aux=0 ring=0 queue=0",
+        "[B6JJ RECOVERY] LOAD generation=51 success=1 rewind=1 pending=1 aux=0 ring=0 queue=0",
+        "[B6JJ RECOVERY] LOAD generation=52 success=1 rewind=1 pending=1 aux=0 ring=0 queue=0",
+        "[B6JJ RECOVERY] LOAD generation=53 success=1 rewind=1 pending=1 aux=0 ring=0 queue=0",
+        "[B6JJ RECOVERY] LOAD generation=54 success=1 rewind=1 pending=1 aux=0 ring=0 queue=0",
+        "[B6JJ RECOVERY] LOAD generation=55 success=1 rewind=1 pending=1 aux=0 ring=0 queue=0",
+        "[B6JJ RECOVERY] LOAD generation=56 success=1 rewind=1 pending=1 aux=0 ring=0 queue=0",
+        "[B6JJ RECOVERY] LOAD generation=57 success=1 rewind=1 pending=1 aux=0 ring=0 queue=0",
+        "[B6JJ RECOVERY] LOAD generation=58 success=1 rewind=1 pending=1 aux=0 ring=0 queue=0",
+        "[B6JJ RECOVERY] LOAD generation=59 success=1 rewind=1 pending=1 aux=0 ring=0 queue=0",
+        "[B6JJ RECOVERY] LOAD generation=60 success=1 rewind=1 pending=1 aux=0 ring=0 queue=0",
+        "[B6JJ RECOVERY] LOAD generation=61 success=1 rewind=1 pending=1 aux=0 ring=0 queue=0",
+        "[B6JJ RECOVERY] LOAD generation=62 success=1 rewind=1 pending=1 aux=0 ring=0 queue=0",
+        "[B6JJ RECOVERY] LOAD generation=63 success=1 rewind=1 pending=1 aux=0 ring=0 queue=0",
+        "[B6JJ RECOVERY] LOAD generation=64 success=1 rewind=1 pending=1 aux=0 ring=0 queue=0",
+        "[B6JJ RECOVERY] LOAD generation=65 success=1 rewind=1 pending=1 aux=0 ring=0 queue=0",
+        "[B6JJ RECOVERY] LOAD generation=66 success=1 rewind=1 pending=1 aux=0 ring=0 queue=0",
+        "[B6JJ RECOVERY] LOAD generation=67 success=1 rewind=1 pending=1 aux=0 ring=0 queue=0",
+        "[B6JJ RECOVERY] LOAD generation=68 success=1 rewind=1 pending=1 aux=0 ring=0 queue=0",
+        "[B6JJ RECOVERY] LOAD generation=69 success=1 rewind=1 pending=1 aux=0 ring=0 queue=0",
+        "[B6JJ RECOVERY] LOAD generation=70 success=1 rewind=1 pending=1 aux=0 ring=0 queue=0",
+        "[B6JJ RECOVERY] LOAD generation=71 success=1 rewind=1 pending=1 aux=0 ring=0 queue=0",
+        "[B6JJ RECOVERY] LOAD generation=72 success=1 rewind=1 pending=1 aux=0 ring=0 queue=0",
+        "[B6JJ RECOVERY] LOAD generation=73 success=1 rewind=1 pending=1 aux=0 ring=0 queue=0",
+        "[B6JJ RECOVERY] LOAD generation=74 success=1 rewind=1 pending=1 aux=0 ring=0 queue=0",
+        "[B6JJ RECOVERY] LOAD generation=75 success=1 rewind=1 pending=1 aux=0 ring=0 queue=0",
+        "[B6JJ RECOVERY] LOAD generation=76 success=1 rewind=1 pending=1 aux=0 ring=0 queue=0",
+        "[B6JJ RECOVERY] LOAD generation=77 success=1 rewind=1 pending=1 aux=0 ring=0 queue=0",
+        "[B6JJ RECOVERY] LOAD generation=78 success=1 rewind=1 pending=1 aux=0 ring=0 queue=0",
+        "[B6JJ RECOVERY] LOAD generation=79 success=1 rewind=1 pending=1 aux=0 ring=0 queue=0",
+        "[B6JJ RECOVERY] LOAD generation=80 success=1 rewind=1 pending=1 aux=0 ring=0 queue=0",
+        "[B6JJ RECOVERY] LOAD generation=81 success=1 rewind=1 pending=1 aux=0 ring=0 queue=0",
+        "[B6JJ RECOVERY] LOAD generation=82 success=1 rewind=1 pending=1 aux=0 ring=0 queue=0",
+        "[B6JJ RECOVERY] LOAD generation=83 success=1 rewind=1 pending=1 aux=0 ring=0 queue=0",
+        "[B6JJ RECOVERY] LOAD generation=84 success=1 rewind=1 pending=1 aux=0 ring=0 queue=0",
+        "[B6JJ RECOVERY] LOAD generation=85 success=1 rewind=1 pending=1 aux=0 ring=0 queue=0",
+        "[B6JJ RECOVERY] LOAD generation=86 success=1 rewind=1 pending=1 aux=0 ring=0 queue=0",
+        "[B6JJ RECOVERY] LOAD generation=87 success=1 rewind=1 pending=1 aux=0 ring=0 queue=0",
+        "[B6JJ RECOVERY] LOAD generation=88 success=1 rewind=1 pending=1 aux=0 ring=0 queue=0",
+        "[B6JJ RECOVERY] LOAD generation=89 success=1 rewind=1 pending=1 aux=0 ring=0 queue=0",
+        "[B6JJ RECOVERY] LOAD generation=90 success=1 rewind=1 pending=1 aux=0 ring=0 queue=0",
+        "[B6JJ RECOVERY] LOAD generation=91 success=1 rewind=1 pending=1 aux=0 ring=0 queue=0",
+        "[B6JJ RECOVERY] LOAD generation=92 success=1 rewind=1 pending=1 aux=0 ring=0 queue=0",
+        "[B6JJ RECOVERY] LOAD generation=93 success=1 rewind=1 pending=1 aux=0 ring=0 queue=0",
+        "[B6JJ RECOVERY] LOAD generation=94 success=1 rewind=1 pending=1 aux=0 ring=0 queue=0",
+        "[B6JJ RECOVERY] LOAD generation=95 success=1 rewind=1 pending=1 aux=0 ring=0 queue=0",
+        "[B6JJ RECOVERY] LOAD generation=96 success=1 rewind=1 pending=1 aux=0 ring=0 queue=0",
+        "[B6JJ RECOVERY] LOAD generation=97 success=1 rewind=1 pending=1 aux=0 ring=0 queue=0",
+        "[B6JJ RECOVERY] LOAD generation=98 success=1 rewind=1 pending=1 aux=0 ring=0 queue=0",
+        "[B6JJ RECOVERY] LOAD generation=99 success=1 rewind=1 pending=1 aux=0 ring=0 queue=0",
+        "[B6JJ RECOVERY] LOAD generation=100 success=1 rewind=1 pending=1 aux=0 ring=0 queue=0",
+        "[B6JJ RECOVERY] LOAD generation=101 success=1 rewind=1 pending=1 aux=0 ring=0 queue=0",
+        "[B6JJ RECOVERY] LOAD generation=102 success=1 rewind=1 pending=1 aux=0 ring=0 queue=0",
+        "[B6JJ RECOVERY] LOAD generation=103 success=1 rewind=1 pending=1 aux=0 ring=0 queue=0",
+        "[B6JJ RECOVERY] LOAD generation=104 success=1 rewind=1 pending=1 aux=0 ring=0 queue=0",
+        "[B6JJ RECOVERY] LOAD generation=105 success=1 rewind=1 pending=1 aux=0 ring=0 queue=0",
+        "[B6JJ RECOVERY] LOAD generation=106 success=1 rewind=1 pending=1 aux=0 ring=0 queue=0",
+        "[B6JJ RECOVERY] LOAD generation=107 success=1 rewind=1 pending=1 aux=0 ring=0 queue=0",
+        "[B6JJ RECOVERY] LOAD generation=108 success=1 rewind=1 pending=1 aux=0 ring=0 queue=0",
+        "[B6JJ RECOVERY] REWIND_END intermediateRebuilds=0 finalRebuilds=1",
+        "[B6JJ RECOVERY] READY generation=108 loads=108 rebuilds=3 recoveryRuns=0 recoveryRoots=1 recoveryCycles=4891 recoveryUs=39581 start=continuation staleQueue=0 stalePcm=0"
+      ],
+      "ring_under": 0,
+      "ring_over": 0,
+      "muted": true,
+      "ongoing_se": "Intentionally discarded, no complete SE-state restoration claim"
+    }
+  ],
+  "bgm": [
+    {
+      "game": "AAMJ",
+      "speed": 2,
+      "observation": "SAME_SCALE_AGREEMENT",
+      "phrase_time_slope": 0.9999999999999999,
+      "audio_clock_sample_rate_ratio": 0.9999942465389476,
+      "minimum_correlation": 0.9999999999999998,
+      "minimum_spectral_cosine": 0.9999999999999998,
+      "dominant_frequencies_equal": true,
+      "offset_samples": [
+        -3017,
+        -3017,
+        -3017,
+        -3017,
+        -3017,
+        -3017
+      ],
+      "scope": "Six unretimed two-second windows in a24-second isolated loaded scene. Constant onset offset allowed by existing analysis; no rate/pitch scaling.",
+      "human_review": "HUMAN_REVIEW_REQUIRED"
+    },
+    {
+      "game": "AAMJ",
+      "speed": 3,
+      "observation": "SAME_SCALE_AGREEMENT",
+      "phrase_time_slope": 1.0000000000000002,
+      "audio_clock_sample_rate_ratio": 0.9999914561039258,
+      "minimum_correlation": 0.9999999999999998,
+      "minimum_spectral_cosine": 0.9999999999999998,
+      "dominant_frequencies_equal": true,
+      "offset_samples": [
+        -4023,
+        -4023,
+        -4023,
+        -4023,
+        -4023,
+        -4023
+      ],
+      "scope": "Six unretimed two-second windows in a24-second isolated loaded scene. Constant onset offset allowed by existing analysis; no rate/pitch scaling.",
+      "human_review": "HUMAN_REVIEW_REQUIRED"
+    },
+    {
+      "game": "AFXJ",
+      "speed": 2,
+      "observation": "SAME_SCALE_AGREEMENT",
+      "phrase_time_slope": 1.0,
+      "audio_clock_sample_rate_ratio": 0.9999942465389476,
+      "minimum_correlation": 0.9999999999999998,
+      "minimum_spectral_cosine": 0.9999999999999999,
+      "dominant_frequencies_equal": true,
+      "offset_samples": [
+        -9875,
+        -9875,
+        -9875,
+        -9875,
+        -9875,
+        -9875
+      ],
+      "scope": "Six unretimed two-second windows in a24-second isolated loaded scene. Constant onset offset allowed by existing analysis; no rate/pitch scaling.",
+      "human_review": "USER_VIEWED_APPROVED_DEMO_ONLY"
+    },
+    {
+      "game": "AFXJ",
+      "speed": 3,
+      "observation": "SAME_SCALE_AGREEMENT",
+      "phrase_time_slope": 1.0,
+      "audio_clock_sample_rate_ratio": 0.9999914561039258,
+      "minimum_correlation": 0.9999999999999998,
+      "minimum_spectral_cosine": 0.9999999999999998,
+      "dominant_frequencies_equal": true,
+      "offset_samples": [
+        -13166,
+        -13166,
+        -13166,
+        -13166,
+        -13166,
+        -13166
+      ],
+      "scope": "Six unretimed two-second windows in a24-second isolated loaded scene. Constant onset offset allowed by existing analysis; no rate/pitch scaling.",
+      "human_review": "USER_VIEWED_APPROVED_DEMO_ONLY"
+    },
+    {
+      "game": "AORJ",
+      "speed": 2,
+      "observation": "SAME_SCALE_AGREEMENT",
+      "phrase_time_slope": 1.0,
+      "audio_clock_sample_rate_ratio": 0.9999942465389476,
+      "minimum_correlation": 0.9999999999999998,
+      "minimum_spectral_cosine": 0.9999999999999999,
+      "dominant_frequencies_equal": true,
+      "offset_samples": [
+        -6858,
+        -6858,
+        -6858,
+        -6858,
+        -6858,
+        -6858
+      ],
+      "scope": "Six unretimed two-second windows in a24-second isolated loaded scene. Constant onset offset allowed by existing analysis; no rate/pitch scaling.",
+      "human_review": "USER_VIEWED_APPROVED_DEMO_ONLY"
+    },
+    {
+      "game": "AORJ",
+      "speed": 3,
+      "observation": "SAME_SCALE_AGREEMENT",
+      "phrase_time_slope": 1.0,
+      "audio_clock_sample_rate_ratio": 0.9999914561039258,
+      "minimum_correlation": 0.9999999999999999,
+      "minimum_spectral_cosine": 0.9999999999999998,
+      "dominant_frequencies_equal": true,
+      "offset_samples": [
+        -9144,
+        -9144,
+        -9144,
+        -9144,
+        -9144,
+        -9144
+      ],
+      "scope": "Six unretimed two-second windows in a24-second isolated loaded scene. Constant onset offset allowed by existing analysis; no rate/pitch scaling.",
+      "human_review": "USER_VIEWED_APPROVED_DEMO_ONLY"
+    },
+    {
+      "game": "B6JJ",
+      "speed": 2,
+      "observation": "SAME_SCALE_AGREEMENT",
+      "phrase_time_slope": 1.0000000000000002,
+      "audio_clock_sample_rate_ratio": 0.9999942465389476,
+      "minimum_correlation": 0.9999999999999998,
+      "minimum_spectral_cosine": 1.0,
+      "dominant_frequencies_equal": true,
+      "offset_samples": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "scope": "Six unretimed two-second windows in a24-second isolated loaded scene. Constant onset offset allowed by existing analysis; no rate/pitch scaling.",
+      "human_review": "HUMAN_REVIEW_REQUIRED"
+    },
+    {
+      "game": "B6JJ",
+      "speed": 3,
+      "observation": "SAME_SCALE_AGREEMENT",
+      "phrase_time_slope": 1.0000000000000002,
+      "audio_clock_sample_rate_ratio": 0.9999914561039258,
+      "minimum_correlation": 0.9999999999999998,
+      "minimum_spectral_cosine": 1.0,
+      "dominant_frequencies_equal": true,
+      "offset_samples": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "scope": "Six unretimed two-second windows in a24-second isolated loaded scene. Constant onset offset allowed by existing analysis; no rate/pitch scaling.",
+      "human_review": "HUMAN_REVIEW_REQUIRED"
+    }
+  ],
+  "retained_evidence": {
+    "phase9_bgm_identities": 20,
+    "phase9_tested": 26,
+    "rom_player": 10,
+    "ewram_player": 9,
+    "unknown_candidate": 1,
+    "new_bgm_verifications": 20,
+    "new_catalog_records": 0,
+    "overlap_prior32_general_limited_pass": 0,
+    "whole_game_promotions": 0,
+    "windows_audio": "Two unchanged active demos recorded by actual RetroArch/OBS process-specific Windows audio; user reviewed scope only",
+    "aorj_town_warmup": "Retained225486 common stereo frames exactly equal at1/2/3x after1x warmup; cold accelerated load probe remains INCONCLUSIVE"
+  },
+  "compatibility": {
+    "passed": true,
+    "total_records": 3075,
+    "summary": {
+      "total_releases": 3075,
+      "driver_families": {
+        "MP2K_ROM_PLAYER": {
+          "total": 363,
+          "LIMITED_TEST_PASS": 2,
+          "EXPERIMENTAL_UNVERIFIED": 355,
+          "NATIVE_FALLBACK": 2,
+          "UNSUPPORTED": 4,
+          "UNKNOWN_DRIVER": 0,
+          "NOT_ANALYZED": 0,
+          "experimental_trial_eligible": 359
+        },
+        "MP2K_EWRAM_PLAYER": {
+          "total": 241,
+          "LIMITED_TEST_PASS": 29,
+          "EXPERIMENTAL_UNVERIFIED": 212,
+          "NATIVE_FALLBACK": 0,
+          "UNSUPPORTED": 0,
+          "UNKNOWN_DRIVER": 0,
+          "NOT_ANALYZED": 0,
+          "experimental_trial_eligible": 241
+        },
+        "MP2K_MIXED / OTHER_MP2K": {
+          "total": 4,
+          "LIMITED_TEST_PASS": 0,
+          "EXPERIMENTAL_UNVERIFIED": 0,
+          "NATIVE_FALLBACK": 0,
+          "UNSUPPORTED": 4,
+          "UNKNOWN_DRIVER": 0,
+          "NOT_ANALYZED": 0,
+          "experimental_trial_eligible": 0
+        },
+        "CUSTOM_DRIVER": {
+          "total": 1,
+          "LIMITED_TEST_PASS": 1,
+          "EXPERIMENTAL_UNVERIFIED": 0,
+          "NATIVE_FALLBACK": 0,
+          "UNSUPPORTED": 0,
+          "UNKNOWN_DRIVER": 0,
+          "NOT_ANALYZED": 0,
+          "experimental_trial_eligible": 1
+        },
+        "OTHER_DRIVER": {
+          "total": 1,
+          "LIMITED_TEST_PASS": 0,
+          "EXPERIMENTAL_UNVERIFIED": 0,
+          "NATIVE_FALLBACK": 0,
+          "UNSUPPORTED": 1,
+          "UNKNOWN_DRIVER": 0,
+          "NOT_ANALYZED": 0,
+          "experimental_trial_eligible": 0
+        },
+        "UNKNOWN_DRIVER": {
+          "total": 187,
+          "LIMITED_TEST_PASS": 0,
+          "EXPERIMENTAL_UNVERIFIED": 0,
+          "NATIVE_FALLBACK": 4,
+          "UNSUPPORTED": 0,
+          "UNKNOWN_DRIVER": 183,
+          "NOT_ANALYZED": 0,
+          "experimental_trial_eligible": 0
+        },
+        "NOT_ANALYZED": {
+          "total": 2278,
+          "LIMITED_TEST_PASS": 0,
+          "EXPERIMENTAL_UNVERIFIED": 0,
+          "NATIVE_FALLBACK": 0,
+          "UNSUPPORTED": 0,
+          "UNKNOWN_DRIVER": 0,
+          "NOT_ANALYZED": 2278,
+          "experimental_trial_eligible": 0
+        }
+      },
+      "public_status": {
+        "LIMITED_TEST_PASS": 32,
+        "EXPERIMENTAL_UNVERIFIED": 567,
+        "NATIVE_FALLBACK": 6,
+        "UNSUPPORTED": 9,
+        "UNKNOWN_DRIVER": 183,
+        "NOT_ANALYZED": 2278
+      },
+      "experimental_trial_eligible": 601
+    },
+    "dat_only": true,
+    "identity_deduplicated": true,
+    "all_fields_round_trip": true,
+    "subset_membership_equal": true,
+    "summary_counts_equal": true,
+    "readme_counts_equal": true,
+    "eligibility_matches_production_profile": true,
+    "no_active_only_promotion": true,
+    "no_regional_result_transfer": true,
+    "public_ownership_statistics": false,
+    "public_private_filenames": false,
+    "public_old_statuses": false,
+    "database_sha256": "f04ff418e5e033686ec3f13582a895bb8ba3bbd67151bddeaad3a8df50d45dbf",
+    "bgm_summary": {
+      "NOT_TESTED": 3049,
+      "BGM_CONFIRMED": 20,
+      "BGM_INCONCLUSIVE": 3,
+      "BGM_NOT_ACTIVE": 3
+    },
+    "se_status_separate": true,
+    "conservative_scope_unchanged": true
+  },
+  "demos": {
+    "schema_version": 1,
+    "version": "v0.4-preview",
+    "video_user_review_pass": true,
+    "review_source": "Explicit user confirmation in final release preparation request",
+    "scope": "Only these two unchanged active gameplay recordings; not all titles, all scenes or all sound effects",
+    "git_video_files": false,
+    "release_assets_only": true,
+    "videos": [
+      {
+        "game_code": "AORJ",
+        "filename": "AORJ-v04-active-walking-review.mp4",
+        "sha256": "8CA4AF7026DF482138C01A893F6BD222F7CB501B7AEFB923AFAF5D4BE861D931",
+        "bytes": 6054380,
+        "duration_seconds": 24.166667,
+        "core_sha256": "92BAE49862CC8598B05C2E83F973FA969374B12260A0D40441D2793134F93D7C",
+        "bridge_sha256": "D750BD152B51F632C37F627FC22C6A33E8CDA9B43B16294334D86E90DD511502",
+        "speed_sequence": [
+          1,
+          2,
+          3,
+          1,
+          2,
+          3
+        ],
+        "stages": [
+          {
+            "target_speed": 1,
+            "clip_begin": 0.0,
+            "clip_end": 3.3491882000816986,
+            "internal_speed_x": 1.0045553460422623,
+            "gba_frames_per_second": 59.99958000293997,
+            "bgm_clock_ratio": 1.0045553460422652
+          },
+          {
+            "target_speed": 2,
+            "clip_begin": 3.3491882000816986,
+            "clip_end": 7.519905300112441,
+            "internal_speed_x": 1.9998056614768869,
+            "gba_frames_per_second": 119.44339378496207,
+            "bgm_clock_ratio": 0.9998977680674722
+          },
+          {
+            "target_speed": 3,
+            "clip_begin": 7.519905300112441,
+            "clip_end": 11.67418420012109,
+            "internal_speed_x": 3.015325661753651,
+            "gba_frames_per_second": 180.09786517993876,
+            "bgm_clock_ratio": 1.0051085539178866
+          },
+          {
+            "target_speed": 1,
+            "clip_begin": 11.67418420012109,
+            "clip_end": 15.819094200036488,
+            "internal_speed_x": 1.0045598665300184,
+            "gba_frames_per_second": 59.999850000375005,
+            "bgm_clock_ratio": 1.0045598665300213
+          },
+          {
+            "target_speed": 2,
+            "clip_begin": 15.819094200036488,
+            "clip_end": 19.990203500026837,
+            "internal_speed_x": 2.0000983121765166,
+            "gba_frames_per_second": 119.4608730797909,
+            "bgm_clock_ratio": 1.0000542195001043
+          },
+          {
+            "target_speed": 3,
+            "clip_begin": 19.990203500026837,
+            "clip_end": 24.15119990007952,
+            "internal_speed_x": 3.0140129485887965,
+            "gba_frames_per_second": 180.01946010363721,
+            "bgm_clock_ratio": 1.004670982862935
+          }
+        ],
+        "scene": "Town continuous walking",
+        "edit_note": "One continuous real take",
+        "video_user_review_pass": true,
+        "bgm_tempo_pitch": "No audible discrepancy reported by user in viewed footage",
+        "motion": "PASS",
+        "volume_sfx_avsync": "No major discrepancy reported by user",
+        "full_game_certification": false,
+        "audio_speed_or_pitch_processing": false,
+        "publication": "PENDING_USER_FINAL_PUBLICATION_INSTRUCTION",
+        "identity": {
+          "release_id": "gba-414cad1aee67ab20f3c133f0259da7e8c3073bbc",
+          "title": "Oriental Blue - Ao no Tengai (Japan)",
+          "region": "Japan",
+          "revision": null,
+          "game_code": "AORJ",
+          "header_revision": 0,
+          "crc32": "05E80ECC",
+          "sha1": "414CAD1AEE67AB20F3C133F0259DA7E8C3073BBC",
+          "sha256": "0E9997636409C47734895EA2180521FA7AD8898D7F45E01634C9E207039D7808",
+          "rom_size": 16777216,
+          "driver_family": "MP2K_ROM_PLAYER"
+        }
+      },
+      {
+        "game_code": "AFXJ",
+        "filename": "AFXJ-v04-active-gameplay-review.mp4",
+        "sha256": "A4CF6C58D8BEA6844DF983579CA076EF1679B082BFE4432BEC4D1F922B414F25",
+        "bytes": 9299332,
+        "duration_seconds": 34.250065,
+        "core_sha256": "92BAE49862CC8598B05C2E83F973FA969374B12260A0D40441D2793134F93D7C",
+        "bridge_sha256": "D750BD152B51F632C37F627FC22C6A33E8CDA9B43B16294334D86E90DD511502",
+        "speed_sequence": [
+          1,
+          2,
+          3,
+          1,
+          2,
+          3
+        ],
+        "stages": [
+          {
+            "target_speed": 1,
+            "clip_begin": 0.0,
+            "clip_end": 4.170556300086901,
+            "internal_speed_x": 1.0045874926170002,
+            "gba_frames_per_second": 60.00150003750094,
+            "bgm_clock_ratio": 1.004587492617003
+          },
+          {
+            "target_speed": 2,
+            "clip_begin": 4.170556300086901,
+            "clip_end": 11.156947400071658,
+            "internal_speed_x": 1.9990730832181016,
+            "gba_frames_per_second": 119.39963871659319,
+            "bgm_clock_ratio": 0.9995365416090536
+          },
+          {
+            "target_speed": 3,
+            "clip_begin": 11.156947400071658,
+            "clip_end": 19.150081100058742,
+            "internal_speed_x": 3.0193658747799983,
+            "gba_frames_per_second": 180.33917700577126,
+            "bgm_clock_ratio": 1.0064552915933356
+          },
+          {
+            "target_speed": 1,
+            "clip_begin": 0.0,
+            "clip_end": 4.185844199964777,
+            "internal_speed_x": 1.0045990457948561,
+            "gba_frames_per_second": 60.00219007993792,
+            "bgm_clock_ratio": 1.004599045794859
+          },
+          {
+            "target_speed": 2,
+            "clip_begin": 4.185844199964777,
+            "clip_end": 11.179544599959627,
+            "internal_speed_x": 1.9994756197643233,
+            "gba_frames_per_second": 119.42368121838693,
+            "bgm_clock_ratio": 0.9997378098821645
+          },
+          {
+            "target_speed": 3,
+            "clip_begin": 11.179544599959627,
+            "clip_end": 15.09892680007033,
+            "internal_speed_x": 3.016719238295465,
+            "gba_frames_per_second": 180.18110002363375,
+            "bgm_clock_ratio": 1.0055730794318245
+          }
+        ],
+        "scene": "Unit movement, enemy targeting and Fire twice",
+        "edit_note": "Two real takes; state reload and audio cut explicitly marked at approximately19.15seconds",
+        "video_user_review_pass": true,
+        "bgm_tempo_pitch": "No audible discrepancy reported by user in viewed footage",
+        "motion": "PASS",
+        "volume_sfx_avsync": "No major discrepancy reported by user",
+        "full_game_certification": false,
+        "audio_speed_or_pitch_processing": false,
+        "publication": "PENDING_USER_FINAL_PUBLICATION_INSTRUCTION",
+        "identity": {
+          "release_id": "gba-fa9d23ee88c7fe24374337aca03eb864b5b991f4",
+          "title": "Final Fantasy Tactics Advance (Japan)",
+          "region": "Japan",
+          "revision": null,
+          "game_code": "AFXJ",
+          "header_revision": 0,
+          "crc32": "A57B0034",
+          "sha1": "FA9D23EE88C7FE24374337ACA03EB864B5B991F4",
+          "sha256": "B13DD536808EF5D0FD4494386A9499F6FEB8310835D3F867CD17CC340D82BF9A",
+          "rom_size": 16777216,
+          "driver_family": "MP2K_EWRAM_PLAYER"
+        }
+      }
+    ]
+  },
+  "known_limits": [
+    "Finite SE can end early at2x/3x; generic STOP analysis intentionally deferred",
+    "Ongoing SE discarded on Load/Rewind",
+    "AAMJ ownership hard fallback preserved",
+    "FFTA late-state restoration may take approximately18seconds",
+    "Conservative3x uses native audio;3x trial is Experimental only",
+    "Unsupported/unknown/Unlimited speeds use native audio",
+    "Unverified games may produce audio errors, freezes or crashes",
+    "B3DJ/BFTJ/BIXJ NOT_ACTIVE;AB2J/A5BJ/BKRJ INCONCLUSIVE",
+    "AORJ192ms observation remains UNKNOWN/INCONCLUSIVE, no speculative product change",
+    "GB/GBC Fixed Audio remains research"
+  ],
+  "human_review_required": [
+    "AAMJ/B6JJ audible native timbre and SFX quality beyond prior scoped measurements",
+    "Eight additional Phase10 ROM/EWRAM representative listening reels",
+    "SE cancel/loop/pitch-bend/voice contention in scenes outside the approved demos",
+    "Long sessions, late-game scenes and untested region/revision identities"
+  ],
+  "safety": "No guards weakened; intentional faults separated from normal zero under/over/drop runs",
+  "protection": {
+    "passed": true,
+    "protected_wavs": 142,
+    "old_rc1_videos_unchanged": 2,
+    "adopted_active_videos_unchanged": 2,
+    "public_v03_artifacts_unchanged": 3,
+    "public_v03_worktree_clean": true,
+    "public_v03_head": "91f153b4e7fd192872a892d81f37501b3a8d4304",
+    "public_v03_tag": "4e3f3bc196cf9575496429791650a89b85970f01",
+    "public_release_assets_unchanged": true,
+    "no_data_deleted": true
+  },
+  "rc1_zip_sha256": "80896A479D5E5465C4A7C67D427E26B0DBF0955D6FC6874AA5738D60B4D85CFF",
+  "packaging": "Repackage documentation/approval/fresh validation; retain exact runtime/source/support bytes. New ZIP hash required.",
+  "evidence": [
+    {
+      "path": "build-final-release/regression48-rerun/results.json",
+      "sha256": "F04136646ED133D05F5AEF78B165FC8997A8E7D24CF508421B68DF4A1BA15355"
+    },
+    {
+      "path": "build-final-release/portable-regression48/results.json",
+      "sha256": "3E9253D7E7B40EA86E2340B7AC07F049F1B1656043E4A793F2A6C0839D34B55A"
+    },
+    {
+      "path": "build-final-release/scenes16/results.json",
+      "sha256": "A5F4072D5AE5C06233C85EAB4CD75EB39D16983D6EAB453323539F929E6D03BB"
+    },
+    {
+      "path": "build-final-release/three36/results.json",
+      "sha256": "D136678EED145F6FDF4CBAA8F592D04772C34E193FAED6881D6324C160129DC5"
+    },
+    {
+      "path": "build-final-release/legacy12/results.json",
+      "sha256": "D0A5CC32C93BD905C779DC3B8B58265506BDD31605D9AC1BAAA2A7AABFCFD9AE"
+    },
+    {
+      "path": "build-final-release/guards28/results.json",
+      "sha256": "423EAE5107E326CC499C4D0DAA42FF39018E5109ACE8F1AE71B0AB444EFD3711"
+    },
+    {
+      "path": "build-final-release/frontend/results.json",
+      "sha256": "A6D362F53ECC0E2E0E12CEB3FAA5E7C9FF7B1357B6E128D371B6A261D368C832"
+    },
+    {
+      "path": "build-final-release/frontend-B6JJ-rerun/results.json",
+      "sha256": "4D8F96BC7D77B1B0258A03F048C4A37F9A02F9FE414DE698C215D80A41AB5CB6"
+    },
+    {
+      "path": "build-final-release/frontend-recovery/jobs.json",
+      "sha256": "F5B67E9A7A59B11E6A15CC94054CD7836A2FFE0886343CA29A31CC9ABEFEE4AF"
+    },
+    {
+      "path": "build-final-release/database-validation.json",
+      "sha256": "AA8D0417D8E6259A3A5D9BE285031A0E0771E972D32CE1E989DEE6BDF22B1E72"
+    },
+    {
+      "path": "build-final-release/protection.json",
+      "sha256": "E11E7387B0A8F48CAEF7EA4234DD8469CA6BC0BD0B72FA58FE0663659670F01C"
+    },
+    {
+      "path": "build-final-release/public-base-strong-audit.json",
+      "sha256": "E2EC82B67E160269275FB0A6442064B693FCA18E56947AD23474291EB030AD32"
+    },
+    {
+      "path": "build-final-release/public-candidate-strong-history.json",
+      "sha256": "1503ACB160628C3CF87A94AC267968CC73BBDF65D4842DAEA67609B27DFB73F1"
+    }
+  ],
+  "test_setup_note": "Initial private48 replay setup referenced a distribution bridge path as an old provenance dictionary key; KeyError occurred before running a case. Corrected the key lookup while preserving the exact bridge-hash assertion. The complete rerun and new portable tool both passed48/48. First B6JJ frontend take stopped when Windows denied replacement of a control file briefly opened by the private adapter. Added a bounded1-second retry to test tooling, preserving failed evidence; complete B6JJ repeat passed. No product-code change.",
+  "public_audit_fix": "Old auditor missed JSON-escaped private paths in historical Phase evidence, including RC1 source archives. Strengthened repeated-separator and decoded JSON key/value scanning, with synthetic regression tests. Final source export omits non-build private Phase evidence/9 path-specific helpers while byte-verifying all compiled source. The first preliminary source clone is retained privately and must never be published; final candidate is a new independent public-main clone with no contaminated private Git objects.",
+  "public_git_audit": {
+    "passed": true,
+    "files": 2207,
+    "archives": 9,
+    "archive_members": 5143,
+    "git_blobs": 4025,
+    "git_objects": 4303,
+    "unreachable_objects_audited": 1931,
+    "audited_roots": [
+      "4d0b186590fa42227bc202f7a4557e0de47c3b10"
+    ],
+    "rom": "NONE",
+    "save": "NONE",
+    "proprietary_bios": "NONE",
+    "unapproved_video": "NONE",
+    "secret": "NONE",
+    "private_path": "NONE"
+  },
+  "final_package_tests": "Pending final ZIP/source/relink/installation tests; RC1 licensing/source/relink passed previously"
+}

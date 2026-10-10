@@ -1,0 +1,189 @@
+{
+  "schema_version": 1,
+  "version": "v0.4-preview",
+  "video_user_review_pass": true,
+  "review_source": "Explicit user confirmation in final release preparation request",
+  "scope": "Only these two unchanged active gameplay recordings; not all titles, all scenes or all sound effects",
+  "git_video_files": false,
+  "release_assets_only": true,
+  "videos": [
+    {
+      "game_code": "AORJ",
+      "filename": "AORJ-v04-active-walking-review.mp4",
+      "sha256": "8CA4AF7026DF482138C01A893F6BD222F7CB501B7AEFB923AFAF5D4BE861D931",
+      "bytes": 6054380,
+      "duration_seconds": 24.166667,
+      "core_sha256": "92BAE49862CC8598B05C2E83F973FA969374B12260A0D40441D2793134F93D7C",
+      "bridge_sha256": "D750BD152B51F632C37F627FC22C6A33E8CDA9B43B16294334D86E90DD511502",
+      "speed_sequence": [
+        1,
+        2,
+        3,
+        1,
+        2,
+        3
+      ],
+      "stages": [
+        {
+          "target_speed": 1,
+          "clip_begin": 0.0,
+          "clip_end": 3.3491882000816986,
+          "internal_speed_x": 1.0045553460422623,
+          "gba_frames_per_second": 59.99958000293997,
+          "bgm_clock_ratio": 1.0045553460422652
+        },
+        {
+          "target_speed": 2,
+          "clip_begin": 3.3491882000816986,
+          "clip_end": 7.519905300112441,
+          "internal_speed_x": 1.9998056614768869,
+          "gba_frames_per_second": 119.44339378496207,
+          "bgm_clock_ratio": 0.9998977680674722
+        },
+        {
+          "target_speed": 3,
+          "clip_begin": 7.519905300112441,
+          "clip_end": 11.67418420012109,
+          "internal_speed_x": 3.015325661753651,
+          "gba_frames_per_second": 180.09786517993876,
+          "bgm_clock_ratio": 1.0051085539178866
+        },
+        {
+          "target_speed": 1,
+          "clip_begin": 11.67418420012109,
+          "clip_end": 15.819094200036488,
+          "internal_speed_x": 1.0045598665300184,
+          "gba_frames_per_second": 59.999850000375005,
+          "bgm_clock_ratio": 1.0045598665300213
+        },
+        {
+          "target_speed": 2,
+          "clip_begin": 15.819094200036488,
+          "clip_end": 19.990203500026837,
+          "internal_speed_x": 2.0000983121765166,
+          "gba_frames_per_second": 119.4608730797909,
+          "bgm_clock_ratio": 1.0000542195001043
+        },
+        {
+          "target_speed": 3,
+          "clip_begin": 19.990203500026837,
+          "clip_end": 24.15119990007952,
+          "internal_speed_x": 3.0140129485887965,
+          "gba_frames_per_second": 180.01946010363721,
+          "bgm_clock_ratio": 1.004670982862935
+        }
+      ],
+      "scene": "Town continuous walking",
+      "edit_note": "One continuous real take",
+      "video_user_review_pass": true,
+      "bgm_tempo_pitch": "No audible discrepancy reported by user in viewed footage",
+      "motion": "PASS",
+      "volume_sfx_avsync": "No major discrepancy reported by user",
+      "full_game_certification": false,
+      "audio_speed_or_pitch_processing": false,
+      "publication": "PENDING_USER_FINAL_PUBLICATION_INSTRUCTION",
+      "identity": {
+        "release_id": "gba-414cad1aee67ab20f3c133f0259da7e8c3073bbc",
+        "title": "Oriental Blue - Ao no Tengai (Japan)",
+        "region": "Japan",
+        "revision": null,
+        "game_code": "AORJ",
+        "header_revision": 0,
+        "crc32": "05E80ECC",
+        "sha1": "414CAD1AEE67AB20F3C133F0259DA7E8C3073BBC",
+        "sha256": "0E9997636409C47734895EA2180521FA7AD8898D7F45E01634C9E207039D7808",
+        "rom_size": 16777216,
+        "driver_family": "MP2K_ROM_PLAYER"
+      }
+    },
+    {
+      "game_code": "AFXJ",
+      "filename": "AFXJ-v04-active-gameplay-review.mp4",
+      "sha256": "A4CF6C58D8BEA6844DF983579CA076EF1679B082BFE4432BEC4D1F922B414F25",
+      "bytes": 9299332,
+      "duration_seconds": 34.250065,
+      "core_sha256": "92BAE49862CC8598B05C2E83F973FA969374B12260A0D40441D2793134F93D7C",
+      "bridge_sha256": "D750BD152B51F632C37F627FC22C6A33E8CDA9B43B16294334D86E90DD511502",
+      "speed_sequence": [
+        1,
+        2,
+        3,
+        1,
+        2,
+        3
+      ],
+      "stages": [
+        {
+          "target_speed": 1,
+          "clip_begin": 0.0,
+          "clip_end": 4.170556300086901,
+          "internal_speed_x": 1.0045874926170002,
+          "gba_frames_per_second": 60.00150003750094,
+          "bgm_clock_ratio": 1.004587492617003
+        },
+        {
+          "target_speed": 2,
+          "clip_begin": 4.170556300086901,
+          "clip_end": 11.156947400071658,
+          "internal_speed_x": 1.9990730832181016,
+          "gba_frames_per_second": 119.39963871659319,
+          "bgm_clock_ratio": 0.9995365416090536
+        },
+        {
+          "target_speed": 3,
+          "clip_begin": 11.156947400071658,
+          "clip_end": 19.150081100058742,
+          "internal_speed_x": 3.0193658747799983,
+          "gba_frames_per_second": 180.33917700577126,
+          "bgm_clock_ratio": 1.0064552915933356
+        },
+        {
+          "target_speed": 1,
+          "clip_begin": 0.0,
+          "clip_end": 4.185844199964777,
+          "internal_speed_x": 1.0045990457948561,
+          "gba_frames_per_second": 60.00219007993792,
+          "bgm_clock_ratio": 1.004599045794859
+        },
+        {
+          "target_speed": 2,
+          "clip_begin": 4.185844199964777,
+          "clip_end": 11.179544599959627,
+          "internal_speed_x": 1.9994756197643233,
+          "gba_frames_per_second": 119.42368121838693,
+          "bgm_clock_ratio": 0.9997378098821645
+        },
+        {
+          "target_speed": 3,
+          "clip_begin": 11.179544599959627,
+          "clip_end": 15.09892680007033,
+          "internal_speed_x": 3.016719238295465,
+          "gba_frames_per_second": 180.18110002363375,
+          "bgm_clock_ratio": 1.0055730794318245
+        }
+      ],
+      "scene": "Unit movement, enemy targeting and Fire twice",
+      "edit_note": "Two real takes; state reload and audio cut explicitly marked at approximately19.15seconds",
+      "video_user_review_pass": true,
+      "bgm_tempo_pitch": "No audible discrepancy reported by user in viewed footage",
+      "motion": "PASS",
+      "volume_sfx_avsync": "No major discrepancy reported by user",
+      "full_game_certification": false,
+      "audio_speed_or_pitch_processing": false,
+      "publication": "PENDING_USER_FINAL_PUBLICATION_INSTRUCTION",
+      "identity": {
+        "release_id": "gba-fa9d23ee88c7fe24374337aca03eb864b5b991f4",
+        "title": "Final Fantasy Tactics Advance (Japan)",
+        "region": "Japan",
+        "revision": null,
+        "game_code": "AFXJ",
+        "header_revision": 0,
+        "crc32": "A57B0034",
+        "sha1": "FA9D23EE88C7FE24374337ACA03EB864B5B991F4",
+        "sha256": "B13DD536808EF5D0FD4494386A9499F6FEB8310835D3F867CD17CC340D82BF9A",
+        "rom_size": 16777216,
+        "driver_family": "MP2K_EWRAM_PLAYER"
+      }
+    }
+  ]
+}

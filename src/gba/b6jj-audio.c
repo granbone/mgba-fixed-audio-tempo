@@ -23,6 +23,7 @@
 #define B6JJ_STARTUP_LATENCY 64U
 struct B6JJEvent {
 	uint64_t sequence, gameCycle, audioCycle;
+	uint64_t audioSample;
 	uint32_t id, header;
 	bool se;
 };
@@ -121,7 +122,7 @@ static void primaryObserve(struct ARMCore* c, uint32_t pc) {
 			if (!b->clock->runActive || target < 0 || b->stats.queue == 16 ||
 			    !headerValid(b, c->gprs[0])) fail(b, "EVENT_HEADER_CLOCK_OR_CAPACITY");
 			else {
-				struct B6JJEvent e = {++b->stats.events, game, (uint64_t) target,
+				struct B6JJEvent e = {++b->stats.events, game, (uint64_t) target, sample,
 					se ? b->seId : b->bgmId, c->gprs[0], se};
 				if (b->stats.queue && e.audioCycle < b->queue[b->stats.queue-1].audioCycle)
 					fail(b, "EVENT_ORDER");
@@ -226,7 +227,7 @@ static bool apply(struct B6JJAudio* b) {
 	uint64_t late = auxCycle(b) - e.audioCycle;
 	if (late > b->stats.maximumLate) b->stats.maximumLate = late;
 	if (b->sink) {
-		struct B6JJAudioEventObservation observation = {e.sequence, e.gameCycle, e.audioCycle, auxCycle(b), e.id, e.header, e.se};
+		struct B6JJAudioEventObservation observation = {e.sequence, e.gameCycle, e.audioCycle, auxCycle(b), e.id, e.header, e.se, e.audioSample};
 		b->sink(b->sinkContext, &observation);
 	}
 	if (!call(b, e.se ? 0x0807D2B8 : 0x0807D250, e.header)) return false;

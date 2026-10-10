@@ -52,7 +52,7 @@ grid('Limited Test Pass',db.records.filter(r=>r.public_status==='LIMITED_TEST_PA
 grid('Experimental Unverified',db.records.filter(r=>r.public_status==='EXPERIMENTAL_UNVERIFIED'));
 grid('Native Fallback & Unsupported',db.records.filter(r=>['NATIVE_FALLBACK','UNSUPPORTED'].includes(r.public_status)));
 grid('Unknown & Not Analyzed',db.records.filter(r=>['UNKNOWN_DRIVER','NOT_ANALYZED'].includes(r.public_status)));
-const s=sheets.Summary;title(s,'GBA Fixed Audio Compatibility','v0.3-preview candidate / Unique public DAT release identities','I');s.tabColor='#334155';
+const s=sheets.Summary;title(s,'GBA Fixed Audio Compatibility',db.version_candidate+' / Unique public DAT release identities','I');s.tabColor='#334155';
 const statusCol=col(fields.indexOf('public_status')),familyCol=col(fields.indexOf('driver_family')),trialCol=col(fields.indexOf('runtime_eligibility'));
 const range=k=>"'All Games'!$"+k+"$6:$"+k+"$"+allEnd;
 const statuses=Object.keys(db.status_definitions),families=Object.keys(db.summary.driver_families);
@@ -82,7 +82,7 @@ const summaryNotes=['Trial eligible includes Limited Test Pass. It is not anothe
  '限定試験は全編クリアや全BGM・SEの正常動作を保証しません。',
  'Experimental can fall back at runtime. Back up saves and states.',
  '実験的対応は動作未確認です。試用前にバックアップを作成してください。',
- '3x: unvalidated. GB/GBC Fixed Audio: research only.'];
+ 'Scoped3x BGM evidence is separate from general/SE validation. GB/GBC: research only.'];
 s.getRange('A16:A'+(15+summaryNotes.length)).values=summaryNotes.map(x=>[x]);s.getRange('A16:I'+(15+summaryNotes.length)).format.font={name:'Arial',size:10,color:'#333333'};s.getRange('A16:I'+(15+summaryNotes.length)).format.rowHeight=24;
 const d=sheets['Status Definitions'];title(d,'Status Definitions / 対応状況','Detection, trial eligibility and observed audio are separate.');
 const defs=[...Object.entries(db.status_definitions),['LIMITED_TEST_SCOPE_EN',db.limited_test_scope.en],['LIMITED_TEST_SCOPE_JA',db.limited_test_scope.ja],

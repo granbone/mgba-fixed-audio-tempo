@@ -1,0 +1,1341 @@
+{
+  "schema_version": 1,
+  "phase": 10,
+  "version": "v0.4-preview-rc1",
+  "date": "2026-10-10",
+  "git": {
+    "branch": "feature/3x-fixed-audio-poc",
+    "start_head": "fc21e282220d6b16d3b78e9ad8e75141260a4edd",
+    "binary_source_head": "d451f54da8aea4217130574df42aee775cd369a5",
+    "final_head": "See final local report commit; package distribution commit is recorded separately in manifest."
+  },
+  "runtime_sha256": {
+    "libmgba_mp2k_bridge.dll": "D750BD152B51F632C37F627FC22C6A33E8CDA9B43B16294334D86E90DD511502",
+    "mgba_fixed_audio_libretro.dll": "92BAE49862CC8598B05C2E83F973FA969374B12260A0D40441D2793134F93D7C",
+    "zlib1.dll": "93E9243A44C29200EEACAF9658EFE2558581770E4B11CA4B500E18E424A6E3B5"
+  },
+  "binary_changed": false,
+  "compiled_source_changed": false,
+  "readiness": "RC_READY_WITH_KNOWN_LIMITATIONS",
+  "publication": "NOT_AUTHORIZED; human listening/video review pending; no push/tag/Release/upload",
+  "bgm": {
+    "phase9_tested": 26,
+    "limited_scene_confirmed": 20,
+    "rom_player": 10,
+    "ewram_player": 9,
+    "unknown_candidate": 1,
+    "new_bgm_confirmations_in_database": 20,
+    "new_catalog_identities": 0,
+    "overlap_with_prior32_general_limited_pass": 0,
+    "general_limited_pass_unchanged": 32,
+    "unconfirmed": [
+      {
+        "game": "B3DJ",
+        "status": "BGM_NOT_ACTIVE",
+        "note": "STATE_LOAD_POSITION_NOT_RECONSTRUCTIBLE repeats for this two-player title fixture. Native pending/recovery preserved; scanning/profile discovery succeeds. Same-scale native prefixes are not Fixed BGM proof. Sustained game speed also falls below3x in this fixture."
+      },
+      {
+        "game": "BFTJ",
+        "status": "BGM_NOT_ACTIVE",
+        "note": "Headless loaded-state steady windows pass, but real RetroArch cold startup emits MPLAY_STOP with player=-1 / null pointer and guard=0 (UNKNOWN_PLAYER_POINTER). Existing HARD sticky native fallback is preserved across Load. Final BGM_NOT_ACTIVE, not confirmed from a bypassing loaded-state test."
+      },
+      {
+        "game": "AB2J",
+        "status": "BGM_INCONCLUSIVE",
+        "note": "Player8 song144 polling STOP at sample290589 and song122 PLAY at294612 in3x; accelerated title/attract transition. 2x comparison passes; full1x/3x audio scene comparison is inconclusive."
+      },
+      {
+        "game": "A5BJ",
+        "status": "BGM_INCONCLUSIVE",
+        "note": "BGM player0 song23 remains, but players2/3 songs318/319 and many others arrive at accelerated game times. Full mixtures differ; isolated BGM fidelity/PSG contention not proven. Finite SFX shortening is not itself a BGM rejection."
+      },
+      {
+        "game": "BIXJ",
+        "status": "BGM_NOT_ACTIVE",
+        "note": "Selected no-input and Start fixtures do not provide comparable nonzero1x BGM. Player discovery/profile validation works; startup has active=0 and unverified ownership. Late game events occur at different audio times. Not a scanner failure or proven bad BGM."
+      },
+      {
+        "game": "BKRJ",
+        "status": "BGM_INCONCLUSIVE",
+        "note": "Ordinary Experimental runtime validates MP2K EWRAM players; full-mix correlations remain below0.97, with multiple song/SE transitions. Structural recognition is not full BGM confirmation."
+      }
+    ]
+  },
+  "representatives": [
+    {
+      "game": "AAMJ",
+      "bgm": "SCOPED_BGM_AGREEMENT_RETAINED",
+      "scope": "Retained Phase9 full scene comparisons plus fresh4-second PCM/event/RAM prefixes1x/2x/3x. No full-game claim.",
+      "human_review": "HUMAN_REVIEW_REQUIRED"
+    },
+    {
+      "game": "AFXJ",
+      "bgm": "SCOPED_BGM_AGREEMENT_RETAINED",
+      "scope": "Retained Phase9 full scene comparisons plus fresh4-second PCM/event/RAM prefixes1x/2x/3x. No full-game claim.",
+      "human_review": "HUMAN_REVIEW_REQUIRED"
+    },
+    {
+      "game": "AORJ",
+      "bgm": "SCOPED_BGM_AGREEMENT_RETAINED",
+      "scope": "Retained Phase9 full scene comparisons plus fresh4-second PCM/event/RAM prefixes1x/2x/3x. No full-game claim.",
+      "human_review": "HUMAN_REVIEW_REQUIRED"
+    },
+    {
+      "game": "B6JJ",
+      "bgm": "SCOPED_BGM_AGREEMENT_RETAINED",
+      "scope": "Retained Phase9 full scene comparisons plus fresh4-second PCM/event/RAM prefixes1x/2x/3x. No full-game claim.",
+      "human_review": "HUMAN_REVIEW_REQUIRED"
+    },
+    {
+      "game": "AXBJ",
+      "title": "Black Matrix Zero (Japan)",
+      "sha256": "39CBC7C6A6D5FC9E03357795A3B46C6558DC6F882724D501D7FDDB7E8C27FAF4",
+      "revision": null,
+      "bgm": "BGM_CONFIRMED",
+      "scope": "Tested loaded scene only; Fixed1x versus Fixed2x/3x normal sample scale. Native1x fidelity and listening are separately reported, not certified by this status.",
+      "comparisons": [
+        {
+          "speed": 2,
+          "phrase_time_slope": 1.0000000000000004,
+          "windows": [
+            {
+              "fast_start_seconds": 2,
+              "reference_start_seconds": 1.93304443359375,
+              "offset_samples": -2194,
+              "correlation": 0.9999999999999999,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 110.0,
+              "fast_dominant_hz": 110.0,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 5,
+              "reference_start_seconds": 4.93304443359375,
+              "offset_samples": -2194,
+              "correlation": 1.0,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 58.0,
+              "fast_dominant_hz": 58.0,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 8,
+              "reference_start_seconds": 7.93304443359375,
+              "offset_samples": -2194,
+              "correlation": 1.0,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 61.5,
+              "fast_dominant_hz": 61.5,
+              "same_sample_scale": true
+            }
+          ]
+        },
+        {
+          "speed": 3,
+          "phrase_time_slope": 1.0000000000000004,
+          "windows": [
+            {
+              "fast_start_seconds": 2,
+              "reference_start_seconds": 1.91070556640625,
+              "offset_samples": -2926,
+              "correlation": 1.0000000000000002,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 110.0,
+              "fast_dominant_hz": 110.0,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 5,
+              "reference_start_seconds": 4.91070556640625,
+              "offset_samples": -2926,
+              "correlation": 1.0,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 58.0,
+              "fast_dominant_hz": 58.0,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 8,
+              "reference_start_seconds": 7.91070556640625,
+              "offset_samples": -2926,
+              "correlation": 0.9999999999999998,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 61.5,
+              "fast_dominant_hz": 61.5,
+              "same_sample_scale": true
+            }
+          ]
+        }
+      ],
+      "human_review": "HUMAN_REVIEW_REQUIRED"
+    },
+    {
+      "game": "A2CJ",
+      "title": "Castlevania - Akatsuki no Minuet (Japan)",
+      "sha256": "C36899E05A29B481D3FB38C2EDC9569437F0811E67FA50A067BF587A6419F891",
+      "revision": null,
+      "bgm": "BGM_CONFIRMED",
+      "scope": "Tested loaded scene only; Fixed1x versus Fixed2x/3x normal sample scale. Native1x fidelity and listening are separately reported, not certified by this status.",
+      "comparisons": [
+        {
+          "speed": 2,
+          "phrase_time_slope": 1.0000000000000004,
+          "windows": [
+            {
+              "fast_start_seconds": 2,
+              "reference_start_seconds": 1.8995361328125,
+              "offset_samples": -3292,
+              "correlation": 1.0000000000000002,
+              "spectral_cosine": 0.9999999999999999,
+              "reference_dominant_hz": 131.0,
+              "fast_dominant_hz": 131.0,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 5,
+              "reference_start_seconds": 4.8995361328125,
+              "offset_samples": -3292,
+              "correlation": 1.0,
+              "spectral_cosine": 1.0000000000000002,
+              "reference_dominant_hz": 196.0,
+              "fast_dominant_hz": 196.0,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 8,
+              "reference_start_seconds": 7.8995361328125,
+              "offset_samples": -3292,
+              "correlation": 0.9999999999999998,
+              "spectral_cosine": 1.0000000000000002,
+              "reference_dominant_hz": 233.0,
+              "fast_dominant_hz": 233.0,
+              "same_sample_scale": true
+            }
+          ]
+        },
+        {
+          "speed": 3,
+          "phrase_time_slope": 1.0000000000000004,
+          "windows": [
+            {
+              "fast_start_seconds": 2,
+              "reference_start_seconds": 1.866058349609375,
+              "offset_samples": -4389,
+              "correlation": 1.0000000000000002,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 131.0,
+              "fast_dominant_hz": 131.0,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 5,
+              "reference_start_seconds": 4.866058349609375,
+              "offset_samples": -4389,
+              "correlation": 1.0000000000000004,
+              "spectral_cosine": 0.9999999999999999,
+              "reference_dominant_hz": 196.0,
+              "fast_dominant_hz": 196.0,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 8,
+              "reference_start_seconds": 7.866058349609375,
+              "offset_samples": -4389,
+              "correlation": 1.0000000000000002,
+              "spectral_cosine": 1.0000000000000002,
+              "reference_dominant_hz": 233.0,
+              "fast_dominant_hz": 233.0,
+              "same_sample_scale": true
+            }
+          ]
+        }
+      ],
+      "human_review": "HUMAN_REVIEW_REQUIRED"
+    },
+    {
+      "game": "A9HJ",
+      "title": "Dragon Quest Monsters - Caravan Heart (Japan)",
+      "sha256": "FB388539B95FDAF6009BAD879E9BBB25955DAF8D4D438486A9213D407B2B48CE",
+      "revision": null,
+      "bgm": "BGM_CONFIRMED",
+      "scope": "Tested loaded scene only; Fixed1x versus Fixed2x/3x normal sample scale. Native1x fidelity and listening are separately reported, not certified by this status.",
+      "comparisons": [
+        {
+          "speed": 2,
+          "phrase_time_slope": 1.0000000000000004,
+          "windows": [
+            {
+              "fast_start_seconds": 2,
+              "reference_start_seconds": 1.87445068359375,
+              "offset_samples": -4114,
+              "correlation": 1.0,
+              "spectral_cosine": 0.9999999999999999,
+              "reference_dominant_hz": 659.5,
+              "fast_dominant_hz": 659.5,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 5,
+              "reference_start_seconds": 4.87445068359375,
+              "offset_samples": -4114,
+              "correlation": 1.0000000000000002,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 881.5,
+              "fast_dominant_hz": 881.5,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 8,
+              "reference_start_seconds": 7.87445068359375,
+              "offset_samples": -4114,
+              "correlation": 1.0,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 661.0,
+              "fast_dominant_hz": 661.0,
+              "same_sample_scale": true
+            }
+          ]
+        },
+        {
+          "speed": 3,
+          "phrase_time_slope": 1.0000000000000004,
+          "windows": [
+            {
+              "fast_start_seconds": 2,
+              "reference_start_seconds": 1.83258056640625,
+              "offset_samples": -5486,
+              "correlation": 0.9999999999999998,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 659.5,
+              "fast_dominant_hz": 659.5,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 5,
+              "reference_start_seconds": 4.83258056640625,
+              "offset_samples": -5486,
+              "correlation": 1.0,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 881.5,
+              "fast_dominant_hz": 881.5,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 8,
+              "reference_start_seconds": 7.83258056640625,
+              "offset_samples": -5486,
+              "correlation": 0.9999999999999998,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 660.5,
+              "fast_dominant_hz": 660.5,
+              "same_sample_scale": true
+            }
+          ]
+        }
+      ],
+      "human_review": "HUMAN_REVIEW_REQUIRED"
+    },
+    {
+      "game": "BFZJ",
+      "title": "F-Zero - Falcon Densetsu (Japan)",
+      "sha256": "D07EDBE5EF2AF76FCEA3E56FF735B6892CA8F0B0D6A0CDE0E7CCCD23821812BD",
+      "revision": null,
+      "bgm": "BGM_CONFIRMED",
+      "scope": "Tested loaded scene only; Fixed1x versus Fixed2x/3x normal sample scale. Native1x fidelity and listening are separately reported, not certified by this status.",
+      "comparisons": [
+        {
+          "speed": 2,
+          "phrase_time_slope": 1.0000000000000007,
+          "windows": [
+            {
+              "fast_start_seconds": 2,
+              "reference_start_seconds": 1.916290283203125,
+              "offset_samples": -2743,
+              "correlation": 1.0,
+              "spectral_cosine": 1.0000000000000002,
+              "reference_dominant_hz": 85.5,
+              "fast_dominant_hz": 85.5,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 5,
+              "reference_start_seconds": 4.916290283203125,
+              "offset_samples": -2743,
+              "correlation": 1.0000000000000004,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 46.5,
+              "fast_dominant_hz": 46.5,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 8,
+              "reference_start_seconds": 7.916290283203125,
+              "offset_samples": -2743,
+              "correlation": 0.9999999999999999,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 468.0,
+              "fast_dominant_hz": 468.0,
+              "same_sample_scale": true
+            }
+          ]
+        },
+        {
+          "speed": 3,
+          "phrase_time_slope": 1.0000000000000004,
+          "windows": [
+            {
+              "fast_start_seconds": 2,
+              "reference_start_seconds": 1.888397216796875,
+              "offset_samples": -3657,
+              "correlation": 1.0000000000000004,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 85.5,
+              "fast_dominant_hz": 85.5,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 5,
+              "reference_start_seconds": 4.888397216796875,
+              "offset_samples": -3657,
+              "correlation": 1.0000000000000002,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 46.5,
+              "fast_dominant_hz": 46.5,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 8,
+              "reference_start_seconds": 7.888397216796875,
+              "offset_samples": -3657,
+              "correlation": 0.9999999999999999,
+              "spectral_cosine": 1.0000000000000002,
+              "reference_dominant_hz": 468.0,
+              "fast_dominant_hz": 468.0,
+              "same_sample_scale": true
+            }
+          ]
+        }
+      ],
+      "human_review": "HUMAN_REVIEW_REQUIRED"
+    },
+    {
+      "game": "AE2J",
+      "title": "Battle Network - Rockman EXE 2 (Japan) (Rev 1)",
+      "sha256": "1AFE35E1D00099D62CBDDAD43C2BE3F0F3C3F0F333E8DF54456076CB2DF6A6B8",
+      "revision": "Rev 1",
+      "bgm": "BGM_CONFIRMED",
+      "scope": "Tested loaded scene only; Fixed1x versus Fixed2x/3x normal sample scale. Native1x fidelity and listening are separately reported, not certified by this status.",
+      "comparisons": [
+        {
+          "speed": 2,
+          "phrase_time_slope": 1.0000000000000004,
+          "windows": [
+            {
+              "fast_start_seconds": 2,
+              "reference_start_seconds": 1.857666015625,
+              "offset_samples": -4664,
+              "correlation": 1.0000000000000002,
+              "spectral_cosine": 1.0000000000000002,
+              "reference_dominant_hz": 248.5,
+              "fast_dominant_hz": 248.5,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 5,
+              "reference_start_seconds": 4.857666015625,
+              "offset_samples": -4664,
+              "correlation": 1.0000000000000002,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 138.5,
+              "fast_dominant_hz": 138.5,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 8,
+              "reference_start_seconds": 7.857666015625,
+              "offset_samples": -4664,
+              "correlation": 0.9999999999999999,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 60.5,
+              "fast_dominant_hz": 60.5,
+              "same_sample_scale": true
+            }
+          ]
+        },
+        {
+          "speed": 3,
+          "phrase_time_slope": 1.0000000000000007,
+          "windows": [
+            {
+              "fast_start_seconds": 2,
+              "reference_start_seconds": 1.81024169921875,
+              "offset_samples": -6218,
+              "correlation": 1.0000000000000004,
+              "spectral_cosine": 1.0000000000000002,
+              "reference_dominant_hz": 248.5,
+              "fast_dominant_hz": 248.5,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 5,
+              "reference_start_seconds": 4.81024169921875,
+              "offset_samples": -6218,
+              "correlation": 1.0,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 138.5,
+              "fast_dominant_hz": 138.5,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 8,
+              "reference_start_seconds": 7.81024169921875,
+              "offset_samples": -6218,
+              "correlation": 0.9941071179314648,
+              "spectral_cosine": 0.9995330149293755,
+              "reference_dominant_hz": 60.5,
+              "fast_dominant_hz": 60.5,
+              "same_sample_scale": true
+            }
+          ]
+        }
+      ],
+      "human_review": "HUMAN_REVIEW_REQUIRED"
+    },
+    {
+      "game": "ABFJ",
+      "title": "Breath of Fire - Ryuu no Senshi (Japan)",
+      "sha256": "CDEBAFD678E9B51A41E28162C42072E66123EE5120758D2831B6AF4F2B95C705",
+      "revision": null,
+      "bgm": "BGM_CONFIRMED",
+      "scope": "Tested loaded scene only; Fixed1x versus Fixed2x/3x normal sample scale. Native1x fidelity and listening are separately reported, not certified by this status.",
+      "comparisons": [
+        {
+          "speed": 2,
+          "phrase_time_slope": 1.0000000000000004,
+          "windows": [
+            {
+              "fast_start_seconds": 2,
+              "reference_start_seconds": 1.93304443359375,
+              "offset_samples": -2194,
+              "correlation": 0.9999999999999999,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 219.5,
+              "fast_dominant_hz": 219.5,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 5,
+              "reference_start_seconds": 4.93304443359375,
+              "offset_samples": -2194,
+              "correlation": 0.9999999999999998,
+              "spectral_cosine": 0.9999999999999999,
+              "reference_dominant_hz": 293.0,
+              "fast_dominant_hz": 293.0,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 8,
+              "reference_start_seconds": 7.93304443359375,
+              "offset_samples": -2194,
+              "correlation": 0.9999999999999999,
+              "spectral_cosine": 0.9999999999999998,
+              "reference_dominant_hz": 147.5,
+              "fast_dominant_hz": 147.5,
+              "same_sample_scale": true
+            }
+          ]
+        },
+        {
+          "speed": 3,
+          "phrase_time_slope": 1.0000000000000004,
+          "windows": [
+            {
+              "fast_start_seconds": 2,
+              "reference_start_seconds": 1.91070556640625,
+              "offset_samples": -2926,
+              "correlation": 1.0000000000000002,
+              "spectral_cosine": 1.0000000000000002,
+              "reference_dominant_hz": 219.5,
+              "fast_dominant_hz": 219.5,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 5,
+              "reference_start_seconds": 4.91070556640625,
+              "offset_samples": -2926,
+              "correlation": 0.9999999999999998,
+              "spectral_cosine": 1.0000000000000002,
+              "reference_dominant_hz": 293.0,
+              "fast_dominant_hz": 293.0,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 8,
+              "reference_start_seconds": 7.91070556640625,
+              "offset_samples": -2926,
+              "correlation": 1.0,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 147.5,
+              "fast_dominant_hz": 147.5,
+              "same_sample_scale": true
+            }
+          ]
+        }
+      ],
+      "human_review": "HUMAN_REVIEW_REQUIRED"
+    },
+    {
+      "game": "ARJJ",
+      "title": "Custom Robo GX (Japan)",
+      "sha256": "E445679A00F5862EC82A327807B9CB9B72D50608061413987383F8E8C86E8E7A",
+      "revision": null,
+      "bgm": "BGM_CONFIRMED",
+      "scope": "Tested loaded scene only; Fixed1x versus Fixed2x/3x normal sample scale. Native1x fidelity and listening are separately reported, not certified by this status.",
+      "comparisons": [
+        {
+          "speed": 2,
+          "phrase_time_slope": 1.0000000000000007,
+          "windows": [
+            {
+              "fast_start_seconds": 2,
+              "reference_start_seconds": 1.916290283203125,
+              "offset_samples": -2743,
+              "correlation": 0.9999999999999999,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 73.0,
+              "fast_dominant_hz": 73.0,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 5,
+              "reference_start_seconds": 4.916290283203125,
+              "offset_samples": -2743,
+              "correlation": 1.0,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 83.0,
+              "fast_dominant_hz": 83.0,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 8,
+              "reference_start_seconds": 7.916290283203125,
+              "offset_samples": -2743,
+              "correlation": 1.0000000000000002,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 83.5,
+              "fast_dominant_hz": 83.5,
+              "same_sample_scale": true
+            }
+          ]
+        },
+        {
+          "speed": 3,
+          "phrase_time_slope": 1.0000000000000004,
+          "windows": [
+            {
+              "fast_start_seconds": 2,
+              "reference_start_seconds": 1.888397216796875,
+              "offset_samples": -3657,
+              "correlation": 1.0,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 73.0,
+              "fast_dominant_hz": 73.0,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 5,
+              "reference_start_seconds": 4.888397216796875,
+              "offset_samples": -3657,
+              "correlation": 1.0000000000000002,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 83.0,
+              "fast_dominant_hz": 83.0,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 8,
+              "reference_start_seconds": 7.888397216796875,
+              "offset_samples": -3657,
+              "correlation": 1.0000000000000002,
+              "spectral_cosine": 0.9999999999999998,
+              "reference_dominant_hz": 83.5,
+              "fast_dominant_hz": 83.5,
+              "same_sample_scale": true
+            }
+          ]
+        }
+      ],
+      "human_review": "HUMAN_REVIEW_REQUIRED"
+    },
+    {
+      "game": "BDDJ",
+      "title": "Double Dragon Advance (Japan)",
+      "sha256": "1D328F4E67806675DBEC107DC7146665CF4BDCC35DB20EAED2CE6C29245DCAFA",
+      "revision": null,
+      "bgm": "BGM_CONFIRMED",
+      "scope": "Tested loaded scene only; Fixed1x versus Fixed2x/3x normal sample scale. Native1x fidelity and listening are separately reported, not certified by this status.",
+      "comparisons": [
+        {
+          "speed": 2,
+          "phrase_time_slope": 1.0000000000000004,
+          "windows": [
+            {
+              "fast_start_seconds": 2,
+              "reference_start_seconds": 1.87445068359375,
+              "offset_samples": -4114,
+              "correlation": 1.0000000000000002,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 223.0,
+              "fast_dominant_hz": 223.0,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 5,
+              "reference_start_seconds": 4.87445068359375,
+              "offset_samples": -4114,
+              "correlation": 1.0,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 87.0,
+              "fast_dominant_hz": 87.0,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 8,
+              "reference_start_seconds": 7.87445068359375,
+              "offset_samples": -4114,
+              "correlation": 1.0,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 119.5,
+              "fast_dominant_hz": 119.5,
+              "same_sample_scale": true
+            }
+          ]
+        },
+        {
+          "speed": 3,
+          "phrase_time_slope": 1.0000000000000004,
+          "windows": [
+            {
+              "fast_start_seconds": 2,
+              "reference_start_seconds": 1.83258056640625,
+              "offset_samples": -5486,
+              "correlation": 0.9999999999999999,
+              "spectral_cosine": 1.0000000000000002,
+              "reference_dominant_hz": 223.0,
+              "fast_dominant_hz": 223.0,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 5,
+              "reference_start_seconds": 4.83258056640625,
+              "offset_samples": -5486,
+              "correlation": 1.0,
+              "spectral_cosine": 0.9999999999999999,
+              "reference_dominant_hz": 130.5,
+              "fast_dominant_hz": 130.5,
+              "same_sample_scale": true
+            },
+            {
+              "fast_start_seconds": 8,
+              "reference_start_seconds": 7.83258056640625,
+              "offset_samples": -5486,
+              "correlation": 0.9999999999999998,
+              "spectral_cosine": 1.0,
+              "reference_dominant_hz": 119.5,
+              "fast_dominant_hz": 119.5,
+              "same_sample_scale": true
+            }
+          ]
+        }
+      ],
+      "human_review": "HUMAN_REVIEW_REQUIRED"
+    }
+  ],
+  "real_frontend": [
+    {
+      "game": "AAMJ",
+      "internal_speeds": [
+        1.00455659449043,
+        1.9994561711206253,
+        3.007337334101399,
+        1.0045714118335547,
+        1.9976816215173205,
+        2.9604863269244754
+      ],
+      "gba_frames_per_second": [
+        59.99965500198375,
+        119.42252046006331,
+        179.62074362987863,
+        60.00054000486005,
+        119.31653104685738,
+        176.82245005186792
+      ],
+      "callback_samples_per_second": [
+        32917.31072546333,
+        32758.990624934067,
+        32848.143491314055,
+        32917.796260166346,
+        32729.916492348526,
+        32336.405553235345
+      ],
+      "one_core_cpu_percent": 4.483743584062694,
+      "ring_underrun": 0,
+      "ring_overrun": 0,
+      "callback_partial": 0,
+      "unexpected_fallback": 0
+    },
+    {
+      "game": "AFXJ",
+      "internal_speeds": [
+        1.0045864807663865,
+        2.0002512268889716,
+        3.0124326490479767,
+        1.0045754301714405,
+        1.9987671301134484,
+        2.9984615667639956
+      ],
+      "gba_frames_per_second": [
+        60.00144003456083,
+        119.47000715426226,
+        179.92507405844566,
+        60.00078001014013,
+        119.38136576261812,
+        179.0906162273581
+      ],
+      "callback_samples_per_second": [
+        32918.290038960935,
+        32772.016779164274,
+        32903.79791843825,
+        32917.92793306313,
+        32747.701411286715,
+        32751.196442578115
+      ],
+      "one_core_cpu_percent": 13.11623987078244,
+      "ring_underrun": 0,
+      "ring_overrun": 0,
+      "callback_partial": 0,
+      "unexpected_fallback": 0
+    },
+    {
+      "game": "AORJ",
+      "internal_speeds": [
+        1.0045545853928115,
+        1.999748719535283,
+        2.9962583055460836,
+        1.0045749278774467,
+        2.000287869631239,
+        2.99871985867507
+      ],
+      "gba_frames_per_second": [
+        59.999535003603725,
+        119.43999364579233,
+        178.959020940762,
+        60.00075000937512,
+        119.47219573368771,
+        179.1060433577351
+      ],
+      "callback_samples_per_second": [
+        32917.24489135209,
+        32763.78372363337,
+        32727.13095454185,
+        32917.91147389342,
+        32772.617132034095,
+        32754.01767904581
+      ],
+      "one_core_cpu_percent": 6.286500410133354,
+      "ring_underrun": 0,
+      "ring_overrun": 0,
+      "callback_partial": 0,
+      "unexpected_fallback": 0
+    },
+    {
+      "game": "B6JJ",
+      "internal_speeds": [
+        1.0045601104305997,
+        1.9998199789834818,
+        2.997648621359478,
+        1.0045774393524385,
+        1.9992854579290444,
+        2.9995781676498368
+      ],
+      "gba_frames_per_second": [
+        59.99986500030374,
+        119.44424979455589,
+        179.04206102989684,
+        60.0009000135002,
+        119.41232418774246,
+        179.15730800788378
+      ],
+      "callback_samples_per_second": [
+        65834.85187158328,
+        65530.10154353822,
+        65484.633821684765,
+        65835.9875398131,
+        65512.5863575002,
+        65526.78540388349
+      ],
+      "one_core_cpu_percent": 2.3799494847698783,
+      "ring_underrun": 0,
+      "ring_overrun": 0,
+      "callback_partial": 0,
+      "unexpected_fallback": 0
+    }
+  ],
+  "schedule": [
+    1,
+    2,
+    3,
+    1,
+    2,
+    3
+  ],
+  "regressions": {
+    "retained": [
+      {
+        "name": "48 conditions",
+        "passed": 48,
+        "scope": "Retained full PCM/event evidence rehashed; no new execution"
+      },
+      {
+        "name": "16 public/common bridge comparisons",
+        "passed": 16,
+        "scope": "Retained original-public-package and common-corrected-bridge comparisons kept separate; full PCM rehashed"
+      },
+      {
+        "name": "representative3x36",
+        "passed": 36,
+        "scope": "Retained full callback/event evidence rehashed, includes switching/recovery/modes"
+      },
+      {
+        "name": "legacy12 suite",
+        "passed": 12,
+        "scope": "Previously passed suite metadata/logs retained; not rerun in Phase10"
+      },
+      {
+        "name": "protection",
+        "protected_wavs": 127,
+        "all_hashes_unchanged": true,
+        "public_artifacts": 3,
+        "public_worktree_clean": true
+      }
+    ],
+    "fresh_prefix12": {
+      "passed": true,
+      "core_sha256": "92BAE49862CC8598B05C2E83F973FA969374B12260A0D40441D2793134F93D7C",
+      "bridge_sha256": "D750BD152B51F632C37F627FC22C6A33E8CDA9B43B16294334D86E90DD511502",
+      "checks": [
+        {
+          "game": "AAMJ",
+          "speed": 1,
+          "frames": 130564,
+          "pcm_prefix_exact": true,
+          "event_prefix_exact": true,
+          "initial_ram_exact": true,
+          "underrun": 0,
+          "overrun": 0,
+          "pcm_sha256": "F32B5A73BC72286590518B579FC4708BD2E5F96678031F8F1EC09C3880B3FE00"
+        },
+        {
+          "game": "AAMJ",
+          "speed": 2,
+          "frames": 134131,
+          "pcm_prefix_exact": true,
+          "event_prefix_exact": true,
+          "initial_ram_exact": true,
+          "underrun": 0,
+          "overrun": 0,
+          "pcm_sha256": "13670F8F03773DD92C99D7F8DF746E9E9238998AD0BCCF52CE795B7138771E62"
+        },
+        {
+          "game": "AAMJ",
+          "speed": 3,
+          "frames": 135320,
+          "pcm_prefix_exact": true,
+          "event_prefix_exact": true,
+          "initial_ram_exact": true,
+          "underrun": 0,
+          "overrun": 0,
+          "pcm_sha256": "158E206ED5C633E664951BD01410E480E9133A2D265BF62F01DE172A8E06A062"
+        },
+        {
+          "game": "AFXJ",
+          "speed": 1,
+          "frames": 148398,
+          "pcm_prefix_exact": true,
+          "event_prefix_exact": true,
+          "initial_ram_exact": true,
+          "underrun": 0,
+          "overrun": 0,
+          "pcm_sha256": "8EAF53E733E42397FC3CA6E31B3FBE99E1D9BFD78D6EB9EBB7D393A3E962918D"
+        },
+        {
+          "game": "AFXJ",
+          "speed": 2,
+          "frames": 158823,
+          "pcm_prefix_exact": true,
+          "event_prefix_exact": true,
+          "initial_ram_exact": true,
+          "underrun": 0,
+          "overrun": 0,
+          "pcm_sha256": "76D0AB34E1F975BD85B0168A3BA6D8D87CEB4077A4CCBA09E7C821146013AC7A"
+        },
+        {
+          "game": "AFXJ",
+          "speed": 3,
+          "frames": 162297,
+          "pcm_prefix_exact": true,
+          "event_prefix_exact": true,
+          "initial_ram_exact": true,
+          "underrun": 0,
+          "overrun": 0,
+          "pcm_sha256": "0DE7EF75DDCAB0124919BC72DBC0817802DBA0E109AAA6136A2A8D684CEC5F1C"
+        },
+        {
+          "game": "AORJ",
+          "speed": 1,
+          "frames": 138453,
+          "pcm_prefix_exact": true,
+          "event_prefix_exact": true,
+          "initial_ram_exact": true,
+          "underrun": 0,
+          "overrun": 0,
+          "pcm_sha256": "ED3ECD9C9EAAC3331CF11EAA7BDC57A843D3740B55F5EC2FB427C23B496BCC6B"
+        },
+        {
+          "game": "AORJ",
+          "speed": 2,
+          "frames": 145861,
+          "pcm_prefix_exact": true,
+          "event_prefix_exact": true,
+          "initial_ram_exact": true,
+          "underrun": 0,
+          "overrun": 0,
+          "pcm_sha256": "3E91579FDBCB3566EF50BB52FF1F82482D8E22653D881A636C39E4CB53D61F56"
+        },
+        {
+          "game": "AORJ",
+          "speed": 3,
+          "frames": 148330,
+          "pcm_prefix_exact": true,
+          "event_prefix_exact": true,
+          "initial_ram_exact": true,
+          "underrun": 0,
+          "overrun": 0,
+          "pcm_sha256": "F2B71F3644B6275B81CAB545B2731916D3B483C8F94C1E35413AAAA9A6CD2810"
+        },
+        {
+          "game": "B6JJ",
+          "speed": 1,
+          "frames": 261143,
+          "pcm_prefix_exact": true,
+          "event_prefix_exact": true,
+          "initial_ram_exact": true,
+          "underrun": 0,
+          "overrun": 0,
+          "pcm_sha256": "B0DA224735EB0EFDD7B07246112189914405EB3517878CA394C6943D35C711F3"
+        },
+        {
+          "game": "B6JJ",
+          "speed": 2,
+          "frames": 262242,
+          "pcm_prefix_exact": true,
+          "event_prefix_exact": true,
+          "initial_ram_exact": true,
+          "underrun": 0,
+          "overrun": 0,
+          "pcm_sha256": "F5303450AFDCC26B4703F057912ABB0469D70E1095ED5F73ADC9248F8DA4BD87"
+        },
+        {
+          "game": "B6JJ",
+          "speed": 3,
+          "frames": 262609,
+          "pcm_prefix_exact": true,
+          "event_prefix_exact": true,
+          "initial_ram_exact": true,
+          "underrun": 0,
+          "overrun": 0,
+          "pcm_sha256": "36059A7E3A25CBB7DE714EE4927A11281190B62B3DF703C397F720EF3E89C2EB"
+        }
+      ],
+      "scope": "Fresh4-second prefixes; complete48/16/12suite/36 results separately retained and verified. Not a rerun of those full suites."
+    },
+    "scope": "48/16/12suite/36 complete matrices retained, reverified, not reexecuted in Phase10.12 new4-second checks are additional and not substitutes or golden updates."
+  },
+  "release_gate": [
+    {
+      "id": "A",
+      "criterion": "Existing1x/2x compatibility",
+      "status": "PASS",
+      "scope": "Retained48 corrected-bridge conditions and16 original/common public-package scene comparisons; new12 prefixes."
+    },
+    {
+      "id": "B",
+      "criterion": "3x game progression",
+      "status": "PASS",
+      "scope": "Actual internal GBA frames.3x range2.96049–3.01243x; nominal3x endpoints not exact. No undershoot hidden."
+    },
+    {
+      "id": "C",
+      "criterion": "BGM tempo/pitch",
+      "status": "PASS",
+      "scope": "Normal sample-scale agreement with Fixed1x in the tested scenes. Native timbre/isolated instrument fidelity and listening remain INCONCLUSIVE."
+    },
+    {
+      "id": "D",
+      "criterion": "SE onset/pitch/lifetime",
+      "status": "INCONCLUSIVE",
+      "scope": "Known finite-SE shortening accepted as a limitation; no universal SE fidelity/loop/cancel certification."
+    },
+    {
+      "id": "E",
+      "criterion": "Load/Rewind",
+      "status": "PASS",
+      "scope": "Retained bounded recovery cases. Continuing SE discarded; AAMJ ownership fallback/FFTA long recovery remain."
+    },
+    {
+      "id": "F",
+      "criterion": "Safety/fallback",
+      "status": "PASS",
+      "scope": "Retained guarded modes/limits plus actual switch tests: ring0, partial callback0, frame-step anomaly0. Limited scenarios only."
+    },
+    {
+      "id": "G",
+      "criterion": "Human listening",
+      "status": "INCONCLUSIVE",
+      "scope": "HUMAN_REVIEW_REQUIRED; automatic analysis is not listening."
+    }
+  ],
+  "known_limits": [
+    "Finite SE can end early at2x/3x; no generic STOP expansion in Phase10.",
+    "State recovery discards ongoing SE. AAMJ can retain guarded native ownership fallback; late FFTA reconstruction can take about18seconds.",
+    "Six coverage identities remain unconfirmed; no whole-title/region/revision promotion.",
+    "AORJ192ms source remains UNKNOWN/INCONCLUSIVE; no product-code change for it.",
+    "Windows endpoint recordings can include other application audio; no other application is modified.",
+    "No hours-long/full-playthrough verification."
+  ],
+  "human_review_required": [
+    "12 representative BGM reels: compare1x/2x/3x phrase continuity, pitch, missing instruments and native timbre.",
+    "FFTA and OrientalBlue25-second videos: verify game image/audio, captions, transition clicks/gaps and audiovisual alignment.",
+    "SE onset/pitch/lifetime, short bursts, loop stopping/cancel and BGM competition beyond tested scenes.",
+    "AORJ unresolved192ms observation; native timbre/isolated pitch for new titles."
+  ],
+  "demos": [
+    {
+      "game": "AFXJ",
+      "path": "build-phase10\\demos\\AFXJ-v04-25s-private.mp4",
+      "sha256": "3018BE5AACC29C28004F5F2EC496C88D4DC9CAE8F151E319C4AC67651054A281",
+      "seconds": 25.004,
+      "measurements": [
+        {
+          "target_speed": 1,
+          "internal_speed_x": 1.0045342437320237,
+          "gba_frames_per_second": 59.99832004703869
+        },
+        {
+          "target_speed": 2,
+          "internal_speed_x": 1.999948975482184,
+          "gba_frames_per_second": 119.45195443306112
+        },
+        {
+          "target_speed": 3,
+          "internal_speed_x": 2.9953388643252334,
+          "gba_frames_per_second": 178.90410501432424
+        },
+        {
+          "target_speed": 1,
+          "internal_speed_x": 1.0045598592912,
+          "gba_frames_per_second": 59.999850000375005
+        },
+        {
+          "target_speed": 2,
+          "internal_speed_x": 1.9995323183398472,
+          "gba_frames_per_second": 119.42706854317554
+        },
+        {
+          "target_speed": 3,
+          "internal_speed_x": 2.9910668697632725,
+          "gba_frames_per_second": 178.64894945485273
+        }
+      ],
+      "review": "HUMAN_REVIEW_REQUIRED"
+    },
+    {
+      "game": "AORJ",
+      "path": "build-phase10\\demos\\AORJ-v04-25s-private.mp4",
+      "sha256": "7E61D5538355933CD621BC6B1C72716CDB088CF88FD837A72093846B7B28F18F",
+      "seconds": 25.0,
+      "measurements": [
+        {
+          "target_speed": 1,
+          "internal_speed_x": 1.004556845628197,
+          "gba_frames_per_second": 59.999670001814984
+        },
+        {
+          "target_speed": 2,
+          "internal_speed_x": 1.999505785549347,
+          "gba_frames_per_second": 119.4254838059044
+        },
+        {
+          "target_speed": 3,
+          "internal_speed_x": 3.0009098381636115,
+          "gba_frames_per_second": 179.23684535982693
+        },
+        {
+          "target_speed": 1,
+          "internal_speed_x": 1.0045734209984791,
+          "gba_frames_per_second": 60.00066000726008
+        },
+        {
+          "target_speed": 2,
+          "internal_speed_x": 2.0002025047422096,
+          "gba_frames_per_second": 119.46709710219282
+        },
+        {
+          "target_speed": 3,
+          "internal_speed_x": 2.9994806717668556,
+          "gba_frames_per_second": 179.15148482243552
+        }
+      ],
+      "review": "HUMAN_REVIEW_REQUIRED"
+    }
+  ],
+  "windows_audio": {
+    "rows": [
+      {
+        "game": "AFXJ",
+        "seconds": 25.004,
+        "peak": 5210,
+        "clipped_stereo_frames": 0,
+        "minimum10ms_rms": 74.64289986328238,
+        "maximum_near_zero_rms_seconds": 0.0,
+        "quiet_threshold_int16_rms": 2,
+        "listening": "HUMAN_REVIEW_REQUIRED",
+        "pitch_and_tempo": "Use retained unretimed PCM comparisons and human review; AAC/mixed-device wave differences are not a pitch failure.",
+        "host_mix": "Default Windows endpoint; other applications can contaminate it. No other application is muted or modified.",
+        "aorj192ms": "UNKNOWN / INCONCLUSIVE; this bounded sanity check is not source attribution"
+      },
+      {
+        "game": "AORJ",
+        "seconds": 24.999666666666666,
+        "peak": 4548,
+        "clipped_stereo_frames": 0,
+        "minimum10ms_rms": 32.960882750112546,
+        "maximum_near_zero_rms_seconds": 0.0,
+        "quiet_threshold_int16_rms": 2,
+        "listening": "HUMAN_REVIEW_REQUIRED",
+        "pitch_and_tempo": "Use retained unretimed PCM comparisons and human review; AAC/mixed-device wave differences are not a pitch failure.",
+        "host_mix": "Default Windows endpoint; other applications can contaminate it. No other application is muted or modified.",
+        "aorj192ms": "UNKNOWN / INCONCLUSIVE; this bounded sanity check is not source attribution"
+      }
+    ],
+    "method": "Decode existing Windows-output AAC to48kHz PCM in memory;10ms RMS/clipping only. No new WAV, time stretch, normalization or pitch correction."
+  },
+  "private_listening": {
+    "path": "build-phase10/listening/index.html",
+    "files": 12,
+    "total_seconds": 108,
+    "protected": true
+  },
+  "compatibility": {
+    "schema_version": 3,
+    "total_identities": 3075,
+    "new_fields": [
+      "bgm_verification_status",
+      "bgm_test_speeds",
+      "bgm_test_scope",
+      "bgm_tested_commit",
+      "bgm_evidence",
+      "se_verification_status"
+    ],
+    "general_fields_unchanged": true,
+    "conservative_scope_unchanged": true,
+    "json_csv_xlsx_markdown": "PASS"
+  },
+  "protection": {
+    "old_wavs": 127,
+    "all_hashes_unchanged": true,
+    "public_v03_artifacts_unchanged": true,
+    "public_worktree_clean": true,
+    "rom_read_only": true,
+    "isolated_states": true,
+    "no_other_emulator_development_changes": true,
+    "no_old_data_deletion": true
+  },
+  "package_checks": {
+    "passed": true,
+    "license_materials": {
+      "status": "PASS",
+      "exit_code": 0
+    },
+    "recursive_public_audit": {
+      "passed": true,
+      "files": 1,
+      "archives": 10,
+      "archive_members": 7283,
+      "git_blobs": 0,
+      "git_objects": 0,
+      "rom": "NONE",
+      "save": "NONE",
+      "proprietary_bios": "NONE",
+      "unapproved_video": "NONE",
+      "secret": "NONE",
+      "private_path": "NONE"
+    },
+    "installation": {
+      "status": "PASS",
+      "exit_code": 0,
+      "scope": "New isolated sandbox: collisions, repeated install, shared/modified files, invalid ownership record; original files preserved"
+    },
+    "relinking": {
+      "status": "PASS",
+      "exit_code": 0,
+      "scope": "Only supplied source/support used; changed bridge loaded by unchanged core in runner and actual RetroArch; exact original AAMJ menu golden; speaker muted",
+      "report_sha256": "FE8B165EAFCD4AF36B39FA8E2768AC30E863C58334F1DD5362BD4865A787C95F"
+    },
+    "package_integrity": {
+      "status": "PASS",
+      "files_covered": 73,
+      "zip_sha256": "80896A479D5E5465C4A7C67D427E26B0DBF0955D6FC6874AA5738D60B4D85CFF",
+      "checksum_file_sha256": "728FB91D1238D4F69E9FD20500A33D7E504462FF854E2EDFBCC9F81AA3E62E41"
+    },
+    "limitation": "Package-source commit precedes the final validation-report commit. This report is external to the immutable RC ZIP; product binaries remain unchanged."
+  },
+  "evidence": [
+    {
+      "path": "build-phase10\\retained-verification.json",
+      "sha256": "FB4E8F4840D1E8A6FC8131BA7F9EAB68ED9601BC4E03DC50D9D0D3705AE510CA"
+    },
+    {
+      "path": "build-phase10\\fresh-prefix12\\results.json",
+      "sha256": "0CD5CDAB4ABFD0E9713EE735A65DBC2F1A9DA57A156E9C4622D4637EFC9A788C"
+    },
+    {
+      "path": "build-phase10\\frontend-final\\results.json",
+      "sha256": "44CD066FAC80E494142D7F49B2728A27134FF67BDEFEF7AB0054A7055A9B1966"
+    },
+    {
+      "path": "build-phase10\\demos\\manifest.json",
+      "sha256": "EEA3D67A2097C1AC6CEEB55925018C4ED30CD66912DC798FFFABD093E36BBC1A"
+    },
+    {
+      "path": "build-phase10\\windows-audio-sanity.json",
+      "sha256": "1E13979F97F471170E6BE6230533A4E5BBBBBDC544535B5D04D676803802E628"
+    },
+    {
+      "path": "build-phase10\\listening\\manifest.json",
+      "sha256": "38A2BBFCEA6D7840A0DA7F8E902ADE19BF0A6B0045D6A94ED07201315FAEC27C"
+    },
+    {
+      "path": "build-phase10\\db-validation-final.json",
+      "sha256": "AA8D0417D8E6259A3A5D9BE285031A0E0771E972D32CE1E989DEE6BDF22B1E72"
+    }
+  ],
+  "package": {
+    "path": "build-phase10/rc/mgba-fixed-audio-tempo-v0.4-preview-rc1-win64.zip",
+    "sha256": "80896A479D5E5465C4A7C67D427E26B0DBF0955D6FC6874AA5738D60B4D85CFF",
+    "bytes": 43322508,
+    "source_commit": "cd8a3562d8d3d2cffcdfd68ef18ecece6e39b32d",
+    "binary_source_commit": "d451f54da8aea4217130574df42aee775cd369a5",
+    "checksum_file_sha256": "728FB91D1238D4F69E9FD20500A33D7E504462FF854E2EDFBCC9F81AA3E62E41"
+  }
+}
