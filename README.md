@@ -42,19 +42,6 @@ Limited test pass means Fixed Audio was observed to work in specific test scenar
 
 Experimental Unverified means a Fixed Audio attempt exists, but correct operation is unverified. Neither all 3,075 releases nor all 601 eligible identities are guaranteed to work. Regional variants do not inherit another release's results.
 
-## Published v0.3 demonstrations / 公開済みv0.3動画
-
-<!-- verified-release-links:start -->
-| Game | Scene / 場面 | Video |
-| --- | --- | --- |
-| Final Fantasy Tactics Advance (AFXJ) | Battle Scene / 戦闘・55s | [MP4](https://github.com/granbone/mgba-fixed-audio-tempo/releases/download/v0.3-preview/FFTA_Fixed_Audio_v03_Demo.mp4) |
-| Oriental Blue: Ao no Tengai (AORJ) | Walking / Gameplay・55s | [MP4](https://github.com/granbone/mgba-fixed-audio-tempo/releases/download/v0.3-preview/OrientalBlue_Fixed_Audio_v03_Demo.mp4) |
-
-[Windows x64 ZIP](https://github.com/granbone/mgba-fixed-audio-tempo/releases/download/v0.3-preview/mgba-fixed-audio-tempo-v0.3-preview-win64.zip) · [SHA256SUMS](https://github.com/granbone/mgba-fixed-audio-tempo/releases/download/v0.3-preview/SHA256SUMS.txt) · [v0.3-preview Release](https://github.com/granbone/mgba-fixed-audio-tempo/releases/tag/v0.3-preview)
-<!-- verified-release-links:end -->
-
-Both v0.3 recordings show real RetroArch gameplay switching **1x→2x→1x**, recorded through OBS and Windows audio. No video speed change, audio time-stretch, pitch correction or audio replacement was applied.
-
 ## Community reports and licenses
 
 Use the [compatibility Issue Form](https://github.com/granbone/mgba-fixed-audio-tempo/issues/new?template=compatibility-report.yml). Include exact identity, mode, speed, scene and version. Do not upload ROMs, BIOS, saves or savestates.
