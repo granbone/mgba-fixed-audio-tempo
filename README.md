@@ -10,10 +10,14 @@ Phase9 verified BGM in limited scenes for **20 exact DAT identities** (ROM_PLAYE
 
 Known limits: some finite SE can end early at 2x/3x; ongoing SE are discarded on State Load/Rewind; FFTA restoration can take longer; ownership or runtime checks may keep native audio active. Unknown/Unlimited frontend speeds use native audio. Unverified games can produce incorrect audio, freeze or crash. GB/GBC Fixed Audio remains research. Major BGM failures, runaway audio and new compatibility regressions remain release blockers.
 
-## v0.4 demonstrations
+## v0.4 demonstrations — updated videos
 
-The user watched and approved the unchanged FFTA active gameplay (34.25seconds) and Oriental Blue active walking (24.17seconds) videos. Both show **1x→2x→3x twice**, using real RetroArch gameplay and Windows process audio. No video speed changes, audio time-stretch or pitch correction were applied. FFTA's state reload/audio cut near19.15seconds is explicitly marked. User approval applies to the viewed footage, not every game or sound effect. [Video manifest](docs/V04_DEMO_MANIFEST.json). The adopted videos are on YouTube: [FFTA active gameplay](https://youtu.be/5A7oz7efibo) · [Oriental Blue active walking](https://youtu.be/dORIryhx6cU). Video files are excluded from Git and the distribution ZIP; the Release assets are the ZIP and SHA256SUMS only.
+The current public videos are **new RTSS-free recordings** captured at **1920×1080 / 60 fps**, with prominent GAME SPEED 1x / 2x / 3x and BGM TEMPO 1x overlays and 0.3-second speed-switch highlighting. They show real RetroArch gameplay and Windows audio, with **1x→2x→3x twice**. No artificial video speed-up or audio time-stretch/pitch correction was applied.
 
+- [Oriental Blue: Ao no Tengai — continuous walking (24.87 s)](https://youtu.be/kqMENTHstSE)
+- [Final Fantasy Tactics Advance — active gameplay (34.32 s)](https://youtu.be/8lcoH3Lm_bE)
+
+Automated video-frame, overlay-transition and audio-comparison checks passed. **Human listening review of these new recordings (BGM, SE, A/V sync) is still pending.** The earlier user-approved demo footage and its original hashes are documented in the [historical launch manifest](docs/V04_DEMO_MANIFEST.json); that approval does not certify the replacement recordings. The updated videos are not stored in Git or the release ZIP.
 ## Download and installation
 
 The v0.4-preview prerelease contains the core, bridge, dependency DLL, complete corresponding source, license notices and LGPL rebuild/relink materials. [Windows x64 ZIP](https://github.com/granbone/mgba-fixed-audio-tempo/releases/download/v0.4-preview/mgba-fixed-audio-tempo-v0.4-preview-win64.zip) · [SHA256SUMS](https://github.com/granbone/mgba-fixed-audio-tempo/releases/download/v0.4-preview/SHA256SUMS.txt) · [Release notes](https://github.com/granbone/mgba-fixed-audio-tempo/releases/tag/v0.4-preview). Verify the ZIP checksum before installation. Per-file SHA256 is also included inside the ZIP.
