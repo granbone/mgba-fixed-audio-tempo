@@ -1,7 +1,7 @@
 # v0.4-preview final release audit
 
-判定：**FINAL_PACKAGE_VALIDATION_PENDING**。公開操作は行わず、最終公開指示を待つ。
-この文書は配布ソースcommit時点の試験スナップショット。最終ZIP・再リンク・導入の検証は次段階。完成後のGit側監査報告が最終判定を記録し、ZIP自身のhash循環を避ける。
+判定：**RELEASE_READY_WITH_KNOWN_LIMITATIONS**。公開操作は行わず、最終公開指示を待つ。
+最終ZIP・再リンク・導入・全Git履歴監査は完了。詳細hashはJSONと外部release-integrityに記録。
 
 ## 新規実行と継続証拠
 
@@ -88,3 +88,16 @@ loop/cancel/pitch bend/voice競合、長時間/後半/未検証identity。未聴
 重大なクラッシュ・BGM破綻・新規1x/2x回帰は今回の限定試験で検出されていない。
 全タイトルの完全対応を公開条件にしないBGM重視のpreviewとして、既知制約付きの公開候補を提案する。
 push/tag/Release/YouTube uploadは実施せず停止する。
+
+## 最終hashと公開前監査
+
+- `mgba-fixed-audio-tempo-v0.4-preview-win64.zip`: `025346D077C7E2DD201231D3A3E79DB459FC32D6F2ED986507E5584222EB7FAC`
+- `AORJ-v04-active-walking-review.mp4`: `8CA4AF7026DF482138C01A893F6BD222F7CB501B7AEFB923AFAF5D4BE861D931`
+- `AFXJ-v04-active-gameplay-review.mp4`: `A4CF6C58D8BEA6844DF983579CA076EF1679B082BFE4432BEC4D1F922B414F25`
+- `SHA256SUMS.txt`: `3170DD49F2E0D5916FEA6876C23DB66D65A0CF97A12DE9AB0723C681BF8A0523`
+
+core: `92BAE49862CC8598B05C2E83F973FA969374B12260A0D40441D2793134F93D7C`
+
+bridge: `D750BD152B51F632C37F627FC22C6A33E8CDA9B43B16294334D86E90DD511502`
+
+最終ZIP/全Git履歴/元LICENSE/変更library再リンク/隔離導入/ファイルchecksum検査はPASS。配布source commitは `6aec2889c7f7a607d996e4ad6985b00a7ae82508`。ZIP内の監査は配布source時点のスナップショットで、最終ZIP自体のhashを含む本Git側報告が後続の最終証拠。

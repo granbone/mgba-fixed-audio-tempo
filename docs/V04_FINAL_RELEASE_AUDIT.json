@@ -2,7 +2,7 @@
   "schema_version": 1,
   "version": "v0.4-preview",
   "date": "2026-10-10",
-  "readiness": "FINAL_PACKAGE_VALIDATION_PENDING",
+  "readiness": "RELEASE_READY_WITH_KNOWN_LIMITATIONS",
   "publication": "NOT_PUBLISHED; no push/tag/Release/YouTube upload",
   "git": {
     "development_branch": "feature/3x-fixed-audio-poc",
@@ -1814,14 +1814,227 @@
   ],
   "test_setup_note": "Initial private48 replay setup referenced a distribution bridge path as an old provenance dictionary key; KeyError occurred before running a case. Corrected the key lookup while preserving the exact bridge-hash assertion. The complete rerun and new portable tool both passed48/48. First B6JJ frontend take stopped when Windows denied replacement of a control file briefly opened by the private adapter. Added a bounded1-second retry to test tooling, preserving failed evidence; complete B6JJ repeat passed. No product-code change.",
   "public_audit_fix": "Old auditor missed JSON-escaped private paths in historical Phase evidence, including RC1 source archives. Strengthened repeated-separator and decoded JSON key/value scanning, with synthetic regression tests. Final source export omits non-build private Phase evidence/9 path-specific helpers while byte-verifying all compiled source. The first preliminary source clone is retained privately and must never be published; final candidate is a new independent public-main clone with no contaminated private Git objects.",
+  "release_integrity": {
+    "version": "v0.4-preview",
+    "publication": "PREPARED_LOCALLY_NOT_PUBLISHED",
+    "source_commit": "6aec2889c7f7a607d996e4ad6985b00a7ae82508",
+    "source_tree": "710e8f49a78ce6573959d6555e5d41174a66ac50",
+    "binary_source_commit": "d451f54da8aea4217130574df42aee775cd369a5",
+    "actual_binary_sha256": {
+      "cores/mgba_fixed_audio_libretro.dll": "92BAE49862CC8598B05C2E83F973FA969374B12260A0D40441D2793134F93D7C",
+      "runtime/libmgba_mp2k_bridge.dll": "D750BD152B51F632C37F627FC22C6A33E8CDA9B43B16294334D86E90DD511502",
+      "runtime/zlib1.dll": "93E9243A44C29200EEACAF9658EFE2558581770E4B11CA4B500E18E424A6E3B5"
+    },
+    "binary_provenance": "Unchanged RC1 runtime; matching complete compiled source archive retained. Clean public source/distribution commit recorded separately.",
+    "agbplay_commit": "0b87da48d2502da359e45718eec8566ac40fa9d7",
+    "bridge_source_note": "Unmodified agbplay archive plus deterministic build-time SequenceReader patches in matching bridge CMakeLists and priority_order.hpp. Both supplied.",
+    "rc1_zip_sha256": "80896A479D5E5465C4A7C67D427E26B0DBF0955D6FC6874AA5738D60B4D85CFF",
+    "repackaged": true,
+    "compiled_source_members_verified": 1878,
+    "source_archive_scope": "All product code, headers, build/relink recipes and dependency materials included. Private non-build historical reports/evidence and local path-specific helpers are excluded from public source. No private Git history imported.",
+    "matching_source_nonbuild_omissions": [
+      "docs/three-x-evidence/clock-test.log",
+      "docs/three-x-evidence/transport-golden.json",
+      "docs/three-x-phase2-evidence/afxj-3x-rejected.json",
+      "docs/three-x-phase2-evidence/aorj-priority.json",
+      "docs/three-x-phase2-evidence/b6jj-recording.json",
+      "docs/three-x-phase2-evidence/b6jj-se.json",
+      "docs/three-x-phase2-evidence/clock-test.log",
+      "docs/three-x-phase2-evidence/frontend-confirmed.json",
+      "docs/three-x-phase2-evidence/guards-host.json",
+      "docs/three-x-phase2-evidence/legacy-12.json",
+      "docs/three-x-phase2-evidence/regression-48.json",
+      "docs/three-x-phase2-evidence/scene-comparisons.json",
+      "docs/three-x-phase2-evidence/three-host.json",
+      "docs/three-x-phase3-evidence/aorj.json",
+      "docs/three-x-phase3-evidence/frontend.json",
+      "docs/three-x-phase3-evidence/listening-manifest.json",
+      "docs/three-x-phase3-evidence/original-wavs.json",
+      "docs/three-x-phase3-evidence/package-scenes.json",
+      "docs/three-x-phase3-evidence/package-windows-first.json",
+      "docs/three-x-phase3-evidence/package-windows-retry.json",
+      "docs/three-x-phase3-evidence/protection.json",
+      "docs/three-x-phase3-evidence/windows-spectrum.json",
+      "docs/three-x-phase4-evidence/bridge-compatibility48.json",
+      "docs/three-x-phase4-evidence/committed-build12.json",
+      "docs/three-x-phase4-evidence/frontend.json",
+      "docs/three-x-phase4-evidence/legacy12.json",
+      "docs/three-x-phase4-evidence/listening-manifest.json",
+      "docs/three-x-phase4-evidence/native-rule.json",
+      "docs/three-x-phase4-evidence/priority-comparison.json",
+      "docs/three-x-phase4-evidence/priority-three.json",
+      "docs/three-x-phase4-evidence/protection.json",
+      "docs/three-x-phase4-evidence/regression-common48.json",
+      "docs/three-x-phase4-evidence/runtime.json",
+      "docs/three-x-phase4-evidence/scenes16.json",
+      "docs/three-x-phase4-evidence/se-stop.json",
+      "docs/three-x-phase4-evidence/three36.json",
+      "docs/three-x-phase4-evidence/voice-selection.json",
+      "docs/three-x-phase5-evidence/legacy12.json",
+      "docs/three-x-phase5-evidence/lifetime-unit.json",
+      "docs/three-x-phase5-evidence/listening.json",
+      "docs/three-x-phase5-evidence/performance.json",
+      "docs/three-x-phase5-evidence/phase4-compatibility.json",
+      "docs/three-x-phase5-evidence/protection.json",
+      "docs/three-x-phase5-evidence/regression48.json",
+      "docs/three-x-phase5-evidence/runtime.json",
+      "docs/three-x-phase5-evidence/scenes16.json",
+      "docs/three-x-phase5-evidence/stop.json",
+      "docs/three-x-phase5-evidence/synthesis.json",
+      "docs/three-x-phase5-evidence/three-extra36.json",
+      "docs/three-x-phase5-evidence/three36.json",
+      "docs/three-x-phase5-evidence/windows.json",
+      "docs/three-x-phase6-evidence/generic-lifetime.json",
+      "docs/three-x-phase6-evidence/guard-analysis.json",
+      "docs/three-x-phase6-evidence/guards28.json",
+      "docs/three-x-phase6-evidence/jobs.json",
+      "docs/three-x-phase6-evidence/legacy12.json",
+      "docs/three-x-phase6-evidence/listening.json",
+      "docs/three-x-phase6-evidence/native-lifetime.json",
+      "docs/three-x-phase6-evidence/polling.json",
+      "docs/three-x-phase6-evidence/priority.json",
+      "docs/three-x-phase6-evidence/protection.json",
+      "docs/three-x-phase6-evidence/regression48.json",
+      "docs/three-x-phase6-evidence/replay.json",
+      "docs/three-x-phase6-evidence/runtime.json",
+      "docs/three-x-phase6-evidence/scenes16.json",
+      "docs/three-x-phase6-evidence/stop.json",
+      "docs/three-x-phase6-evidence/synthesis.json",
+      "docs/three-x-phase6-evidence/three72.json",
+      "docs/three-x-phase6-evidence/windows.json",
+      "docs/three-x-phase7-evidence/cross-title-A8CJ.json",
+      "docs/three-x-phase7-evidence/cross-title-raw.json",
+      "docs/three-x-phase7-evidence/cross-title.json",
+      "docs/three-x-phase7-evidence/frontend.json",
+      "docs/three-x-phase7-evidence/inherited-safety.json",
+      "docs/three-x-phase7-evidence/latency.json",
+      "docs/three-x-phase7-evidence/legacy12.json",
+      "docs/three-x-phase7-evidence/listening.json",
+      "docs/three-x-phase7-evidence/native-A8CJ-reference.json",
+      "docs/three-x-phase7-evidence/native-lifetime.json",
+      "docs/three-x-phase7-evidence/native-reference.json",
+      "docs/three-x-phase7-evidence/protection.json",
+      "docs/three-x-phase7-evidence/public48-inherited.json",
+      "docs/three-x-phase7-evidence/recovery.json",
+      "docs/three-x-phase7-evidence/regression48.json",
+      "docs/three-x-phase7-evidence/runtime.json",
+      "docs/three-x-phase7-evidence/scenes16.json",
+      "docs/three-x-phase8-evidence/additional-bgm.json",
+      "docs/three-x-phase8-evidence/aorj-notes.json",
+      "docs/three-x-phase8-evidence/aorj.json",
+      "docs/three-x-phase8-evidence/counterfactual.json",
+      "docs/three-x-phase8-evidence/cross-title.json",
+      "docs/three-x-phase8-evidence/frontend.json",
+      "docs/three-x-phase8-evidence/guard-analysis.json",
+      "docs/three-x-phase8-evidence/guards28.json",
+      "docs/three-x-phase8-evidence/latency.json",
+      "docs/three-x-phase8-evidence/legacy12.json",
+      "docs/three-x-phase8-evidence/lifetimes.json",
+      "docs/three-x-phase8-evidence/listening.json",
+      "docs/three-x-phase8-evidence/model.json",
+      "docs/three-x-phase8-evidence/native-aorj.json",
+      "docs/three-x-phase8-evidence/native.json",
+      "docs/three-x-phase8-evidence/protection.json",
+      "docs/three-x-phase8-evidence/public48-inherited.json",
+      "docs/three-x-phase8-evidence/recovery.json",
+      "docs/three-x-phase8-evidence/regression48.json",
+      "docs/three-x-phase8-evidence/runtime.json",
+      "docs/three-x-phase8-evidence/scenes16.json",
+      "docs/three-x-phase8-evidence/three72-comparison.json",
+      "docs/three-x-phase8-evidence/three72.json"
+    ],
+    "video_user_review_pass": true,
+    "human_review_scope": "Only these two unchanged active gameplay recordings; not all titles, all scenes or all sound effects",
+    "full_playthrough_claimed": false,
+    "remaining_human_review": [
+      "AAMJ/B6JJ audible native timbre and SFX quality beyond prior scoped measurements",
+      "Eight additional Phase10 ROM/EWRAM representative listening reels",
+      "SE cancel/loop/pitch-bend/voice contention in scenes outside the approved demos",
+      "Long sessions, late-game scenes and untested region/revision identities"
+    ],
+    "packaged_at_utc": "2026-10-10T10:45:59.038239+00:00",
+    "zip_filename": "mgba-fixed-audio-tempo-v0.4-preview-win64.zip",
+    "zip_sha256": "025346D077C7E2DD201231D3A3E79DB459FC32D6F2ED986507E5584222EB7FAC",
+    "zip_bytes": 42419639,
+    "assets": [
+      {
+        "filename": "mgba-fixed-audio-tempo-v0.4-preview-win64.zip",
+        "sha256": "025346D077C7E2DD201231D3A3E79DB459FC32D6F2ED986507E5584222EB7FAC",
+        "bytes": 42419639
+      },
+      {
+        "filename": "AORJ-v04-active-walking-review.mp4",
+        "sha256": "8CA4AF7026DF482138C01A893F6BD222F7CB501B7AEFB923AFAF5D4BE861D931",
+        "bytes": 6054380
+      },
+      {
+        "filename": "AFXJ-v04-active-gameplay-review.mp4",
+        "sha256": "A4CF6C58D8BEA6844DF983579CA076EF1679B082BFE4432BEC4D1F922B414F25",
+        "bytes": 9299332
+      },
+      {
+        "filename": "SHA256SUMS.txt",
+        "sha256": "3170DD49F2E0D5916FEA6876C23DB66D65A0CF97A12DE9AB0723C681BF8A0523",
+        "bytes": 318
+      }
+    ],
+    "video_directory": "Use the unchanged adopted demo files described by docs/V04_DEMO_MANIFEST.json",
+    "package_checksum_file_sha256": "08E8419DE01470A33EBEE962B766D31BD55D7A0FADB005A06BA41FA14FF76785"
+  },
+  "final_package_tests": {
+    "passed": true,
+    "tests": [
+      {
+        "test": "license",
+        "returncode": 0
+      },
+      {
+        "test": "zip_audit",
+        "returncode": 0
+      },
+      {
+        "test": "installation",
+        "returncode": 0
+      },
+      {
+        "test": "relink",
+        "returncode": 0
+      }
+    ],
+    "recursive_zip_audit": {
+      "passed": true,
+      "files": 1,
+      "archives": 10,
+      "archive_members": 7080,
+      "git_blobs": 0,
+      "git_objects": 0,
+      "rom": "NONE",
+      "save": "NONE",
+      "proprietary_bios": "NONE",
+      "unapproved_video": "NONE",
+      "secret": "NONE",
+      "private_path": "NONE"
+    },
+    "per_file_checksum_count": 79,
+    "zip_matches_package": true,
+    "assets_hashes_verified": true,
+    "relink": "Modified agbplay rebuilt using only supplied sources/support; unmodified distribution core loaded it in runner and actual RetroArch. Original AAMJ menu golden required.",
+    "relink_report_sha256": "AE386A19B702EDE4DE235A12FB71690EE6BC42C2CDC6774888F906F47C0E0087",
+    "package_checksums_sha256": "08E8419DE01470A33EBEE962B766D31BD55D7A0FADB005A06BA41FA14FF76785"
+  },
+  "final_package_runtime_prefix12": {
+    "passed": 12,
+    "scope": "Fresh12 four-second PCM/event/initial-RAM prefixes from final package DLL paths. Additional packaging smoke, not a substitute for full fresh matrices.",
+    "report_sha256": "0CD5CDAB4ABFD0E9713EE735A65DBC2F1A9DA57A156E9C4622D4637EFC9A788C"
+  },
   "public_git_audit": {
     "passed": true,
-    "files": 2207,
+    "files": 2209,
     "archives": 9,
     "archive_members": 5143,
-    "git_blobs": 4025,
-    "git_objects": 4303,
-    "unreachable_objects_audited": 1931,
+    "git_blobs": 4031,
+    "git_objects": 4328,
+    "unreachable_objects_audited": 1837,
     "audited_roots": [
       "4d0b186590fa42227bc202f7a4557e0de47c3b10"
     ],
@@ -1832,5 +2045,51 @@
     "secret": "NONE",
     "private_path": "NONE"
   },
-  "final_package_tests": "Pending final ZIP/source/relink/installation tests; RC1 licensing/source/relink passed previously"
+  "planned_release": {
+    "tag_candidate": "v0.4-preview",
+    "name": "mGBA Fixed Audio Tempo v0.4-preview",
+    "prerelease": true,
+    "assets": [
+      "mgba-fixed-audio-tempo-v0.4-preview-win64.zip",
+      "AORJ-v04-active-walking-review.mp4",
+      "AFXJ-v04-active-gameplay-review.mp4",
+      "SHA256SUMS.txt"
+    ],
+    "youtube": "English metadata prepared; no upload",
+    "executed": false
+  },
+  "release_gate": {
+    "compatibility_1x_2x": {
+      "status": "PASS",
+      "scope": "Fresh48/16/12 with corrected-reference and original-package scopes distinguished"
+    },
+    "game_speed": {
+      "status": "PASS",
+      "scope": "Direct GBA counters, measured near3x range; AAMJ/AFXJ shortfall disclosed, no universal exact3.000x claim",
+      "minimum_3x": 2.9683121434155026,
+      "maximum_3x": 3.001299847213142,
+      "minimum_target_achievement_percent": 98.94373811385009
+    },
+    "bgm": {
+      "status": "PASS",
+      "scope": "Four isolated measured scenes and two user-reviewed demos;20 Phase9 scoped identities retained"
+    },
+    "se": {
+      "status": "INCONCLUSIVE",
+      "scope": "Finite-SE shortening remains an accepted preview limit; no new severe failure observed in tested cases, full lifetimes/loop/cancel/pitch-bend not certified"
+    },
+    "load_rewind": {
+      "status": "PASS",
+      "scope": "Fresh host matrices/legacy suites and actual RetroArch recovery; ongoing SE discard and existing fallback/reconstruction limits retained"
+    },
+    "safety": {
+      "status": "PASS",
+      "scope": "Tested guard/fault conditions only, no weakened guards"
+    },
+    "human_listening": {
+      "status": "PASS",
+      "scope": "Two adopted active demos only; all other listed unreviewed material remains HUMAN_REVIEW_REQUIRED"
+    },
+    "blocking_issues": []
+  }
 }
