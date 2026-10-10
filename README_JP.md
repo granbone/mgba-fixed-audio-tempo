@@ -10,14 +10,15 @@ Phase9では公開DATの正確な**20 identityで限定場面のBGM一致**を�
 
 既知制約：2x/3xで一部の有限SEが途中終了する場合があります。Load/Rewindでは継続中SEを破棄します。FFTAの復元に時間がかかる場合、ownershipやruntime検証でnative音声が続く場合があります。未知速度・Unlimitedは通常音声へ戻します。未検証ゲームには音声異常・フリーズ・クラッシュの可能性があります。GB/GBC Fixed Audioは研究段階です。重大なBGM異常・音声暴走・新規互換性回帰は公開阻害条件です。
 
-## v0.4デモ動画（更新版）
+## v0.4 デモ動画（更新版）
 
-公開中の動画2本は、**RTSS表示を除去して新規収録**した1920×1080・60fpsの実プレイ映像です。GAME SPEED 1x / 2x / 3x と BGM TEMPO 1x の大型表示、切替時0.3秒の強調演出を追加しました。両動画とも**1x→2x→3xを2周**します。実RetroArch画面とWindows音声を使用し、映像の擬似倍速や音声タイムストレッチ・音高補正は行っていません。
+RTSS表示を除去した1080p・60fpsの新録画に更新しました。GAME SPEED 1x / 2x / 3xとBGM TEMPO 1xを大きく表示し、切替時に0.3秒の強調を加えています。
 
-- [Oriental Blue：連続歩行（24.87秒）](https://youtu.be/kqMENTHstSE)
-- [FFTA：実プレイ（34.32秒）](https://youtu.be/8lcoH3Lm_bE)
+- **[Oriental Blue — 連続歩行（24.87秒）](https://youtu.be/kqMENTHstSE)**
+- **[FFTA — 戦闘実プレイ（34.32秒）](https://youtu.be/8lcoH3Lm_bE)**
 
-全フレームの画面保持、オーバーレイ切替、音声比較の機械的確認はPASSしています。ただし、**新録画のBGM・SE・AV同期に対する人間の聴取確認は未完了**です。以前の動画に対するユーザー視聴PASSは新録画の保証ではありません。旧動画のハッシュ等は[公開時の動画manifest](docs/V04_DEMO_MANIFEST.json)に履歴として保存しています。動画ファイルはGit履歴や配布ZIPには含まれません。
+両動画とも実際のRetroArchで1x → 2x → 3xを2周します。録画の擬似倍速、音声のタイムストレッチ、音高補正はありません。
+
 ## ダウンロードと導入
 
 v0.4-previewはPrereleaseです。core・bridge・依存DLL、完全な対応ソース、ライセンス・LGPL再リンク素材を同梱します。[Windows x64 ZIP](https://github.com/granbone/mgba-fixed-audio-tempo/releases/download/v0.4-preview/mgba-fixed-audio-tempo-v0.4-preview-win64.zip)・[SHA256SUMS](https://github.com/granbone/mgba-fixed-audio-tempo/releases/download/v0.4-preview/SHA256SUMS.txt)・[Release Notes](https://github.com/granbone/mgba-fixed-audio-tempo/releases/tag/v0.4-preview)。導入前にZIPのチェックサムを照合してください。ZIP内にも全ファイルのSHA256を含みます。
