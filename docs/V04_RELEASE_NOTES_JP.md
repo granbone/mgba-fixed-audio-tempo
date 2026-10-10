@@ -14,13 +14,14 @@ Independent Audio Clockとイベント駆動合成により、対応GBAのBGMを
 
 最終準備で**48/48 PCM/event、16/16比較、12/12既存suite、代表3x 36/36**を確認しました。48条件は共通修正版bridge基準、16条件は元v0.3配布package基準8件と共通修正版bridge基準8件を区別しています。実RetroArchのGBA内部frameCounterで、実2x **1.9916～2.0010x**、実3x **2.9683～3.0013x**を測定しました。試験場面に限定した結果で、常に3.000xに達する保証ではありません。[最終監査](https://github.com/granbone/mgba-fixed-audio-tempo/blob/main/docs/V04_FINAL_RELEASE_AUDIT.md)。
 
-## デモ動画
+## デモ動画（公開後に更新したリンク）
 
-- [FFTA active gameplay](https://youtu.be/5A7oz7efibo)：34.25秒。ユニット移動とファイア発動2回。約19.15秒のstate再読み込み・音声カットを明示。
-- [Oriental Blue active walking](https://youtu.be/dORIryhx6cU)：24.17秒。町で主人公が連続歩行。
+公開デモを**RTSSなしの新規録画（1080p・60fps）**に更新しました。大型のGAME SPEED／BGM TEMPO表示と、速度切替時0.3秒の強調演出を追加しています。
 
-実RetroArch映像とWindows音声で**1x→2x→3xを2周**します。ユーザーは採用映像を視聴し、BGM・動き・AV同期に重大な違和感なしと確認しました。映像の擬似倍速・音声タイムストレッチ・音高加工はありません。確認は視聴範囲のみです。動画はGit・ZIPへ含めず、今回YouTubeへ再アップロードしません。
+- [Oriental Blue：連続歩行（24.87秒）](https://youtu.be/kqMENTHstSE)
+- [FFTA：実プレイ（34.32秒）](https://youtu.be/8lcoH3Lm_bE)
 
+両動画とも実RetroArch画面とWindows音声で**1x→2x→3xを2周**します。映像の擬似倍速・音声タイムストレッチ・音高補正はありません。フレーム、オーバーレイ、音声比較の機械的検証はPASSしましたが、**新録画のBGM・SE・AV同期の人間による聴取確認は未完了**です。旧動画のユーザー視聴PASSとハッシュは[公開時の動画manifest](V04_DEMO_MANIFEST.json)に履歴として残します。この公開後のリンク更新はタグ・ZIP・DLL・互換性DBを変更しません。動画ファイルはGit・ZIPに含みません。
 ## 既知制約・安全上の注意
 
 - 一部の有限SEは2x/3xで途中終了します。BGMを優先し、全SEの寿命・ループ・キャンセル・pitch bendは完全認証していません。
