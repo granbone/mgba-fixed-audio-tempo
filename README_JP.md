@@ -4,19 +4,19 @@
 
 Windows x64向けの実験的RetroArchコアです。独立Audio Clockとイベント駆動合成により、対応するGBAのBGMを、**ゲームが2x・3xでも通常テンポ・通常音程**で再生します。録音のタイムストレッチや音高補正は使用しません。native fallbackでは通常のmGBA音声になり、倍速時のテンポ維持は行いません。
 
-v0.4-previewはローカルの公開準備段階です。最終公開指示を待ち、v0.4のReleaseやダウンロードリンクはまだ作成していません。下記の公開v0.3配布物は保全しています。[最終公開監査](docs/V04_FINAL_RELEASE_AUDIT.md)・[Release Notes](docs/V04_RELEASE_NOTES_JP.md)。
+**v0.4-preview Windows x64 Prerelease**は[GitHub Releases](https://github.com/granbone/mgba-fixed-audio-tempo/releases)から取得してください。下記の公開v0.3配布物は保全しています。[最終公開監査](docs/V04_FINAL_RELEASE_AUDIT.md)・[Release Notes](docs/V04_RELEASE_NOTES_JP.md)。
 
 Phase9では公開DATの正確な**20 identityで限定場面のBGM一致**を確認しました（ROM_PLAYER10、EWRAM_PLAYER9、UNKNOWN候補1）。全編やSEの認証ではありません。DBは3,075 identity、Experimental試行対象601 identityです。[対応表](COMPATIBILITY.md)。
 
 既知制約：2x/3xで一部の有限SEが途中終了する場合があります。Load/Rewindでは継続中SEを破棄します。FFTAの復元に時間がかかる場合、ownershipやruntime検証でnative音声が続く場合があります。未知速度・Unlimitedは通常音声へ戻します。未検証ゲームには音声異常・フリーズ・クラッシュの可能性があります。GB/GBC Fixed Audioは研究段階です。重大なBGM異常・音声暴走・新規互換性回帰は公開阻害条件です。
 
-## 採用済みv0.4デモ候補
+## v0.4デモ動画
 
-FFTA active gameplay（34.25秒）とOriental Blue active walking（24.17秒）は、ユーザーが実際に視聴し、映像・音声とも問題なしと確認しました。両方とも実RetroArchとWindowsの対象プロセス音声を収録し、**1x→2x→3xを2周**しています。映像の擬似倍速・音声タイムストレッチ・音高補正はありません。FFTAの約19.15秒のstate再読み込みと音声カットは明示済みです。確認範囲は視聴した映像に限り、全タイトル・全SEの保証ではありません。[動画manifest](docs/V04_DEMO_MANIFEST.json)。MP4はRelease Assets用とし、Git履歴や配布ZIPへ含めません。
+FFTA active gameplay（34.25秒）とOriental Blue active walking（24.17秒）は、ユーザーが実際に視聴し、映像・音声とも問題なしと確認しました。両方とも実RetroArchとWindowsの対象プロセス音声を収録し、**1x→2x→3xを2周**しています。映像の擬似倍速・音声タイムストレッチ・音高補正はありません。FFTAの約19.15秒のstate再読み込みと音声カットは明示済みです。確認範囲は視聴した映像に限り、全タイトル・全SEの保証ではありません。[動画manifest](docs/V04_DEMO_MANIFEST.json)。採用動画はYouTubeで公開されています：[FFTA active gameplay](https://youtu.be/5A7oz7efibo)・[Oriental Blue active walking](https://youtu.be/dORIryhx6cU)。動画ファイルはGit履歴や配布ZIPへ含めません。Release AssetsはZIPとSHA256SUMSのみです。
 
 ## ダウンロードと導入
 
-v0.3-previewはPrereleaseです。core・bridge・依存DLL、完全な対応ソース、ライセンス・LGPL再リンク素材を同梱します。配布リンクとSHA256SUMSは下の動画欄に掲載しています。
+v0.4-previewはPrereleaseです。core・bridge・依存DLL、完全な対応ソース、ライセンス・LGPL再リンク素材を同梱します。[Windows x64 ZIP](https://github.com/granbone/mgba-fixed-audio-tempo/releases/download/v0.4-preview/mgba-fixed-audio-tempo-v0.4-preview-win64.zip)・[SHA256SUMS](https://github.com/granbone/mgba-fixed-audio-tempo/releases/download/v0.4-preview/SHA256SUMS.txt)・[Release Notes](https://github.com/granbone/mgba-fixed-audio-tempo/releases/tag/v0.4-preview)。導入前にZIPのチェックサムを照合してください。ZIP内にも全ファイルのSHA256を含みます。
 
 [INSTALL](INSTALL.md)・[BUILDING](BUILDING.md)・[ARCHITECTURE](ARCHITECTURE.md)・[再リンク手順](docs/RELINKING.md)を参照してください。bridgeはcore DLLの隣に配置します。
 

@@ -1,6 +1,6 @@
-# v0.4-preview preparation manifest
+# v0.4-preview publication manifest
 
-Publication is pending the user's final instruction. No push, tag, GitHub Release or YouTube upload has occurred.
+The user authorized official publication of v0.4-preview. Use the clean public candidate history, a normal main push, an annotated tag and a GitHub prerelease. The final preparation audit remains a historical pre-publication record.
 
 The runtime is byte-identical to RC1. Binary source commit:
 `d451f54da8aea4217130574df42aee775cd369a5`.
@@ -10,7 +10,7 @@ patch recipes, dependency sources, LGPL relink support and original licenses are
 The private diagnostic adapter is excluded from runtime files.
 
 The distribution ZIP contains no ROM, BIOS, save, state, private WAV, raw PCM or MP4.
-The two user-approved active demo MP4s are separate planned Release assets.
+The two user-approved active demos use the existing YouTube URLs: https://youtu.be/5A7oz7efibo and https://youtu.be/dORIryhx6cU. MP4s are not Release assets and are not re-uploaded.
 Their unchanged filenames, lengths and hashes are in docs/V04_DEMO_MANIFEST.json.
 Older25-second RC1 videos are preserved privately and are not selected assets.
 
@@ -23,4 +23,4 @@ safe native fallback remain. GB/GBC Fixed Audio is research. No all-title guaran
 
 See docs/V04_FINAL_RELEASE_AUDIT.md for final test scope and known limits.
 Internal SHA256SUMS.txt covers every package file except itself. External asset
-SHA256SUMS.txt covers the final ZIP and two unchanged demo files; no self-hash cycle.
+SHA256SUMS.txt for this publication covers only the final ZIP, matching the two-asset Release layout. The prior preparation checksum including private demo files is preserved separately and is not uploaded. No self-hash cycle.

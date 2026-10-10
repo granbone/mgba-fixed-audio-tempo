@@ -4,19 +4,19 @@
 
 This experimental Windows x64 RetroArch core uses an independent audio clock and event-driven synthesis to keep supported GBA BGM at its normal tempo and pitch while the game runs at **2x or 3x**. It does not time-stretch or pitch-correct a fast recording. Native fallback uses normal mGBA audio and does not provide fixed tempo during fast-forward.
 
-The v0.4-preview distribution is prepared locally, pending the user's final publication instruction. No v0.4 Release or download link is published yet. Published v0.3 downloads below remain available and unchanged. See [final release audit](docs/V04_FINAL_RELEASE_AUDIT.md) and [release notes](docs/V04_RELEASE_NOTES_EN.md).
+Get the **v0.4-preview Windows x64 prerelease** from [GitHub Releases](https://github.com/granbone/mgba-fixed-audio-tempo/releases). Public v0.3 downloads below remain available and unchanged. See [final release audit](docs/V04_FINAL_RELEASE_AUDIT.md) and [release notes](docs/V04_RELEASE_NOTES_EN.md).
 
 Phase9 verified BGM in limited scenes for **20 exact DAT identities** (ROM_PLAYER 10, EWRAM_PLAYER 9, UNKNOWN candidate 1). These are additional BGM-only observations, not whole-game or SE certification. The catalog has 3,075 identities; 601 are eligible for an Experimental attempt. See [compatibility](COMPATIBILITY.md).
 
 Known limits: some finite SE can end early at 2x/3x; ongoing SE are discarded on State Load/Rewind; FFTA restoration can take longer; ownership or runtime checks may keep native audio active. Unknown/Unlimited frontend speeds use native audio. Unverified games can produce incorrect audio, freeze or crash. GB/GBC Fixed Audio remains research. Major BGM failures, runaway audio and new compatibility regressions remain release blockers.
 
-## Adopted v0.4 demonstration candidates
+## v0.4 demonstrations
 
-The user watched and approved the unchanged FFTA active gameplay (34.25seconds) and Oriental Blue active walking (24.17seconds) videos. Both show **1x→2x→3x twice**, using real RetroArch gameplay and Windows process audio. No video speed changes, audio time-stretch or pitch correction were applied. FFTA's state reload/audio cut near19.15seconds is explicitly marked. User approval applies to the viewed footage, not every game or sound effect. [Video manifest](docs/V04_DEMO_MANIFEST.json). MP4s are planned Release assets and are excluded from Git and the distribution ZIP.
+The user watched and approved the unchanged FFTA active gameplay (34.25seconds) and Oriental Blue active walking (24.17seconds) videos. Both show **1x→2x→3x twice**, using real RetroArch gameplay and Windows process audio. No video speed changes, audio time-stretch or pitch correction were applied. FFTA's state reload/audio cut near19.15seconds is explicitly marked. User approval applies to the viewed footage, not every game or sound effect. [Video manifest](docs/V04_DEMO_MANIFEST.json). The adopted videos are on YouTube: [FFTA active gameplay](https://youtu.be/5A7oz7efibo) · [Oriental Blue active walking](https://youtu.be/dORIryhx6cU). Video files are excluded from Git and the distribution ZIP; the Release assets are the ZIP and SHA256SUMS only.
 
 ## Download and installation
 
-The v0.3-preview prerelease contains the core, bridge, dependency DLL, complete corresponding source, license notices and LGPL rebuild/relink materials. Download links are below; per-file SHA256 is supplied with the release.
+The v0.4-preview prerelease contains the core, bridge, dependency DLL, complete corresponding source, license notices and LGPL rebuild/relink materials. [Windows x64 ZIP](https://github.com/granbone/mgba-fixed-audio-tempo/releases/download/v0.4-preview/mgba-fixed-audio-tempo-v0.4-preview-win64.zip) · [SHA256SUMS](https://github.com/granbone/mgba-fixed-audio-tempo/releases/download/v0.4-preview/SHA256SUMS.txt) · [Release notes](https://github.com/granbone/mgba-fixed-audio-tempo/releases/tag/v0.4-preview). Verify the ZIP checksum before installation. Per-file SHA256 is also included inside the ZIP.
 
 See [INSTALL.md](INSTALL.md), [BUILDING.md](BUILDING.md), [architecture](ARCHITECTURE.md), [LGPL relinking](docs/RELINKING.md) and [third-party notices](THIRD_PARTY_NOTICES.md). The bridge is installed beside the core DLL.
 

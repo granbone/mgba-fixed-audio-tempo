@@ -5,7 +5,7 @@
   "review_source": "Explicit user confirmation in final release preparation request",
   "scope": "Only these two unchanged active gameplay recordings; not all titles, all scenes or all sound effects",
   "git_video_files": false,
-  "release_assets_only": true,
+  "release_assets_only": false,
   "videos": [
     {
       "game_code": "AORJ",
@@ -81,7 +81,7 @@
       "volume_sfx_avsync": "No major discrepancy reported by user",
       "full_game_certification": false,
       "audio_speed_or_pitch_processing": false,
-      "publication": "PENDING_USER_FINAL_PUBLICATION_INSTRUCTION",
+      "publication": "USER_SUPPLIED_PUBLIC_YOUTUBE_URL",
       "identity": {
         "release_id": "gba-414cad1aee67ab20f3c133f0259da7e8c3073bbc",
         "title": "Oriental Blue - Ao no Tengai (Japan)",
@@ -94,7 +94,8 @@
         "sha256": "0E9997636409C47734895EA2180521FA7AD8898D7F45E01634C9E207039D7808",
         "rom_size": 16777216,
         "driver_family": "MP2K_ROM_PLAYER"
-      }
+      },
+      "youtube_url": "https://youtu.be/dORIryhx6cU"
     },
     {
       "game_code": "AFXJ",
@@ -170,7 +171,7 @@
       "volume_sfx_avsync": "No major discrepancy reported by user",
       "full_game_certification": false,
       "audio_speed_or_pitch_processing": false,
-      "publication": "PENDING_USER_FINAL_PUBLICATION_INSTRUCTION",
+      "publication": "USER_SUPPLIED_PUBLIC_YOUTUBE_URL",
       "identity": {
         "release_id": "gba-fa9d23ee88c7fe24374337aca03eb864b5b991f4",
         "title": "Final Fantasy Tactics Advance (Japan)",
@@ -183,7 +184,9 @@
         "sha256": "B13DD536808EF5D0FD4494386A9499F6FEB8310835D3F867CD17CC340D82BF9A",
         "rom_size": 16777216,
         "driver_family": "MP2K_EWRAM_PLAYER"
-      }
+      },
+      "youtube_url": "https://youtu.be/5A7oz7efibo"
     }
-  ]
+  ],
+  "delivery": "User-approved existing YouTube videos; no MP4 Release assets or re-upload"
 }

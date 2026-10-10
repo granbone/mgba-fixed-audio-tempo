@@ -1,0 +1,70 @@
+{
+  "version": "v0.4-preview",
+  "publication_authorized": true,
+  "prerelease": true,
+  "tag_kind": "annotated",
+  "public_candidate_start": "e90b889cddeb5951ba8c4c89d1cb1a3cd941acd9",
+  "public_main_base": "fd06f47974ab104f476c3f777d43f869b3fba9c1",
+  "distribution_source_commit": "6aec2889c7f7a607d996e4ad6985b00a7ae82508",
+  "binary_source_commit": "d451f54da8aea4217130574df42aee775cd369a5",
+  "runtime_changed": false,
+  "compiled_source_changed": false,
+  "private_development_history_imported": false,
+  "assets": [
+    {
+      "filename": "mgba-fixed-audio-tempo-v0.4-preview-win64.zip",
+      "sha256": "025346D077C7E2DD201231D3A3E79DB459FC32D6F2ED986507E5584222EB7FAC",
+      "bytes": 42419639
+    },
+    {
+      "filename": "SHA256SUMS.txt",
+      "sha256": "3C672DF828AA6007D5AF19B640C63BBBB1EA813F4F57022EDAC795A50804CEDD",
+      "bytes": 112
+    }
+  ],
+  "core_sha256": "92BAE49862CC8598B05C2E83F973FA969374B12260A0D40441D2793134F93D7C",
+  "bridge_sha256": "D750BD152B51F632C37F627FC22C6A33E8CDA9B43B16294334D86E90DD511502",
+  "youtube": {
+    "AFXJ": "https://youtu.be/5A7oz7efibo",
+    "AORJ": "https://youtu.be/dORIryhx6cU"
+  },
+  "mp4_assets": false,
+  "youtube_reupload": false,
+  "compatibility": {
+    "identities": 3075,
+    "experimental_trial_eligible": 601,
+    "bgm_confirmed_limited_scope": 20
+  },
+  "verification": {
+    "prior_final_regression_evidence_reused": true,
+    "evidence_hashes_rechecked": 13,
+    "new_gameplay_regressions_in_publication_step": false,
+    "new_checks": [
+      "ZIP/core/bridge identity",
+      "Every internal package checksum",
+      "Public DB format/field parity",
+      "Public working tree and all Git objects",
+      "Recursive ZIP content audit",
+      "Anonymous post-publication download and SHA256"
+    ]
+  },
+  "readiness": "RELEASE_READY_WITH_KNOWN_LIMITATIONS",
+  "known_limits": [
+    "Finite SE can end early at2x/3x; generic STOP analysis intentionally deferred",
+    "Ongoing SE discarded on Load/Rewind",
+    "AAMJ ownership hard fallback preserved",
+    "FFTA late-state restoration may take approximately18seconds",
+    "Conservative3x uses native audio;3x trial is Experimental only",
+    "Unsupported/unknown/Unlimited speeds use native audio",
+    "Unverified games may produce audio errors, freezes or crashes",
+    "B3DJ/BFTJ/BIXJ NOT_ACTIVE;AB2J/A5BJ/BKRJ INCONCLUSIVE",
+    "AORJ192ms observation remains UNKNOWN/INCONCLUSIVE, no speculative product change",
+    "GB/GBC Fixed Audio remains research"
+  ],
+  "human_review_required": [
+    "AAMJ/B6JJ audible native timbre and SFX quality beyond prior scoped measurements",
+    "Eight additional Phase10 ROM/EWRAM representative listening reels",
+    "SE cancel/loop/pitch-bend/voice contention in scenes outside the approved demos",
+    "Long sessions, late-game scenes and untested region/revision identities"
+  ]
+}
