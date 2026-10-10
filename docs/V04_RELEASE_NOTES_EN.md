@@ -14,13 +14,14 @@ The [Compatibility Database](https://github.com/granbone/mgba-fixed-audio-tempo/
 
 Final preparation recorded **48/48 PCM/event, 16/16 scene comparisons, 12/12 legacy suites, and 36/36 representative 3x conditions**. The 48-condition reference is the corrected bridge; the 16 comparisons separately include eight original-v0.3-package comparisons and eight common-corrected-bridge comparisons. Direct GBA internal frameCounter measurements in actual RetroArch were **1.9916–2.0010x at target 2x** and **2.9683–3.0013x at target 3x**. These are tested-scene results, not a universal exact 3.000x guarantee. See the [final audit](https://github.com/granbone/mgba-fixed-audio-tempo/blob/main/docs/V04_FINAL_RELEASE_AUDIT.md).
 
-## Demonstrations
+## Demonstrations — updated video links
 
-- [Final Fantasy Tactics Advance — active gameplay](https://youtu.be/5A7oz7efibo): 34.25 seconds, unit movement and two Fire attacks. State reload/audio cut near 19.15 seconds is marked.
-- [Oriental Blue — active walking](https://youtu.be/dORIryhx6cU): 24.17 seconds, continuous town movement.
+The public demonstration links were updated after the v0.4-preview release to new **RTSS-free 1080p/60fps** captures with large GAME SPEED and BGM TEMPO overlays and 0.3-second emphasis when the game-speed mode changes:
 
-Both use real RetroArch gameplay and Windows audio, with **1x→2x→3x twice**. The user reviewed the adopted footage and reported no major BGM, motion or AV-sync issue. No pseudo-speed video editing, audio time-stretch or pitch processing was applied. This approval covers the viewed footage only. No video files are in Git or the ZIP; no YouTube re-upload was performed for this release.
+- [Oriental Blue — continuous walking (24.87 seconds)](https://youtu.be/kqMENTHstSE)
+- [Final Fantasy Tactics Advance — active gameplay (34.32 seconds)](https://youtu.be/8lcoH3Lm_bE)
 
+Both show real RetroArch gameplay with Windows audio and **1x→2x→3x twice**, without artificial video speed-up or time-stretch/pitch correction. Automated frame/overlay/audio-comparison checks passed; **human listening review of the newly recorded BGM, SE and A/V sync is still pending**. The original user-approved launch videos and their recording-specific hashes remain recorded in the [historical launch manifest](V04_DEMO_MANIFEST.json). This post-release video-link update does not change the binaries, distribution ZIP, compatibility data or tag. No MP4 files are included in Git or the ZIP.
 ## Known limits and safety
 
 - Some finite SE end early at 2x/3x. BGM is the priority; full SE lifetime/loop/cancel/pitch-bend behavior is not certified.
